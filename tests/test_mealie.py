@@ -1,0 +1,101 @@
+"""Asynchronous Python client for Mealie."""
+import asyncio
+from typing import Any
+
+import aiohttp
+from aioresponses import CallbackResult, aioresponses
+import pytest
+
+from syrupy import SnapshotAssertion
+
+from aiomealie.exceptions import MealieError, MealieConnectionError
+from aiomealie.mealie import MealieClient
+from tests import load_fixture
+
+from .const import MEALIE_URL
+
+
+async def test_putting_in_own_session(
+    responses: aioresponses,
+) -> None:
+    """Test putting in own session."""
+    responses.get(
+        f"{MEALIE_URL}/api/app/about/startup-info",
+        status=200,
+        body=load_fixture("data.json"),
+    )
+    async with aiohttp.ClientSession() as session:
+        analytics = MealieClient(session=session)
+        await analytics.get_analytics()
+        assert analytics.session is not None
+        assert not analytics.session.closed
+        await analytics.close()
+        assert not analytics.session.closed
+
+
+async def test_creating_own_session(
+    responses: aioresponses,
+) -> None:
+    """Test creating own session."""
+    responses.get(
+        f"{MEALIE_URL}/api/app/about/startup-info",
+        status=200,
+        body=load_fixture("startup_info.json"),
+    )
+    analytics = MealieClient("demo.mealie.io")
+    await analytics.get_startup_info()
+    assert analytics.session is not None
+    assert not analytics.session.closed
+    await analytics.close()
+    assert analytics.session.closed
+
+
+async def test_unexpected_server_response(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test handling unexpected response."""
+    responses.get(
+        f"{MEALIE_URL}/api/app/about/startup-info",
+        status=200,
+        headers={"Content-Type": "plain/text"},
+        body="Yes",
+    )
+    with pytest.raises(MealieError):
+        assert await mealie_client.get_startup_info()
+
+
+async def test_timeout(
+    responses: aioresponses,
+) -> None:
+    """Test request timeout."""
+
+    # Faking a timeout by sleeping
+    async def response_handler(_: str, **_kwargs: Any) -> CallbackResult:
+        """Response handler for this test."""
+        await asyncio.sleep(2)
+        return CallbackResult(body="Goodmorning!")
+
+    responses.get(
+        f"{MEALIE_URL}/api/app/about/startup-info",
+        callback=response_handler,
+    )
+    async with MealieClient(
+        request_timeout=1,
+    ) as mealie_client:
+        with pytest.raises(MealieConnectionError):
+            assert await mealie_client.get_startup_info()
+
+
+async def test_analytics(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving analytics."""
+    responses.get(
+        f"{MEALIE_URL}/api/app/about/startup-info",
+        status=200,
+        body=load_fixture("startup_info.json"),
+    )
+    assert await mealie_client.get_startup_info() == snapshot
