@@ -21,7 +21,7 @@ async def test_putting_in_own_session(
     responses.get(
         f"{MEALIE_URL}/api/app/about/startup-info",
         status=200,
-        body=load_fixture("data.json"),
+        body=load_fixture("startup_info.json"),
     )
     async with aiohttp.ClientSession() as session:
         analytics = MealieClient(session=session, api_host="demo.mealie.io")

@@ -65,7 +65,7 @@ class MealieClient:
 
     async def get_startup_info(self) -> StartupInfo:
         """Get startup info."""
-        response = await self._request("/api/app/about/startup-info")
+        response = await self._request("api/app/about/startup-info")
         return StartupInfo.from_json(response)
 
     async def close(self) -> None:

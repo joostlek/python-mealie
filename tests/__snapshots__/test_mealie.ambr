@@ -1,0 +1,6 @@
+# serializer version: 1
+# name: test_analytics
+  dict({
+    'is_first_login': True,
+  })
+# ---
