@@ -1,4 +1,4 @@
-# Python: Homeassistant analytics
+# Python: Mealie
 
 [![GitHub Release][releases-shield]][releases]
 [![Python Versions][python-versions-shield]][pypi]
@@ -108,25 +108,25 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[build-shield]: https://github.com/joostlek/python-homeassistant-analytics/actions/workflows/tests.yaml/badge.svg
-[build]: https://github.com/joostlek/python-homeassistant-analytics/actions
-[code-smells]: https://sonarcloud.io/api/project_badges/measure?project=joostlek_python-homeassistant-analytics&metric=code_smells
-[codecov-shield]: https://codecov.io/gh/joostlek/python-homeassistant-analytics/branch/master/graph/badge.svg
-[codecov]: https://codecov.io/gh/joostlek/python-homeassistant-analytics
-[commits-shield]: https://img.shields.io/github/commit-activity/y/joostlek/python-homeassistant-analytics.svg
-[commits]: https://github.com/joostlek/python-homeassistant-analytics/commits/master
-[contributors]: https://github.com/joostlek/python-homeassistant-analytics/graphs/contributors
+[build-shield]: https://github.com/joostlek/python-mealie/actions/workflows/tests.yaml/badge.svg
+[build]: https://github.com/joostlek/python-mealie/actions
+[code-smells]: https://sonarcloud.io/api/project_badges/measure?project=joostlek_python-mealie&metric=code_smells
+[codecov-shield]: https://codecov.io/gh/joostlek/python-mealie/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/joostlek/python-mealie
+[commits-shield]: https://img.shields.io/github/commit-activity/y/joostlek/python-mealie.svg
+[commits]: https://github.com/joostlek/python-mealie/commits/master
+[contributors]: https://github.com/joostlek/python-mealie/graphs/contributors
 [joostlek]: https://github.com/joostlek
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[license-shield]: https://img.shields.io/github/license/joostlek/python-homeassistant-analytics.svg
+[license-shield]: https://img.shields.io/github/license/joostlek/python-mealie.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
 [poetry-install]: https://python-poetry.org/docs/#installation
 [poetry]: https://python-poetry.org
 [pre-commit]: https://pre-commit.com/
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-stable-green.svg
-[python-versions-shield]: https://img.shields.io/pypi/pyversions/python-homeassistant-analytics
-[releases-shield]: https://img.shields.io/github/release/joostlek/python-homeassistant-analytics.svg
-[releases]: https://github.com/joostlek/python-homeassistant-analytics/releases
+[python-versions-shield]: https://img.shields.io/pypi/pyversions/python-mealie
+[releases-shield]: https://img.shields.io/github/release/joostlek/python-mealie.svg
+[releases]: https://github.com/joostlek/python-mealie/releases
 [semver]: http://semver.org/spec/v2.0.0.html
-[sonarcloud]: https://sonarcloud.io/summary/new_code?id=joostlek_python-homeassistant-analytics
-[pypi]: https://pypi.org/project/python-homeassistant-analytics/
+[sonarcloud]: https://sonarcloud.io/summary/new_code?id=joostlek_python-mealie
+[pypi]: https://pypi.org/project/python-mealie/
