@@ -1,0 +1,16 @@
+{
+    "lightPrimary": "#E58325",
+    "lightAccent": "#007A99",
+    "lightSecondary": "#973542",
+    "lightSuccess": "#43A047",
+    "lightInfo": "#1976D2",
+    "lightWarning": "#FF6D00",
+    "lightError": "#EF5350",
+    "darkPrimary": "#E58325",
+    "darkAccent": "#007A99",
+    "darkSecondary": "#973542",
+    "darkSuccess": "#43A047",
+    "darkInfo": "#1976D2",
+    "darkWarning": "#FF6D00",
+    "darkError": "#EF5350"
+}

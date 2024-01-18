@@ -1,6 +1,24 @@
 # serializer version: 1
-# name: test_analytics
+# name: test_startup_info
   dict({
     'is_first_login': True,
+  })
+# ---
+# name: test_theme
+  dict({
+    'dark_accent': '#007A99',
+    'dark_error': '#EF5350',
+    'dark_info': '#1976D2',
+    'dark_primary': '#E58325',
+    'dark_secondary': '#973542',
+    'dark_success': '#43A047',
+    'dark_warning': '#FF6D00',
+    'light_accent': '#007A99',
+    'light_error': '#EF5350',
+    'light_info': '#1976D2',
+    'light_primary': '#E58325',
+    'light_secondary': '#973542',
+    'light_success': '#43A047',
+    'light_warning': '#FF6D00',
   })
 # ---
