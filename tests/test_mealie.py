@@ -6,10 +6,9 @@ import aiohttp
 from aioresponses import CallbackResult, aioresponses
 import pytest
 
-from syrupy import SnapshotAssertion
-
-from aiomealie.exceptions import MealieError, MealieConnectionError
+from aiomealie.exceptions import MealieConnectionError, MealieError
 from aiomealie.mealie import MealieClient
+from syrupy import SnapshotAssertion
 from tests import load_fixture
 
 from .const import MEALIE_URL
