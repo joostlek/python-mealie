@@ -63,6 +63,4 @@ class MealieSnapshotExtension(AmberSnapshotExtension):
     Need to be bumped when we change the MealieSnapshotSerializer.
     """
 
-    serializer_class: type[
-        AmberDataSerializer
-    ] = MealieSnapshotSerializer
+    serializer_class: type[AmberDataSerializer] = MealieSnapshotSerializer

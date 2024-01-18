@@ -1,11 +1,10 @@
 """Constants for tests."""
-from importlib import metadata
+
+from aiomealie.mealie import VERSION
 
 MEALIE_URL = "https://demo.mealie.io:443"
 
-version = metadata.version("aiomealie")
-
 HEADERS = {
-    "User-Agent": f"AioMealie/{version}",
+    "User-Agent": f"AioMealie/{VERSION}",
     "Accept": "application/json, text/plain, */*",
 }

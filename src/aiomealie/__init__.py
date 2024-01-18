@@ -6,5 +6,5 @@ from aiomealie.mealie import MealieClient
 
 __all__ = [
     "MealieConnectionError",
-    "MealieClient"
+    "MealieClient",
 ]

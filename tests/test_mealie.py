@@ -6,10 +6,9 @@ import aiohttp
 from aioresponses import CallbackResult, aioresponses
 import pytest
 
-from syrupy import SnapshotAssertion
-
-from aiomealie.exceptions import MealieError, MealieConnectionError
+from aiomealie.exceptions import MealieConnectionError, MealieError
 from aiomealie.mealie import MealieClient
+from syrupy import SnapshotAssertion
 from tests import load_fixture
 
 from .const import MEALIE_URL
@@ -22,11 +21,11 @@ async def test_putting_in_own_session(
     responses.get(
         f"{MEALIE_URL}/api/app/about/startup-info",
         status=200,
-        body=load_fixture("data.json"),
+        body=load_fixture("startup_info.json"),
     )
     async with aiohttp.ClientSession() as session:
-        analytics = MealieClient(session=session)
-        await analytics.get_analytics()
+        analytics = MealieClient(session=session, api_host="demo.mealie.io")
+        await analytics.get_startup_info()
         assert analytics.session is not None
         assert not analytics.session.closed
         await analytics.close()
@@ -42,7 +41,7 @@ async def test_creating_own_session(
         status=200,
         body=load_fixture("startup_info.json"),
     )
-    analytics = MealieClient("demo.mealie.io")
+    analytics = MealieClient(api_host="demo.mealie.io")
     await analytics.get_startup_info()
     assert analytics.session is not None
     assert not analytics.session.closed
@@ -82,6 +81,7 @@ async def test_timeout(
     )
     async with MealieClient(
         request_timeout=1,
+        api_host="demo.mealie.io",
     ) as mealie_client:
         with pytest.raises(MealieConnectionError):
             assert await mealie_client.get_startup_info()

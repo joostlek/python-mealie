@@ -12,4 +12,3 @@ class StartupInfo(DataClassORJSONMixin):
     """StartupInfo model."""
 
     is_first_login: bool = field(metadata=field_options(alias="isFirstLogin"))
-

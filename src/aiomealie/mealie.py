@@ -7,16 +7,10 @@ from importlib import metadata
 from typing import Self
 
 from aiohttp import ClientSession
-import orjson
 from yarl import URL
 
-from aiomealie.exceptions import (
-    MealieConnectionError,
-    MealieError,
-)
-from aiomealie.models import (
-    StartupInfo,
-)
+from aiomealie.exceptions import MealieConnectionError, MealieError
+from aiomealie.models import StartupInfo
 
 VERSION = metadata.version(__package__)
 
@@ -71,7 +65,7 @@ class MealieClient:
 
     async def get_startup_info(self) -> StartupInfo:
         """Get startup info."""
-        response = await self._request("/api/app/about/startup-info")
+        response = await self._request("api/app/about/startup-info")
         return StartupInfo.from_json(response)
 
     async def close(self) -> None:
