@@ -129,4 +129,4 @@ SOFTWARE.
 [releases]: https://github.com/joostlek/python-mealie/releases
 [semver]: http://semver.org/spec/v2.0.0.html
 [sonarcloud]: https://sonarcloud.io/summary/new_code?id=joostlek_python-mealie
-[pypi]: https://pypi.org/project/python-mealie/
+[pypi]: https://pypi.org/project/aiomealie/
