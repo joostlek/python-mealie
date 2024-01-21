@@ -32,3 +32,25 @@ class Theme(DataClassORJSONMixin):
     dark_info: str = field(metadata=field_options(alias="darkInfo"))
     dark_warning: str = field(metadata=field_options(alias="darkWarning"))
     dark_error: str = field(metadata=field_options(alias="darkError"))
+
+
+@dataclass
+class Recipe(DataClassORJSONMixin):
+    """Recipe model."""
+
+    recipe_id: str = field(metadata=field_options(alias="id"))
+    user_id: str = field(metadata=field_options(alias="userId"))
+    group_id: str = field(metadata=field_options(alias="groupId"))
+    name: str
+    slug: str
+    image: str
+    recipe_yield: str = field(metadata=field_options(alias="recipeYield"))
+    description: str
+    original_url: str = field(metadata=field_options(alias="orgURL"))
+
+
+@dataclass
+class RecipesResponse(DataClassORJSONMixin):
+    """RecipesResponse model."""
+
+    items: list[Recipe]

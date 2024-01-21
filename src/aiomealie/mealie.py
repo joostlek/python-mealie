@@ -10,7 +10,7 @@ from aiohttp import ClientSession
 from yarl import URL
 
 from aiomealie.exceptions import MealieConnectionError, MealieError
-from aiomealie.models import StartupInfo, Theme
+from aiomealie.models import RecipesResponse, StartupInfo, Theme
 
 VERSION = metadata.version(__package__)
 
@@ -72,6 +72,11 @@ class MealieClient:
         """Get theme."""
         response = await self._request("api/app/about/theme")
         return Theme.from_json(response)
+
+    async def get_recipes(self) -> RecipesResponse:
+        """Get recipes."""
+        response = await self._request("api/recipes")
+        return RecipesResponse.from_json(response)
 
     async def close(self) -> None:
         """Close open client session."""

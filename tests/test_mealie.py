@@ -113,3 +113,17 @@ async def test_theme(
         body=load_fixture("theme.json"),
     )
     assert await mealie_client.get_theme() == snapshot
+
+
+async def test_recipes(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving recipes."""
+    responses.get(
+        f"{MEALIE_URL}/api/recipes",
+        status=200,
+        body=load_fixture("recipes.json"),
+    )
+    assert await mealie_client.get_recipes() == snapshot
