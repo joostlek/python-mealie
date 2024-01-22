@@ -63,6 +63,7 @@ class MealplanEntryType(StrEnum):
     DINNER = "dinner"
     LUNCH = "lunch"
     BREAKFAST = "breakfast"
+    SIDE = "side"
 
 
 @dataclass
@@ -74,3 +75,10 @@ class Mealplan(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     recipe: Recipe
     entry_type: MealplanEntryType = field(metadata=field_options(alias="entryType"))
+
+
+@dataclass
+class MealplanResponse(DataClassORJSONMixin):
+    """MealplanResponse model."""
+
+    items: list[Mealplan]
