@@ -4,14 +4,23 @@ from __future__ import annotations
 import asyncio
 from dataclasses import dataclass
 from importlib import metadata
-from typing import Self
+from typing import TYPE_CHECKING, Any, Self
 
 from aiohttp import ClientSession
 import orjson
 from yarl import URL
 
 from aiomealie.exceptions import MealieConnectionError, MealieError
-from aiomealie.models import Mealplan, RecipesResponse, StartupInfo, Theme
+from aiomealie.models import (
+    Mealplan,
+    MealplanResponse,
+    RecipesResponse,
+    StartupInfo,
+    Theme,
+)
+
+if TYPE_CHECKING:
+    from datetime import date
 
 VERSION = metadata.version(__package__)
 
@@ -25,7 +34,7 @@ class MealieClient:
     request_timeout: int = 10
     _close_session: bool = False
 
-    async def _request(self, uri: str) -> str:
+    async def _request(self, uri: str, params: dict[str, Any] | None = None) -> str:
         """Handle a request to Mealie."""
         url = URL.build(
             scheme="https",
@@ -46,6 +55,7 @@ class MealieClient:
             async with asyncio.timeout(self.request_timeout):
                 response = await self.session.get(
                     url,
+                    params=params,
                     headers=headers,
                 )
         except asyncio.TimeoutError as exception:
@@ -84,6 +94,20 @@ class MealieClient:
         raw_response = await self._request("api/groups/mealplans/today")
         response = orjson.loads(raw_response)  # pylint: disable=maybe-no-member
         return [Mealplan.from_dict(item) for item in response]
+
+    async def get_mealplans(
+        self,
+        start_date: date | None = None,
+        end_date: date | None = None,
+    ) -> MealplanResponse:
+        """Get mealplans."""
+        params = {}
+        if start_date:
+            params["start_date"] = start_date.isoformat()
+        if end_date:
+            params["end_date"] = end_date.isoformat()
+        response = await self._request("api/groups/mealplans", params)
+        return MealplanResponse.from_json(response)
 
     async def close(self) -> None:
         """Close open client session."""

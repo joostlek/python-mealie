@@ -1,17 +1,24 @@
 """Asynchronous Python client for Mealie."""
+from __future__ import annotations
+
 import asyncio
-from typing import Any
+from datetime import date
+from typing import TYPE_CHECKING, Any
 
 import aiohttp
+from aiohttp.hdrs import METH_GET
 from aioresponses import CallbackResult, aioresponses
 import pytest
+from yarl import URL
 
 from aiomealie.exceptions import MealieConnectionError, MealieError
 from aiomealie.mealie import MealieClient
-from syrupy import SnapshotAssertion
 from tests import load_fixture
 
-from .const import MEALIE_URL
+from .const import HEADERS, MEALIE_URL
+
+if TYPE_CHECKING:
+    from syrupy import SnapshotAssertion
 
 
 async def test_putting_in_own_session(
@@ -141,3 +148,63 @@ async def test_mealplan_today(
         body=load_fixture("mealplan_today.json"),
     )
     assert await mealie_client.get_mealplan_today() == snapshot
+
+
+async def test_mealplans(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving mealplan."""
+    responses.get(
+        f"{MEALIE_URL}/api/groups/mealplans",
+        status=200,
+        body=load_fixture("mealplans.json"),
+    )
+    assert await mealie_client.get_mealplans() == snapshot
+
+
+@pytest.mark.parametrize(
+    ("kwargs", "params"),
+    [
+        ({}, {}),
+        (
+            {
+                "start_date": date(2021, 1, 1),
+                "end_date": date(2021, 1, 2),
+            },
+            {
+                "start_date": "2021-01-01",
+                "end_date": "2021-01-02",
+            },
+        ),
+    ],
+)
+async def test_mealplans_parameters(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    kwargs: dict[str, Any],
+    params: dict[str, Any],
+) -> None:
+    """Test retrieving mealplans."""
+    url = (
+        URL.build(
+            scheme="https",
+            host="demo.mealie.io",
+            port=443,
+        )
+        .joinpath("api/groups/mealplans")
+        .with_query(params)
+    )
+    responses.get(
+        url,
+        status=200,
+        body=load_fixture("mealplans.json"),
+    )
+    assert await mealie_client.get_mealplans(**kwargs)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/mealplans",
+        METH_GET,
+        headers=HEADERS,
+        params=params,
+    )
