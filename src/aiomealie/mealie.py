@@ -7,10 +7,11 @@ from importlib import metadata
 from typing import Self
 
 from aiohttp import ClientSession
+import orjson
 from yarl import URL
 
 from aiomealie.exceptions import MealieConnectionError, MealieError
-from aiomealie.models import RecipesResponse, StartupInfo, Theme
+from aiomealie.models import Mealplan, RecipesResponse, StartupInfo, Theme
 
 VERSION = metadata.version(__package__)
 
@@ -77,6 +78,12 @@ class MealieClient:
         """Get recipes."""
         response = await self._request("api/recipes")
         return RecipesResponse.from_json(response)
+
+    async def get_mealplan_today(self) -> list[Mealplan]:
+        """Get mealplan."""
+        raw_response = await self._request("api/groups/mealplans/today")
+        response = orjson.loads(raw_response)  # pylint: disable=maybe-no-member
+        return [Mealplan.from_dict(item) for item in response]
 
     async def close(self) -> None:
         """Close open client session."""

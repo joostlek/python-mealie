@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from enum import StrEnum
 
 from mashumaro import field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
@@ -54,3 +55,22 @@ class RecipesResponse(DataClassORJSONMixin):
     """RecipesResponse model."""
 
     items: list[Recipe]
+
+
+class MealplanEntryType(StrEnum):
+    """MealplanEntryType model."""
+
+    DINNER = "dinner"
+    LUNCH = "lunch"
+    BREAKFAST = "breakfast"
+
+
+@dataclass
+class Mealplan(DataClassORJSONMixin):
+    """Mealplan model."""
+
+    mealplan_id: str = field(metadata=field_options(alias="id"))
+    user_id: str = field(metadata=field_options(alias="userId"))
+    group_id: str = field(metadata=field_options(alias="groupId"))
+    recipe: Recipe
+    entry_type: MealplanEntryType = field(metadata=field_options(alias="entryType"))

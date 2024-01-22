@@ -127,3 +127,17 @@ async def test_recipes(
         body=load_fixture("recipes.json"),
     )
     assert await mealie_client.get_recipes() == snapshot
+
+
+async def test_mealplan_today(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving mealplan."""
+    responses.get(
+        f"{MEALIE_URL}/api/groups/mealplans/today",
+        status=200,
+        body=load_fixture("mealplan_today.json"),
+    )
+    assert await mealie_client.get_mealplan_today() == snapshot
