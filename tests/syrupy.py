@@ -1,4 +1,5 @@
 """Asynchronous Python client for Mealie."""
+
 from __future__ import annotations
 
 from dataclasses import asdict, is_dataclass

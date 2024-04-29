@@ -1,6 +1,5 @@
 """Asynchronous Python client for Mealie."""
 
-
 from pathlib import Path
 
 
