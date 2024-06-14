@@ -75,9 +75,9 @@ class Mealplan(DataClassORJSONMixin):
     mealplan_id: str = field(metadata=field_options(alias="id"))
     user_id: str = field(metadata=field_options(alias="userId"))
     group_id: str = field(metadata=field_options(alias="groupId"))
-    recipe: Recipe
     entry_type: MealplanEntryType = field(metadata=field_options(alias="entryType"))
     mealplan_date: date = field(metadata=field_options(alias="date"))
+    recipe: Recipe | None
 
 
 @dataclass
