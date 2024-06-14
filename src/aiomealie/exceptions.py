@@ -7,3 +7,7 @@ class MealieError(Exception):
 
 class MealieConnectionError(MealieError):
     """Mealie connection exception."""
+
+
+class MealieAuthenticationError(MealieError):
+    """Mealie authentication exception."""

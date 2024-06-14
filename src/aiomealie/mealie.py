@@ -11,7 +11,11 @@ from aiohttp import ClientSession
 import orjson
 from yarl import URL
 
-from aiomealie.exceptions import MealieConnectionError, MealieError
+from aiomealie.exceptions import (
+    MealieConnectionError,
+    MealieError,
+    MealieAuthenticationError,
+)
 from aiomealie.models import (
     Mealplan,
     MealplanResponse,
@@ -31,6 +35,7 @@ class MealieClient:
     """Main class for handling connections with Mealie."""
 
     api_host: str
+    token: str | None = None
     session: ClientSession | None = None
     request_timeout: int = 10
     _close_session: bool = False
@@ -47,6 +52,8 @@ class MealieClient:
             "User-Agent": f"AioMealie/{VERSION}",
             "Accept": "application/json, text/plain, */*",
         }
+        if self.token:
+            headers["Authorization"] = f"Bearer {self.token}"
 
         if self.session is None:
             self.session = ClientSession()
@@ -62,6 +69,10 @@ class MealieClient:
         except asyncio.TimeoutError as exception:
             msg = "Timeout occurred while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
+
+        if response.status == 401:
+            msg = "Unauthorized access to Mealie"
+            raise MealieAuthenticationError(msg)
 
         content_type = response.headers.get("Content-Type", "")
 
