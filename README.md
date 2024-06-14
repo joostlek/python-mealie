@@ -111,7 +111,7 @@ SOFTWARE.
 [build-shield]: https://github.com/joostlek/python-mealie/actions/workflows/tests.yaml/badge.svg
 [build]: https://github.com/joostlek/python-mealie/actions
 [code-smells]: https://sonarcloud.io/api/project_badges/measure?project=joostlek_python-mealie&metric=code_smells
-[codecov-shield]: https://codecov.io/gh/joostlek/python-mealie/branch/master/graph/badge.svg
+[codecov-shield]: https://codecov.io/gh/joostlek/python-mealie/branch/main/graph/badge.svg
 [codecov]: https://codecov.io/gh/joostlek/python-mealie
 [commits-shield]: https://img.shields.io/github/commit-activity/y/joostlek/python-mealie.svg
 [commits]: https://github.com/joostlek/python-mealie/commits/master
@@ -124,7 +124,7 @@ SOFTWARE.
 [poetry]: https://python-poetry.org
 [pre-commit]: https://pre-commit.com/
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-stable-green.svg
-[python-versions-shield]: https://img.shields.io/pypi/pyversions/python-mealie
+[python-versions-shield]: https://img.shields.io/pypi/pyversions/aiomealie
 [releases-shield]: https://img.shields.io/github/release/joostlek/python-mealie.svg
 [releases]: https://github.com/joostlek/python-mealie/releases
 [semver]: http://semver.org/spec/v2.0.0.html
