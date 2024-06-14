@@ -1,6 +1,10 @@
 """Asynchronous Python client for Mealie."""
 
-from aiomealie.exceptions import MealieConnectionError, MealieError
+from aiomealie.exceptions import (
+    MealieConnectionError,
+    MealieError,
+    MealieAuthenticationError,
+)
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
     StartupInfo,
@@ -15,6 +19,7 @@ from aiomealie.models import (
 __all__ = [
     "MealieConnectionError",
     "MealieError",
+    "MealieAuthenticationError",
     "MealieClient",
     "StartupInfo",
     "Theme",
