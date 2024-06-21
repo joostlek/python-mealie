@@ -2,7 +2,7 @@
 
 from aiomealie.mealie import VERSION
 
-MEALIE_URL = "https://demo.mealie.io:443"
+MEALIE_URL = "https://demo.mealie.io"
 
 HEADERS = {
     "User-Agent": f"AioMealie/{VERSION}",
