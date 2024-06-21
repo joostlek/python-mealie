@@ -35,6 +35,8 @@ class MealieClient:
     """Main class for handling connections with Mealie."""
 
     api_host: str
+    port: int
+    secure: bool
     token: str | None = None
     session: ClientSession | None = None
     request_timeout: int = 10
@@ -43,9 +45,9 @@ class MealieClient:
     async def _request(self, uri: str, params: dict[str, Any] | None = None) -> str:
         """Handle a request to Mealie."""
         url = URL.build(
-            scheme="https",
+            scheme="https" if self.secure else "http",
             host=self.api_host,
-            port=443,
+            port=self.port,
         ).joinpath(uri)
 
         headers = {

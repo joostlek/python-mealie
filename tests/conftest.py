@@ -23,6 +23,8 @@ async def client() -> AsyncGenerator[MealieClient, None]:
     """Return a Spotify client."""
     async with aiohttp.ClientSession() as session, MealieClient(
         "demo.mealie.io",
+        443,
+        secure=True,
         session=session,
     ) as mealie_client:
         yield mealie_client

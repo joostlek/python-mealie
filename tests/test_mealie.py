@@ -32,7 +32,9 @@ async def test_putting_in_own_session(
         body=load_fixture("startup_info.json"),
     )
     async with aiohttp.ClientSession() as session:
-        analytics = MealieClient(session=session, api_host="demo.mealie.io")
+        analytics = MealieClient(
+            session=session, api_host="demo.mealie.io", port=443, secure=True
+        )
         await analytics.get_startup_info()
         assert analytics.session is not None
         assert not analytics.session.closed
@@ -49,7 +51,7 @@ async def test_creating_own_session(
         status=200,
         body=load_fixture("startup_info.json"),
     )
-    analytics = MealieClient(api_host="demo.mealie.io")
+    analytics = MealieClient(api_host="demo.mealie.io", port=443, secure=True)
     await analytics.get_startup_info()
     assert analytics.session is not None
     assert not analytics.session.closed
@@ -88,8 +90,7 @@ async def test_timeout(
         callback=response_handler,
     )
     async with MealieClient(
-        request_timeout=1,
-        api_host="demo.mealie.io",
+        request_timeout=1, api_host="demo.mealie.io", port=443, secure=True
     ) as mealie_client:
         with pytest.raises(MealieConnectionError):
             assert await mealie_client.get_startup_info()
