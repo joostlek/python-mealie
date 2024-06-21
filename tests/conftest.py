@@ -22,9 +22,7 @@ def snapshot_assertion(snapshot: SnapshotAssertion) -> SnapshotAssertion:
 async def client() -> AsyncGenerator[MealieClient, None]:
     """Return a Spotify client."""
     async with aiohttp.ClientSession() as session, MealieClient(
-        "demo.mealie.io",
-        443,
-        secure=True,
+        "https://demo.mealie.io",
         session=session,
     ) as mealie_client:
         yield mealie_client

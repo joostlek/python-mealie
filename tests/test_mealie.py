@@ -32,9 +32,7 @@ async def test_putting_in_own_session(
         body=load_fixture("startup_info.json"),
     )
     async with aiohttp.ClientSession() as session:
-        analytics = MealieClient(
-            session=session, api_host="demo.mealie.io", port=443, secure=True
-        )
+        analytics = MealieClient(session=session, api_host="https://demo.mealie.io")
         await analytics.get_startup_info()
         assert analytics.session is not None
         assert not analytics.session.closed
@@ -51,7 +49,7 @@ async def test_creating_own_session(
         status=200,
         body=load_fixture("startup_info.json"),
     )
-    analytics = MealieClient(api_host="demo.mealie.io", port=443, secure=True)
+    analytics = MealieClient(api_host="https://demo.mealie.io")
     await analytics.get_startup_info()
     assert analytics.session is not None
     assert not analytics.session.closed
@@ -90,7 +88,7 @@ async def test_timeout(
         callback=response_handler,
     )
     async with MealieClient(
-        request_timeout=1, api_host="demo.mealie.io", port=443, secure=True
+        request_timeout=1, api_host="https://demo.mealie.io"
     ) as mealie_client:
         with pytest.raises(MealieConnectionError):
             assert await mealie_client.get_startup_info()
@@ -189,15 +187,7 @@ async def test_mealplans_parameters(
     params: dict[str, Any],
 ) -> None:
     """Test retrieving mealplans."""
-    url = (
-        URL.build(
-            scheme="https",
-            host="demo.mealie.io",
-            port=443,
-        )
-        .joinpath("api/groups/mealplans")
-        .with_query(params)
-    )
+    url = URL(MEALIE_URL).joinpath("api/groups/mealplans").with_query(params)
     responses.get(
         url,
         status=200,
