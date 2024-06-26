@@ -10,6 +10,19 @@ from mashumaro import field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
 
 
+class OrderDirection(StrEnum):
+    """OrderDirection type."""
+
+    ASCENDING = "asc"
+    DESCENDING = "desc"
+
+
+class ShoppingItemsOrderBy(StrEnum):
+    """ShoppingItemOrderBy type."""
+
+    POSITION = "position"
+
+
 @dataclass
 class StartupInfo(DataClassORJSONMixin):
     """StartupInfo model."""

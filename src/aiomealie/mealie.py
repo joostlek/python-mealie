@@ -20,8 +20,10 @@ from aiomealie.models import (
     GroupSummary,
     Mealplan,
     MealplanResponse,
+    OrderDirection,
     RecipesResponse,
     ShoppingListsResponse,
+    ShoppingItemsOrderBy,
     ShoppingItemsResponse,
     StartupInfo,
     Theme,
@@ -132,17 +134,14 @@ class MealieClient:
 
     async def get_shopping_items(
         self,
-        query_filter: str,
-        order_by: str = "position",
-        order_direction: str = "asc",
-        per_page: str = "1000",
+        shopping_list_id: str,
     ) -> ShoppingItemsResponse:
         """Get shopping items."""
-        params = {}
-        params["queryFilter"] = query_filter
-        params["orderBy"] = order_by
-        params["orderDirection"] = order_direction
-        params["perPage"] = per_page
+        params: dict[str, Any] = {}
+        params["queryFilter"] = f"shoppingListId={shopping_list_id}"
+        params["orderBy"] = ShoppingItemsOrderBy.POSITION
+        params["orderDirection"] = OrderDirection.ASCENDING
+        params["perPage"] = 9999
         response = await self._request("api/groups/shopping/items", params)
         return ShoppingItemsResponse.from_json(response)
 

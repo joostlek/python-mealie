@@ -235,16 +235,13 @@ async def test_shopping_lists(
     [
         (
             {
-                "query_filter": "shoppingListId=27edbaab-2ec6-441f-8490-0283ea77585f",
-                "order_by": "position",
-                "order_direction": "asc",
-                "per_page": "1000",
+                "shopping_list_id": "27edbaab-2ec6-441f-8490-0283ea77585f",
             },
             {
                 "queryFilter": "shoppingListId=27edbaab-2ec6-441f-8490-0283ea77585f",
                 "orderBy": "position",
                 "orderDirection": "asc",
-                "perPage": "1000",
+                "perPage": 9999,
             },
         ),
     ],
