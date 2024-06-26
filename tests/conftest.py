@@ -20,7 +20,7 @@ def snapshot_assertion(snapshot: SnapshotAssertion) -> SnapshotAssertion:
 
 @pytest.fixture(name="mealie_client")
 async def client() -> AsyncGenerator[MealieClient, None]:
-    """Return a Spotify client."""
+    """Return a Mealie client."""
     async with aiohttp.ClientSession() as session, MealieClient(
         "https://demo.mealie.io",
         session=session,

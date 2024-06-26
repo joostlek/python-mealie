@@ -10,11 +10,33 @@ from mashumaro import field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
 
 
+class OrderDirection(StrEnum):
+    """OrderDirection type."""
+
+    ASCENDING = "asc"
+    DESCENDING = "desc"
+
+
+class ShoppingItemsOrderBy(StrEnum):
+    """ShoppingItemOrderBy type."""
+
+    POSITION = "position"
+
+
 @dataclass
 class StartupInfo(DataClassORJSONMixin):
     """StartupInfo model."""
 
     is_first_login: bool = field(metadata=field_options(alias="isFirstLogin"))
+
+
+@dataclass
+class GroupSummary(DataClassORJSONMixin):
+    """GroupSummary model."""
+
+    name: str
+    group_id: str = field(metadata=field_options(alias="id"))
+    slug: str
 
 
 @dataclass
@@ -85,3 +107,43 @@ class MealplanResponse(DataClassORJSONMixin):
     """MealplanResponse model."""
 
     items: list[Mealplan]
+
+
+@dataclass
+class ShoppingList(DataClassORJSONMixin):
+    """ShoppingList model."""
+
+    list_id: str = field(metadata=field_options(alias="id"))
+    name: str
+
+
+@dataclass
+class ShoppingListsResponse(DataClassORJSONMixin):
+    """ShoppingListsResponse model."""
+
+    items: list[ShoppingList]
+
+
+@dataclass
+class ShoppingItem(DataClassORJSONMixin):
+    """ShoppingItem model."""
+
+    item_id: str = field(metadata=field_options(alias="id"))
+    list_id: str = field(metadata=field_options(alias="shoppingListId"))
+    note: str
+    display: str
+    checked: bool
+    position: int
+    is_food: bool = field(metadata=field_options(alias="isFood"))
+    disable_amount: bool = field(metadata=field_options(alias="disableAmount"))
+    quantity: float
+    label_id: str = field(metadata=field_options(alias="labelId"))
+    food_id: str = field(metadata=field_options(alias="foodId"))
+    unit_id: str = field(metadata=field_options(alias="unitId"))
+
+
+@dataclass
+class ShoppingItemsResponse(DataClassORJSONMixin):
+    """ShoppingItemsResponse model."""
+
+    items: list[ShoppingItem]
