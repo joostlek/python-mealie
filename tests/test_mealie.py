@@ -230,37 +230,31 @@ async def test_shopping_lists(
     assert await mealie_client.get_shopping_lists() == snapshot
 
 
-@pytest.mark.parametrize(
-    ("kwargs", "params"),
-    [
-        (
-            {
-                "shopping_list_id": "27edbaab-2ec6-441f-8490-0283ea77585f",
-            },
-            {
-                "queryFilter": "shoppingListId=27edbaab-2ec6-441f-8490-0283ea77585f",
-                "orderBy": "position",
-                "orderDirection": "asc",
-                "perPage": 9999,
-            },
-        ),
-    ],
-)
 async def test_shopping_items(
     responses: aioresponses,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
-    kwargs: dict[str, Any],
-    params: dict[str, Any],
 ) -> None:
     """Test retrieving shopping items."""
+
+    shopping_list_id: str = "27edbaab-2ec6-441f-8490-0283ea77585f"
+    params: dict[str, Any] = {
+        "queryFilter": f"shoppingListId={shopping_list_id}",
+        "orderBy": "position",
+        "orderDirection": "asc",
+        "perPage": 9999,
+    }
+
     url = URL(MEALIE_URL).joinpath("api/groups/shopping/items").with_query(params)
     responses.get(
         url,
         status=200,
         body=load_fixture("shopping_items.json"),
     )
-    assert await mealie_client.get_shopping_items(**kwargs) == snapshot
+    assert (
+        await mealie_client.get_shopping_items(shopping_list_id=shopping_list_id)
+        == snapshot
+    )
 
     responses.assert_called_once_with(
         f"{MEALIE_URL}/api/groups/shopping/items",
