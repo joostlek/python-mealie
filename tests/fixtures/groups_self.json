@@ -1,0 +1,17 @@
+{
+    "name": "home",
+    "id": "0bf60b2e-ca89-42a9-94d4-8f67ca72b157",
+    "slug": "home",
+    "preferences": {
+        "privateGroup": true,
+        "firstDayOfWeek": 1,
+        "recipePublic": true,
+        "recipeShowNutrition": true,
+        "recipeShowAssets": true,
+        "recipeLandscapeView": false,
+        "recipeDisableComments": false,
+        "recipeDisableAmount": false,
+        "groupId": "0bf60b2e-ca89-42a9-94d4-8f67ca72b157",
+        "id": "1994bf96-92c8-4697-bee6-3ad714571102"
+    }
+}

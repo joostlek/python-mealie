@@ -8,12 +8,15 @@ from aiomealie.exceptions import (
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
     StartupInfo,
+    GroupSummary,
     Theme,
     Recipe,
     RecipesResponse,
     Mealplan,
     MealplanResponse,
     MealplanEntryType,
+    ShoppingListsResponse,
+    ShoppingItemsResponse,
 )
 
 __all__ = [
@@ -22,10 +25,13 @@ __all__ = [
     "MealieAuthenticationError",
     "MealieClient",
     "StartupInfo",
+    "GroupSummary",
     "Theme",
     "Recipe",
     "RecipesResponse",
     "Mealplan",
     "MealplanResponse",
     "MealplanEntryType",
+    "ShoppingListsResponse",
+    "ShoppingItemsResponse",
 ]

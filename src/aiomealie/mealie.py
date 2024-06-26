@@ -17,9 +17,12 @@ from aiomealie.exceptions import (
     MealieAuthenticationError,
 )
 from aiomealie.models import (
+    GroupSummary,
     Mealplan,
     MealplanResponse,
     RecipesResponse,
+    ShoppingListsResponse,
+    ShoppingItemsResponse,
     StartupInfo,
     Theme,
 )
@@ -87,6 +90,11 @@ class MealieClient:
         response = await self._request("api/app/about/startup-info")
         return StartupInfo.from_json(response)
 
+    async def get_groups_self(self) -> GroupSummary:
+        """Get groups self."""
+        response = await self._request("api/groups/self")
+        return GroupSummary.from_json(response)
+
     async def get_theme(self) -> Theme:
         """Get theme."""
         response = await self._request("api/app/about/theme")
@@ -116,6 +124,27 @@ class MealieClient:
             params["end_date"] = end_date.isoformat()
         response = await self._request("api/groups/mealplans", params)
         return MealplanResponse.from_json(response)
+
+    async def get_shopping_lists(self) -> ShoppingListsResponse:
+        """Get shopping lists."""
+        response = await self._request("api/groups/shopping/lists")
+        return ShoppingListsResponse.from_json(response)
+
+    async def get_shopping_items(
+        self,
+        query_filter: str,
+        order_by: str = "position",
+        order_direction: str = "asc",
+        per_page: str = "1000",
+    ) -> ShoppingItemsResponse:
+        """Get shopping items."""
+        params = {}
+        params["queryFilter"] = query_filter
+        params["orderBy"] = order_by
+        params["orderDirection"] = order_direction
+        params["perPage"] = per_page
+        response = await self._request("api/groups/shopping/items", params)
+        return ShoppingItemsResponse.from_json(response)
 
     async def close(self) -> None:
         """Close open client session."""

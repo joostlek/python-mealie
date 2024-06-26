@@ -1,4 +1,11 @@
 # serializer version: 1
+# name: test_groups_self
+  dict({
+    'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
+    'name': 'home',
+    'slug': 'home',
+  })
+# ---
 # name: test_mealplan_today
   list([
     dict({
@@ -950,6 +957,72 @@
         'recipe_yield': '4 servings',
         'slug': 'tortelline-a-la-romana',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
+      }),
+    ]),
+  })
+# ---
+# name: test_shopping_items[kwargs0-params0]
+  dict({
+    'items': list([
+      dict({
+        'checked': False,
+        'disable_amount': True,
+        'display': '2 Apples',
+        'food_id': None,
+        'is_food': False,
+        'item_id': 'f45430f7-3edf-45a9-a50f-73bb375090be',
+        'label_id': None,
+        'list_id': '9ce096fe-ded2-4077-877d-78ba450ab13e',
+        'note': 'Apples',
+        'position': 0,
+        'quantity': 2.0,
+        'unit_id': None,
+      }),
+      dict({
+        'checked': False,
+        'disable_amount': False,
+        'display': '1 can acorn squash',
+        'food_id': '09322430-d24c-4b1a-abb6-22b6ed3a88f5',
+        'is_food': True,
+        'item_id': '84d8fd74-8eb0-402e-84b6-71f251bfb7cc',
+        'label_id': None,
+        'list_id': '9ce096fe-ded2-4077-877d-78ba450ab13e',
+        'note': '',
+        'position': 1,
+        'quantity': 1.0,
+        'unit_id': '7bf539d4-fc78-48bc-b48e-c35ccccec34a',
+      }),
+      dict({
+        'checked': False,
+        'disable_amount': False,
+        'display': 'aubergine',
+        'food_id': '96801494-4e26-4148-849a-8155deb76327',
+        'is_food': True,
+        'item_id': '69913b9a-7c75-4935-abec-297cf7483f88',
+        'label_id': None,
+        'list_id': '9ce096fe-ded2-4077-877d-78ba450ab13e',
+        'note': '',
+        'position': 2,
+        'quantity': 0.0,
+        'unit_id': None,
+      }),
+    ]),
+  })
+# ---
+# name: test_shopping_lists
+  dict({
+    'items': list([
+      dict({
+        'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+        'name': 'Supermarket',
+      }),
+      dict({
+        'list_id': 'f8438635-8211-4be8-80d0-0aa42e37a5f2',
+        'name': 'Special groceries',
+      }),
+      dict({
+        'list_id': 'e9d78ff2-4b23-4b77-a3a8-464827100b46',
+        'name': 'Freezer',
       }),
     ]),
   })

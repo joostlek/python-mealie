@@ -108,6 +108,20 @@ async def test_startup_info(
     assert await mealie_client.get_startup_info() == snapshot
 
 
+async def test_groups_self(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving groups self."""
+    responses.get(
+        f"{MEALIE_URL}/api/groups/self",
+        status=200,
+        body=load_fixture("groups_self.json"),
+    )
+    assert await mealie_client.get_groups_self() == snapshot
+
+
 async def test_theme(
     responses: aioresponses,
     mealie_client: MealieClient,
@@ -196,6 +210,63 @@ async def test_mealplans_parameters(
     assert await mealie_client.get_mealplans(**kwargs)
     responses.assert_called_once_with(
         f"{MEALIE_URL}/api/groups/mealplans",
+        METH_GET,
+        headers=HEADERS,
+        params=params,
+    )
+
+
+async def test_shopping_lists(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving shopping lists."""
+    responses.get(
+        f"{MEALIE_URL}/api/groups/shopping/lists",
+        status=200,
+        body=load_fixture("shopping_lists.json"),
+    )
+    assert await mealie_client.get_shopping_lists() == snapshot
+
+
+@pytest.mark.parametrize(
+    ("kwargs", "params"),
+    [
+        (
+            {
+                "query_filter": "shoppingListId=27edbaab-2ec6-441f-8490-0283ea77585f",
+                "order_by": "position",
+                "order_direction": "asc",
+                "per_page": "1000",
+            },
+            {
+                "queryFilter": "shoppingListId=27edbaab-2ec6-441f-8490-0283ea77585f",
+                "orderBy": "position",
+                "orderDirection": "asc",
+                "perPage": "1000",
+            },
+        ),
+    ],
+)
+async def test_shopping_items(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+    kwargs: dict[str, Any],
+    params: dict[str, Any],
+) -> None:
+    """Test retrieving shopping items."""
+    url = URL(MEALIE_URL).joinpath("api/groups/shopping/items").with_query(params)
+    responses.get(
+        url,
+        status=200,
+        body=load_fixture("shopping_items.json"),
+    )
+    assert await mealie_client.get_shopping_items(**kwargs) == snapshot
+
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/shopping/items",
         METH_GET,
         headers=HEADERS,
         params=params,
