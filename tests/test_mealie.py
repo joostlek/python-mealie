@@ -7,7 +7,7 @@ from datetime import date
 from typing import TYPE_CHECKING, Any
 
 import aiohttp
-from aiohttp.hdrs import METH_GET
+from aiohttp.hdrs import METH_GET, METH_POST, METH_PUT, METH_DELETE
 from aioresponses import CallbackResult, aioresponses
 import pytest
 from yarl import URL
@@ -261,4 +261,82 @@ async def test_shopping_items(
         METH_GET,
         headers=HEADERS,
         params=params,
+    )
+
+
+async def test_add_shopping_item(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test adding shopping item."""
+
+    item: dict[str, Any] = {
+        "shopping_list_id": "27edbaab-2ec6-441f-8490-0283ea77585f",
+        "note": "Bread",
+        "position": 0,
+    }
+
+    url = URL(MEALIE_URL).joinpath("api/groups/shopping/items")
+
+    responses.post(
+        url,
+        status=201,
+    )
+    await mealie_client.add_shopping_item(item=item)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/shopping/items",
+        METH_POST,
+        headers=HEADERS,
+        json=item,
+    )
+
+
+async def test_update_shopping_item(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test adding shopping item."""
+
+    item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
+
+    item: dict[str, Any] = {
+        "shopping_list_id": "27edbaab-2ec6-441f-8490-0283ea77585f",
+        "note": "Bread",
+        "position": 0,
+    }
+
+    url = URL(MEALIE_URL).joinpath(f"api/groups/shopping/items/{item_id}")
+
+    responses.put(
+        url,
+        status=201,
+    )
+    await mealie_client.update_shopping_item(item_id=item_id, item=item)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        METH_PUT,
+        headers=HEADERS,
+        json=item,
+    )
+
+
+async def test_delete_shopping_item(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test adding shopping item."""
+
+    item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
+
+    url = URL(MEALIE_URL).joinpath(f"api/groups/shopping/items/{item_id}")
+
+    responses.delete(
+        url,
+        status=201,
+    )
+    await mealie_client.delete_shopping_item(item_id=item_id)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        METH_DELETE,
+        headers=HEADERS,
     )
