@@ -19,7 +19,7 @@ from aiomealie.exceptions import (
     MealieError,
 )
 from aiomealie.mealie import MealieClient
-from aiomealie.models import ShoppingItem
+from aiomealie.models import MutateShoppingItem
 from tests import load_fixture
 
 from .const import HEADERS, MEALIE_URL
@@ -102,7 +102,7 @@ async def test_validation_error(
 
     item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
 
-    item = ShoppingItem(
+    item = MutateShoppingItem(
         list_id="27edbaab-2ec6-441f-8490-0283ea77585f", note="Bread", position=0
     )
 
@@ -316,7 +316,7 @@ async def test_add_shopping_item(
 ) -> None:
     """Test adding shopping item."""
 
-    item = ShoppingItem(
+    item = MutateShoppingItem(
         list_id="27edbaab-2ec6-441f-8490-0283ea77585f", note="Bread", position=0
     )
 
@@ -342,7 +342,7 @@ async def test_update_shopping_item(
 
     item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
 
-    item = ShoppingItem(
+    item = MutateShoppingItem(
         list_id="27edbaab-2ec6-441f-8490-0283ea77585f", note="Bread", position=0
     )
 

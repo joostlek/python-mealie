@@ -25,7 +25,7 @@ from aiomealie.models import (
     OrderDirection,
     RecipesResponse,
     ShoppingListsResponse,
-    ShoppingItem,
+    MutateShoppingItem,
     ShoppingItemsOrderBy,
     ShoppingItemsResponse,
     StartupInfo,
@@ -198,13 +198,15 @@ class MealieClient:
 
     async def add_shopping_item(
         self,
-        item: ShoppingItem,
+        item: MutateShoppingItem,
     ) -> None:
         """Add a shopping item."""
 
         await self._post("api/groups/shopping/items", data=item.to_dict(omit_none=True))
 
-    async def update_shopping_item(self, item_id: str, item: ShoppingItem) -> None:
+    async def update_shopping_item(
+        self, item_id: str, item: MutateShoppingItem
+    ) -> None:
         """Update a shopping item."""
 
         await self._put(

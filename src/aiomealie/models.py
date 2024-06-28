@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from typing import Optional
 
 from dataclasses import dataclass, field
 from datetime import date
@@ -128,29 +127,43 @@ class ShoppingListsResponse(DataClassORJSONMixin):
 
 
 @dataclass
-class ShoppingItem(DataClassORJSONMixin, DataClassDictMixin):
+class ShoppingItem(DataClassORJSONMixin):
     """ShoppingItem model."""
 
-    item_id: Optional[str] = field(default=None, metadata=field_options(alias="id"))
-    list_id: Optional[str] = field(
+    item_id: str = field(metadata=field_options(alias="id"))
+    list_id: str = field(metadata=field_options(alias="shoppingListId"))
+    note: str
+    display: str
+    checked: bool
+    position: int
+    is_food: bool = field(metadata=field_options(alias="isFood"))
+    disable_amount: bool = field(metadata=field_options(alias="disableAmount"))
+    quantity: float
+    label_id: str = field(metadata=field_options(alias="labelId"))
+    food_id: str = field(metadata=field_options(alias="foodId"))
+    unit_id: str = field(metadata=field_options(alias="unitId"))
+
+
+@dataclass
+class MutateShoppingItem(DataClassDictMixin):
+    """MutateShoppingItem model."""
+
+    item_id: str | None = field(default=None, metadata=field_options(alias="id"))
+    list_id: str | None = field(
         default=None, metadata=field_options(alias="shoppingListId")
     )
-    note: Optional[str] = field(default=None)
-    display: Optional[str] = field(default=None)
-    checked: Optional[bool] = field(default=None)
-    position: Optional[int] = field(default=None)
-    is_food: Optional[bool] = field(
-        default=None, metadata=field_options(alias="isFood")
-    )
-    disable_amount: Optional[bool] = field(
+    note: str | None = field(default=None)
+    display: str | None = field(default=None)
+    checked: bool | None = field(default=None)
+    position: int | None = field(default=None)
+    is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
+    disable_amount: bool | None = field(
         default=None, metadata=field_options(alias="disableAmount")
     )
-    quantity: Optional[float] = field(default=None)
-    label_id: Optional[str] = field(
-        default=None, metadata=field_options(alias="labelId")
-    )
-    food_id: Optional[str] = field(default=None, metadata=field_options(alias="foodId"))
-    unit_id: Optional[str] = field(default=None, metadata=field_options(alias="unitId"))
+    quantity: float | None = field(default=None)
+    label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
+    food_id: str | None = field(default=None, metadata=field_options(alias="foodId"))
+    unit_id: str | None = field(default=None, metadata=field_options(alias="unitId"))
 
     class Config(BaseConfig):  # pylint: disable=too-few-public-methods
         """Mashumaro Config."""
