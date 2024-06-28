@@ -152,7 +152,7 @@ class ShoppingItem(DataClassORJSONMixin, DataClassDictMixin):
     food_id: Optional[str] = field(default=None, metadata=field_options(alias="foodId"))
     unit_id: Optional[str] = field(default=None, metadata=field_options(alias="unitId"))
 
-    class Config(BaseConfig):
+    class Config(BaseConfig): # pylint: disable=too-few-public-methods
         """Mashumaro Config."""
 
         serialize_by_alias = True
