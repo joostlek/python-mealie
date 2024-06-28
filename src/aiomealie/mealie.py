@@ -16,6 +16,7 @@ from aiomealie.exceptions import (
     MealieConnectionError,
     MealieError,
     MealieAuthenticationError,
+    MealieValidationError,
 )
 from aiomealie.models import (
     GroupSummary,
@@ -24,6 +25,7 @@ from aiomealie.models import (
     OrderDirection,
     RecipesResponse,
     ShoppingListsResponse,
+    ShoppingItem,
     ShoppingItemsOrderBy,
     ShoppingItemsResponse,
     StartupInfo,
@@ -74,11 +76,9 @@ class MealieClient:
             "json": data,
         }
 
-        not_none_kwargs = {k: v for k, v in kwargs.items() if v is not None}
-
         try:
             async with asyncio.timeout(self.request_timeout):
-                response = await self.session.request(method, url, **not_none_kwargs)
+                response = await self.session.request(method, url, **kwargs)
         except asyncio.TimeoutError as exception:
             msg = "Timeout occurred while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
@@ -90,7 +90,7 @@ class MealieClient:
         if response.status == 422:
             text = await response.text()
             msg = "Mealie validation error"
-            raise MealieError(
+            raise MealieValidationError(
                 msg,
                 {"response": text},
             )
@@ -198,16 +198,18 @@ class MealieClient:
 
     async def add_shopping_item(
         self,
-        item: dict[str, Any],
+        item: ShoppingItem,
     ) -> None:
         """Add a shopping item."""
 
-        await self._post("api/groups/shopping/items", data=item)
+        await self._post("api/groups/shopping/items", data=item.to_dict(omit_none=True))
 
-    async def update_shopping_item(self, item_id: str, item: dict[str, Any]) -> None:
+    async def update_shopping_item(self, item_id: str, item: ShoppingItem) -> None:
         """Update a shopping item."""
 
-        await self._put(f"api/groups/shopping/items/{item_id}", data=item)
+        await self._put(
+            f"api/groups/shopping/items/{item_id}", data=item.to_dict(omit_none=True)
+        )
 
     async def delete_shopping_item(self, item_id: str) -> None:
         """Delete shopping item."""

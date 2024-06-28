@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 
+from typing import Optional
+
 from dataclasses import dataclass, field
 from datetime import date
 from enum import StrEnum
 
-from mashumaro import field_options
+from mashumaro import DataClassDictMixin, field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
+from mashumaro.config import BaseConfig
 
 
 class OrderDirection(StrEnum):
@@ -125,21 +128,35 @@ class ShoppingListsResponse(DataClassORJSONMixin):
 
 
 @dataclass
-class ShoppingItem(DataClassORJSONMixin):
+class ShoppingItem(DataClassORJSONMixin, DataClassDictMixin):
     """ShoppingItem model."""
 
-    item_id: str = field(metadata=field_options(alias="id"))
-    list_id: str = field(metadata=field_options(alias="shoppingListId"))
-    note: str
-    display: str
-    checked: bool
-    position: int
-    is_food: bool = field(metadata=field_options(alias="isFood"))
-    disable_amount: bool = field(metadata=field_options(alias="disableAmount"))
-    quantity: float
-    label_id: str = field(metadata=field_options(alias="labelId"))
-    food_id: str = field(metadata=field_options(alias="foodId"))
-    unit_id: str = field(metadata=field_options(alias="unitId"))
+    item_id: Optional[str] = field(default=None, metadata=field_options(alias="id"))
+    list_id: Optional[str] = field(
+        default=None, metadata=field_options(alias="shoppingListId")
+    )
+    note: Optional[str] = field(default=None)
+    display: Optional[str] = field(default=None)
+    checked: Optional[bool] = field(default=None)
+    position: Optional[int] = field(default=None)
+    is_food: Optional[bool] = field(
+        default=None, metadata=field_options(alias="isFood")
+    )
+    disable_amount: Optional[bool] = field(
+        default=None, metadata=field_options(alias="disableAmount")
+    )
+    quantity: Optional[float] = field(default=None)
+    label_id: Optional[str] = field(
+        default=None, metadata=field_options(alias="labelId")
+    )
+    food_id: Optional[str] = field(default=None, metadata=field_options(alias="foodId"))
+    unit_id: Optional[str] = field(default=None, metadata=field_options(alias="unitId"))
+
+    class Config(BaseConfig):
+        """Mashumaro Config."""
+
+        serialize_by_alias = True
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
 
 
 @dataclass

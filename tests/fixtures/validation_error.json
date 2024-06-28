@@ -1,0 +1,18 @@
+{
+    "detail": [
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "shoppingListId"
+            ],
+            "msg": "Field required",
+            "input": {
+                "note": "Test 422",
+                "isFood": false,
+                "checked": false,
+                "position": "4"
+            }
+        }
+    ]
+}
