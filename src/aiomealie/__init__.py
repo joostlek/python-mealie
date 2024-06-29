@@ -4,6 +4,7 @@ from aiomealie.exceptions import (
     MealieConnectionError,
     MealieError,
     MealieAuthenticationError,
+    MealieValidationError,
 )
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
@@ -17,12 +18,14 @@ from aiomealie.models import (
     MealplanEntryType,
     ShoppingListsResponse,
     ShoppingItemsResponse,
+    UserInfo,
 )
 
 __all__ = [
     "MealieConnectionError",
     "MealieError",
     "MealieAuthenticationError",
+    "MealieValidationError",
     "MealieClient",
     "StartupInfo",
     "GroupSummary",
@@ -34,4 +37,5 @@ __all__ = [
     "MealplanEntryType",
     "ShoppingListsResponse",
     "ShoppingItemsResponse",
+    "UserInfo",
 ]

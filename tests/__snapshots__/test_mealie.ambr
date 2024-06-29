@@ -1102,3 +1102,11 @@
     'light_warning': '#FF6D00',
   })
 # ---
+# name: test_user_info
+  dict({
+    'email': 'changeme@example.com',
+    'full_name': 'Change Me',
+    'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
+    'username': 'admin',
+  })
+# ---
