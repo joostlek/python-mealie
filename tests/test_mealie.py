@@ -17,6 +17,7 @@ from aiomealie.exceptions import (
     MealieConnectionError,
     MealieValidationError,
     MealieError,
+    MealieNotFoundError,
 )
 from aiomealie.mealie import MealieClient
 from aiomealie.models import MutateShoppingItem
@@ -116,6 +117,21 @@ async def test_validation_error(
         await mealie_client.update_shopping_item(item_id, item)
 
 
+async def test_not_found_error(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test not found error from mealie."""
+    responses.get(
+        f"{MEALIE_URL}/api/recipes/original-sacher-torte-2",
+        status=404,
+        body=load_fixture("not_found_error.json"),
+    )
+
+    with pytest.raises(MealieNotFoundError):
+        await mealie_client.get_recipe("original-sacher-torte-2")
+
+
 async def test_timeout(
     responses: aioresponses,
 ) -> None:
@@ -192,6 +208,20 @@ async def test_recipes(
         body=load_fixture("recipes.json"),
     )
     assert await mealie_client.get_recipes() == snapshot
+
+
+async def test_retrieving_recipe(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving recipe."""
+    responses.get(
+        f"{MEALIE_URL}/api/recipes/original-sacher-torte-2",
+        status=200,
+        body=load_fixture("recipe.json"),
+    )
+    assert await mealie_client.get_recipe("original-sacher-torte-2") == snapshot
 
 
 async def test_mealplan_today(

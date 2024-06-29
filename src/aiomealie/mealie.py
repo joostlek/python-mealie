@@ -17,6 +17,7 @@ from aiomealie.exceptions import (
     MealieError,
     MealieAuthenticationError,
     MealieValidationError,
+    MealieNotFoundError,
 )
 from aiomealie.models import (
     GroupSummary,
@@ -31,6 +32,7 @@ from aiomealie.models import (
     StartupInfo,
     Theme,
     UserInfo,
+    Recipe,
 )
 
 if TYPE_CHECKING:
@@ -92,6 +94,14 @@ class MealieClient:
             text = await response.text()
             msg = "Mealie validation error"
             raise MealieValidationError(
+                msg,
+                {"response": text},
+            )
+
+        if response.status == 404:
+            text = await response.text()
+            msg = "Object not found in Mealie"
+            raise MealieNotFoundError(
                 msg,
                 {"response": text},
             )
@@ -163,6 +173,11 @@ class MealieClient:
         """Get recipes."""
         response = await self._get("api/recipes")
         return RecipesResponse.from_json(response)
+
+    async def get_recipe(self, recipe_id_or_slug: str) -> Recipe:
+        """Get recipe."""
+        response = await self._get(f"api/recipes/{recipe_id_or_slug}")
+        return Recipe.from_json(response)
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""
