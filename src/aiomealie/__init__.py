@@ -11,7 +11,7 @@ from aiomealie.models import (
     StartupInfo,
     GroupSummary,
     Theme,
-    Recipe,
+    BaseRecipe,
     RecipesResponse,
     Mealplan,
     MealplanResponse,
@@ -19,6 +19,10 @@ from aiomealie.models import (
     ShoppingListsResponse,
     ShoppingItemsResponse,
     UserInfo,
+    Recipe,
+    Instruction,
+    Ingredient,
+    Tag,
 )
 
 __all__ = [
@@ -30,7 +34,11 @@ __all__ = [
     "StartupInfo",
     "GroupSummary",
     "Theme",
+    "BaseRecipe",
     "Recipe",
+    "Instruction",
+    "Ingredient",
+    "Tag",
     "RecipesResponse",
     "Mealplan",
     "MealplanResponse",

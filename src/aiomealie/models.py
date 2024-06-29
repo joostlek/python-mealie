@@ -13,6 +13,19 @@ from mashumaro.types import SerializationStrategy
 from mashumaro.config import BaseConfig
 
 
+class OptionalStringSerializationStrategy(SerializationStrategy):
+    """Serialization strategy for optional strings."""
+
+    def serialize(self, value: str | None) -> str | None:
+        """Serialize optional string."""
+        return value
+
+    def deserialize(self, value: str) -> str | None:
+        """Deserialize optional string."""
+        val = value.strip()
+        return val if val else None
+
+
 class OrderDirection(StrEnum):
     """OrderDirection type."""
 
@@ -73,7 +86,43 @@ class Theme(DataClassORJSONMixin):
 
 
 @dataclass
-class Recipe(DataClassORJSONMixin):
+class Tag(DataClassORJSONMixin):
+    """Tag model."""
+
+    tag_id: str = field(metadata=field_options(alias="id"))
+    name: str
+    slug: str
+
+
+@dataclass
+class Ingredient(DataClassORJSONMixin):
+    """Ingredient model."""
+
+    quantity: float
+    note: str
+    unit: str | None
+    is_food: bool = field(metadata=field_options(alias="isFood"))
+    reference_id: str = field(metadata=field_options(alias="referenceId"))
+
+
+@dataclass
+class Instruction(DataClassORJSONMixin):
+    """Instruction model."""
+
+    instruction_id: str = field(metadata=field_options(alias="id"))
+    title: str | None = field(
+        metadata=field_options(
+            serialization_strategy=OptionalStringSerializationStrategy()
+        )
+    )
+    text: str
+    ingredient_references: list[str] = field(
+        metadata=field_options(alias="ingredientReferences")
+    )
+
+
+@dataclass
+class BaseRecipe(DataClassORJSONMixin):
     """Recipe model."""
 
     recipe_id: str = field(metadata=field_options(alias="id"))
@@ -88,23 +137,24 @@ class Recipe(DataClassORJSONMixin):
 
 
 @dataclass
+class Recipe(BaseRecipe):
+    """Recipe model."""
+
+    tags: list[Tag]
+    date_added: date = field(metadata=field_options(alias="dateAdded"))
+    ingredients: list[Ingredient] = field(
+        metadata=field_options(alias="recipeIngredient")
+    )
+    instructions: list[Instruction] = field(
+        metadata=field_options(alias="recipeInstructions")
+    )
+
+
+@dataclass
 class RecipesResponse(DataClassORJSONMixin):
     """RecipesResponse model."""
 
-    items: list[Recipe]
-
-
-class OptionalStringSerializationStrategy(SerializationStrategy):
-    """Serialization strategy for optional strings."""
-
-    def serialize(self, value: str | None) -> str | None:
-        """Serialize optional string."""
-        return value
-
-    def deserialize(self, value: str) -> str | None:
-        """Deserialize optional string."""
-        val = value.strip()
-        return val if val else None
+    items: list[BaseRecipe]
 
 
 class MealplanEntryType(StrEnum):
@@ -135,7 +185,7 @@ class Mealplan(DataClassORJSONMixin):
             alias="text", serialization_strategy=OptionalStringSerializationStrategy()
         )
     )
-    recipe: Recipe | None
+    recipe: BaseRecipe | None
 
 
 @dataclass
