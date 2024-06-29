@@ -19,6 +19,7 @@ from aiomealie.exceptions import (
     MealieAuthenticationError,
     MealieValidationError,
     MealieNotFoundError,
+    MealieBadRequestError,
 )
 from aiomealie.models import (
     GroupSummary,
@@ -90,7 +91,7 @@ class MealieClient:
         if response.status == 400:
             text = await response.text()
             msg = "Bad request to Mealie"
-            raise MealieError(
+            raise MealieBadRequestError(
                 msg,
                 {"response": text},
             )

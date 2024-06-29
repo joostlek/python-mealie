@@ -5,6 +5,7 @@ from aiomealie.exceptions import (
     MealieError,
     MealieAuthenticationError,
     MealieValidationError,
+    MealieBadRequestError,
 )
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
@@ -31,6 +32,7 @@ __all__ = [
     "MealieConnectionError",
     "MealieError",
     "MealieAuthenticationError",
+    "MealieBadRequestError",
     "MealieValidationError",
     "MealieClient",
     "StartupInfo",

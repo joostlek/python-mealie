@@ -18,6 +18,7 @@ from aiomealie.exceptions import (
     MealieValidationError,
     MealieError,
     MealieNotFoundError,
+    MealieBadRequestError,
 )
 from aiomealie.mealie import MealieClient
 from aiomealie.models import MutateShoppingItem
@@ -130,6 +131,23 @@ async def test_not_found_error(
 
     with pytest.raises(MealieNotFoundError):
         await mealie_client.get_recipe("original-sacher-torte-2")
+
+
+async def test_bad_request_error(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test not found error from mealie."""
+    responses.post(
+        f"{MEALIE_URL}/api/recipes/create-url",
+        status=400,
+        body=load_fixture("bad_request_error.json"),
+    )
+
+    with pytest.raises(MealieBadRequestError):
+        await mealie_client.import_recipe(
+            "https://www.sacher.com/en/original-sacher-torte/recipe/"
+        )
 
 
 async def test_timeout(
