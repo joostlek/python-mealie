@@ -7,13 +7,19 @@ from datetime import date
 from typing import TYPE_CHECKING, Any
 
 import aiohttp
-from aiohttp.hdrs import METH_GET
+from aiohttp.hdrs import METH_GET, METH_POST, METH_PUT, METH_DELETE
 from aioresponses import CallbackResult, aioresponses
 import pytest
 from yarl import URL
 
-from aiomealie.exceptions import MealieConnectionError, MealieError
+from aiomealie.exceptions import (
+    MealieAuthenticationError,
+    MealieConnectionError,
+    MealieValidationError,
+    MealieError,
+)
 from aiomealie.mealie import MealieClient
+from aiomealie.models import MutateShoppingItem
 from tests import load_fixture
 
 from .const import HEADERS, MEALIE_URL
@@ -49,12 +55,12 @@ async def test_creating_own_session(
         status=200,
         body=load_fixture("startup_info.json"),
     )
-    analytics = MealieClient(api_host="https://demo.mealie.io")
-    await analytics.get_startup_info()
-    assert analytics.session is not None
-    assert not analytics.session.closed
-    await analytics.close()
-    assert analytics.session.closed
+    mealie_client = MealieClient(api_host="https://demo.mealie.io", token="XXX")
+    await mealie_client.get_startup_info()
+    assert mealie_client.session is not None
+    assert not mealie_client.session.closed
+    await mealie_client.close()
+    assert mealie_client.session.closed
 
 
 async def test_unexpected_server_response(
@@ -70,6 +76,44 @@ async def test_unexpected_server_response(
     )
     with pytest.raises(MealieError):
         assert await mealie_client.get_startup_info()
+
+
+async def test_authentication_error(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test authentication error from mealie."""
+
+    responses.get(
+        f"{MEALIE_URL}/api/groups/self",
+        status=401,
+        body=load_fixture("authentication_error.json"),
+    )
+
+    with pytest.raises(MealieAuthenticationError):
+        assert await mealie_client.get_groups_self()
+
+
+async def test_validation_error(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test validation error from mealie."""
+
+    item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
+
+    item = MutateShoppingItem(
+        list_id="27edbaab-2ec6-441f-8490-0283ea77585f", note="Bread", position=0
+    )
+
+    responses.put(
+        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        status=422,
+        body=load_fixture("validation_error.json"),
+    )
+
+    with pytest.raises(MealieValidationError):
+        await mealie_client.update_shopping_item(item_id, item)
 
 
 async def test_timeout(
@@ -170,8 +214,14 @@ async def test_mealplans(
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test retrieving mealplan."""
+
+    params: dict[str, Any] = {
+        "perPage": -1,
+    }
+
+    url = URL(MEALIE_URL).joinpath("api/groups/mealplans").with_query(params)
     responses.get(
-        f"{MEALIE_URL}/api/groups/mealplans",
+        url,
         status=200,
         body=load_fixture("mealplans.json"),
     )
@@ -181,7 +231,7 @@ async def test_mealplans(
 @pytest.mark.parametrize(
     ("kwargs", "params"),
     [
-        ({}, {}),
+        ({}, {"perPage": -1}),
         (
             {
                 "start_date": date(2021, 1, 1),
@@ -190,6 +240,7 @@ async def test_mealplans(
             {
                 "start_date": "2021-01-01",
                 "end_date": "2021-01-02",
+                "perPage": -1,
             },
         ),
     ],
@@ -201,6 +252,7 @@ async def test_mealplans_parameters(
     params: dict[str, Any],
 ) -> None:
     """Test retrieving mealplans."""
+
     url = URL(MEALIE_URL).joinpath("api/groups/mealplans").with_query(params)
     responses.get(
         url,
@@ -213,6 +265,7 @@ async def test_mealplans_parameters(
         METH_GET,
         headers=HEADERS,
         params=params,
+        json=None,
     )
 
 
@@ -222,8 +275,14 @@ async def test_shopping_lists(
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test retrieving shopping lists."""
+
+    params: dict[str, Any] = {
+        "perPage": -1,
+    }
+
+    url = URL(MEALIE_URL).joinpath("api/groups/shopping/lists").with_query(params)
     responses.get(
-        f"{MEALIE_URL}/api/groups/shopping/lists",
+        url,
         status=200,
         body=load_fixture("shopping_lists.json"),
     )
@@ -242,7 +301,7 @@ async def test_shopping_items(
         "queryFilter": f"shoppingListId={shopping_list_id}",
         "orderBy": "position",
         "orderDirection": "asc",
-        "perPage": 9999,
+        "perPage": -1,
     }
 
     url = URL(MEALIE_URL).joinpath("api/groups/shopping/items").with_query(params)
@@ -261,4 +320,85 @@ async def test_shopping_items(
         METH_GET,
         headers=HEADERS,
         params=params,
+        json=None,
+    )
+
+
+async def test_add_shopping_item(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test adding shopping item."""
+
+    item = MutateShoppingItem(
+        list_id="27edbaab-2ec6-441f-8490-0283ea77585f", note="Bread", position=0
+    )
+
+    responses.post(
+        f"{MEALIE_URL}/api/groups/shopping/items",
+        status=201,
+    )
+    await mealie_client.add_shopping_item(item=item)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/shopping/items",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={
+            "shoppingListId": "27edbaab-2ec6-441f-8490-0283ea77585f",
+            "note": "Bread",
+            "position": 0,
+        },
+    )
+
+
+async def test_update_shopping_item(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test adding shopping item."""
+
+    item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
+
+    item = MutateShoppingItem(
+        list_id="27edbaab-2ec6-441f-8490-0283ea77585f", note="Bread", position=0
+    )
+
+    responses.put(
+        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        status=201,
+    )
+    await mealie_client.update_shopping_item(item_id=item_id, item=item)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        METH_PUT,
+        headers=HEADERS,
+        params=None,
+        json={
+            "shoppingListId": "27edbaab-2ec6-441f-8490-0283ea77585f",
+            "note": "Bread",
+            "position": 0,
+        },
+    )
+
+
+async def test_delete_shopping_item(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test adding shopping item."""
+
+    item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
+
+    responses.delete(
+        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        status=201,
+    )
+    await mealie_client.delete_shopping_item(item_id=item_id)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        METH_DELETE,
+        headers=HEADERS,
+        params=None,
+        json=None,
     )

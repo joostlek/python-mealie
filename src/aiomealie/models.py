@@ -2,13 +2,15 @@
 
 from __future__ import annotations
 
+
 from dataclasses import dataclass, field
 from datetime import date
 from enum import StrEnum
 
-from mashumaro import field_options
+from mashumaro import DataClassDictMixin, field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
 from mashumaro.types import SerializationStrategy
+from mashumaro.config import BaseConfig
 
 
 class OrderDirection(StrEnum):
@@ -164,6 +166,34 @@ class ShoppingItem(DataClassORJSONMixin):
     label_id: str = field(metadata=field_options(alias="labelId"))
     food_id: str = field(metadata=field_options(alias="foodId"))
     unit_id: str = field(metadata=field_options(alias="unitId"))
+
+
+@dataclass
+class MutateShoppingItem(DataClassDictMixin):
+    """MutateShoppingItem model."""
+
+    item_id: str | None = field(default=None, metadata=field_options(alias="id"))
+    list_id: str | None = field(
+        default=None, metadata=field_options(alias="shoppingListId")
+    )
+    note: str | None = None
+    display: str | None = None
+    checked: bool | None = None
+    position: int | None = None
+    is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
+    disable_amount: bool | None = field(
+        default=None, metadata=field_options(alias="disableAmount")
+    )
+    quantity: float | None = None
+    label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
+    food_id: str | None = field(default=None, metadata=field_options(alias="foodId"))
+    unit_id: str | None = field(default=None, metadata=field_options(alias="unitId"))
+
+    class Config(BaseConfig):  # pylint: disable=too-few-public-methods
+        """Mashumaro Config."""
+
+        serialize_by_alias = True
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
 
 
 @dataclass

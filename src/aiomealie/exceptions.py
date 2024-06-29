@@ -11,3 +11,7 @@ class MealieConnectionError(MealieError):
 
 class MealieAuthenticationError(MealieError):
     """Mealie authentication exception."""
+
+
+class MealieValidationError(MealieError):
+    """Mealie validation exception."""
