@@ -228,6 +228,21 @@ async def test_mealplans(
     assert await mealie_client.get_mealplans() == snapshot
 
 
+async def test_user_info(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving user info."""
+
+    responses.get(
+        f"{MEALIE_URL}/api/users/self",
+        status=200,
+        body=load_fixture("users_self.json"),
+    )
+    assert await mealie_client.get_user_info() == snapshot
+
+
 @pytest.mark.parametrize(
     ("kwargs", "params"),
     [

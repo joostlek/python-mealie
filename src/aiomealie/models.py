@@ -43,6 +43,16 @@ class GroupSummary(DataClassORJSONMixin):
 
 
 @dataclass
+class UserInfo(DataClassORJSONMixin):
+    """UserInfo model."""
+
+    user_id: str = field(metadata=field_options(alias="id"))
+    username: str
+    email: str
+    full_name: str = field(metadata=field_options(alias="fullName"))
+
+
+@dataclass
 class Theme(DataClassORJSONMixin):
     """Theme model."""
 

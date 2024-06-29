@@ -30,6 +30,7 @@ from aiomealie.models import (
     ShoppingItemsResponse,
     StartupInfo,
     Theme,
+    UserInfo,
 )
 
 if TYPE_CHECKING:
@@ -142,6 +143,11 @@ class MealieClient:
         """Get startup info."""
         response = await self._get("api/app/about/startup-info")
         return StartupInfo.from_json(response)
+
+    async def get_user_info(self) -> UserInfo:
+        """Get startup info."""
+        response = await self._get("api/users/self")
+        return UserInfo.from_json(response)
 
     async def get_groups_self(self) -> GroupSummary:
         """Get groups self."""
