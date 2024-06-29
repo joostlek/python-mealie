@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 from dataclasses import dataclass
 from importlib import metadata
 from typing import TYPE_CHECKING, Any, Self
@@ -85,6 +86,14 @@ class MealieClient:
         except asyncio.TimeoutError as exception:
             msg = "Timeout occurred while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
+
+        if response.status == 400:
+            text = await response.text()
+            msg = "Bad request to Mealie"
+            raise MealieError(
+                msg,
+                {"response": text},
+            )
 
         if response.status == 401:
             msg = "Unauthorized access to Mealie"
@@ -178,6 +187,12 @@ class MealieClient:
         """Get recipe."""
         response = await self._get(f"api/recipes/{recipe_id_or_slug}")
         return Recipe.from_json(response)
+
+    async def import_recipe(self, url: str, include_tags: bool = False) -> Recipe:
+        """Import a recipe."""
+        data = {"url": url, "include_tags": include_tags}
+        response = await self._post("api/recipes/create-url", data)
+        return await self.get_recipe(json.loads(response))
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""

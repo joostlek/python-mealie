@@ -224,6 +224,47 @@ async def test_retrieving_recipe(
     assert await mealie_client.get_recipe("original-sacher-torte-2") == snapshot
 
 
+async def test_importing_recipe(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test importing recipe."""
+    responses.post(
+        f"{MEALIE_URL}/api/recipes/create-url",
+        status=201,
+        body=load_fixture("scrape_recipe.json"),
+    )
+    responses.get(
+        f"{MEALIE_URL}/api/recipes/original-sacher-torte-2",
+        status=200,
+        body=load_fixture("recipe.json"),
+    )
+    assert (
+        await mealie_client.import_recipe(
+            "https://www.sacher.com/en/original-sacher-torte/recipe/"
+        )
+        == snapshot
+    )
+    responses.assert_called_with(
+        f"{MEALIE_URL}/api/recipes/create-url",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={
+            "url": "https://www.sacher.com/en/original-sacher-torte/recipe/",
+            "include_tags": False,
+        },
+    )
+    responses.assert_called_with(
+        f"{MEALIE_URL}/api/recipes/original-sacher-torte-2",
+        METH_GET,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
 async def test_mealplan_today(
     responses: aioresponses,
     mealie_client: MealieClient,
