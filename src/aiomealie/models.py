@@ -9,6 +9,7 @@ from enum import StrEnum
 
 from mashumaro import DataClassDictMixin, field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
+from mashumaro.types import SerializationStrategy
 from mashumaro.config import BaseConfig
 
 
@@ -83,6 +84,19 @@ class RecipesResponse(DataClassORJSONMixin):
     items: list[Recipe]
 
 
+class OptionalStringSerializationStrategy(SerializationStrategy):
+    """Serialization strategy for optional strings."""
+
+    def serialize(self, value: str | None) -> str | None:
+        """Serialize optional string."""
+        return value
+
+    def deserialize(self, value: str) -> str | None:
+        """Deserialize optional string."""
+        val = value.strip()
+        return val if val else None
+
+
 class MealplanEntryType(StrEnum):
     """MealplanEntryType model."""
 
@@ -101,6 +115,16 @@ class Mealplan(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     entry_type: MealplanEntryType = field(metadata=field_options(alias="entryType"))
     mealplan_date: date = field(metadata=field_options(alias="date"))
+    title: str | None = field(
+        metadata=field_options(
+            serialization_strategy=OptionalStringSerializationStrategy()
+        )
+    )
+    description: str | None = field(
+        metadata=field_options(
+            alias="text", serialization_strategy=OptionalStringSerializationStrategy()
+        )
+    )
     recipe: Recipe | None
 
 
