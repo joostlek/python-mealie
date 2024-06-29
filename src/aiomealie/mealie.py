@@ -170,17 +170,20 @@ class MealieClient:
         end_date: date | None = None,
     ) -> MealplanResponse:
         """Get mealplans."""
-        params = {}
+        params: dict[str, Any] = {}
         if start_date:
             params["start_date"] = start_date.isoformat()
         if end_date:
             params["end_date"] = end_date.isoformat()
+        params["perPage"] = -1
         response = await self._get("api/groups/mealplans", params)
         return MealplanResponse.from_json(response)
 
     async def get_shopping_lists(self) -> ShoppingListsResponse:
         """Get shopping lists."""
-        response = await self._get("api/groups/shopping/lists")
+        params: dict[str, Any] = {}
+        params["perPage"] = -1
+        response = await self._get("api/groups/shopping/lists", params)
         return ShoppingListsResponse.from_json(response)
 
     async def get_shopping_items(
@@ -192,7 +195,7 @@ class MealieClient:
         params["queryFilter"] = f"shoppingListId={shopping_list_id}"
         params["orderBy"] = ShoppingItemsOrderBy.POSITION
         params["orderDirection"] = OrderDirection.ASCENDING
-        params["perPage"] = 9999
+        params["perPage"] = -1
         response = await self._get("api/groups/shopping/items", params)
         return ShoppingItemsResponse.from_json(response)
 

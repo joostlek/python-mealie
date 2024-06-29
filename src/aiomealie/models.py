@@ -152,15 +152,15 @@ class MutateShoppingItem(DataClassDictMixin):
     list_id: str | None = field(
         default=None, metadata=field_options(alias="shoppingListId")
     )
-    note: str | None = field(default=None)
-    display: str | None = field(default=None)
-    checked: bool | None = field(default=None)
-    position: int | None = field(default=None)
+    note: str | None = None
+    display: str | None = None
+    checked: bool | None = None
+    position: int | None = None
     is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
     disable_amount: bool | None = field(
         default=None, metadata=field_options(alias="disableAmount")
     )
-    quantity: float | None = field(default=None)
+    quantity: float | None = None
     label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
     food_id: str | None = field(default=None, metadata=field_options(alias="foodId"))
     unit_id: str | None = field(default=None, metadata=field_options(alias="unitId"))

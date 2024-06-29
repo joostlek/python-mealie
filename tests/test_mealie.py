@@ -214,8 +214,14 @@ async def test_mealplans(
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test retrieving mealplan."""
+
+    params: dict[str, Any] = {
+        "perPage": -1,
+    }
+
+    url = URL(MEALIE_URL).joinpath("api/groups/mealplans").with_query(params)
     responses.get(
-        f"{MEALIE_URL}/api/groups/mealplans",
+        url,
         status=200,
         body=load_fixture("mealplans.json"),
     )
@@ -225,7 +231,7 @@ async def test_mealplans(
 @pytest.mark.parametrize(
     ("kwargs", "params"),
     [
-        ({}, {}),
+        ({}, {"perPage": -1}),
         (
             {
                 "start_date": date(2021, 1, 1),
@@ -234,6 +240,7 @@ async def test_mealplans(
             {
                 "start_date": "2021-01-01",
                 "end_date": "2021-01-02",
+                "perPage": -1,
             },
         ),
     ],
@@ -245,6 +252,7 @@ async def test_mealplans_parameters(
     params: dict[str, Any],
 ) -> None:
     """Test retrieving mealplans."""
+
     url = URL(MEALIE_URL).joinpath("api/groups/mealplans").with_query(params)
     responses.get(
         url,
@@ -267,8 +275,14 @@ async def test_shopping_lists(
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test retrieving shopping lists."""
+
+    params: dict[str, Any] = {
+        "perPage": -1,
+    }
+
+    url = URL(MEALIE_URL).joinpath("api/groups/shopping/lists").with_query(params)
     responses.get(
-        f"{MEALIE_URL}/api/groups/shopping/lists",
+        url,
         status=200,
         body=load_fixture("shopping_lists.json"),
     )
@@ -287,7 +301,7 @@ async def test_shopping_items(
         "queryFilter": f"shoppingListId={shopping_list_id}",
         "orderBy": "position",
         "orderDirection": "asc",
-        "perPage": 9999,
+        "perPage": -1,
     }
 
     url = URL(MEALIE_URL).joinpath("api/groups/shopping/items").with_query(params)
