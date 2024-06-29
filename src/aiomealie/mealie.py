@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING, Any, Self
 
 from aiohttp import ClientSession
 from aiohttp.hdrs import METH_GET, METH_POST, METH_PUT, METH_DELETE
-import orjson
+from mashumaro.codecs.orjson import ORJSONDecoder
 from yarl import URL
 
 from aiomealie.exceptions import (
@@ -166,9 +166,8 @@ class MealieClient:
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""
-        raw_response = await self._get("api/groups/mealplans/today")
-        response = orjson.loads(raw_response)  # pylint: disable=maybe-no-member
-        return [Mealplan.from_dict(item) for item in response]
+        response = await self._get("api/groups/mealplans/today")
+        return ORJSONDecoder(list[Mealplan]).decode(response)
 
     async def get_mealplans(
         self,
