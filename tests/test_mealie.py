@@ -344,7 +344,11 @@ async def test_add_shopping_item(
         METH_POST,
         headers=HEADERS,
         params=None,
-        json=item.to_dict(omit_none=True),
+        json={
+            "shoppingListId": "27edbaab-2ec6-441f-8490-0283ea77585f",
+            "note": "Bread",
+            "position": 0,
+        },
     )
 
 
