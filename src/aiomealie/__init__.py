@@ -18,7 +18,7 @@ from aiomealie.models import (
     MealplanEntryType,
     ShoppingList,
     ShoppingListsResponse,
-    ShoppingItem,    
+    ShoppingItem,
     ShoppingItemsResponse,
     UserInfo,
     Recipe,
