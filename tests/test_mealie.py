@@ -460,7 +460,7 @@ async def test_update_shopping_item(
     responses: aioresponses,
     mealie_client: MealieClient,
 ) -> None:
-    """Test adding shopping item."""
+    """Test updating shopping item."""
 
     item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
 
@@ -490,7 +490,7 @@ async def test_delete_shopping_item(
     responses: aioresponses,
     mealie_client: MealieClient,
 ) -> None:
-    """Test adding shopping item."""
+    """Test deleting shopping item."""
 
     item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
 
