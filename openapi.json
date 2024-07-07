@@ -2,8 +2,8 @@
     "openapi": "3.1.0",
     "info": {
         "title": "Mealie",
-        "description": "\nMealie is a web application for managing your recipes, meal plans, and shopping lists. This is the Restful\nAPI interactive documentation that can be used to explore the API. If you're justing getting started with\nthe API and want to get started quickly, you can use the\n[API Usage | Mealie Docs](https://nightly.mealie.io/documentation/getting-started/api-usage/)\nas a reference for how to get started.\n\n\nAs of this release <b>develop</b>, Mealie is still in rapid development and therefore some of these APIs may\nchange from version to version.\n\n\nIf you have any questions or comments about mealie, please use the discord server to talk to the developers or other\ncommunity members. If you'd like to file an issue, please use the\n[GitHub Issue Tracker | Mealie](https://github.com/mealie-recipes/mealie/issues/new/choose)\n\n\n## Helpful Links\n- [Home Page](https://mealie.io)\n- [Documentation](https://nightly.mealie.io)\n- [Discord](https://discord.gg/QuStdQGSGK)\n- [Demo](https://demo.mealie.io)\n- [Beta](https://demo.mealie.io)\n",
-        "version": "develop"
+        "description": "\nMealie is a web application for managing your recipes, meal plans, and shopping lists. This is the Restful\nAPI interactive documentation that can be used to explore the API. If you're justing getting started with\nthe API and want to get started quickly, you can use the\n[API Usage | Mealie Docs](https://nightly.mealie.io/documentation/getting-started/api-usage/)\nas a reference for how to get started.\n\n\nAs of this release <b>nightly</b>, Mealie is still in rapid development and therefore some of these APIs may\nchange from version to version.\n\n\nIf you have any questions or comments about mealie, please use the discord server to talk to the developers or other\ncommunity members. If you'd like to file an issue, please use the\n[GitHub Issue Tracker | Mealie](https://github.com/mealie-recipes/mealie/issues/new/choose)\n\n\n## Helpful Links\n- [Home Page](https://mealie.io)\n- [Documentation](https://nightly.mealie.io)\n- [Discord](https://discord.gg/QuStdQGSGK)\n- [Demo](https://demo.mealie.io)\n- [Beta](https://demo.mealie.io)\n",
+        "version": "nightly"
     },
     "paths": {
         "/api/app/about": {
@@ -8426,7 +8426,7 @@
             "get": {
                 "tags": ["Recipe: Exports"],
                 "summary": "Get Recipe As Zip",
-                "description": "Get a Recipe and It's Original Image as a Zip File",
+                "description": "Get a Recipe and Its Original Image as a Zip File",
                 "operationId": "get_recipe_as_zip_api_recipes__slug__exports_zip_get",
                 "security": [
                     {
@@ -9795,7 +9795,7 @@
         },
         "/api/recipes/{slug}/image": {
             "post": {
-                "tags": ["Recipe: CRUD", "Recipe: Images and Assets"],
+                "tags": ["Recipe: Images and Assets", "Recipe: CRUD"],
                 "summary": "Scrape Image Url",
                 "operationId": "scrape_image_url_api_recipes__slug__image_post",
                 "security": [
@@ -9882,7 +9882,7 @@
                 }
             },
             "put": {
-                "tags": ["Recipe: CRUD", "Recipe: Images and Assets"],
+                "tags": ["Recipe: Images and Assets", "Recipe: CRUD"],
                 "summary": "Update Recipe Image",
                 "operationId": "update_recipe_image_api_recipes__slug__image_put",
                 "security": [
@@ -9973,7 +9973,7 @@
         },
         "/api/recipes/{slug}/assets": {
             "post": {
-                "tags": ["Recipe: CRUD", "Recipe: Images and Assets"],
+                "tags": ["Recipe: Images and Assets", "Recipe: CRUD"],
                 "summary": "Upload Recipe Asset",
                 "description": "Upload a file to store as a recipe asset",
                 "operationId": "upload_recipe_asset_api_recipes__slug__assets_post",
@@ -15638,7 +15638,7 @@
         },
         "/api/admin/groups": {
             "get": {
-                "tags": ["Admin: Manage Groups", "Admin: Groups"],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Get All",
                 "operationId": "get_all_api_admin_groups_get",
                 "security": [
@@ -15789,7 +15789,7 @@
                 }
             },
             "post": {
-                "tags": ["Admin: Manage Groups", "Admin: Groups"],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Create One",
                 "operationId": "create_one_api_admin_groups_post",
                 "security": [
@@ -15854,7 +15854,7 @@
         },
         "/api/admin/groups/{item_id}": {
             "get": {
-                "tags": ["Admin: Manage Groups", "Admin: Groups"],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Get One",
                 "operationId": "get_one_api_admin_groups__item_id__get",
                 "security": [
@@ -15917,7 +15917,7 @@
                 }
             },
             "put": {
-                "tags": ["Admin: Manage Groups", "Admin: Groups"],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Update One",
                 "operationId": "update_one_api_admin_groups__item_id__put",
                 "security": [
@@ -15990,7 +15990,7 @@
                 }
             },
             "delete": {
-                "tags": ["Admin: Manage Groups", "Admin: Groups"],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_admin_groups__item_id__delete",
                 "security": [
@@ -18887,6 +18887,103 @@
                     }
                 }
             }
+        },
+        "/g/{group_slug}/r/{recipe_slug}": {
+            "get": {
+                "summary": "Serve Recipe With Meta",
+                "operationId": "serve_recipe_with_meta_g__group_slug__r__recipe_slug__get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "group_slug",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Group Slug"
+                        }
+                    },
+                    {
+                        "name": "recipe_slug",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Recipe Slug"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/g/{group_slug}/shared/r/{token_id}": {
+            "get": {
+                "summary": "Serve Shared Recipe With Meta",
+                "operationId": "serve_shared_recipe_with_meta_g__group_slug__shared_r__token_id__get",
+                "parameters": [
+                    {
+                        "name": "group_slug",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Group Slug"
+                        }
+                    },
+                    {
+                        "name": "token_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Token Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "components": {
@@ -18931,6 +19028,10 @@
                     "oidcProviderName": {
                         "type": "string",
                         "title": "Oidcprovidername"
+                    },
+                    "enableOpenai": {
+                        "type": "boolean",
+                        "title": "Enableopenai"
                     },
                     "versionLatest": {
                         "type": "string",
@@ -18981,6 +19082,7 @@
                     "enableOidc",
                     "oidcRedirect",
                     "oidcProviderName",
+                    "enableOpenai",
                     "versionLatest",
                     "apiPort",
                     "apiDocs",
@@ -19052,6 +19154,10 @@
                     "oidcProviderName": {
                         "type": "string",
                         "title": "Oidcprovidername"
+                    },
+                    "enableOpenai": {
+                        "type": "boolean",
+                        "title": "Enableopenai"
                     }
                 },
                 "type": "object",
@@ -19062,7 +19168,8 @@
                     "allowSignup",
                     "enableOidc",
                     "oidcRedirect",
-                    "oidcProviderName"
+                    "oidcProviderName",
+                    "enableOpenai"
                 ],
                 "title": "AppInfo"
             },
@@ -19534,6 +19641,10 @@
                         "type": "boolean",
                         "title": "Oidcready"
                     },
+                    "enableOpenai": {
+                        "type": "boolean",
+                        "title": "Enableopenai"
+                    },
                     "baseUrlSet": {
                         "type": "boolean",
                         "title": "Baseurlset"
@@ -19548,6 +19659,7 @@
                     "emailReady",
                     "ldapReady",
                     "oidcReady",
+                    "enableOpenai",
                     "baseUrlSet",
                     "isUpToDate"
                 ],
@@ -19749,6 +19861,11 @@
                         "title": "Extras",
                         "default": {}
                     },
+                    "onHand": {
+                        "type": "boolean",
+                        "title": "Onhand",
+                        "default": false
+                    },
                     "labelId": {
                         "anyOf": [
                             {
@@ -19830,6 +19947,11 @@
                         ],
                         "title": "Extras",
                         "default": {}
+                    },
+                    "onHand": {
+                        "type": "boolean",
+                        "title": "Onhand",
+                        "default": false
                     },
                     "fraction": {
                         "type": "boolean",
@@ -21246,6 +21368,11 @@
                         "title": "Extras",
                         "default": {}
                     },
+                    "onHand": {
+                        "type": "boolean",
+                        "title": "Onhand",
+                        "default": false
+                    },
                     "labelId": {
                         "anyOf": [
                             {
@@ -21448,6 +21575,11 @@
                         ],
                         "title": "Extras",
                         "default": {}
+                    },
+                    "onHand": {
+                        "type": "boolean",
+                        "title": "Onhand",
+                        "default": false
                     },
                     "fraction": {
                         "type": "boolean",
@@ -24859,7 +24991,7 @@
                         "type": "string",
                         "format": "date-time",
                         "title": "Timestamp",
-                        "default": "2024-05-13T14:29:29.805564"
+                        "default": "2024-07-05T17:53:40.601018"
                     }
                 },
                 "type": "object",
@@ -24911,7 +25043,7 @@
                         "type": "string",
                         "format": "date-time",
                         "title": "Timestamp",
-                        "default": "2024-05-13T14:29:29.805564"
+                        "default": "2024-07-05T17:53:40.601018"
                     },
                     "id": {
                         "type": "string",
@@ -25197,7 +25329,7 @@
             },
             "RegisteredParser": {
                 "type": "string",
-                "enum": ["nlp", "brute"],
+                "enum": ["nlp", "brute", "openai"],
                 "title": "RegisteredParser"
             },
             "ReportCategory": {
@@ -25399,6 +25531,11 @@
                     "url": {
                         "type": "string",
                         "title": "Url"
+                    },
+                    "useOpenAI": {
+                        "type": "boolean",
+                        "title": "Useopenai",
+                        "default": false
                     }
                 },
                 "type": "object",
@@ -25651,6 +25788,18 @@
                         ],
                         "title": "Extras",
                         "default": {}
+                    },
+                    "id": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uuid4"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Id"
                     },
                     "recipeReferences": {
                         "items": {
@@ -26994,7 +27143,8 @@
                     "mealie_alpha",
                     "tandoor",
                     "plantoeat",
-                    "myrecipebox"
+                    "myrecipebox",
+                    "recipekeeper"
                 ],
                 "title": "SupportedMigrations"
             },
@@ -27424,7 +27574,7 @@
                     "admin": "false",
                     "email": "changeme@example.com",
                     "fullName": "Change Me",
-                    "group": "Home",
+                    "group": "home",
                     "username": "ChangeMe"
                 }
             },
@@ -27540,7 +27690,7 @@
                     "admin": "false",
                     "email": "changeme@example.com",
                     "fullName": "Change Me",
-                    "group": "Home",
+                    "group": "home",
                     "username": "ChangeMe"
                 }
             },
@@ -28015,7 +28165,7 @@
                     "admin": "false",
                     "email": "changeme@example.com",
                     "fullName": "Change Me",
-                    "group": "Home",
+                    "group": "home",
                     "username": "ChangeMe"
                 }
             }
