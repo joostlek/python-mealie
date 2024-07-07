@@ -9,6 +9,7 @@ from aiomealie.exceptions import (
 )
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
+    About,
     StartupInfo,
     GroupSummary,
     Theme,
@@ -30,6 +31,7 @@ from aiomealie.models import (
 )
 
 __all__ = [
+    "About",
     "MealieConnectionError",
     "MealieError",
     "MealieAuthenticationError",

@@ -172,6 +172,20 @@ async def test_timeout(
             assert await mealie_client.get_startup_info()
 
 
+async def test_about(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving about."""
+    responses.get(
+        f"{MEALIE_URL}/api/app/about",
+        status=200,
+        body=load_fixture("about.json"),
+    )
+    assert await mealie_client.get_about() == snapshot
+
+
 async def test_startup_info(
     responses: aioresponses,
     mealie_client: MealieClient,

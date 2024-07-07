@@ -1,4 +1,9 @@
 # serializer version: 1
+# name: test_about
+  dict({
+    'version': 'v1.10.2',
+  })
+# ---
 # name: test_groups_self
   dict({
     'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',

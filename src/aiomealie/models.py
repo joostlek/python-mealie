@@ -40,6 +40,13 @@ class ShoppingItemsOrderBy(StrEnum):
 
 
 @dataclass
+class About(DataClassORJSONMixin):
+    """About model."""
+
+    version: str
+
+
+@dataclass
 class StartupInfo(DataClassORJSONMixin):
     """StartupInfo model."""
 
