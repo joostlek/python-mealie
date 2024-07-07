@@ -22,6 +22,7 @@ from aiomealie.exceptions import (
     MealieBadRequestError,
 )
 from aiomealie.models import (
+    About,
     GroupSummary,
     Mealplan,
     MealplanResponse,
@@ -164,8 +165,13 @@ class MealieClient:
         response = await self._get("api/app/about/startup-info")
         return StartupInfo.from_json(response)
 
+    async def get_about(self) -> About:
+        """Get about info."""
+        response = await self._get("api/app/about")
+        return About.from_json(response)
+
     async def get_user_info(self) -> UserInfo:
-        """Get startup info."""
+        """Get user info."""
         response = await self._get("api/users/self")
         return UserInfo.from_json(response)
 
