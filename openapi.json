@@ -8,9 +8,7 @@
     "paths": {
         "/api/app/about": {
             "get": {
-                "tags": [
-                    "App: About"
-                ],
+                "tags": ["App: About"],
                 "summary": "Get App Info",
                 "description": "Get general application information",
                 "operationId": "get_app_info_api_app_about_get",
@@ -30,9 +28,7 @@
         },
         "/api/app/about/startup-info": {
             "get": {
-                "tags": [
-                    "App: About"
-                ],
+                "tags": ["App: About"],
                 "summary": "Get Startup Info",
                 "description": "returns helpful startup information",
                 "operationId": "get_startup_info_api_app_about_startup_info_get",
@@ -52,9 +48,7 @@
         },
         "/api/app/about/theme": {
             "get": {
-                "tags": [
-                    "App: About"
-                ],
+                "tags": ["App: About"],
                 "summary": "Get App Theme",
                 "description": "Get's the current theme settings",
                 "operationId": "get_app_theme_api_app_about_theme_get",
@@ -74,9 +68,7 @@
         },
         "/api/app/about/oidc": {
             "get": {
-                "tags": [
-                    "App: About"
-                ],
+                "tags": ["App: About"],
                 "summary": "Get Oidc Info",
                 "description": "Get's the current OIDC configuration needed for the frontend",
                 "operationId": "get_oidc_info_api_app_about_oidc_get",
@@ -96,9 +88,7 @@
         },
         "/api/auth/token": {
             "post": {
-                "tags": [
-                    "Users: Authentication"
-                ],
+                "tags": ["Users: Authentication"],
                 "summary": "Get Token",
                 "operationId": "get_token_api_auth_token_post",
                 "requestBody": {
@@ -139,9 +129,7 @@
         },
         "/api/auth/refresh": {
             "get": {
-                "tags": [
-                    "Users: Authentication"
-                ],
+                "tags": ["Users: Authentication"],
                 "summary": "Refresh Token",
                 "description": "Use a valid token to get another token",
                 "operationId": "refresh_token_api_auth_refresh_get",
@@ -164,9 +152,7 @@
         },
         "/api/auth/logout": {
             "post": {
-                "tags": [
-                    "Users: Authentication"
-                ],
+                "tags": ["Users: Authentication"],
                 "summary": "Logout",
                 "operationId": "logout_api_auth_logout_post",
                 "responses": {
@@ -188,9 +174,7 @@
         },
         "/api/users/register": {
             "post": {
-                "tags": [
-                    "Users: Registration"
-                ],
+                "tags": ["Users: Registration"],
                 "summary": "Register New User",
                 "operationId": "register_new_user_api_users_register_post",
                 "parameters": [
@@ -264,9 +248,7 @@
         },
         "/api/users/group-users": {
             "get": {
-                "tags": [
-                    "Users: CRUD"
-                ],
+                "tags": ["Users: CRUD"],
                 "summary": "Get All Group Users",
                 "description": "Returns all users from the current group",
                 "operationId": "get_all_group_users_api_users_group_users_get",
@@ -420,9 +402,7 @@
         },
         "/api/users/self": {
             "get": {
-                "tags": [
-                    "Users: CRUD"
-                ],
+                "tags": ["Users: CRUD"],
                 "summary": "Get Logged In User",
                 "operationId": "get_logged_in_user_api_users_self_get",
                 "security": [
@@ -477,9 +457,7 @@
         },
         "/api/users/self/ratings": {
             "get": {
-                "tags": [
-                    "Users: CRUD"
-                ],
+                "tags": ["Users: CRUD"],
                 "summary": "Get Logged In User Ratings",
                 "operationId": "get_logged_in_user_ratings_api_users_self_ratings_get",
                 "security": [
@@ -534,9 +512,7 @@
         },
         "/api/users/self/ratings/{recipe_id}": {
             "get": {
-                "tags": [
-                    "Users: CRUD"
-                ],
+                "tags": ["Users: CRUD"],
                 "summary": "Get Logged In User Rating For Recipe",
                 "operationId": "get_logged_in_user_rating_for_recipe_api_users_self_ratings__recipe_id__get",
                 "security": [
@@ -601,9 +577,7 @@
         },
         "/api/users/self/favorites": {
             "get": {
-                "tags": [
-                    "Users: CRUD"
-                ],
+                "tags": ["Users: CRUD"],
                 "summary": "Get Logged In User Favorites",
                 "operationId": "get_logged_in_user_favorites_api_users_self_favorites_get",
                 "security": [
@@ -658,9 +632,7 @@
         },
         "/api/users/password": {
             "put": {
-                "tags": [
-                    "Users: CRUD"
-                ],
+                "tags": ["Users: CRUD"],
                 "summary": "Update Password",
                 "description": "Resets the User Password",
                 "operationId": "update_password_api_users_password_put",
@@ -724,9 +696,7 @@
         },
         "/api/users/{item_id}": {
             "put": {
-                "tags": [
-                    "Users: CRUD"
-                ],
+                "tags": ["Users: CRUD"],
                 "summary": "Update User",
                 "operationId": "update_user_api_users__item_id__put",
                 "security": [
@@ -797,9 +767,7 @@
                 }
             },
             "get": {
-                "tags": [
-                    "Users: Admin CRUD"
-                ],
+                "tags": ["Users: Admin CRUD"],
                 "summary": "Get User",
                 "operationId": "get_user_api_users__item_id__get",
                 "security": [
@@ -862,9 +830,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Users: Admin CRUD"
-                ],
+                "tags": ["Users: Admin CRUD"],
                 "summary": "Delete User",
                 "description": "Removes a user from the database. Must be the current user or a super user",
                 "operationId": "delete_user_api_users__item_id__delete",
@@ -928,9 +894,7 @@
         },
         "/api/users": {
             "get": {
-                "tags": [
-                    "Users: Admin CRUD"
-                ],
+                "tags": ["Users: Admin CRUD"],
                 "summary": "Get All",
                 "description": "Returns all users from all groups",
                 "operationId": "get_all_api_users_get",
@@ -1082,9 +1046,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Users: Admin CRUD"
-                ],
+                "tags": ["Users: Admin CRUD"],
                 "summary": "Create User",
                 "operationId": "create_user_api_users_post",
                 "security": [
@@ -1149,9 +1111,7 @@
         },
         "/api/users/forgot-password": {
             "post": {
-                "tags": [
-                    "Users: Passwords"
-                ],
+                "tags": ["Users: Passwords"],
                 "summary": "Forgot Password",
                 "description": "Sends an email with a reset link to the user",
                 "operationId": "forgot_password_api_users_forgot_password_post",
@@ -1189,9 +1149,7 @@
         },
         "/api/users/reset-password": {
             "post": {
-                "tags": [
-                    "Users: Passwords"
-                ],
+                "tags": ["Users: Passwords"],
                 "summary": "Reset Password",
                 "description": "Resets the user password",
                 "operationId": "reset_password_api_users_reset_password_post",
@@ -1229,9 +1187,7 @@
         },
         "/api/users/{id}/image": {
             "post": {
-                "tags": [
-                    "Users: Images"
-                ],
+                "tags": ["Users: Images"],
                 "summary": "Update User Image",
                 "description": "Updates a User Image",
                 "operationId": "update_user_image_api_users__id__image_post",
@@ -1305,9 +1261,7 @@
         },
         "/api/users/api-tokens": {
             "post": {
-                "tags": [
-                    "Users: Tokens"
-                ],
+                "tags": ["Users: Tokens"],
                 "summary": "Create Api Token",
                 "description": "Create api_token in the Database",
                 "operationId": "create_api_token_api_users_api_tokens_post",
@@ -1373,9 +1327,7 @@
         },
         "/api/users/api-tokens/{token_id}": {
             "delete": {
-                "tags": [
-                    "Users: Tokens"
-                ],
+                "tags": ["Users: Tokens"],
                 "summary": "Delete Api Token",
                 "description": "Delete api_token from the Database",
                 "operationId": "delete_api_token_api_users_api_tokens__token_id__delete",
@@ -1440,9 +1392,7 @@
         },
         "/api/users/{id}/ratings": {
             "get": {
-                "tags": [
-                    "Users: Ratings"
-                ],
+                "tags": ["Users: Ratings"],
                 "summary": "Get Ratings",
                 "description": "Get user's rated recipes",
                 "operationId": "get_ratings_api_users__id__ratings_get",
@@ -1508,9 +1458,7 @@
         },
         "/api/users/{id}/favorites": {
             "get": {
-                "tags": [
-                    "Users: Ratings"
-                ],
+                "tags": ["Users: Ratings"],
                 "summary": "Get Favorites",
                 "description": "Get user's favorited recipes",
                 "operationId": "get_favorites_api_users__id__favorites_get",
@@ -1576,9 +1524,7 @@
         },
         "/api/users/{id}/ratings/{slug}": {
             "post": {
-                "tags": [
-                    "Users: Ratings"
-                ],
+                "tags": ["Users: Ratings"],
                 "summary": "Set Rating",
                 "description": "Sets the user's rating for a recipe",
                 "operationId": "set_rating_api_users__id__ratings__slug__post",
@@ -1661,9 +1607,7 @@
         },
         "/api/users/{id}/favorites/{slug}": {
             "post": {
-                "tags": [
-                    "Users: Ratings"
-                ],
+                "tags": ["Users: Ratings"],
                 "summary": "Add Favorite",
                 "description": "Adds a recipe to the user's favorites",
                 "operationId": "add_favorite_api_users__id__favorites__slug__post",
@@ -1734,9 +1678,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Users: Ratings"
-                ],
+                "tags": ["Users: Ratings"],
                 "summary": "Remove Favorite",
                 "description": "Removes a recipe from the user's favorites",
                 "operationId": "remove_favorite_api_users__id__favorites__slug__delete",
@@ -1809,9 +1751,7 @@
         },
         "/api/groups/self": {
             "get": {
-                "tags": [
-                    "Groups: Self Service"
-                ],
+                "tags": ["Groups: Self Service"],
                 "summary": "Get Logged In User Group",
                 "description": "Returns the Group Data for the Current User",
                 "operationId": "get_logged_in_user_group_api_groups_self_get",
@@ -1867,9 +1807,7 @@
         },
         "/api/groups/members": {
             "get": {
-                "tags": [
-                    "Groups: Self Service"
-                ],
+                "tags": ["Groups: Self Service"],
                 "summary": "Get Group Members",
                 "description": "Returns the Group of user lists",
                 "operationId": "get_group_members_api_groups_members_get",
@@ -1929,9 +1867,7 @@
         },
         "/api/groups/preferences": {
             "get": {
-                "tags": [
-                    "Groups: Self Service"
-                ],
+                "tags": ["Groups: Self Service"],
                 "summary": "Get Group Preferences",
                 "operationId": "get_group_preferences_api_groups_preferences_get",
                 "security": [
@@ -1984,9 +1920,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Self Service"
-                ],
+                "tags": ["Groups: Self Service"],
                 "summary": "Update Group Preferences",
                 "operationId": "update_group_preferences_api_groups_preferences_put",
                 "security": [
@@ -2051,9 +1985,7 @@
         },
         "/api/groups/permissions": {
             "put": {
-                "tags": [
-                    "Groups: Self Service"
-                ],
+                "tags": ["Groups: Self Service"],
                 "summary": "Set Member Permissions",
                 "operationId": "set_member_permissions_api_groups_permissions_put",
                 "security": [
@@ -2118,9 +2050,7 @@
         },
         "/api/groups/statistics": {
             "get": {
-                "tags": [
-                    "Groups: Self Service"
-                ],
+                "tags": ["Groups: Self Service"],
                 "summary": "Get Statistics",
                 "operationId": "get_statistics_api_groups_statistics_get",
                 "security": [
@@ -2175,9 +2105,7 @@
         },
         "/api/groups/storage": {
             "get": {
-                "tags": [
-                    "Groups: Self Service"
-                ],
+                "tags": ["Groups: Self Service"],
                 "summary": "Get Storage",
                 "operationId": "get_storage_api_groups_storage_get",
                 "security": [
@@ -2232,9 +2160,7 @@
         },
         "/api/groups/mealplans/rules": {
             "get": {
-                "tags": [
-                    "Groups: Mealplan Rules"
-                ],
+                "tags": ["Groups: Mealplan Rules"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_mealplans_rules_get",
                 "security": [
@@ -2385,9 +2311,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Groups: Mealplan Rules"
-                ],
+                "tags": ["Groups: Mealplan Rules"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_mealplans_rules_post",
                 "security": [
@@ -2452,9 +2376,7 @@
         },
         "/api/groups/mealplans/rules/{item_id}": {
             "get": {
-                "tags": [
-                    "Groups: Mealplan Rules"
-                ],
+                "tags": ["Groups: Mealplan Rules"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_mealplans_rules__item_id__get",
                 "security": [
@@ -2517,9 +2439,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Mealplan Rules"
-                ],
+                "tags": ["Groups: Mealplan Rules"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_mealplans_rules__item_id__put",
                 "security": [
@@ -2592,9 +2512,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Groups: Mealplan Rules"
-                ],
+                "tags": ["Groups: Mealplan Rules"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_mealplans_rules__item_id__delete",
                 "security": [
@@ -2659,9 +2577,7 @@
         },
         "/api/groups/categories": {
             "get": {
-                "tags": [
-                    "Groups: Mealplan Categories"
-                ],
+                "tags": ["Groups: Mealplan Categories"],
                 "summary": "Get Mealplan Categories",
                 "operationId": "get_mealplan_categories_api_groups_categories_get",
                 "security": [
@@ -2718,9 +2634,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Mealplan Categories"
-                ],
+                "tags": ["Groups: Mealplan Categories"],
                 "summary": "Update Mealplan Categories",
                 "operationId": "update_mealplan_categories_api_groups_categories_put",
                 "security": [
@@ -2793,9 +2707,7 @@
         },
         "/api/groups/mealplans/today": {
             "get": {
-                "tags": [
-                    "Groups: Mealplans"
-                ],
+                "tags": ["Groups: Mealplans"],
                 "summary": "Get Todays Meals",
                 "operationId": "get_todays_meals_api_groups_mealplans_today_get",
                 "security": [
@@ -2865,9 +2777,7 @@
         },
         "/api/groups/mealplans/random": {
             "post": {
-                "tags": [
-                    "Groups: Mealplans"
-                ],
+                "tags": ["Groups: Mealplans"],
                 "summary": "Create Random Meal",
                 "description": "create_random_meal is a route that provides the randomized functionality for mealplaners.\nIt operates by following the rules setout in the Groups mealplan settings. If not settings\nare set, it will default return any random meal.\n\nRefer to the mealplan settings routes for more information on how rules can be applied\nto the random meal selector.",
                 "operationId": "create_random_meal_api_groups_mealplans_random_post",
@@ -2950,9 +2860,7 @@
         },
         "/api/groups/mealplans": {
             "get": {
-                "tags": [
-                    "Groups: Mealplans"
-                ],
+                "tags": ["Groups: Mealplans"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_mealplans_get",
                 "security": [
@@ -3154,9 +3062,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Groups: Mealplans"
-                ],
+                "tags": ["Groups: Mealplans"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_mealplans_post",
                 "security": [
@@ -3238,9 +3144,7 @@
         },
         "/api/groups/mealplans/{item_id}": {
             "get": {
-                "tags": [
-                    "Groups: Mealplans"
-                ],
+                "tags": ["Groups: Mealplans"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_mealplans__item_id__get",
                 "security": [
@@ -3319,9 +3223,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Mealplans"
-                ],
+                "tags": ["Groups: Mealplans"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_mealplans__item_id__put",
                 "security": [
@@ -3410,9 +3312,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Groups: Mealplans"
-                ],
+                "tags": ["Groups: Mealplans"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_mealplans__item_id__delete",
                 "security": [
@@ -3493,9 +3393,7 @@
         },
         "/api/groups/cookbooks": {
             "get": {
-                "tags": [
-                    "Groups: Cookbooks"
-                ],
+                "tags": ["Groups: Cookbooks"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_cookbooks_get",
                 "security": [
@@ -3663,9 +3561,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Groups: Cookbooks"
-                ],
+                "tags": ["Groups: Cookbooks"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_cookbooks_post",
                 "security": [
@@ -3745,9 +3641,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Cookbooks"
-                ],
+                "tags": ["Groups: Cookbooks"],
                 "summary": "Update Many",
                 "operationId": "update_many_api_groups_cookbooks_put",
                 "security": [
@@ -3837,9 +3731,7 @@
         },
         "/api/groups/cookbooks/{item_id}": {
             "get": {
-                "tags": [
-                    "Groups: Cookbooks"
-                ],
+                "tags": ["Groups: Cookbooks"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_cookbooks__item_id__get",
                 "security": [
@@ -3926,9 +3818,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Cookbooks"
-                ],
+                "tags": ["Groups: Cookbooks"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_cookbooks__item_id__put",
                 "security": [
@@ -4017,9 +3907,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Groups: Cookbooks"
-                ],
+                "tags": ["Groups: Cookbooks"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_cookbooks__item_id__delete",
                 "security": [
@@ -4100,9 +3988,7 @@
         },
         "/api/groups/webhooks": {
             "get": {
-                "tags": [
-                    "Groups: Webhooks"
-                ],
+                "tags": ["Groups: Webhooks"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_webhooks_get",
                 "security": [
@@ -4253,9 +4139,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Groups: Webhooks"
-                ],
+                "tags": ["Groups: Webhooks"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_webhooks_post",
                 "security": [
@@ -4320,9 +4204,7 @@
         },
         "/api/groups/webhooks/rerun": {
             "post": {
-                "tags": [
-                    "Groups: Webhooks"
-                ],
+                "tags": ["Groups: Webhooks"],
                 "summary": "Rerun Webhooks",
                 "description": "Manually re-fires all previously scheduled webhooks for today",
                 "operationId": "rerun_webhooks_api_groups_webhooks_rerun_post",
@@ -4376,9 +4258,7 @@
         },
         "/api/groups/webhooks/{item_id}": {
             "get": {
-                "tags": [
-                    "Groups: Webhooks"
-                ],
+                "tags": ["Groups: Webhooks"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_webhooks__item_id__get",
                 "security": [
@@ -4441,9 +4321,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Webhooks"
-                ],
+                "tags": ["Groups: Webhooks"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_webhooks__item_id__put",
                 "security": [
@@ -4516,9 +4394,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Groups: Webhooks"
-                ],
+                "tags": ["Groups: Webhooks"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_webhooks__item_id__delete",
                 "security": [
@@ -4583,9 +4459,7 @@
         },
         "/api/groups/invitations": {
             "get": {
-                "tags": [
-                    "Groups: Invitations"
-                ],
+                "tags": ["Groups: Invitations"],
                 "summary": "Get Invite Tokens",
                 "operationId": "get_invite_tokens_api_groups_invitations_get",
                 "security": [
@@ -4642,9 +4516,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Groups: Invitations"
-                ],
+                "tags": ["Groups: Invitations"],
                 "summary": "Create Invite Token",
                 "operationId": "create_invite_token_api_groups_invitations_post",
                 "security": [
@@ -4709,9 +4581,7 @@
         },
         "/api/groups/invitations/email": {
             "post": {
-                "tags": [
-                    "Groups: Invitations"
-                ],
+                "tags": ["Groups: Invitations"],
                 "summary": "Email Invitation",
                 "operationId": "email_invitation_api_groups_invitations_email_post",
                 "security": [
@@ -4776,9 +4646,7 @@
         },
         "/api/groups/migrations": {
             "post": {
-                "tags": [
-                    "Group: Migrations"
-                ],
+                "tags": ["Group: Migrations"],
                 "summary": "Start Data Migration",
                 "operationId": "start_data_migration_api_groups_migrations_post",
                 "security": [
@@ -4843,9 +4711,7 @@
         },
         "/api/groups/reports": {
             "get": {
-                "tags": [
-                    "Groups: Reports"
-                ],
+                "tags": ["Groups: Reports"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_reports_get",
                 "security": [
@@ -4920,9 +4786,7 @@
         },
         "/api/groups/reports/{item_id}": {
             "get": {
-                "tags": [
-                    "Groups: Reports"
-                ],
+                "tags": ["Groups: Reports"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_reports__item_id__get",
                 "security": [
@@ -4985,9 +4849,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Groups: Reports"
-                ],
+                "tags": ["Groups: Reports"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_reports__item_id__delete",
                 "security": [
@@ -5050,9 +4912,7 @@
         },
         "/api/groups/shopping/lists": {
             "get": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_shopping_lists_get",
                 "security": [
@@ -5220,9 +5080,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_shopping_lists_post",
                 "security": [
@@ -5304,9 +5162,7 @@
         },
         "/api/groups/shopping/lists/{item_id}": {
             "get": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_shopping_lists__item_id__get",
                 "security": [
@@ -5386,9 +5242,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_shopping_lists__item_id__put",
                 "security": [
@@ -5478,9 +5332,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_shopping_lists__item_id__delete",
                 "security": [
@@ -5562,9 +5414,7 @@
         },
         "/api/groups/shopping/lists/{item_id}/recipe/{recipe_id}": {
             "post": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Add Recipe Ingredients To List",
                 "operationId": "add_recipe_ingredients_to_list_api_groups_shopping_lists__item_id__recipe__recipe_id__post",
                 "security": [
@@ -5673,9 +5523,7 @@
         },
         "/api/groups/shopping/lists/{item_id}/recipe/{recipe_id}/delete": {
             "post": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Remove Recipe Ingredients From List",
                 "operationId": "remove_recipe_ingredients_from_list_api_groups_shopping_lists__item_id__recipe__recipe_id__delete_post",
                 "security": [
@@ -5784,9 +5632,7 @@
         },
         "/api/groups/shopping/lists/{item_id}/label-settings": {
             "put": {
-                "tags": [
-                    "Group: Shopping Lists"
-                ],
+                "tags": ["Group: Shopping Lists"],
                 "summary": "Update Label Settings",
                 "operationId": "update_label_settings_api_groups_shopping_lists__item_id__label_settings_put",
                 "security": [
@@ -5882,9 +5728,7 @@
         },
         "/api/groups/shopping/items": {
             "get": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_shopping_items_get",
                 "security": [
@@ -6052,9 +5896,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_shopping_items_post",
                 "security": [
@@ -6134,9 +5976,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Update Many",
                 "operationId": "update_many_api_groups_shopping_items_put",
                 "security": [
@@ -6220,9 +6060,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Delete Many",
                 "operationId": "delete_many_api_groups_shopping_items_delete",
                 "security": [
@@ -6307,9 +6145,7 @@
         },
         "/api/groups/shopping/items/create-bulk": {
             "post": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Create Many",
                 "operationId": "create_many_api_groups_shopping_items_create_bulk_post",
                 "security": [
@@ -6395,9 +6231,7 @@
         },
         "/api/groups/shopping/items/{item_id}": {
             "get": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_shopping_items__item_id__get",
                 "security": [
@@ -6477,9 +6311,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_shopping_items__item_id__put",
                 "security": [
@@ -6569,9 +6401,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Group: Shopping List Items"
-                ],
+                "tags": ["Group: Shopping List Items"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_shopping_items__item_id__delete",
                 "security": [
@@ -6653,9 +6483,7 @@
         },
         "/api/groups/labels": {
             "get": {
-                "tags": [
-                    "Group: Multi Purpose Labels"
-                ],
+                "tags": ["Group: Multi Purpose Labels"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_labels_get",
                 "security": [
@@ -6822,9 +6650,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Group: Multi Purpose Labels"
-                ],
+                "tags": ["Group: Multi Purpose Labels"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_labels_post",
                 "security": [
@@ -6889,9 +6715,7 @@
         },
         "/api/groups/labels/{item_id}": {
             "get": {
-                "tags": [
-                    "Group: Multi Purpose Labels"
-                ],
+                "tags": ["Group: Multi Purpose Labels"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_labels__item_id__get",
                 "security": [
@@ -6954,9 +6778,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Group: Multi Purpose Labels"
-                ],
+                "tags": ["Group: Multi Purpose Labels"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_labels__item_id__put",
                 "security": [
@@ -7029,9 +6851,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Group: Multi Purpose Labels"
-                ],
+                "tags": ["Group: Multi Purpose Labels"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_labels__item_id__delete",
                 "security": [
@@ -7096,9 +6916,7 @@
         },
         "/api/groups/events/notifications": {
             "get": {
-                "tags": [
-                    "Group: Event Notifications"
-                ],
+                "tags": ["Group: Event Notifications"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_events_notifications_get",
                 "security": [
@@ -7266,9 +7084,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Group: Event Notifications"
-                ],
+                "tags": ["Group: Event Notifications"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_events_notifications_post",
                 "security": [
@@ -7350,9 +7166,7 @@
         },
         "/api/groups/events/notifications/{item_id}": {
             "get": {
-                "tags": [
-                    "Group: Event Notifications"
-                ],
+                "tags": ["Group: Event Notifications"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_events_notifications__item_id__get",
                 "security": [
@@ -7432,9 +7246,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Group: Event Notifications"
-                ],
+                "tags": ["Group: Event Notifications"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_events_notifications__item_id__put",
                 "security": [
@@ -7524,9 +7336,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Group: Event Notifications"
-                ],
+                "tags": ["Group: Event Notifications"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_events_notifications__item_id__delete",
                 "security": [
@@ -7601,9 +7411,7 @@
         },
         "/api/groups/events/notifications/{item_id}/test": {
             "post": {
-                "tags": [
-                    "Group: Event Notifications"
-                ],
+                "tags": ["Group: Event Notifications"],
                 "summary": "Test Notification",
                 "operationId": "test_notification_api_groups_events_notifications__item_id__test_post",
                 "security": [
@@ -7678,9 +7486,7 @@
         },
         "/api/groups/recipe-actions": {
             "get": {
-                "tags": [
-                    "Groups: Recipe Actions"
-                ],
+                "tags": ["Groups: Recipe Actions"],
                 "summary": "Get All",
                 "operationId": "get_all_api_groups_recipe_actions_get",
                 "security": [
@@ -7831,9 +7637,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Groups: Recipe Actions"
-                ],
+                "tags": ["Groups: Recipe Actions"],
                 "summary": "Create One",
                 "operationId": "create_one_api_groups_recipe_actions_post",
                 "security": [
@@ -7898,9 +7702,7 @@
         },
         "/api/groups/recipe-actions/{item_id}": {
             "get": {
-                "tags": [
-                    "Groups: Recipe Actions"
-                ],
+                "tags": ["Groups: Recipe Actions"],
                 "summary": "Get One",
                 "operationId": "get_one_api_groups_recipe_actions__item_id__get",
                 "security": [
@@ -7963,9 +7765,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Groups: Recipe Actions"
-                ],
+                "tags": ["Groups: Recipe Actions"],
                 "summary": "Update One",
                 "operationId": "update_one_api_groups_recipe_actions__item_id__put",
                 "security": [
@@ -8038,9 +7838,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Groups: Recipe Actions"
-                ],
+                "tags": ["Groups: Recipe Actions"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_groups_recipe_actions__item_id__delete",
                 "security": [
@@ -8105,9 +7903,7 @@
         },
         "/api/groups/seeders/foods": {
             "post": {
-                "tags": [
-                    "Groups: Seeders"
-                ],
+                "tags": ["Groups: Seeders"],
                 "summary": "Seed Foods",
                 "operationId": "seed_foods_api_groups_seeders_foods_post",
                 "security": [
@@ -8172,9 +7968,7 @@
         },
         "/api/groups/seeders/labels": {
             "post": {
-                "tags": [
-                    "Groups: Seeders"
-                ],
+                "tags": ["Groups: Seeders"],
                 "summary": "Seed Labels",
                 "operationId": "seed_labels_api_groups_seeders_labels_post",
                 "security": [
@@ -8239,9 +8033,7 @@
         },
         "/api/groups/seeders/units": {
             "post": {
-                "tags": [
-                    "Groups: Seeders"
-                ],
+                "tags": ["Groups: Seeders"],
                 "summary": "Seed Units",
                 "operationId": "seed_units_api_groups_seeders_units_post",
                 "security": [
@@ -8306,9 +8098,7 @@
         },
         "/api/recipes/summary/untagged": {
             "get": {
-                "tags": [
-                    "Recipe: Query All"
-                ],
+                "tags": ["Recipe: Query All"],
                 "summary": "Get Untagged Recipes",
                 "operationId": "get_untagged_recipes_api_recipes_summary_untagged_get",
                 "parameters": [
@@ -8353,9 +8143,7 @@
         },
         "/api/recipes/summary/uncategorized": {
             "get": {
-                "tags": [
-                    "Recipe: Query All"
-                ],
+                "tags": ["Recipe: Query All"],
                 "summary": "Get Uncategorized Recipes",
                 "operationId": "get_uncategorized_recipes_api_recipes_summary_uncategorized_get",
                 "parameters": [
@@ -8400,9 +8188,7 @@
         },
         "/api/recipes/exports": {
             "get": {
-                "tags": [
-                    "Recipe: Exports"
-                ],
+                "tags": ["Recipe: Exports"],
                 "summary": "Get Recipe Formats And Templates",
                 "operationId": "get_recipe_formats_and_templates_api_recipes_exports_get",
                 "security": [
@@ -8474,9 +8260,7 @@
         },
         "/api/recipes/{slug}/exports": {
             "post": {
-                "tags": [
-                    "Recipe: Exports"
-                ],
+                "tags": ["Recipe: Exports"],
                 "summary": "Get Recipe Zip Token",
                 "description": "Generates a recipe zip token to be used to download a recipe as a zip file",
                 "operationId": "get_recipe_zip_token_api_recipes__slug__exports_post",
@@ -8556,9 +8340,7 @@
                 }
             },
             "get": {
-                "tags": [
-                    "Recipe: Exports"
-                ],
+                "tags": ["Recipe: Exports"],
                 "summary": "Get Recipe As Format",
                 "description": "## Parameters\n`template_name`: The name of the template to use to use in the exports listed. Template type will automatically\nbe set on the backend. Because of this, it's important that your templates have unique names. See available\nnames and formats in the /api/recipes/exports endpoint.",
                 "operationId": "get_recipe_as_format_api_recipes__slug__exports_get",
@@ -8642,9 +8424,7 @@
         },
         "/api/recipes/{slug}/exports/zip": {
             "get": {
-                "tags": [
-                    "Recipe: Exports"
-                ],
+                "tags": ["Recipe: Exports"],
                 "summary": "Get Recipe As Zip",
                 "description": "Get a Recipe and Its Original Image as a Zip File",
                 "operationId": "get_recipe_as_zip_api_recipes__slug__exports_zip_get",
@@ -8733,9 +8513,7 @@
         },
         "/api/recipes/create-url": {
             "post": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Parse Recipe Url",
                 "description": "Takes in a URL and attempts to scrape data and load it into the database",
                 "operationId": "parse_recipe_url_api_recipes_create_url_post",
@@ -8819,9 +8597,7 @@
         },
         "/api/recipes/create-url/bulk": {
             "post": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Parse Recipe Url Bulk",
                 "description": "Takes in a URL and attempts to scrape data and load it into the database",
                 "operationId": "parse_recipe_url_bulk_api_recipes_create_url_bulk_post",
@@ -8902,9 +8678,7 @@
         },
         "/api/recipes/test-scrape-url": {
             "post": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Test Parse Recipe Url",
                 "operationId": "test_parse_recipe_url_api_recipes_test_scrape_url_post",
                 "security": [
@@ -8984,9 +8758,7 @@
         },
         "/api/recipes/create-from-zip": {
             "post": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Create Recipe From Zip",
                 "description": "Create recipe from archive",
                 "operationId": "create_recipe_from_zip_api_recipes_create_from_zip_post",
@@ -9067,9 +8839,7 @@
         },
         "/api/recipes": {
             "get": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Get All",
                 "operationId": "get_all_api_recipes_get",
                 "security": [
@@ -9421,9 +9191,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Create One",
                 "description": "Takes in a JSON string and loads data into the database as a new entry",
                 "operationId": "create_one_api_recipes_post",
@@ -9507,9 +9275,7 @@
         },
         "/api/recipes/{slug}": {
             "get": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Get One",
                 "description": "Takes in a recipe's slug or id and returns all data for a recipe",
                 "operationId": "get_one_api_recipes__slug__get",
@@ -9591,9 +9357,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Update One",
                 "description": "Updates a recipe by existing slug and data.",
                 "operationId": "update_one_api_recipes__slug__put",
@@ -9681,9 +9445,7 @@
                 }
             },
             "patch": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Patch One",
                 "description": "Updates a recipe by existing slug and data.",
                 "operationId": "patch_one_api_recipes__slug__patch",
@@ -9771,9 +9533,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Delete One",
                 "description": "Deletes a recipe by slug",
                 "operationId": "delete_one_api_recipes__slug__delete",
@@ -9853,9 +9613,7 @@
         },
         "/api/recipes/{slug}/duplicate": {
             "post": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Duplicate One",
                 "description": "Duplicates a recipe with a new custom name if given",
                 "operationId": "duplicate_one_api_recipes__slug__duplicate_post",
@@ -9947,9 +9705,7 @@
         },
         "/api/recipes/{slug}/last-made": {
             "patch": {
-                "tags": [
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: CRUD"],
                 "summary": "Update Last Made",
                 "description": "Update a recipe's last made timestamp",
                 "operationId": "update_last_made_api_recipes__slug__last_made_patch",
@@ -10039,10 +9795,7 @@
         },
         "/api/recipes/{slug}/image": {
             "post": {
-                "tags": [
-                    "Recipe: Images and Assets",
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: Images and Assets", "Recipe: CRUD"],
                 "summary": "Scrape Image Url",
                 "operationId": "scrape_image_url_api_recipes__slug__image_post",
                 "security": [
@@ -10129,10 +9882,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Recipe: Images and Assets",
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: Images and Assets", "Recipe: CRUD"],
                 "summary": "Update Recipe Image",
                 "operationId": "update_recipe_image_api_recipes__slug__image_put",
                 "security": [
@@ -10223,10 +9973,7 @@
         },
         "/api/recipes/{slug}/assets": {
             "post": {
-                "tags": [
-                    "Recipe: Images and Assets",
-                    "Recipe: CRUD"
-                ],
+                "tags": ["Recipe: Images and Assets", "Recipe: CRUD"],
                 "summary": "Upload Recipe Asset",
                 "description": "Upload a file to store as a recipe asset",
                 "operationId": "upload_recipe_asset_api_recipes__slug__assets_post",
@@ -10318,9 +10065,7 @@
         },
         "/api/recipes/{slug}/comments": {
             "get": {
-                "tags": [
-                    "Recipe: Comments"
-                ],
+                "tags": ["Recipe: Comments"],
                 "summary": "Get Recipe Comments",
                 "description": "Get all comments for a recipe",
                 "operationId": "get_recipe_comments_api_recipes__slug__comments_get",
@@ -10389,10 +10134,7 @@
         },
         "/api/recipes/bulk-actions/tag": {
             "post": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Bulk Tag Recipes",
                 "operationId": "bulk_tag_recipes_api_recipes_bulk_actions_tag_post",
                 "security": [
@@ -10455,10 +10197,7 @@
         },
         "/api/recipes/bulk-actions/settings": {
             "post": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Bulk Settings Recipes",
                 "operationId": "bulk_settings_recipes_api_recipes_bulk_actions_settings_post",
                 "security": [
@@ -10521,10 +10260,7 @@
         },
         "/api/recipes/bulk-actions/categorize": {
             "post": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Bulk Categorize Recipes",
                 "operationId": "bulk_categorize_recipes_api_recipes_bulk_actions_categorize_post",
                 "security": [
@@ -10587,10 +10323,7 @@
         },
         "/api/recipes/bulk-actions/delete": {
             "post": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Bulk Delete Recipes",
                 "operationId": "bulk_delete_recipes_api_recipes_bulk_actions_delete_post",
                 "security": [
@@ -10653,10 +10386,7 @@
         },
         "/api/recipes/bulk-actions/export": {
             "post": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Bulk Export Recipes",
                 "operationId": "bulk_export_recipes_api_recipes_bulk_actions_export_post",
                 "security": [
@@ -10717,10 +10447,7 @@
                 }
             },
             "get": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Get Exported Data",
                 "operationId": "get_exported_data_api_recipes_bulk_actions_export_get",
                 "security": [
@@ -10779,10 +10506,7 @@
         },
         "/api/recipes/bulk-actions/export/download": {
             "get": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Get Exported Data Token",
                 "description": "Returns a token to download a file",
                 "operationId": "get_exported_data_token_api_recipes_bulk_actions_export_download_get",
@@ -10846,10 +10570,7 @@
         },
         "/api/recipes/bulk-actions/export/purge": {
             "delete": {
-                "tags": [
-                    "Recipe: Bulk Actions",
-                    "Recipe: Bulk Exports"
-                ],
+                "tags": ["Recipe: Bulk Actions", "Recipe: Bulk Exports"],
                 "summary": "Purge Export Data",
                 "description": "Remove all exports data, including items on disk without database entry",
                 "operationId": "purge_export_data_api_recipes_bulk_actions_export_purge_delete",
@@ -10905,9 +10626,7 @@
         },
         "/api/recipes/shared/{token_id}": {
             "get": {
-                "tags": [
-                    "Recipe: Shared"
-                ],
+                "tags": ["Recipe: Shared"],
                 "summary": "Get Shared Recipe",
                 "operationId": "get_shared_recipe_api_recipes_shared__token_id__get",
                 "parameters": [
@@ -10948,9 +10667,7 @@
         },
         "/api/recipes/timeline/events": {
             "get": {
-                "tags": [
-                    "Recipe: Timeline"
-                ],
+                "tags": ["Recipe: Timeline"],
                 "summary": "Get All",
                 "operationId": "get_all_api_recipes_timeline_events_get",
                 "security": [
@@ -11118,9 +10835,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Recipe: Timeline"
-                ],
+                "tags": ["Recipe: Timeline"],
                 "summary": "Create One",
                 "operationId": "create_one_api_recipes_timeline_events_post",
                 "security": [
@@ -11202,9 +10917,7 @@
         },
         "/api/recipes/timeline/events/{item_id}": {
             "get": {
-                "tags": [
-                    "Recipe: Timeline"
-                ],
+                "tags": ["Recipe: Timeline"],
                 "summary": "Get One",
                 "operationId": "get_one_api_recipes_timeline_events__item_id__get",
                 "security": [
@@ -11284,9 +10997,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Recipe: Timeline"
-                ],
+                "tags": ["Recipe: Timeline"],
                 "summary": "Update One",
                 "operationId": "update_one_api_recipes_timeline_events__item_id__put",
                 "security": [
@@ -11376,9 +11087,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Recipe: Timeline"
-                ],
+                "tags": ["Recipe: Timeline"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_recipes_timeline_events__item_id__delete",
                 "security": [
@@ -11460,9 +11169,7 @@
         },
         "/api/recipes/timeline/events/{item_id}/image": {
             "put": {
-                "tags": [
-                    "Recipe: Timeline"
-                ],
+                "tags": ["Recipe: Timeline"],
                 "summary": "Update Event Image",
                 "operationId": "update_event_image_api_recipes_timeline_events__item_id__image_put",
                 "security": [
@@ -11554,9 +11261,7 @@
         },
         "/api/organizers/categories": {
             "get": {
-                "tags": [
-                    "Organizer: Categories"
-                ],
+                "tags": ["Organizer: Categories"],
                 "summary": "Get All",
                 "description": "Returns a list of available categories in the database",
                 "operationId": "get_all_api_organizers_categories_get",
@@ -11741,9 +11446,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Organizer: Categories"
-                ],
+                "tags": ["Organizer: Categories"],
                 "summary": "Create One",
                 "description": "Creates a Category in the database",
                 "operationId": "create_one_api_organizers_categories_post",
@@ -11824,9 +11527,7 @@
         },
         "/api/organizers/categories/{item_id}": {
             "get": {
-                "tags": [
-                    "Organizer: Categories"
-                ],
+                "tags": ["Organizer: Categories"],
                 "summary": "Get One",
                 "description": "Returns a list of recipes associated with the provided category.",
                 "operationId": "get_one_api_organizers_categories__item_id__get",
@@ -11907,9 +11608,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Organizer: Categories"
-                ],
+                "tags": ["Organizer: Categories"],
                 "summary": "Update One",
                 "description": "Updates an existing Tag in the database",
                 "operationId": "update_one_api_organizers_categories__item_id__put",
@@ -12000,9 +11699,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Organizer: Categories"
-                ],
+                "tags": ["Organizer: Categories"],
                 "summary": "Delete One",
                 "description": "Removes a recipe category from the database. Deleting a\ncategory does not impact a recipe. The category will be removed\nfrom any recipes that contain it",
                 "operationId": "delete_one_api_organizers_categories__item_id__delete",
@@ -12083,9 +11780,7 @@
         },
         "/api/organizers/categories/empty": {
             "get": {
-                "tags": [
-                    "Organizer: Categories"
-                ],
+                "tags": ["Organizer: Categories"],
                 "summary": "Get All Empty",
                 "description": "Returns a list of categories that do not contain any recipes",
                 "operationId": "get_all_empty_api_organizers_categories_empty_get",
@@ -12162,9 +11857,7 @@
         },
         "/api/organizers/categories/slug/{category_slug}": {
             "get": {
-                "tags": [
-                    "Organizer: Categories"
-                ],
+                "tags": ["Organizer: Categories"],
                 "summary": "Get One By Slug",
                 "description": "Returns a category object with the associated recieps relating to the category",
                 "operationId": "get_one_by_slug_api_organizers_categories_slug__category_slug__get",
@@ -12244,9 +11937,7 @@
         },
         "/api/organizers/tags": {
             "get": {
-                "tags": [
-                    "Organizer: Tags"
-                ],
+                "tags": ["Organizer: Tags"],
                 "summary": "Get All",
                 "description": "Returns a list of available tags in the database",
                 "operationId": "get_all_api_organizers_tags_get",
@@ -12431,9 +12122,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Organizer: Tags"
-                ],
+                "tags": ["Organizer: Tags"],
                 "summary": "Create One",
                 "description": "Creates a Tag in the database",
                 "operationId": "create_one_api_organizers_tags_post",
@@ -12514,9 +12203,7 @@
         },
         "/api/organizers/tags/empty": {
             "get": {
-                "tags": [
-                    "Organizer: Tags"
-                ],
+                "tags": ["Organizer: Tags"],
                 "summary": "Get Empty Tags",
                 "description": "Returns a list of tags that do not contain any recipes",
                 "operationId": "get_empty_tags_api_organizers_tags_empty_get",
@@ -12587,9 +12274,7 @@
         },
         "/api/organizers/tags/{item_id}": {
             "get": {
-                "tags": [
-                    "Organizer: Tags"
-                ],
+                "tags": ["Organizer: Tags"],
                 "summary": "Get One",
                 "description": "Returns a list of recipes associated with the provided tag.",
                 "operationId": "get_one_api_organizers_tags__item_id__get",
@@ -12670,9 +12355,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Organizer: Tags"
-                ],
+                "tags": ["Organizer: Tags"],
                 "summary": "Update One",
                 "description": "Updates an existing Tag in the database",
                 "operationId": "update_one_api_organizers_tags__item_id__put",
@@ -12763,9 +12446,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Organizer: Tags"
-                ],
+                "tags": ["Organizer: Tags"],
                 "summary": "Delete Recipe Tag",
                 "description": "Removes a recipe tag from the database. Deleting a\ntag does not impact a recipe. The tag will be removed\nfrom any recipes that contain it",
                 "operationId": "delete_recipe_tag_api_organizers_tags__item_id__delete",
@@ -12846,9 +12527,7 @@
         },
         "/api/organizers/tags/slug/{tag_slug}": {
             "get": {
-                "tags": [
-                    "Organizer: Tags"
-                ],
+                "tags": ["Organizer: Tags"],
                 "summary": "Get One By Slug",
                 "operationId": "get_one_by_slug_api_organizers_tags_slug__tag_slug__get",
                 "security": [
@@ -12929,9 +12608,7 @@
         },
         "/api/organizers/tools": {
             "get": {
-                "tags": [
-                    "Organizer: Tools"
-                ],
+                "tags": ["Organizer: Tools"],
                 "summary": "Get All",
                 "operationId": "get_all_api_organizers_tools_get",
                 "security": [
@@ -13098,9 +12775,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Organizer: Tools"
-                ],
+                "tags": ["Organizer: Tools"],
                 "summary": "Create One",
                 "operationId": "create_one_api_organizers_tools_post",
                 "security": [
@@ -13165,9 +12840,7 @@
         },
         "/api/organizers/tools/{item_id}": {
             "get": {
-                "tags": [
-                    "Organizer: Tools"
-                ],
+                "tags": ["Organizer: Tools"],
                 "summary": "Get One",
                 "operationId": "get_one_api_organizers_tools__item_id__get",
                 "security": [
@@ -13230,9 +12903,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Organizer: Tools"
-                ],
+                "tags": ["Organizer: Tools"],
                 "summary": "Update One",
                 "operationId": "update_one_api_organizers_tools__item_id__put",
                 "security": [
@@ -13305,9 +12976,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Organizer: Tools"
-                ],
+                "tags": ["Organizer: Tools"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_organizers_tools__item_id__delete",
                 "security": [
@@ -13372,9 +13041,7 @@
         },
         "/api/organizers/tools/slug/{tool_slug}": {
             "get": {
-                "tags": [
-                    "Organizer: Tools"
-                ],
+                "tags": ["Organizer: Tools"],
                 "summary": "Get One By Slug",
                 "operationId": "get_one_by_slug_api_organizers_tools_slug__tool_slug__get",
                 "security": [
@@ -13438,9 +13105,7 @@
         },
         "/api/shared/recipes": {
             "get": {
-                "tags": [
-                    "Shared: Recipes"
-                ],
+                "tags": ["Shared: Recipes"],
                 "summary": "Get All",
                 "operationId": "get_all_api_shared_recipes_get",
                 "security": [
@@ -13514,9 +13179,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Shared: Recipes"
-                ],
+                "tags": ["Shared: Recipes"],
                 "summary": "Create One",
                 "operationId": "create_one_api_shared_recipes_post",
                 "security": [
@@ -13581,9 +13244,7 @@
         },
         "/api/shared/recipes/{item_id}": {
             "get": {
-                "tags": [
-                    "Shared: Recipes"
-                ],
+                "tags": ["Shared: Recipes"],
                 "summary": "Get One",
                 "operationId": "get_one_api_shared_recipes__item_id__get",
                 "security": [
@@ -13646,9 +13307,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Shared: Recipes"
-                ],
+                "tags": ["Shared: Recipes"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_shared_recipes__item_id__delete",
                 "security": [
@@ -13718,9 +13377,7 @@
         },
         "/api/comments": {
             "get": {
-                "tags": [
-                    "Recipe: Comments"
-                ],
+                "tags": ["Recipe: Comments"],
                 "summary": "Get All",
                 "operationId": "get_all_api_comments_get",
                 "security": [
@@ -13871,9 +13528,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Recipe: Comments"
-                ],
+                "tags": ["Recipe: Comments"],
                 "summary": "Create One",
                 "operationId": "create_one_api_comments_post",
                 "security": [
@@ -13938,9 +13593,7 @@
         },
         "/api/comments/{item_id}": {
             "get": {
-                "tags": [
-                    "Recipe: Comments"
-                ],
+                "tags": ["Recipe: Comments"],
                 "summary": "Get One",
                 "operationId": "get_one_api_comments__item_id__get",
                 "security": [
@@ -14003,9 +13656,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Recipe: Comments"
-                ],
+                "tags": ["Recipe: Comments"],
                 "summary": "Update One",
                 "operationId": "update_one_api_comments__item_id__put",
                 "security": [
@@ -14078,9 +13729,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Recipe: Comments"
-                ],
+                "tags": ["Recipe: Comments"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_comments__item_id__delete",
                 "security": [
@@ -14145,9 +13794,7 @@
         },
         "/api/parser/ingredients": {
             "post": {
-                "tags": [
-                    "Recipe: Ingredient Parser"
-                ],
+                "tags": ["Recipe: Ingredient Parser"],
                 "summary": "Parse Ingredients",
                 "operationId": "parse_ingredients_api_parser_ingredients_post",
                 "security": [
@@ -14216,9 +13863,7 @@
         },
         "/api/parser/ingredient": {
             "post": {
-                "tags": [
-                    "Recipe: Ingredient Parser"
-                ],
+                "tags": ["Recipe: Ingredient Parser"],
                 "summary": "Parse Ingredient",
                 "operationId": "parse_ingredient_api_parser_ingredient_post",
                 "security": [
@@ -14283,9 +13928,7 @@
         },
         "/api/foods/merge": {
             "put": {
-                "tags": [
-                    "Recipes: Foods"
-                ],
+                "tags": ["Recipes: Foods"],
                 "summary": "Merge One",
                 "operationId": "merge_one_api_foods_merge_put",
                 "security": [
@@ -14350,9 +13993,7 @@
         },
         "/api/foods": {
             "get": {
-                "tags": [
-                    "Recipes: Foods"
-                ],
+                "tags": ["Recipes: Foods"],
                 "summary": "Get All",
                 "operationId": "get_all_api_foods_get",
                 "security": [
@@ -14519,9 +14160,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Recipes: Foods"
-                ],
+                "tags": ["Recipes: Foods"],
                 "summary": "Create One",
                 "operationId": "create_one_api_foods_post",
                 "security": [
@@ -14586,9 +14225,7 @@
         },
         "/api/foods/{item_id}": {
             "get": {
-                "tags": [
-                    "Recipes: Foods"
-                ],
+                "tags": ["Recipes: Foods"],
                 "summary": "Get One",
                 "operationId": "get_one_api_foods__item_id__get",
                 "security": [
@@ -14651,9 +14288,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Recipes: Foods"
-                ],
+                "tags": ["Recipes: Foods"],
                 "summary": "Update One",
                 "operationId": "update_one_api_foods__item_id__put",
                 "security": [
@@ -14726,9 +14361,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Recipes: Foods"
-                ],
+                "tags": ["Recipes: Foods"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_foods__item_id__delete",
                 "security": [
@@ -14793,9 +14426,7 @@
         },
         "/api/units/merge": {
             "put": {
-                "tags": [
-                    "Recipes: Units"
-                ],
+                "tags": ["Recipes: Units"],
                 "summary": "Merge One",
                 "operationId": "merge_one_api_units_merge_put",
                 "security": [
@@ -14860,9 +14491,7 @@
         },
         "/api/units": {
             "get": {
-                "tags": [
-                    "Recipes: Units"
-                ],
+                "tags": ["Recipes: Units"],
                 "summary": "Get All",
                 "operationId": "get_all_api_units_get",
                 "security": [
@@ -15029,9 +14658,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Recipes: Units"
-                ],
+                "tags": ["Recipes: Units"],
                 "summary": "Create One",
                 "operationId": "create_one_api_units_post",
                 "security": [
@@ -15096,9 +14723,7 @@
         },
         "/api/units/{item_id}": {
             "get": {
-                "tags": [
-                    "Recipes: Units"
-                ],
+                "tags": ["Recipes: Units"],
                 "summary": "Get One",
                 "operationId": "get_one_api_units__item_id__get",
                 "security": [
@@ -15161,9 +14786,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Recipes: Units"
-                ],
+                "tags": ["Recipes: Units"],
                 "summary": "Update One",
                 "operationId": "update_one_api_units__item_id__put",
                 "security": [
@@ -15236,9 +14859,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Recipes: Units"
-                ],
+                "tags": ["Recipes: Units"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_units__item_id__delete",
                 "security": [
@@ -15303,9 +14924,7 @@
         },
         "/api/admin/about": {
             "get": {
-                "tags": [
-                    "Admin: About"
-                ],
+                "tags": ["Admin: About"],
                 "summary": "Get App Info",
                 "description": "Get general application information",
                 "operationId": "get_app_info_api_admin_about_get",
@@ -15361,9 +14980,7 @@
         },
         "/api/admin/about/statistics": {
             "get": {
-                "tags": [
-                    "Admin: About"
-                ],
+                "tags": ["Admin: About"],
                 "summary": "Get App Statistics",
                 "operationId": "get_app_statistics_api_admin_about_statistics_get",
                 "security": [
@@ -15418,9 +15035,7 @@
         },
         "/api/admin/about/check": {
             "get": {
-                "tags": [
-                    "Admin: About"
-                ],
+                "tags": ["Admin: About"],
                 "summary": "Check App Config",
                 "operationId": "check_app_config_api_admin_about_check_get",
                 "security": [
@@ -15475,10 +15090,7 @@
         },
         "/api/admin/users": {
             "get": {
-                "tags": [
-                    "Admin: Users",
-                    "Admin: Manage Users"
-                ],
+                "tags": ["Admin: Users", "Admin: Manage Users"],
                 "summary": "Get All",
                 "operationId": "get_all_api_admin_users_get",
                 "security": [
@@ -15629,10 +15241,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Admin: Users",
-                    "Admin: Manage Users"
-                ],
+                "tags": ["Admin: Users", "Admin: Manage Users"],
                 "summary": "Create One",
                 "operationId": "create_one_api_admin_users_post",
                 "security": [
@@ -15697,10 +15306,7 @@
         },
         "/api/admin/users/unlock": {
             "post": {
-                "tags": [
-                    "Admin: Users",
-                    "Admin: Manage Users"
-                ],
+                "tags": ["Admin: Users", "Admin: Manage Users"],
                 "summary": "Unlock Users",
                 "operationId": "unlock_users_api_admin_users_unlock_post",
                 "security": [
@@ -15765,10 +15371,7 @@
         },
         "/api/admin/users/{item_id}": {
             "get": {
-                "tags": [
-                    "Admin: Users",
-                    "Admin: Manage Users"
-                ],
+                "tags": ["Admin: Users", "Admin: Manage Users"],
                 "summary": "Get One",
                 "operationId": "get_one_api_admin_users__item_id__get",
                 "security": [
@@ -15831,10 +15434,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Admin: Users",
-                    "Admin: Manage Users"
-                ],
+                "tags": ["Admin: Users", "Admin: Manage Users"],
                 "summary": "Update One",
                 "operationId": "update_one_api_admin_users__item_id__put",
                 "security": [
@@ -15907,10 +15507,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Admin: Users",
-                    "Admin: Manage Users"
-                ],
+                "tags": ["Admin: Users", "Admin: Manage Users"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_admin_users__item_id__delete",
                 "security": [
@@ -15975,10 +15572,7 @@
         },
         "/api/admin/users/password-reset-token": {
             "post": {
-                "tags": [
-                    "Admin: Users",
-                    "Admin: Manage Users"
-                ],
+                "tags": ["Admin: Users", "Admin: Manage Users"],
                 "summary": "Generate Token",
                 "description": "Generates a reset token and returns it. This is an authenticated endpoint",
                 "operationId": "generate_token_api_admin_users_password_reset_token_post",
@@ -16044,10 +15638,7 @@
         },
         "/api/admin/groups": {
             "get": {
-                "tags": [
-                    "Admin: Groups",
-                    "Admin: Manage Groups"
-                ],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Get All",
                 "operationId": "get_all_api_admin_groups_get",
                 "security": [
@@ -16198,10 +15789,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Admin: Groups",
-                    "Admin: Manage Groups"
-                ],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Create One",
                 "operationId": "create_one_api_admin_groups_post",
                 "security": [
@@ -16266,10 +15854,7 @@
         },
         "/api/admin/groups/{item_id}": {
             "get": {
-                "tags": [
-                    "Admin: Groups",
-                    "Admin: Manage Groups"
-                ],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Get One",
                 "operationId": "get_one_api_admin_groups__item_id__get",
                 "security": [
@@ -16332,10 +15917,7 @@
                 }
             },
             "put": {
-                "tags": [
-                    "Admin: Groups",
-                    "Admin: Manage Groups"
-                ],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Update One",
                 "operationId": "update_one_api_admin_groups__item_id__put",
                 "security": [
@@ -16408,10 +15990,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Admin: Groups",
-                    "Admin: Manage Groups"
-                ],
+                "tags": ["Admin: Groups", "Admin: Manage Groups"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_admin_groups__item_id__delete",
                 "security": [
@@ -16476,9 +16055,7 @@
         },
         "/api/admin/email": {
             "get": {
-                "tags": [
-                    "Admin: Email"
-                ],
+                "tags": ["Admin: Email"],
                 "summary": "Check Email Config",
                 "description": "Get general application information",
                 "operationId": "check_email_config_api_admin_email_get",
@@ -16532,9 +16109,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Admin: Email"
-                ],
+                "tags": ["Admin: Email"],
                 "summary": "Send Test Email",
                 "operationId": "send_test_email_api_admin_email_post",
                 "security": [
@@ -16599,9 +16174,7 @@
         },
         "/api/admin/backups": {
             "get": {
-                "tags": [
-                    "Admin: Backups"
-                ],
+                "tags": ["Admin: Backups"],
                 "summary": "Get All",
                 "operationId": "get_all_api_admin_backups_get",
                 "security": [
@@ -16654,9 +16227,7 @@
                 }
             },
             "post": {
-                "tags": [
-                    "Admin: Backups"
-                ],
+                "tags": ["Admin: Backups"],
                 "summary": "Create One",
                 "operationId": "create_one_api_admin_backups_post",
                 "security": [
@@ -16711,9 +16282,7 @@
         },
         "/api/admin/backups/{file_name}": {
             "get": {
-                "tags": [
-                    "Admin: Backups"
-                ],
+                "tags": ["Admin: Backups"],
                 "summary": "Get One",
                 "description": "Returns a token to download a file",
                 "operationId": "get_one_api_admin_backups__file_name__get",
@@ -16776,9 +16345,7 @@
                 }
             },
             "delete": {
-                "tags": [
-                    "Admin: Backups"
-                ],
+                "tags": ["Admin: Backups"],
                 "summary": "Delete One",
                 "operationId": "delete_one_api_admin_backups__file_name__delete",
                 "security": [
@@ -16842,9 +16409,7 @@
         },
         "/api/admin/backups/upload": {
             "post": {
-                "tags": [
-                    "Admin: Backups"
-                ],
+                "tags": ["Admin: Backups"],
                 "summary": "Upload One",
                 "description": "Upload a .zip File to later be imported into Mealie",
                 "operationId": "upload_one_api_admin_backups_upload_post",
@@ -16910,9 +16475,7 @@
         },
         "/api/admin/backups/{file_name}/restore": {
             "post": {
-                "tags": [
-                    "Admin: Backups"
-                ],
+                "tags": ["Admin: Backups"],
                 "summary": "Import One",
                 "operationId": "import_one_api_admin_backups__file_name__restore_post",
                 "security": [
@@ -16976,9 +16539,7 @@
         },
         "/api/admin/maintenance": {
             "get": {
-                "tags": [
-                    "Admin: Maintenance"
-                ],
+                "tags": ["Admin: Maintenance"],
                 "summary": "Get Maintenance Summary",
                 "description": "Get the maintenance summary",
                 "operationId": "get_maintenance_summary_api_admin_maintenance_get",
@@ -17034,9 +16595,7 @@
         },
         "/api/admin/maintenance/storage": {
             "get": {
-                "tags": [
-                    "Admin: Maintenance"
-                ],
+                "tags": ["Admin: Maintenance"],
                 "summary": "Get Storage Details",
                 "operationId": "get_storage_details_api_admin_maintenance_storage_get",
                 "security": [
@@ -17091,9 +16650,7 @@
         },
         "/api/admin/maintenance/clean/images": {
             "post": {
-                "tags": [
-                    "Admin: Maintenance"
-                ],
+                "tags": ["Admin: Maintenance"],
                 "summary": "Clean Images",
                 "description": "Purges all the images from the filesystem that aren't .webp",
                 "operationId": "clean_images_api_admin_maintenance_clean_images_post",
@@ -17149,9 +16706,7 @@
         },
         "/api/admin/maintenance/clean/temp": {
             "post": {
-                "tags": [
-                    "Admin: Maintenance"
-                ],
+                "tags": ["Admin: Maintenance"],
                 "summary": "Clean Temp",
                 "operationId": "clean_temp_api_admin_maintenance_clean_temp_post",
                 "security": [
@@ -17206,9 +16761,7 @@
         },
         "/api/admin/maintenance/clean/recipe-folders": {
             "post": {
-                "tags": [
-                    "Admin: Maintenance"
-                ],
+                "tags": ["Admin: Maintenance"],
                 "summary": "Clean Recipe Folders",
                 "description": "Deletes all the recipe folders that don't have names that are valid UUIDs",
                 "operationId": "clean_recipe_folders_api_admin_maintenance_clean_recipe_folders_post",
@@ -17264,9 +16817,7 @@
         },
         "/api/admin/analytics": {
             "get": {
-                "tags": [
-                    "Admin: Analytics"
-                ],
+                "tags": ["Admin: Analytics"],
                 "summary": "Get Analytics",
                 "operationId": "get_analytics_api_admin_analytics_get",
                 "security": [
@@ -17321,9 +16872,7 @@
         },
         "/api/validators/user/name": {
             "get": {
-                "tags": [
-                    "Validators"
-                ],
+                "tags": ["Validators"],
                 "summary": "Validate User",
                 "description": "Checks if a user with the given name exists",
                 "operationId": "validate_user_api_validators_user_name_get",
@@ -17364,9 +16913,7 @@
         },
         "/api/validators/user/email": {
             "get": {
-                "tags": [
-                    "Validators"
-                ],
+                "tags": ["Validators"],
                 "summary": "Validate User Email",
                 "description": "Checks if a user with the given name exists",
                 "operationId": "validate_user_email_api_validators_user_email_get",
@@ -17407,9 +16954,7 @@
         },
         "/api/validators/group": {
             "get": {
-                "tags": [
-                    "Validators"
-                ],
+                "tags": ["Validators"],
                 "summary": "Validate Group",
                 "description": "Checks if a group with the given name exists",
                 "operationId": "validate_group_api_validators_group_get",
@@ -17450,9 +16995,7 @@
         },
         "/api/validators/recipe": {
             "get": {
-                "tags": [
-                    "Validators"
-                ],
+                "tags": ["Validators"],
                 "summary": "Validate Recipe",
                 "description": "Checks if a group with the given slug exists",
                 "operationId": "validate_recipe_api_validators_recipe_get",
@@ -17503,9 +17046,7 @@
         },
         "/api/explore/cookbooks/{group_slug}": {
             "get": {
-                "tags": [
-                    "Explore: Cookbooks"
-                ],
+                "tags": ["Explore: Cookbooks"],
                 "summary": "Get All",
                 "operationId": "get_all_api_explore_cookbooks__group_slug__get",
                 "parameters": [
@@ -17675,9 +17216,7 @@
         },
         "/api/explore/cookbooks/{group_slug}/{item_id}": {
             "get": {
-                "tags": [
-                    "Explore: Cookbooks"
-                ],
+                "tags": ["Explore: Cookbooks"],
                 "summary": "Get One",
                 "operationId": "get_one_api_explore_cookbooks__group_slug___item_id__get",
                 "parameters": [
@@ -17750,9 +17289,7 @@
         },
         "/api/explore/foods/{group_slug}": {
             "get": {
-                "tags": [
-                    "Explore: Foods"
-                ],
+                "tags": ["Explore: Foods"],
                 "summary": "Get All",
                 "operationId": "get_all_api_explore_foods__group_slug__get",
                 "parameters": [
@@ -17922,9 +17459,7 @@
         },
         "/api/explore/foods/{group_slug}/{item_id}": {
             "get": {
-                "tags": [
-                    "Explore: Foods"
-                ],
+                "tags": ["Explore: Foods"],
                 "summary": "Get One",
                 "operationId": "get_one_api_explore_foods__group_slug___item_id__get",
                 "parameters": [
@@ -17990,9 +17525,7 @@
         },
         "/api/explore/organizers/{group_slug}/categories": {
             "get": {
-                "tags": [
-                    "Explore: Categories"
-                ],
+                "tags": ["Explore: Categories"],
                 "summary": "Get All",
                 "operationId": "get_all_api_explore_organizers__group_slug__categories_get",
                 "parameters": [
@@ -18162,9 +17695,7 @@
         },
         "/api/explore/organizers/{group_slug}/categories/{item_id}": {
             "get": {
-                "tags": [
-                    "Explore: Categories"
-                ],
+                "tags": ["Explore: Categories"],
                 "summary": "Get One",
                 "operationId": "get_one_api_explore_organizers__group_slug__categories__item_id__get",
                 "parameters": [
@@ -18230,9 +17761,7 @@
         },
         "/api/explore/organizers/{group_slug}/tags": {
             "get": {
-                "tags": [
-                    "Explore: Tags"
-                ],
+                "tags": ["Explore: Tags"],
                 "summary": "Get All",
                 "operationId": "get_all_api_explore_organizers__group_slug__tags_get",
                 "parameters": [
@@ -18402,9 +17931,7 @@
         },
         "/api/explore/organizers/{group_slug}/tags/{item_id}": {
             "get": {
-                "tags": [
-                    "Explore: Tags"
-                ],
+                "tags": ["Explore: Tags"],
                 "summary": "Get One",
                 "operationId": "get_one_api_explore_organizers__group_slug__tags__item_id__get",
                 "parameters": [
@@ -18470,9 +17997,7 @@
         },
         "/api/explore/organizers/{group_slug}/tools": {
             "get": {
-                "tags": [
-                    "Explore: Tools"
-                ],
+                "tags": ["Explore: Tools"],
                 "summary": "Get All",
                 "operationId": "get_all_api_explore_organizers__group_slug__tools_get",
                 "parameters": [
@@ -18642,9 +18167,7 @@
         },
         "/api/explore/organizers/{group_slug}/tools/{item_id}": {
             "get": {
-                "tags": [
-                    "Explore: Tools"
-                ],
+                "tags": ["Explore: Tools"],
                 "summary": "Get One",
                 "operationId": "get_one_api_explore_organizers__group_slug__tools__item_id__get",
                 "parameters": [
@@ -18710,9 +18233,7 @@
         },
         "/api/explore/recipes/{group_slug}": {
             "get": {
-                "tags": [
-                    "Explore: Recipes"
-                ],
+                "tags": ["Explore: Recipes"],
                 "summary": "Get All",
                 "operationId": "get_all_api_explore_recipes__group_slug__get",
                 "parameters": [
@@ -19050,9 +18571,7 @@
         },
         "/api/explore/recipes/{group_slug}/{recipe_slug}": {
             "get": {
-                "tags": [
-                    "Explore: Recipes"
-                ],
+                "tags": ["Explore: Recipes"],
                 "summary": "Get Recipe",
                 "operationId": "get_recipe_api_explore_recipes__group_slug___recipe_slug__get",
                 "parameters": [
@@ -19117,9 +18636,7 @@
         },
         "/api/media/recipes/{recipe_id}/images/{file_name}": {
             "get": {
-                "tags": [
-                    "Recipe: Images and Assets"
-                ],
+                "tags": ["Recipe: Images and Assets"],
                 "summary": "Get Recipe Img",
                 "description": "Takes in a recipe id, returns the static image. This route is proxied in the docker image\nand should not hit the API in production",
                 "operationId": "get_recipe_img_api_media_recipes__recipe_id__images__file_name__get",
@@ -19166,9 +18683,7 @@
         },
         "/api/media/recipes/{recipe_id}/images/timeline/{timeline_event_id}/{file_name}": {
             "get": {
-                "tags": [
-                    "Recipe: Images and Assets"
-                ],
+                "tags": ["Recipe: Images and Assets"],
                 "summary": "Get Recipe Timeline Event Img",
                 "description": "Takes in a recipe id and event timeline id, returns the static image. This route is proxied in the docker image\nand should not hit the API in production",
                 "operationId": "get_recipe_timeline_event_img_api_media_recipes__recipe_id__images_timeline__timeline_event_id___file_name__get",
@@ -19224,9 +18739,7 @@
         },
         "/api/media/recipes/{recipe_id}/assets/{file_name}": {
             "get": {
-                "tags": [
-                    "Recipe: Images and Assets"
-                ],
+                "tags": ["Recipe: Images and Assets"],
                 "summary": "Get Recipe Asset",
                 "description": "Returns a recipe asset",
                 "operationId": "get_recipe_asset_api_media_recipes__recipe_id__assets__file_name__get",
@@ -19275,9 +18788,7 @@
         },
         "/api/media/users/{user_id}/{file_name}": {
             "get": {
-                "tags": [
-                    "Recipe: Images and Assets"
-                ],
+                "tags": ["Recipe: Images and Assets"],
                 "summary": "Get User Image",
                 "description": "Takes in a recipe slug, returns the static image. This route is proxied in the docker image\nand should not hit the API in production",
                 "operationId": "get_user_image_api_media_users__user_id___file_name__get",
@@ -19321,9 +18832,7 @@
         },
         "/api/media/docker/validate.txt": {
             "get": {
-                "tags": [
-                    "Recipe: Images and Assets"
-                ],
+                "tags": ["Recipe: Images and Assets"],
                 "summary": "Get Validation Text",
                 "operationId": "get_validation_text_api_media_docker_validate_txt_get",
                 "responses": {
@@ -19335,9 +18844,7 @@
         },
         "/api/utils/download": {
             "get": {
-                "tags": [
-                    "Utils"
-                ],
+                "tags": ["Utils"],
                 "summary": "Download File",
                 "description": "Uses a file token obtained by an active user to retrieve a file from the operating\nsystem.",
                 "operationId": "download_file_api_utils_download_get",
@@ -19604,10 +19111,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "imports",
-                    "templates"
-                ],
+                "required": ["imports", "templates"],
                 "title": "AllBackups"
             },
             "AppInfo": {
@@ -19681,10 +19185,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "isFirstLogin",
-                    "isDemo"
-                ],
+                "required": ["isFirstLogin", "isDemo"],
                 "title": "AppStartupInfo"
             },
             "AppStatistics": {
@@ -19814,10 +19315,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipes",
-                    "categories"
-                ],
+                "required": ["recipes", "categories"],
                 "title": "AssignCategories"
             },
             "AssignSettings": {
@@ -19834,10 +19332,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipes",
-                    "settings"
-                ],
+                "required": ["recipes", "settings"],
                 "title": "AssignSettings"
             },
             "AssignTags": {
@@ -19858,19 +19353,12 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipes",
-                    "tags"
-                ],
+                "required": ["recipes", "tags"],
                 "title": "AssignTags"
             },
             "AuthMethod": {
                 "type": "string",
-                "enum": [
-                    "Mealie",
-                    "LDAP",
-                    "OIDC"
-                ],
+                "enum": ["Mealie", "LDAP", "OIDC"],
                 "title": "AuthMethod"
             },
             "BackupFile": {
@@ -19890,11 +19378,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "date",
-                    "size"
-                ],
+                "required": ["name", "date", "size"],
                 "title": "BackupFile"
             },
             "Body_create_recipe_from_zip_api_recipes_create_from_zip_post": {
@@ -19906,9 +19390,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "archive"
-                ],
+                "required": ["archive"],
                 "title": "Body_create_recipe_from_zip_api_recipes_create_from_zip_post"
             },
             "Body_get_token_api_auth_token_post": {
@@ -19949,10 +19431,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "migration_type",
-                    "archive"
-                ],
+                "required": ["migration_type", "archive"],
                 "title": "Body_start_data_migration_api_groups_migrations_post"
             },
             "Body_update_event_image_api_recipes_timeline_events__item_id__image_put": {
@@ -19968,10 +19447,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "image",
-                    "extension"
-                ],
+                "required": ["image", "extension"],
                 "title": "Body_update_event_image_api_recipes_timeline_events__item_id__image_put"
             },
             "Body_update_recipe_image_api_recipes__slug__image_put": {
@@ -19987,10 +19463,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "image",
-                    "extension"
-                ],
+                "required": ["image", "extension"],
                 "title": "Body_update_recipe_image_api_recipes__slug__image_put"
             },
             "Body_update_user_image_api_users__id__image_post": {
@@ -20002,9 +19475,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "profile"
-                ],
+                "required": ["profile"],
                 "title": "Body_update_user_image_api_users__id__image_post"
             },
             "Body_upload_one_api_admin_backups_upload_post": {
@@ -20016,9 +19487,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "archive"
-                ],
+                "required": ["archive"],
                 "title": "Body_upload_one_api_admin_backups_upload_post"
             },
             "Body_upload_recipe_asset_api_recipes__slug__assets_post": {
@@ -20042,12 +19511,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "icon",
-                    "extension",
-                    "file"
-                ],
+                "required": ["name", "icon", "extension", "file"],
                 "title": "Body_upload_recipe_asset_api_recipes__slug__assets_post"
             },
             "Category": {
@@ -20067,11 +19531,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "name",
-                    "slug"
-                ],
+                "required": ["id", "name", "slug"],
                 "title": "Category"
             },
             "CategoryBase": {
@@ -20091,11 +19551,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "id", "slug"],
                 "title": "CategoryBase"
             },
             "CategoryIn": {
@@ -20106,9 +19562,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "CategoryIn"
             },
             "CategoryOut": {
@@ -20133,12 +19587,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug",
-                    "groupId"
-                ],
+                "required": ["name", "id", "slug", "groupId"],
                 "title": "CategoryOut"
             },
             "CategorySummary": {
@@ -20158,11 +19607,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "slug",
-                    "name"
-                ],
+                "required": ["id", "slug", "name"],
                 "title": "CategorySummary"
             },
             "ChangePassword": {
@@ -20179,9 +19624,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "newPassword"
-                ],
+                "required": ["newPassword"],
                 "title": "ChangePassword"
             },
             "CheckAppConfig": {
@@ -20275,9 +19718,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "CookBookPagination"
             },
             "CreateCookBook": {
@@ -20353,9 +19794,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "CreateCookBook"
             },
             "CreateGroupRecipeAction": {
@@ -20373,11 +19812,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "actionType",
-                    "title",
-                    "url"
-                ],
+                "required": ["actionType", "title", "url"],
                 "title": "CreateGroupRecipeAction"
             },
             "CreateIngredientFood": {
@@ -20453,9 +19888,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "CreateIngredientFood"
             },
             "CreateIngredientFoodAlias": {
@@ -20466,9 +19899,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "CreateIngredientFoodAlias"
             },
             "CreateIngredientUnit": {
@@ -20559,9 +19990,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "CreateIngredientUnit"
             },
             "CreateIngredientUnitAlias": {
@@ -20572,9 +20001,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "CreateIngredientUnitAlias"
             },
             "CreateInviteToken": {
@@ -20585,9 +20012,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "uses"
-                ],
+                "required": ["uses"],
                 "title": "CreateInviteToken"
             },
             "CreatePlanEntry": {
@@ -20629,9 +20054,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "date"
-                ],
+                "required": ["date"],
                 "title": "CreatePlanEntry"
             },
             "CreateRandomEntry": {
@@ -20651,9 +20074,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "date"
-                ],
+                "required": ["date"],
                 "title": "CreateRandomEntry"
             },
             "CreateRecipe": {
@@ -20664,9 +20085,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "CreateRecipe"
             },
             "CreateRecipeBulk": {
@@ -20705,9 +20124,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "url"
-                ],
+                "required": ["url"],
                 "title": "CreateRecipeBulk"
             },
             "CreateRecipeByUrlBulk": {
@@ -20721,9 +20138,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "imports"
-                ],
+                "required": ["imports"],
                 "title": "CreateRecipeByUrlBulk"
             },
             "CreateUserRegistration": {
@@ -20833,9 +20248,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "scheduledTime"
-                ],
+                "required": ["scheduledTime"],
                 "title": "CreateWebhook"
             },
             "DeleteRecipes": {
@@ -20849,9 +20262,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipes"
-                ],
+                "required": ["recipes"],
                 "title": "DeleteRecipes"
             },
             "DeleteTokenResponse": {
@@ -20862,9 +20273,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "tokenDelete"
-                ],
+                "required": ["tokenDelete"],
                 "title": "DeleteTokenResponse"
             },
             "EmailInitationResponse": {
@@ -20886,9 +20295,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "success"
-                ],
+                "required": ["success"],
                 "title": "EmailInitationResponse"
             },
             "EmailInvitation": {
@@ -20903,10 +20310,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "email",
-                    "token"
-                ],
+                "required": ["email", "token"],
                 "title": "EmailInvitation"
             },
             "EmailReady": {
@@ -20917,9 +20321,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "ready"
-                ],
+                "required": ["ready"],
                 "title": "EmailReady"
             },
             "EmailSuccess": {
@@ -20941,9 +20343,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "success"
-                ],
+                "required": ["success"],
                 "title": "EmailSuccess"
             },
             "EmailTest": {
@@ -20954,9 +20354,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "email"
-                ],
+                "required": ["email"],
                 "title": "EmailTest"
             },
             "ExportRecipes": {
@@ -20978,16 +20376,12 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipes"
-                ],
+                "required": ["recipes"],
                 "title": "ExportRecipes"
             },
             "ExportTypes": {
                 "type": "string",
-                "enum": [
-                    "json"
-                ],
+                "enum": ["json"],
                 "const": "json",
                 "title": "ExportTypes"
             },
@@ -20999,9 +20393,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "fileToken"
-                ],
+                "required": ["fileToken"],
                 "title": "FileTokenResponse"
             },
             "ForgotPassword": {
@@ -21012,9 +20404,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "email"
-                ],
+                "required": ["email"],
                 "title": "ForgotPassword"
             },
             "FormatResponse": {
@@ -21042,11 +20432,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "json",
-                    "zip",
-                    "jinja2"
-                ],
+                "required": ["json", "zip", "jinja2"],
                 "title": "FormatResponse"
             },
             "GroupAdminUpdate": {
@@ -21072,10 +20458,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "name"
-                ],
+                "required": ["id", "name"],
                 "title": "GroupAdminUpdate"
             },
             "GroupBase": {
@@ -21087,9 +20470,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "GroupBase"
             },
             "GroupDataExport": {
@@ -21157,9 +20538,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "GroupEventNotifierCreate"
             },
             "GroupEventNotifierOptions": {
@@ -21398,9 +20777,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id"
-                ],
+                "required": ["id"],
                 "title": "GroupEventNotifierOptionsOut"
             },
             "GroupEventNotifierOut": {
@@ -21428,13 +20805,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "name",
-                    "enabled",
-                    "groupId",
-                    "options"
-                ],
+                "required": ["id", "name", "enabled", "groupId", "options"],
                 "title": "GroupEventNotifierOut"
             },
             "GroupEventNotifierUpdate": {
@@ -21502,11 +20873,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["name", "groupId", "id"],
                 "title": "GroupEventNotifierUpdate"
             },
             "GroupEventPagination": {
@@ -21562,9 +20929,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "GroupEventPagination"
             },
             "GroupInDB": {
@@ -21631,11 +20996,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "id", "slug"],
                 "title": "GroupInDB"
             },
             "GroupPagination": {
@@ -21691,9 +21052,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "GroupPagination"
             },
             "GroupRecipeActionOut": {
@@ -21721,13 +21080,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "actionType",
-                    "title",
-                    "url",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["actionType", "title", "url", "groupId", "id"],
                 "title": "GroupRecipeActionOut"
             },
             "GroupRecipeActionPagination": {
@@ -21783,17 +21136,12 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "GroupRecipeActionPagination"
             },
             "GroupRecipeActionType": {
                 "type": "string",
-                "enum": [
-                    "link",
-                    "post"
-                ],
+                "enum": ["link", "post"],
                 "title": "GroupRecipeActionType"
             },
             "GroupStatistics": {
@@ -21884,11 +21232,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "id", "slug"],
                 "title": "GroupSummary"
             },
             "HTTPValidationError": {
@@ -22085,10 +21429,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "name"
-                ],
+                "required": ["id", "name"],
                 "title": "IngredientFood"
             },
             "IngredientFoodAlias": {
@@ -22099,9 +21440,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "IngredientFoodAlias"
             },
             "IngredientFoodPagination": {
@@ -22157,9 +21496,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "IngredientFoodPagination"
             },
             "IngredientReferences": {
@@ -22197,9 +21534,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "ingredient"
-                ],
+                "required": ["ingredient"],
                 "title": "IngredientRequest"
             },
             "IngredientUnit": {
@@ -22307,10 +21642,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "name"
-                ],
+                "required": ["id", "name"],
                 "title": "IngredientUnit"
             },
             "IngredientUnitAlias": {
@@ -22321,9 +21653,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "IngredientUnitAlias"
             },
             "IngredientUnitPagination": {
@@ -22379,9 +21709,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "IngredientUnitPagination"
             },
             "IngredientsRequest": {
@@ -22403,9 +21731,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "ingredients"
-                ],
+                "required": ["ingredients"],
                 "title": "IngredientsRequest"
             },
             "LongLiveTokenIn": {
@@ -22421,9 +21747,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "LongLiveTokenIn"
             },
             "LongLiveTokenOut": {
@@ -22454,11 +21778,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "token",
-                    "name",
-                    "id"
-                ],
+                "required": ["token", "name", "id"],
                 "title": "LongLiveTokenOut"
             },
             "MaintenanceStorageDetails": {
@@ -22510,11 +21830,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "dataDirSize",
-                    "cleanableImages",
-                    "cleanableDirs"
-                ],
+                "required": ["dataDirSize", "cleanableImages", "cleanableDirs"],
                 "title": "MaintenanceSummary"
             },
             "MealieAnalytics": {
@@ -22595,10 +21911,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "fromFood",
-                    "toFood"
-                ],
+                "required": ["fromFood", "toFood"],
                 "title": "MergeFood"
             },
             "MergeUnit": {
@@ -22615,10 +21928,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "fromUnit",
-                    "toUnit"
-                ],
+                "required": ["fromUnit", "toUnit"],
                 "title": "MergeUnit"
             },
             "MultiPurposeLabelCreate": {
@@ -22634,9 +21944,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "MultiPurposeLabelCreate"
             },
             "MultiPurposeLabelOut": {
@@ -22662,11 +21970,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["name", "groupId", "id"],
                 "title": "MultiPurposeLabelOut"
             },
             "MultiPurposeLabelPagination": {
@@ -22722,9 +22026,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "MultiPurposeLabelPagination"
             },
             "MultiPurposeLabelSummary": {
@@ -22750,11 +22052,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["name", "groupId", "id"],
                 "title": "MultiPurposeLabelSummary"
             },
             "MultiPurposeLabelUpdate": {
@@ -22780,11 +22078,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["name", "groupId", "id"],
                 "title": "MultiPurposeLabelUpdate"
             },
             "Nutrition": {
@@ -22907,27 +22201,17 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "configurationUrl",
-                    "clientId",
-                    "groupsClaim"
-                ],
+                "required": ["configurationUrl", "clientId", "groupsClaim"],
                 "title": "OIDCInfo"
             },
             "OrderByNullPosition": {
                 "type": "string",
-                "enum": [
-                    "first",
-                    "last"
-                ],
+                "enum": ["first", "last"],
                 "title": "OrderByNullPosition"
             },
             "OrderDirection": {
                 "type": "string",
-                "enum": [
-                    "asc",
-                    "desc"
-                ],
+                "enum": ["asc", "desc"],
                 "title": "OrderDirection"
             },
             "PaginationBase_IngredientFood_": {
@@ -22983,9 +22267,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PaginationBase[IngredientFood]"
             },
             "PaginationBase_ReadCookBook_": {
@@ -23041,9 +22323,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PaginationBase[ReadCookBook]"
             },
             "PaginationBase_RecipeCategory_": {
@@ -23099,9 +22379,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PaginationBase[RecipeCategory]"
             },
             "PaginationBase_RecipeSummary_": {
@@ -23157,9 +22435,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PaginationBase[RecipeSummary]"
             },
             "PaginationBase_RecipeTag_": {
@@ -23215,9 +22491,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PaginationBase[RecipeTag]"
             },
             "PaginationBase_RecipeTool_": {
@@ -23273,9 +22547,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PaginationBase[RecipeTool]"
             },
             "ParsedIngredient": {
@@ -23304,9 +22576,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "ingredient"
-                ],
+                "required": ["ingredient"],
                 "title": "ParsedIngredient"
             },
             "PasswordResetToken": {
@@ -23317,9 +22587,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "token"
-                ],
+                "required": ["token"],
                 "title": "PasswordResetToken"
             },
             "PlanEntryPagination": {
@@ -23375,19 +22643,12 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PlanEntryPagination"
             },
             "PlanEntryType": {
                 "type": "string",
-                "enum": [
-                    "breakfast",
-                    "lunch",
-                    "dinner",
-                    "side"
-                ],
+                "enum": ["breakfast", "lunch", "dinner", "side"],
                 "title": "PlanEntryType"
             },
             "PlanRulesCreate": {
@@ -23488,10 +22749,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "groupId",
-                    "id"
-                ],
+                "required": ["groupId", "id"],
                 "title": "PlanRulesOut"
             },
             "PlanRulesPagination": {
@@ -23547,20 +22805,12 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "PlanRulesPagination"
             },
             "PlanRulesType": {
                 "type": "string",
-                "enum": [
-                    "breakfast",
-                    "lunch",
-                    "dinner",
-                    "side",
-                    "unset"
-                ],
+                "enum": ["breakfast", "lunch", "dinner", "side", "unset"],
                 "title": "PlanRulesType"
             },
             "ReadCookBook": {
@@ -23646,11 +22896,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["name", "groupId", "id"],
                 "title": "ReadCookBook"
             },
             "ReadGroupPreferences": {
@@ -23707,10 +22953,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "groupId",
-                    "id"
-                ],
+                "required": ["groupId", "id"],
                 "title": "ReadGroupPreferences"
             },
             "ReadInviteToken": {
@@ -23730,11 +22973,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "token",
-                    "usesLeft",
-                    "groupId"
-                ],
+                "required": ["token", "usesLeft", "groupId"],
                 "title": "ReadInviteToken"
             },
             "ReadPlanEntry": {
@@ -23807,11 +23046,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "date",
-                    "id",
-                    "groupId"
-                ],
+                "required": ["date", "id", "groupId"],
                 "title": "ReadPlanEntry"
             },
             "ReadWebhook": {
@@ -23856,11 +23091,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "scheduledTime",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["scheduledTime", "groupId", "id"],
                 "title": "ReadWebhook"
             },
             "Recipe-Input": {
@@ -24566,10 +23797,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "icon"
-                ],
+                "required": ["name", "icon"],
                 "title": "RecipeAsset"
             },
             "RecipeCategory": {
@@ -24596,10 +23824,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "slug"
-                ],
+                "required": ["name", "slug"],
                 "title": "RecipeCategory"
             },
             "RecipeCategoryPagination": {
@@ -24655,9 +23880,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "RecipeCategoryPagination"
             },
             "RecipeCommentCreate": {
@@ -24673,10 +23896,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId",
-                    "text"
-                ],
+                "required": ["recipeId", "text"],
                 "title": "RecipeCommentCreate"
             },
             "RecipeCommentOut-Input": {
@@ -24826,9 +24046,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "RecipeCommentPagination"
             },
             "RecipeCommentUpdate": {
@@ -24844,10 +24062,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "text"
-                ],
+                "required": ["id", "text"],
                 "title": "RecipeCommentUpdate"
             },
             "RecipeCookBook": {
@@ -24940,12 +24155,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id",
-                    "recipes"
-                ],
+                "required": ["name", "groupId", "id", "recipes"],
                 "title": "RecipeCookBook"
             },
             "RecipeDuplicate": {
@@ -25186,9 +24396,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "timestamp"
-                ],
+                "required": ["timestamp"],
                 "title": "RecipeLastMade"
             },
             "RecipeNote": {
@@ -25203,10 +24411,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "title",
-                    "text"
-                ],
+                "required": ["title", "text"],
                 "title": "RecipeNote"
             },
             "RecipeSettings": {
@@ -25305,9 +24510,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId"
-                ],
+                "required": ["recipeId"],
                 "title": "RecipeShareTokenCreate"
             },
             "RecipeShareTokenSummary": {
@@ -25339,12 +24542,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId",
-                    "groupId",
-                    "id",
-                    "createdAt"
-                ],
+                "required": ["recipeId", "groupId", "id", "createdAt"],
                 "title": "RecipeShareTokenSummary"
             },
             "RecipeStep": {
@@ -25387,9 +24585,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "text"
-                ],
+                "required": ["text"],
                 "title": "RecipeStep"
             },
             "RecipeSummary": {
@@ -25656,10 +24852,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "slug"
-                ],
+                "required": ["name", "slug"],
                 "title": "RecipeTag"
             },
             "RecipeTagPagination": {
@@ -25715,9 +24908,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "RecipeTagPagination"
             },
             "RecipeTagResponse": {
@@ -25745,11 +24936,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "id", "slug"],
                 "title": "RecipeTagResponse"
             },
             "RecipeTimelineEventIn": {
@@ -25808,11 +24995,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId",
-                    "subject",
-                    "eventType"
-                ],
+                "required": ["recipeId", "subject", "eventType"],
                 "title": "RecipeTimelineEventIn"
             },
             "RecipeTimelineEventOut": {
@@ -25943,9 +25126,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "RecipeTimelineEventPagination"
             },
             "RecipeTimelineEventUpdate": {
@@ -25977,9 +25158,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "subject"
-                ],
+                "required": ["subject"],
                 "title": "RecipeTimelineEventUpdate"
             },
             "RecipeTool": {
@@ -26004,11 +25183,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "name",
-                    "slug"
-                ],
+                "required": ["id", "name", "slug"],
                 "title": "RecipeTool"
             },
             "RecipeToolCreate": {
@@ -26024,9 +25199,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "RecipeToolCreate"
             },
             "RecipeToolOut": {
@@ -26051,11 +25224,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "id", "slug"],
                 "title": "RecipeToolOut"
             },
             "RecipeToolPagination": {
@@ -26111,9 +25280,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "RecipeToolPagination"
             },
             "RecipeToolResponse": {
@@ -26146,11 +25313,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "id", "slug"],
                 "title": "RecipeToolResponse"
             },
             "RecipeZipTokenResponse": {
@@ -26161,28 +25324,17 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "token"
-                ],
+                "required": ["token"],
                 "title": "RecipeZipTokenResponse"
             },
             "RegisteredParser": {
                 "type": "string",
-                "enum": [
-                    "nlp",
-                    "brute",
-                    "openai"
-                ],
+                "enum": ["nlp", "brute", "openai"],
                 "title": "RegisteredParser"
             },
             "ReportCategory": {
                 "type": "string",
-                "enum": [
-                    "backup",
-                    "restore",
-                    "migration",
-                    "bulk_import"
-                ],
+                "enum": ["backup", "restore", "migration", "bulk_import"],
                 "title": "ReportCategory"
             },
             "ReportEntryOut": {
@@ -26218,11 +25370,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "reportId",
-                    "message",
-                    "id"
-                ],
+                "required": ["reportId", "message", "id"],
                 "title": "ReportEntryOut"
             },
             "ReportOut": {
@@ -26267,12 +25415,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "category",
-                    "groupId",
-                    "name",
-                    "id"
-                ],
+                "required": ["category", "groupId", "name", "id"],
                 "title": "ReportOut"
             },
             "ReportSummary": {
@@ -26309,22 +25452,12 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "category",
-                    "groupId",
-                    "name",
-                    "id"
-                ],
+                "required": ["category", "groupId", "name", "id"],
                 "title": "ReportSummary"
             },
             "ReportSummaryStatus": {
                 "type": "string",
-                "enum": [
-                    "in-progress",
-                    "success",
-                    "failure",
-                    "partial"
-                ],
+                "enum": ["in-progress", "success", "failure", "partial"],
                 "title": "ReportSummaryStatus"
             },
             "ResetPassword": {
@@ -26347,12 +25480,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "token",
-                    "email",
-                    "password",
-                    "passwordConfirm"
-                ],
+                "required": ["token", "email", "password", "passwordConfirm"],
                 "title": "ResetPassword"
             },
             "SaveGroupRecipeAction": {
@@ -26375,12 +25503,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "actionType",
-                    "title",
-                    "url",
-                    "groupId"
-                ],
+                "required": ["actionType", "title", "url", "groupId"],
                 "title": "SaveGroupRecipeAction"
             },
             "ScrapeRecipe": {
@@ -26396,9 +25519,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "url"
-                ],
+                "required": ["url"],
                 "title": "ScrapeRecipe",
                 "example": {
                     "includeTags": true,
@@ -26418,9 +25539,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "url"
-                ],
+                "required": ["url"],
                 "title": "ScrapeRecipeTest"
             },
             "SeederConfig": {
@@ -26431,9 +25550,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "locale"
-                ],
+                "required": ["locale"],
                 "title": "SeederConfig"
             },
             "SetPermissions": {
@@ -26460,9 +25577,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "userId"
-                ],
+                "required": ["userId"],
                 "title": "SetPermissions"
             },
             "ShoppingListAddRecipeParams": {
@@ -26696,9 +25811,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "shoppingListId"
-                ],
+                "required": ["shoppingListId"],
                 "title": "ShoppingListItemCreate"
             },
             "ShoppingListItemOut-Input": {
@@ -26873,10 +25986,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "shoppingListId",
-                    "id"
-                ],
+                "required": ["shoppingListId", "id"],
                 "title": "ShoppingListItemOut"
             },
             "ShoppingListItemOut-Output": {
@@ -27051,10 +26161,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "shoppingListId",
-                    "id"
-                ],
+                "required": ["shoppingListId", "id"],
                 "title": "ShoppingListItemOut"
             },
             "ShoppingListItemPagination": {
@@ -27110,9 +26217,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "ShoppingListItemPagination"
             },
             "ShoppingListItemRecipeRefCreate": {
@@ -27152,9 +26257,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId"
-                ],
+                "required": ["recipeId"],
                 "title": "ShoppingListItemRecipeRefCreate"
             },
             "ShoppingListItemRecipeRefOut": {
@@ -27204,11 +26307,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId",
-                    "id",
-                    "shoppingListItemId"
-                ],
+                "required": ["recipeId", "id", "shoppingListItemId"],
                 "title": "ShoppingListItemRecipeRefOut"
             },
             "ShoppingListItemRecipeRefUpdate": {
@@ -27258,11 +26357,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId",
-                    "id",
-                    "shoppingListItemId"
-                ],
+                "required": ["recipeId", "id", "shoppingListItemId"],
                 "title": "ShoppingListItemRecipeRefUpdate"
             },
             "ShoppingListItemUpdate": {
@@ -27413,9 +26508,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "shoppingListId"
-                ],
+                "required": ["shoppingListId"],
                 "title": "ShoppingListItemUpdate"
             },
             "ShoppingListItemUpdateBulk": {
@@ -27571,10 +26664,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "shoppingListId",
-                    "id"
-                ],
+                "required": ["shoppingListId", "id"],
                 "title": "ShoppingListItemUpdateBulk",
                 "description": "Only used for bulk update operations where the shopping list item id isn't already supplied"
             },
@@ -27636,12 +26726,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "shoppingListId",
-                    "labelId",
-                    "id",
-                    "label"
-                ],
+                "required": ["shoppingListId", "labelId", "id", "label"],
                 "title": "ShoppingListMultiPurposeLabelOut"
             },
             "ShoppingListMultiPurposeLabelUpdate": {
@@ -27668,11 +26753,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "shoppingListId",
-                    "labelId",
-                    "id"
-                ],
+                "required": ["shoppingListId", "labelId", "id"],
                 "title": "ShoppingListMultiPurposeLabelUpdate"
             },
             "ShoppingListOut": {
@@ -27765,11 +26846,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "groupId",
-                    "userId",
-                    "id"
-                ],
+                "required": ["groupId", "userId", "id"],
                 "title": "ShoppingListOut"
             },
             "ShoppingListPagination": {
@@ -27825,9 +26902,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "ShoppingListPagination"
             },
             "ShoppingListRecipeRefOut": {
@@ -28039,11 +27114,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "groupId",
-                    "userId",
-                    "id"
-                ],
+                "required": ["groupId", "userId", "id"],
                 "title": "ShoppingListUpdate"
             },
             "SuccessResponse": {
@@ -28059,9 +27130,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "message"
-                ],
+                "required": ["message"],
                 "title": "SuccessResponse"
             },
             "SupportedMigrations": {
@@ -28096,11 +27165,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "name",
-                    "slug"
-                ],
+                "required": ["id", "name", "slug"],
                 "title": "Tag"
             },
             "TagBase": {
@@ -28120,11 +27185,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "id", "slug"],
                 "title": "TagBase"
             },
             "TagIn": {
@@ -28135,9 +27196,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name"
-                ],
+                "required": ["name"],
                 "title": "TagIn"
             },
             "TagOut": {
@@ -28162,29 +27221,17 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id",
-                    "slug"
-                ],
+                "required": ["name", "groupId", "id", "slug"],
                 "title": "TagOut"
             },
             "TimelineEventImage": {
                 "type": "string",
-                "enum": [
-                    "has image",
-                    "does not have image"
-                ],
+                "enum": ["has image", "does not have image"],
                 "title": "TimelineEventImage"
             },
             "TimelineEventType": {
                 "type": "string",
-                "enum": [
-                    "system",
-                    "info",
-                    "comment"
-                ],
+                "enum": ["system", "info", "comment"],
                 "title": "TimelineEventType"
             },
             "UnlockResults": {
@@ -28281,11 +27328,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "name",
-                    "groupId",
-                    "id"
-                ],
+                "required": ["name", "groupId", "id"],
                 "title": "UpdateCookBook"
             },
             "UpdateGroupPreferences": {
@@ -28342,9 +27385,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "image"
-                ],
+                "required": ["image"],
                 "title": "UpdateImageResponse"
             },
             "UpdatePlanEntry": {
@@ -28407,11 +27448,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "date",
-                    "id",
-                    "groupId"
-                ],
+                "required": ["date", "id", "groupId"],
                 "title": "UpdatePlanEntry"
             },
             "UserBase-Output": {
@@ -28438,10 +27475,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "admin"
-                ],
+                "required": ["id", "admin"],
                 "title": "UserBase"
             },
             "UserIn": {
@@ -28534,10 +27568,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "email",
-                    "password"
-                ],
+                "required": ["email", "password"],
                 "title": "UserIn",
                 "example": {
                     "admin": "false",
@@ -28716,9 +27747,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "UserPagination"
             },
             "UserRatingOut": {
@@ -28756,11 +27785,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId",
-                    "userId",
-                    "id"
-                ],
+                "required": ["recipeId", "userId", "id"],
                 "title": "UserRatingOut"
             },
             "UserRatingSummary": {
@@ -28788,9 +27813,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "recipeId"
-                ],
+                "required": ["recipeId"],
                 "title": "UserRatingSummary"
             },
             "UserRatingUpdate": {
@@ -28832,9 +27855,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "ratings"
-                ],
+                "required": ["ratings"],
                 "title": "UserRatings[UserRatingOut]"
             },
             "UserRatings_UserRatingSummary_": {
@@ -28848,9 +27869,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "ratings"
-                ],
+                "required": ["ratings"],
                 "title": "UserRatings[UserRatingSummary]"
             },
             "UserSummary": {
@@ -28866,10 +27885,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "fullName"
-                ],
+                "required": ["id", "fullName"],
                 "title": "UserSummary"
             },
             "UserSummaryPagination": {
@@ -28925,9 +27941,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "UserSummaryPagination"
             },
             "ValidationError": {
@@ -28956,11 +27970,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "loc",
-                    "msg",
-                    "type"
-                ],
+                "required": ["loc", "msg", "type"],
                 "title": "ValidationError"
             },
             "ValidationResponse": {
@@ -28971,9 +27981,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "valid"
-                ],
+                "required": ["valid"],
                 "title": "ValidationResponse"
             },
             "WebhookPagination": {
@@ -29029,16 +28037,12 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "items"
-                ],
+                "required": ["items"],
                 "title": "WebhookPagination"
             },
             "WebhookType": {
                 "type": "string",
-                "enum": [
-                    "mealplan"
-                ],
+                "enum": ["mealplan"],
                 "const": "mealplan",
                 "title": "WebhookType"
             },
@@ -29066,10 +28070,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "id",
-                    "admin"
-                ],
+                "required": ["id", "admin"],
                 "title": "UserBase"
             },
             "mealie__schema__user__user__UserBase": {
@@ -29158,9 +28159,7 @@
                     }
                 },
                 "type": "object",
-                "required": [
-                    "email"
-                ],
+                "required": ["email"],
                 "title": "UserBase",
                 "example": {
                     "admin": "false",
