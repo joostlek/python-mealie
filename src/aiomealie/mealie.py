@@ -265,7 +265,7 @@ class MealieClient:
         await self._delete(f"api/groups/shopping/items/{item_id}")
 
     async def get_statistics(self) -> Statistics:
-        """Get statistics item."""
+        """Get statistics."""
 
         response = await self._get("api/groups/statistics")
         return Statistics.from_json(response)
