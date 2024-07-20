@@ -6,6 +6,7 @@ from aiomealie.exceptions import (
     MealieAuthenticationError,
     MealieValidationError,
     MealieBadRequestError,
+    MealieNotFoundError,
 )
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
@@ -28,6 +29,7 @@ from aiomealie.models import (
     Instruction,
     Ingredient,
     Tag,
+    Statistics,
 )
 
 __all__ = [
@@ -36,6 +38,7 @@ __all__ = [
     "MealieError",
     "MealieAuthenticationError",
     "MealieBadRequestError",
+    "MealieNotFoundError",
     "MealieValidationError",
     "MealieClient",
     "StartupInfo",
@@ -51,6 +54,7 @@ __all__ = [
     "MealplanResponse",
     "MealplanEntryType",
     "ShoppingItem",
+    "Statistics",
     "MutateShoppingItem",
     "ShoppingItemsResponse",
     "ShoppingList",

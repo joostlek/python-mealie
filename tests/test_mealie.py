@@ -520,3 +520,17 @@ async def test_delete_shopping_item(
         params=None,
         json=None,
     )
+
+
+async def test_statistics(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving statistics."""
+    responses.get(
+        f"{MEALIE_URL}/api/groups/statistics",
+        status=200,
+        body=load_fixture("statistics.json"),
+    )
+    assert await mealie_client.get_statistics() == snapshot

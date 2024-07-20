@@ -268,3 +268,14 @@ class ShoppingItemsResponse(DataClassORJSONMixin):
     """ShoppingItemsResponse model."""
 
     items: list[ShoppingItem]
+
+
+@dataclass
+class Statistics(DataClassORJSONMixin):
+    """Statistics model."""
+
+    total_recipes: int = field(metadata=field_options(alias="totalRecipes"))
+    total_users: int = field(metadata=field_options(alias="totalUsers"))
+    total_categories: int = field(metadata=field_options(alias="totalCategories"))
+    total_tags: int = field(metadata=field_options(alias="totalTags"))
+    total_tools: int = field(metadata=field_options(alias="totalTools"))

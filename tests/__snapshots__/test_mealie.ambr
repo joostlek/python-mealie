@@ -1465,6 +1465,15 @@
     'is_first_login': True,
   })
 # ---
+# name: test_statistics
+  dict({
+    'total_categories': 24,
+    'total_recipes': 765,
+    'total_tags': 454,
+    'total_tools': 11,
+    'total_users': 3,
+  })
+# ---
 # name: test_theme
   dict({
     'dark_accent': '#007A99',

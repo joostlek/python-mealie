@@ -36,6 +36,7 @@ from aiomealie.models import (
     Theme,
     UserInfo,
     Recipe,
+    Statistics,
 )
 
 if TYPE_CHECKING:
@@ -262,6 +263,12 @@ class MealieClient:
         """Delete shopping item."""
 
         await self._delete(f"api/groups/shopping/items/{item_id}")
+
+    async def get_statistics(self) -> Statistics:
+        """Get statistics."""
+
+        response = await self._get("api/groups/statistics")
+        return Statistics.from_json(response)
 
     async def close(self) -> None:
         """Close open client session."""
