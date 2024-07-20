@@ -28,6 +28,7 @@ from aiomealie.models import (
     Instruction,
     Ingredient,
     Tag,
+    Statistics,
 )
 
 __all__ = [
@@ -51,6 +52,7 @@ __all__ = [
     "MealplanResponse",
     "MealplanEntryType",
     "ShoppingItem",
+    "Statistics",
     "MutateShoppingItem",
     "ShoppingItemsResponse",
     "ShoppingList",
