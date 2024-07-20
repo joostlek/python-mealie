@@ -161,6 +161,7 @@ class Recipe(BaseRecipe):
 class RecipesResponse(DataClassORJSONMixin):
     """RecipesResponse model."""
 
+    total: int
     items: list[BaseRecipe]
 
 

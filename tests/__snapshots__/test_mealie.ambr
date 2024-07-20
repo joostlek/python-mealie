@@ -1204,6 +1204,7 @@
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
     ]),
+    'total': 662,
   })
 # ---
 # name: test_retrieving_recipe
