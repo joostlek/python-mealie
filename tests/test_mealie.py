@@ -561,3 +561,44 @@ async def test_random_mealplan(
             "entryType": "breakfast",
         },
     )
+
+
+@pytest.mark.parametrize(
+    ("kwargs", "data"),
+    [
+        ({"recipe_id": "abc"}, {"recipeId": "abc"}),
+        ({"note_title": "title"}, {"title": "title"}),
+        (
+            {"note_title": "title", "note_text": "description"},
+            {"title": "title", "text": "description"},
+        ),
+    ],
+)
+async def test_set_mealplan(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    kwargs: dict[str, Any],
+    data: dict[str, Any],
+) -> None:
+    """Test setting mealplan."""
+
+    responses.post(
+        f"{MEALIE_URL}/api/groups/mealplans",
+        status=201,
+        body=load_fixture("mealplan.json"),
+    )
+
+    await mealie_client.set_mealplan(
+        at=date(2021, 1, 1), entry_type=MealplanEntryType.BREAKFAST, **kwargs
+    )
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/mealplans",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={
+            "date": "2021-01-01",
+            "entryType": "breakfast",
+        }
+        | data,
+    )

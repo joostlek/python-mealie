@@ -284,6 +284,29 @@ class MealieClient:
         )
         return Mealplan.from_json(response)
 
+    async def set_mealplan(
+        self,
+        at: date,
+        entry_type: MealplanEntryType,
+        *,
+        recipe_id: str | None = None,
+        note_title: str | None = None,
+        note_text: str | None = None,
+    ) -> Mealplan:
+        """Set a mealplan for a specific date."""
+        data = {
+            "date": at.isoformat(),
+            "entryType": entry_type.value,
+        }
+        if recipe_id:
+            data["recipeId"] = recipe_id
+        if note_title:
+            data["title"] = note_title
+            if note_text:
+                data["text"] = note_text
+        response = await self._post("api/groups/mealplans", data)
+        return Mealplan.from_json(response)
+
     async def close(self) -> None:
         """Close open client session."""
         if self.session and self._close_session:
