@@ -37,6 +37,7 @@ from aiomealie.models import (
     UserInfo,
     Recipe,
     Statistics,
+    MealplanEntryType,
 )
 
 if TYPE_CHECKING:
@@ -269,6 +270,19 @@ class MealieClient:
 
         response = await self._get("api/groups/statistics")
         return Statistics.from_json(response)
+
+    async def random_mealplan(
+        self, at: date, entry_type: MealplanEntryType
+    ) -> Mealplan:
+        """Set a random mealplan for a specific date."""
+        response = await self._post(
+            "api/groups/mealplans/random",
+            {
+                "date": at.isoformat(),
+                "entryType": entry_type.value,
+            },
+        )
+        return Mealplan.from_json(response)
 
     async def close(self) -> None:
         """Close open client session."""

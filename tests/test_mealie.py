@@ -21,7 +21,7 @@ from aiomealie.exceptions import (
     MealieBadRequestError,
 )
 from aiomealie.mealie import MealieClient
-from aiomealie.models import MutateShoppingItem
+from aiomealie.models import MutateShoppingItem, MealplanEntryType
 from tests import load_fixture
 
 from .const import HEADERS, MEALIE_URL
@@ -534,3 +534,30 @@ async def test_statistics(
         body=load_fixture("statistics.json"),
     )
     assert await mealie_client.get_statistics() == snapshot
+
+
+async def test_random_mealplan(
+    responses: aioresponses, mealie_client: MealieClient, snapshot: SnapshotAssertion
+) -> None:
+    """Test setting random mealplan."""
+
+    responses.post(
+        f"{MEALIE_URL}/api/groups/mealplans/random",
+        status=201,
+        body=load_fixture("mealplan.json"),
+    )
+    assert (
+        await mealie_client.random_mealplan(
+            at=date(2021, 1, 1), entry_type=MealplanEntryType.BREAKFAST
+        )
+    ) == snapshot
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/groups/mealplans/random",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={
+            "date": "2021-01-01",
+            "entryType": "breakfast",
+        },
+    )
