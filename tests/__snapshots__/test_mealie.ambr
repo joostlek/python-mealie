@@ -639,6 +639,28 @@
     ]),
   })
 # ---
+# name: test_random_mealplan
+  dict({
+    'description': None,
+    'entry_type': <MealplanEntryType.DINNER: 'dinner'>,
+    'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
+    'mealplan_date': datetime.date(2024, 1, 21),
+    'mealplan_id': 192,
+    'recipe': dict({
+      'description': 'This is a wonderful option for picnics and grill outs when you are looking for a new take on potato salad. This simple side salad made with cauliflower, peas, and hard boiled eggs can be made the day ahead and chilled until party time!',
+      'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
+      'image': 'qLdv',
+      'name': 'Cauliflower Salad',
+      'original_url': 'https://www.allrecipes.com/recipe/142152/cauliflower-salad/',
+      'recipe_id': '40393996-417e-4487-a081-28608a668826',
+      'recipe_yield': '6 servings',
+      'slug': 'cauliflower-salad',
+      'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
+    }),
+    'title': None,
+    'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
+  })
+# ---
 # name: test_recipes
   dict({
     'items': list([
