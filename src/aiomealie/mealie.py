@@ -78,15 +78,11 @@ class MealieClient:
             self.session = ClientSession()
             self._close_session = True
 
-        kwargs = {
-            "headers": headers,
-            "params": params,
-            "json": data,
-        }
-
         try:
             async with asyncio.timeout(self.request_timeout):
-                response = await self.session.request(method, url, **kwargs)
+                response = await self.session.request(
+                    method, url, headers=headers, params=params, json=data
+                )
         except asyncio.TimeoutError as exception:
             msg = "Timeout occurred while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
