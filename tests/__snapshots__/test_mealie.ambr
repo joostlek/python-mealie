@@ -95,6 +95,13 @@
         'reference_id': 'ef023f23-7816-4871-87f6-4d29f9a283f7',
         'unit': None,
       }),
+      dict({
+        'is_food': True,
+        'note': 'A little water',
+        'quantity': None,
+        'reference_id': '811328dc-a5d4-4104-80d2-e26fc52b5966',
+        'unit': None,
+      }),
     ]),
     'instructions': list([
       dict({
@@ -1310,6 +1317,13 @@
         'note': 'Unsweetend whipped cream to garnish',
         'quantity': 1.0,
         'reference_id': 'ef023f23-7816-4871-87f6-4d29f9a283f7',
+        'unit': None,
+      }),
+      dict({
+        'is_food': True,
+        'note': 'A little water',
+        'quantity': None,
+        'reference_id': '811328dc-a5d4-4104-80d2-e26fc52b5966',
         'unit': None,
       }),
     ]),
