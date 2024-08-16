@@ -105,7 +105,7 @@ class Tag(DataClassORJSONMixin):
 class Ingredient(DataClassORJSONMixin):
     """Ingredient model."""
 
-    quantity: float
+    quantity: float | None
     note: str
     unit: str | None
     is_food: bool = field(metadata=field_options(alias="isFood"))
