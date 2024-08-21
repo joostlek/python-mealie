@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+
 import asyncio
+from awesomeversion import AwesomeVersion
 import json
 from dataclasses import dataclass
 from importlib import metadata
@@ -55,6 +57,7 @@ class MealieClient:
     session: ClientSession | None = None
     request_timeout: int = 10
     _close_session: bool = False
+    _version: AwesomeVersion = AwesomeVersion("")
 
     async def _request(
         self,
@@ -158,6 +161,19 @@ class MealieClient:
         """Handle a DELETE request to Mealie."""
         return await self._request(METH_DELETE, uri, data=data, params=params)
 
+    async def define_version(self) -> str:
+        """Get the version and set it for version dependent API's."""
+        about = await self.get_about()
+        self._version = AwesomeVersion(about.version.replace("beta-", "b"))
+        return about.version
+
+    def _versioned_path(self, path_end: str) -> str:
+        """Return the path with a prefix based on the major version."""
+        assert self._version != ""
+        if self._version.major and self._version.major > 1:
+            return "api/households/" + path_end
+        return "api/groups/" + path_end
+
     async def get_startup_info(self) -> StartupInfo:
         """Get startup info."""
         response = await self._get("api/app/about/startup-info")
@@ -201,7 +217,7 @@ class MealieClient:
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""
-        response = await self._get("api/groups/mealplans/today")
+        response = await self._get(self._versioned_path("mealplans/today"))
         return ORJSONDecoder(list[Mealplan]).decode(response)
 
     async def get_mealplans(
