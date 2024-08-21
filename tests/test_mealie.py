@@ -109,7 +109,7 @@ async def test_validation_error(
     )
 
     responses.put(
-        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        f"{MEALIE_URL}/api/households/shopping/items/{item_id}",
         status=422,
         body=load_fixture("validation_error.json"),
     )
@@ -304,7 +304,7 @@ async def test_mealplan_today(
 ) -> None:
     """Test retrieving mealplan."""
     responses.get(
-        f"{MEALIE_URL}/api/groups/mealplans/today",
+        f"{MEALIE_URL}/api/households/mealplans/today",
         status=200,
         body=load_fixture("mealplan_today.json"),
     )
@@ -322,7 +322,7 @@ async def test_mealplans(
         "perPage": -1,
     }
 
-    url = URL(MEALIE_URL).joinpath("api/groups/mealplans").with_query(params)
+    url = URL(MEALIE_URL).joinpath("api/households/mealplans").with_query(params)
     responses.get(
         url,
         status=200,
@@ -371,7 +371,7 @@ async def test_mealplans_parameters(
 ) -> None:
     """Test retrieving mealplans."""
 
-    url = URL(MEALIE_URL).joinpath("api/groups/mealplans").with_query(params)
+    url = URL(MEALIE_URL).joinpath("api/households/mealplans").with_query(params)
     responses.get(
         url,
         status=200,
@@ -379,7 +379,7 @@ async def test_mealplans_parameters(
     )
     assert await mealie_client.get_mealplans(**kwargs)
     responses.assert_called_once_with(
-        f"{MEALIE_URL}/api/groups/mealplans",
+        f"{MEALIE_URL}/api/households/mealplans",
         METH_GET,
         headers=HEADERS,
         params=params,
@@ -398,7 +398,7 @@ async def test_shopping_lists(
         "perPage": -1,
     }
 
-    url = URL(MEALIE_URL).joinpath("api/groups/shopping/lists").with_query(params)
+    url = URL(MEALIE_URL).joinpath("api/households/shopping/lists").with_query(params)
     responses.get(
         url,
         status=200,
@@ -422,7 +422,7 @@ async def test_shopping_items(
         "perPage": -1,
     }
 
-    url = URL(MEALIE_URL).joinpath("api/groups/shopping/items").with_query(params)
+    url = URL(MEALIE_URL).joinpath("api/households/shopping/items").with_query(params)
     responses.get(
         url,
         status=200,
@@ -434,7 +434,7 @@ async def test_shopping_items(
     )
 
     responses.assert_called_once_with(
-        f"{MEALIE_URL}/api/groups/shopping/items",
+        f"{MEALIE_URL}/api/households/shopping/items",
         METH_GET,
         headers=HEADERS,
         params=params,
@@ -453,12 +453,12 @@ async def test_add_shopping_item(
     )
 
     responses.post(
-        f"{MEALIE_URL}/api/groups/shopping/items",
+        f"{MEALIE_URL}/api/households/shopping/items",
         status=201,
     )
     await mealie_client.add_shopping_item(item=item)
     responses.assert_called_once_with(
-        f"{MEALIE_URL}/api/groups/shopping/items",
+        f"{MEALIE_URL}/api/households/shopping/items",
         METH_POST,
         headers=HEADERS,
         params=None,
@@ -483,12 +483,12 @@ async def test_update_shopping_item(
     )
 
     responses.put(
-        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        f"{MEALIE_URL}/api/households/shopping/items/{item_id}",
         status=201,
     )
     await mealie_client.update_shopping_item(item_id=item_id, item=item)
     responses.assert_called_once_with(
-        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        f"{MEALIE_URL}/api/households/shopping/items/{item_id}",
         METH_PUT,
         headers=HEADERS,
         params=None,
@@ -509,12 +509,12 @@ async def test_delete_shopping_item(
     item_id: str = "64207a44-7b40-4392-a06a-bc4e10394622"
 
     responses.delete(
-        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        f"{MEALIE_URL}/api/households/shopping/items/{item_id}",
         status=201,
     )
     await mealie_client.delete_shopping_item(item_id=item_id)
     responses.assert_called_once_with(
-        f"{MEALIE_URL}/api/groups/shopping/items/{item_id}",
+        f"{MEALIE_URL}/api/households/shopping/items/{item_id}",
         METH_DELETE,
         headers=HEADERS,
         params=None,
@@ -529,7 +529,7 @@ async def test_statistics(
 ) -> None:
     """Test retrieving statistics."""
     responses.get(
-        f"{MEALIE_URL}/api/groups/statistics",
+        f"{MEALIE_URL}/api/households/statistics",
         status=200,
         body=load_fixture("statistics.json"),
     )
@@ -542,7 +542,7 @@ async def test_random_mealplan(
     """Test setting random mealplan."""
 
     responses.post(
-        f"{MEALIE_URL}/api/groups/mealplans/random",
+        f"{MEALIE_URL}/api/households/mealplans/random",
         status=201,
         body=load_fixture("mealplan.json"),
     )
@@ -552,7 +552,7 @@ async def test_random_mealplan(
         )
     ) == snapshot
     responses.assert_called_once_with(
-        f"{MEALIE_URL}/api/groups/mealplans/random",
+        f"{MEALIE_URL}/api/households/mealplans/random",
         METH_POST,
         headers=HEADERS,
         params=None,
@@ -583,7 +583,7 @@ async def test_set_mealplan(
     """Test setting mealplan."""
 
     responses.post(
-        f"{MEALIE_URL}/api/groups/mealplans",
+        f"{MEALIE_URL}/api/households/mealplans",
         status=201,
         body=load_fixture("mealplan.json"),
     )
@@ -592,7 +592,7 @@ async def test_set_mealplan(
         at=date(2021, 1, 1), entry_type=MealplanEntryType.BREAKFAST, **kwargs
     )
     responses.assert_called_once_with(
-        f"{MEALIE_URL}/api/groups/mealplans",
+        f"{MEALIE_URL}/api/households/mealplans",
         METH_POST,
         headers=HEADERS,
         params=None,
