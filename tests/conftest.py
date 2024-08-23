@@ -11,8 +11,6 @@ from syrupy import SnapshotAssertion
 
 from .syrupy import MealieSnapshotExtension
 
-from awesomeversion import AwesomeVersion
-
 
 @pytest.fixture(name="snapshot")
 def snapshot_assertion(snapshot: SnapshotAssertion) -> SnapshotAssertion:
@@ -28,7 +26,6 @@ async def client() -> AsyncGenerator[MealieClient, None]:
         session=session,
     ) as mealie_client:
         # pylint: disable=W0212
-        mealie_client._version = AwesomeVersion("2.0.0")
         yield mealie_client
 
 

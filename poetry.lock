@@ -206,17 +206,6 @@ files = [
 cryptography = "*"
 
 [[package]]
-name = "awesomeversion"
-version = "24.6.0"
-description = "One version package to rule them all, One version package to find them, One version package to bring them all, and in the darkness bind them."
-optional = false
-python-versions = "<4.0,>=3.8"
-files = [
-    {file = "awesomeversion-24.6.0-py3-none-any.whl", hash = "sha256:6768415b8954b379a25cebf21ed4f682cab10aebf3f82a6640aaaa15ec6821f2"},
-    {file = "awesomeversion-24.6.0.tar.gz", hash = "sha256:aee7ccbaed6f8d84e0f0364080c7734a0166d77ea6ccfcc4900b38917f1efc71"},
-]
-
-[[package]]
 name = "certifi"
 version = "2024.7.4"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -2051,4 +2040,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e46256a5dbcd10eac86922f985eedd84c050dfc92118b6cbc5a5a71367516bbd"
+content-hash = "8a1d6b730852ef76779547751125a64972cb0f0eaa606d23fd1dad7b9b7d26e0"
