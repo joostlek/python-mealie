@@ -135,7 +135,12 @@ class BaseRecipe(DataClassORJSONMixin):
     recipe_id: str = field(metadata=field_options(alias="id"))
     user_id: str = field(metadata=field_options(alias="userId"))
     group_id: str = field(metadata=field_options(alias="groupId"))
-    household_id: str | None = field(metadata=field_options(alias="householdId"))
+    household_id: str | None = field(
+        metadata=field_options(
+            alias="householdId",
+            serialization_strategy=OptionalStringSerializationStrategy,
+        )
+    )
     name: str
     slug: str
     image: str

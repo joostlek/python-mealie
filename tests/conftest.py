@@ -26,6 +26,7 @@ async def client() -> AsyncGenerator[MealieClient, None]:
         session=session,
     ) as mealie_client:
         # pylint: disable=W0212
+        mealie_client._household_support = True
         yield mealie_client
 
 
