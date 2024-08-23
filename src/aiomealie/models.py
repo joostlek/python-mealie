@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-
 from dataclasses import dataclass, field
 from datetime import date
 from enum import StrEnum
@@ -20,7 +19,7 @@ class OptionalStringSerializationStrategy(SerializationStrategy):
         """Serialize optional string."""
         return value
 
-    def deserialize(self, value: str) -> str | None:
+    def deserialize(self, value: str | None) -> str | None:
         """Deserialize optional string."""
         val = value.strip()
         return val if val else None
@@ -138,8 +137,8 @@ class BaseRecipe(DataClassORJSONMixin):
     household_id: str | None = field(
         metadata=field_options(
             alias="householdId",
-            serialization_strategy=OptionalStringSerializationStrategy,
-        )
+            serialization_strategy=OptionalStringSerializationStrategy(),
+        ),
     )
     name: str
     slug: str
@@ -189,8 +188,8 @@ class Mealplan(DataClassORJSONMixin):
     household_id: str | None = field(
         metadata=field_options(
             alias="householdId",
-            serialization_strategy=OptionalStringSerializationStrategy,
-        )
+            serialization_strategy=OptionalStringSerializationStrategy(),
+        ),
     )
     entry_type: MealplanEntryType = field(metadata=field_options(alias="entryType"))
     mealplan_date: date = field(metadata=field_options(alias="date"))
