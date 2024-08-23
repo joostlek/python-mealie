@@ -164,7 +164,7 @@ class MealieClient:
         """Check whether households are supported."""
         try:
             await self._get("api/households/mealplans/today")
-        except MealieNotFoundError:        
+        except MealieNotFoundError:
             self._household_support = False
         self._household_support = True
         
