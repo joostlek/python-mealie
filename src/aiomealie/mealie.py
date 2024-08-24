@@ -280,7 +280,9 @@ class MealieClient:
     async def delete_shopping_item(self, item_id: str) -> None:
         """Delete shopping item."""
 
-        await self._delete(f"{self._versioned_path("shopping/items")}/{item_id}")
+        await self._delete(
+            f"{self._versioned_path('shopping/items')}/{item_id}",
+        )
 
     async def get_statistics(self) -> Statistics:
         """Get statistics."""
