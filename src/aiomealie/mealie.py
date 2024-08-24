@@ -273,7 +273,7 @@ class MealieClient:
         """Update a shopping item."""
 
         await self._put(
-            f"{self._versioned_path("shopping/items")}/{item_id}",
+            f"{self._versioned_path('shopping/items')}/{item_id}",
             data=item.to_dict(omit_none=True),
         )
 
