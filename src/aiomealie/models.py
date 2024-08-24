@@ -21,6 +21,8 @@ class OptionalStringSerializationStrategy(SerializationStrategy):
 
     def deserialize(self, value: str | None) -> str | None:
         """Deserialize optional string."""
+        if not value:
+            return None
         val = value.strip()
         return val if val else None
 
