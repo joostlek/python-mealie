@@ -167,7 +167,7 @@ class MealieClient:
         except MealieNotFoundError:
             self._household_support = False
         self._household_support = True
-        
+        return self._household_support
 
     def _versioned_path(self, path_end: str) -> str:
         """Return the path with a prefix based on household support detected."""
