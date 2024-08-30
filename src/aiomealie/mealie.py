@@ -56,7 +56,7 @@ class MealieClient:
     session: ClientSession | None = None
     request_timeout: int = 10
     _close_session: bool = False
-    _household_support: bool | None = None
+    household_support: bool | None = None
 
     async def _request(
         self,
@@ -165,14 +165,15 @@ class MealieClient:
         try:
             await self._get("api/households/mealplans/today")
         except MealieNotFoundError:
-            self._household_support = False
-        self._household_support = True
-        return self._household_support
+            self.household_support = False
+        else:
+            self.household_support = True
+        return self.household_support
 
     def _versioned_path(self, path_end: str) -> str:
         """Return the path with a prefix based on household support detected."""
-        assert self._household_support
-        if self._household_support:
+        assert self.household_support
+        if self.household_support:
             return "api/households/" + path_end
         return "api/groups/" + path_end
 
