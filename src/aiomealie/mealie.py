@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+
 import asyncio
 import json
 from dataclasses import dataclass
@@ -55,6 +56,7 @@ class MealieClient:
     session: ClientSession | None = None
     request_timeout: int = 10
     _close_session: bool = False
+    household_support: bool | None = None
 
     async def _request(
         self,
@@ -158,6 +160,23 @@ class MealieClient:
         """Handle a DELETE request to Mealie."""
         return await self._request(METH_DELETE, uri, data=data, params=params)
 
+    async def define_household_support(self) -> bool:
+        """Check whether households are supported."""
+        try:
+            await self._get("api/households/mealplans/today")
+        except MealieNotFoundError:
+            self.household_support = False
+        else:
+            self.household_support = True
+        return self.household_support
+
+    def _versioned_path(self, path_end: str) -> str:
+        """Return the path with a prefix based on household support detected."""
+        assert self.household_support
+        if self.household_support:
+            return "api/households/" + path_end
+        return "api/groups/" + path_end
+
     async def get_startup_info(self) -> StartupInfo:
         """Get startup info."""
         response = await self._get("api/app/about/startup-info")
@@ -201,7 +220,7 @@ class MealieClient:
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""
-        response = await self._get("api/groups/mealplans/today")
+        response = await self._get(self._versioned_path("mealplans/today"))
         return ORJSONDecoder(list[Mealplan]).decode(response)
 
     async def get_mealplans(
@@ -216,14 +235,14 @@ class MealieClient:
         if end_date:
             params["end_date"] = end_date.isoformat()
         params["perPage"] = -1
-        response = await self._get("api/groups/mealplans", params)
+        response = await self._get(self._versioned_path("mealplans"), params)
         return MealplanResponse.from_json(response)
 
     async def get_shopping_lists(self) -> ShoppingListsResponse:
         """Get shopping lists."""
         params: dict[str, Any] = {}
         params["perPage"] = -1
-        response = await self._get("api/groups/shopping/lists", params)
+        response = await self._get(self._versioned_path("shopping/lists"), params)
         return ShoppingListsResponse.from_json(response)
 
     async def get_shopping_items(
@@ -236,7 +255,7 @@ class MealieClient:
         params["orderBy"] = ShoppingItemsOrderBy.POSITION
         params["orderDirection"] = OrderDirection.ASCENDING
         params["perPage"] = -1
-        response = await self._get("api/groups/shopping/items", params)
+        response = await self._get(self._versioned_path("shopping/items"), params)
         return ShoppingItemsResponse.from_json(response)
 
     async def add_shopping_item(
@@ -245,7 +264,9 @@ class MealieClient:
     ) -> None:
         """Add a shopping item."""
 
-        await self._post("api/groups/shopping/items", data=item.to_dict(omit_none=True))
+        await self._post(
+            self._versioned_path("shopping/items"), data=item.to_dict(omit_none=True)
+        )
 
     async def update_shopping_item(
         self, item_id: str, item: MutateShoppingItem
@@ -253,18 +274,21 @@ class MealieClient:
         """Update a shopping item."""
 
         await self._put(
-            f"api/groups/shopping/items/{item_id}", data=item.to_dict(omit_none=True)
+            f"{self._versioned_path('shopping/items')}/{item_id}",
+            data=item.to_dict(omit_none=True),
         )
 
     async def delete_shopping_item(self, item_id: str) -> None:
         """Delete shopping item."""
 
-        await self._delete(f"api/groups/shopping/items/{item_id}")
+        await self._delete(
+            f"{self._versioned_path('shopping/items')}/{item_id}",
+        )
 
     async def get_statistics(self) -> Statistics:
         """Get statistics."""
 
-        response = await self._get("api/groups/statistics")
+        response = await self._get(self._versioned_path("statistics"))
         return Statistics.from_json(response)
 
     async def random_mealplan(
@@ -272,7 +296,7 @@ class MealieClient:
     ) -> Mealplan:
         """Set a random mealplan for a specific date."""
         response = await self._post(
-            "api/groups/mealplans/random",
+            self._versioned_path("mealplans/random"),
             {
                 "date": at.isoformat(),
                 "entryType": entry_type.value,
@@ -300,7 +324,7 @@ class MealieClient:
             data["title"] = note_title
             if note_text:
                 data["text"] = note_text
-        response = await self._post("api/groups/mealplans", data)
+        response = await self._post(self._versioned_path("mealplans"), data)
         return Mealplan.from_json(response)
 
     async def close(self) -> None:
