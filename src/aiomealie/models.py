@@ -136,21 +136,22 @@ class BaseRecipe(DataClassORJSONMixin):
     recipe_id: str = field(metadata=field_options(alias="id"))
     user_id: str = field(metadata=field_options(alias="userId"))
     group_id: str = field(metadata=field_options(alias="groupId"))
-    household_id: str | None = field(
-        metadata=field_options(
-            alias="householdId",
-            serialization_strategy=OptionalStringSerializationStrategy(),
-        ),
-    )
     name: str
     slug: str
     image: str
     recipe_yield: str = field(metadata=field_options(alias="recipeYield"))
     description: str
     original_url: str = field(metadata=field_options(alias="orgURL"))
+    household_id: str | None = field(
+        default=None,
+        metadata=field_options(
+            alias="householdId",
+            serialization_strategy=OptionalStringSerializationStrategy(),
+        ),
+    )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Recipe(BaseRecipe):
     """Recipe model."""
 
@@ -187,12 +188,6 @@ class Mealplan(DataClassORJSONMixin):
     mealplan_id: str = field(metadata=field_options(alias="id"))
     user_id: str = field(metadata=field_options(alias="userId"))
     group_id: str = field(metadata=field_options(alias="groupId"))
-    household_id: str | None = field(
-        metadata=field_options(
-            alias="householdId",
-            serialization_strategy=OptionalStringSerializationStrategy(),
-        ),
-    )
     entry_type: MealplanEntryType = field(metadata=field_options(alias="entryType"))
     mealplan_date: date = field(metadata=field_options(alias="date"))
     title: str | None = field(
@@ -206,6 +201,13 @@ class Mealplan(DataClassORJSONMixin):
         )
     )
     recipe: BaseRecipe | None
+    household_id: str | None = field(
+        default=None,
+        metadata=field_options(
+            alias="householdId",
+            serialization_strategy=OptionalStringSerializationStrategy(),
+        ),
+    )
 
 
 @dataclass
