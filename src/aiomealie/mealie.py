@@ -172,7 +172,6 @@ class MealieClient:
 
     def _versioned_path(self, path_end: str) -> str:
         """Return the path with a prefix based on household support detected."""
-        assert self.household_support
         if self.household_support:
             return "api/households/" + path_end
         return "api/groups/" + path_end
