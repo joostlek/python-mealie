@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from importlib import metadata
 from typing import TYPE_CHECKING, Any, Self
 
-from aiohttp import ClientSession
+from aiohttp import ClientSession, ClientConnectionError
 from aiohttp.hdrs import METH_GET, METH_POST, METH_PUT, METH_DELETE
 from mashumaro.codecs.orjson import ORJSONDecoder
 from yarl import URL
@@ -87,6 +87,9 @@ class MealieClient:
                 )
         except asyncio.TimeoutError as exception:
             msg = "Timeout occurred while connecting to Mealie"
+            raise MealieConnectionError(msg) from exception
+        except ClientConnectionError as exception:
+            msg = "Client connection error while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
 
         if response.status == 400:
