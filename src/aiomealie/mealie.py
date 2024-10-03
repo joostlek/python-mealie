@@ -89,7 +89,7 @@ class MealieClient:
             msg = "Timeout occurred while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
         except ClientConnectionError as exception:
-            msg = "Client connection error"
+            msg = "Client connection error while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
 
         if response.status == 400:
