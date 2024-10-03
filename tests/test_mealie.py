@@ -172,6 +172,14 @@ async def test_timeout(
             assert await mealie_client.get_startup_info()
 
 
+async def test_client_connection_error() -> None:
+    """Test client connection error from mealie."""
+
+    async with MealieClient(api_host="https://bad-url") as mealie_client:
+        with pytest.raises(MealieConnectionError):
+            assert await mealie_client.get_startup_info()
+
+
 async def test_about(
     responses: aioresponses,
     mealie_client: MealieClient,
