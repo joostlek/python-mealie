@@ -109,6 +109,7 @@ class Ingredient(DataClassORJSONMixin):
     quantity: float | None
     note: str
     unit: str | None
+    food: str | None
     is_food: bool = field(metadata=field_options(alias="isFood"))
     reference_id: str = field(metadata=field_options(alias="referenceId"))
 
