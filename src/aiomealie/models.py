@@ -245,9 +245,9 @@ class ShoppingItem(DataClassORJSONMixin):
     is_food: bool = field(metadata=field_options(alias="isFood"))
     disable_amount: bool = field(metadata=field_options(alias="disableAmount"))
     quantity: float
-    label_id: str = field(metadata=field_options(alias="labelId"))
-    food_id: str = field(metadata=field_options(alias="foodId"))
-    unit_id: str = field(metadata=field_options(alias="unitId"))
+    label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
+    food_id: str | None = field(default=None, metadata=field_options(alias="foodId"))
+    unit_id: str | None = field(default=None, metadata=field_options(alias="unitId"))
 
 
 @dataclass
