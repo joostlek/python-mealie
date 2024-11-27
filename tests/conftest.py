@@ -21,10 +21,13 @@ def snapshot_assertion(snapshot: SnapshotAssertion) -> SnapshotAssertion:
 @pytest.fixture(name="mealie_client")
 async def client() -> AsyncGenerator[MealieClient, None]:
     """Return a Mealie client."""
-    async with aiohttp.ClientSession() as session, MealieClient(
-        "https://demo.mealie.io",
-        session=session,
-    ) as mealie_client:
+    async with (
+        aiohttp.ClientSession() as session,
+        MealieClient(
+            "https://demo.mealie.io",
+            session=session,
+        ) as mealie_client,
+    ):
         mealie_client.household_support = True
         yield mealie_client
 
