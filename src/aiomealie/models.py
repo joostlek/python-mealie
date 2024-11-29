@@ -138,10 +138,14 @@ class BaseRecipe(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     name: str
     slug: str
-    image: str
-    recipe_yield: str = field(metadata=field_options(alias="recipeYield"))
     description: str
-    original_url: str = field(metadata=field_options(alias="orgURL"))
+    image: str | None = None
+    recipe_yield: str | None = field(
+        default=None, metadata=field_options(alias="recipeYield")
+    )
+    original_url: str | None = field(
+        default=None, metadata=field_options(alias="orgURL")
+    )
     household_id: str | None = field(
         default=None,
         metadata=field_options(
@@ -185,7 +189,7 @@ class MealplanEntryType(StrEnum):
 class Mealplan(DataClassORJSONMixin):
     """Mealplan model."""
 
-    mealplan_id: str = field(metadata=field_options(alias="id"))
+    mealplan_id: int = field(metadata=field_options(alias="id"))
     user_id: str = field(metadata=field_options(alias="userId"))
     group_id: str = field(metadata=field_options(alias="groupId"))
     entry_type: MealplanEntryType = field(metadata=field_options(alias="entryType"))
@@ -245,9 +249,9 @@ class ShoppingItem(DataClassORJSONMixin):
     is_food: bool = field(metadata=field_options(alias="isFood"))
     disable_amount: bool = field(metadata=field_options(alias="disableAmount"))
     quantity: float
-    label_id: str = field(metadata=field_options(alias="labelId"))
-    food_id: str = field(metadata=field_options(alias="foodId"))
-    unit_id: str = field(metadata=field_options(alias="unitId"))
+    label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
+    food_id: str | None = field(default=None, metadata=field_options(alias="foodId"))
+    unit_id: str | None = field(default=None, metadata=field_options(alias="unitId"))
 
 
 @dataclass
