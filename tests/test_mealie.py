@@ -139,7 +139,7 @@ async def test_bad_request_error(
 ) -> None:
     """Test not found error from mealie."""
     responses.post(
-        f"{MEALIE_URL}/api/recipes/create-url",
+        f"{MEALIE_URL}/api/recipes/create/url",
         status=400,
         body=load_fixture("bad_request_error.json"),
     )
@@ -271,7 +271,7 @@ async def test_importing_recipe(
 ) -> None:
     """Test importing recipe."""
     responses.post(
-        f"{MEALIE_URL}/api/recipes/create-url",
+        f"{MEALIE_URL}/api/recipes/create/url",
         status=201,
         body=load_fixture("scrape_recipe.json"),
     )
@@ -287,7 +287,7 @@ async def test_importing_recipe(
         == snapshot
     )
     responses.assert_called_with(
-        f"{MEALIE_URL}/api/recipes/create-url",
+        f"{MEALIE_URL}/api/recipes/create/url",
         METH_POST,
         headers=HEADERS,
         params=None,

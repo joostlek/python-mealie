@@ -180,8 +180,7 @@ class MealieClient:
         """Return the version, retrieve from get_about if not stored."""
         if not self._version:
             about = await self.get_about()
-            if about:
-                self._version = about.version
+            self._version = about.version
         return self._version
 
     def _versioned_path(self, path_end: str) -> str:
@@ -229,7 +228,7 @@ class MealieClient:
         """Import a recipe."""
         data = {"url": url, "include_tags": include_tags}
         version = AwesomeVersion(self._version)
-        if version.valid and version.major < 2:
+        if version.valid and version < AwesomeVersion("2.0.0"):
             url = "api/recipes/create-url"
         else:
             url = "api/recipes/create/url"
