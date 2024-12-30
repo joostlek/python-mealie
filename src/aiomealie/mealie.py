@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+from awesomeversion import AwesomeVersion
 from dataclasses import dataclass
 from importlib import metadata
 from typing import TYPE_CHECKING, Any, Self
@@ -57,6 +58,7 @@ class MealieClient:
     request_timeout: int = 10
     _close_session: bool = False
     household_support: bool | None = None
+    _version: str | None = None
 
     async def _request(
         self,
@@ -173,6 +175,14 @@ class MealieClient:
             self.household_support = True
         return self.household_support
 
+    @property
+    async def version(self) -> str:
+        """Return the version, retrieve from get_about if not stored."""
+        if not self._version:
+            about = await self.get_about()
+            self._version = about.version
+        return self._version
+
     def _versioned_path(self, path_end: str) -> str:
         """Return the path with a prefix based on household support detected."""
         if self.household_support:
@@ -217,7 +227,12 @@ class MealieClient:
     async def import_recipe(self, url: str, include_tags: bool = False) -> Recipe:
         """Import a recipe."""
         data = {"url": url, "include_tags": include_tags}
-        response = await self._post("api/recipes/create-url", data)
+        version = AwesomeVersion(self._version)
+        if version.valid and version < AwesomeVersion("2.0.0"):
+            mealie_uri = "api/recipes/create-url"
+        else:
+            mealie_uri = "api/recipes/create/url"
+        response = await self._post(mealie_uri, data)
         return await self.get_recipe(json.loads(response))
 
     async def get_mealplan_today(self) -> list[Mealplan]:
