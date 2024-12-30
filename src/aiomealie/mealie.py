@@ -229,10 +229,10 @@ class MealieClient:
         data = {"url": url, "include_tags": include_tags}
         version = AwesomeVersion(self._version)
         if version.valid and version < AwesomeVersion("2.0.0"):
-            url = "api/recipes/create-url"
+            mealie_uri = "api/recipes/create-url"
         else:
-            url = "api/recipes/create/url"
-        response = await self._post(url, data)
+            mealie_uri = "api/recipes/create/url"
+        response = await self._post(mealie_uri, data)
         return await self.get_recipe(json.loads(response))
 
     async def get_mealplan_today(self) -> list[Mealplan]:
