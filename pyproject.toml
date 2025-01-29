@@ -33,7 +33,7 @@ orjson = ">=3.9.0"
 awesomeversion = "^24.6.0"
 
 [tool.poetry.group.dev.dependencies]
-codespell = "2.4.0"
+codespell = "2.4.1"
 covdefaults = "2.3.0"
 coverage = {version = "7.6.10", extras = ["toml"]}
 mypy = "1.14.1"
