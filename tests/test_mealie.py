@@ -239,15 +239,43 @@ async def test_theme(
 async def test_recipes(
     responses: aioresponses,
     mealie_client: MealieClient,
-    snapshot: SnapshotAssertion,
+    snapshot: SnapshotAssertion
 ) -> None:
     """Test retrieving recipes."""
+
+    params: dict[str, Any] = {
+        "perPage": 50,
+    }
+    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
     responses.get(
-        f"{MEALIE_URL}/api/recipes",
+        url,
         status=200,
         body=load_fixture("recipes.json"),
     )
-    assert await mealie_client.get_recipes() == snapshot
+
+    params: dict[str, Any] = {
+        "perPage": 50,
+        "search": "pasta"
+    }
+    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
+    responses.get(
+        url,
+        status=200,
+        body=load_fixture("recipes_searched.json"),
+    )
+    assert await mealie_client.get_recipes(search="pasta") == snapshot
+
+    params: dict[str, Any] = {
+        "perPage": 20,
+        "search": "pasta"
+    }
+    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
+    responses.get(
+        url,
+        status=200,
+        body=load_fixture("recipes_searched.json"),
+    )
+    assert await mealie_client.get_recipes(search="pasta", per_page=20) == snapshot
 
 
 async def test_retrieving_recipe(

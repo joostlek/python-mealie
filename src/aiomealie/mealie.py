@@ -214,9 +214,15 @@ class MealieClient:
         response = await self._get("api/app/about/theme")
         return Theme.from_json(response)
 
-    async def get_recipes(self) -> RecipesResponse:
+    async def get_recipes(
+        self, search: str | None = None, per_page: int = 50
+    ) -> RecipesResponse:
         """Get recipes."""
-        response = await self._get("api/recipes")
+        params: dict[str, Any] = {}
+        params["perPage"] = per_page
+        if search:
+            params["search"] = search
+        response = await self._get("api/recipes", params=params)
         return RecipesResponse.from_json(response)
 
     async def get_recipe(self, recipe_id_or_slug: str) -> Recipe:
