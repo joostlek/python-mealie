@@ -236,41 +236,36 @@ async def test_theme(
     assert await mealie_client.get_theme() == snapshot
 
 
+@pytest.mark.parametrize(
+    ("kwargs", "params"),
+    [
+        ({}, {"perPage": 50}),
+        ({"search": "pasta"}, {"perPage": 50, "search": "pasta"}),
+        ({"search": "pasta", "per_page": 20}, {"perPage": 20, "search": "pasta"}),
+    ],
+)
 async def test_recipes(
-    responses: aioresponses, mealie_client: MealieClient, snapshot: SnapshotAssertion
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+    kwargs: dict[str, Any],
+    params: dict[str, Any],
 ) -> None:
-    """Test retrieving recipes."""
-
-    params_default: dict[str, Any] = {"perPage": 50}
-    url_default = URL(MEALIE_URL).joinpath("api/recipes").with_query(params_default)
+    """Test retrieving recipes with various parameters."""
+    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
     responses.get(
-        url_default,
+        url,
         status=200,
         body=load_fixture("recipes.json"),
     )
-    assert await mealie_client.get_recipes() == snapshot
-
-    # Scenario 2: Search for 'pasta', default per_page
-    params_search: dict[str, Any] = {"perPage": 50, "search": "pasta"}
-    url_search = URL(MEALIE_URL).joinpath("api/recipes").with_query(params_search)
-    responses.get(
-        url_search,
-        status=200,
-        body=load_fixture("recipes_searched.json"),
+    assert await mealie_client.get_recipes(**kwargs) == snapshot
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/recipes",
+        METH_GET,
+        headers=HEADERS,
+        params=params,
+        json=None,
     )
-    assert await mealie_client.get_recipes(search="pasta") == snapshot
-
-    # Scenario 3: Search for 'pasta', limited per_page
-    params_search_limited: dict[str, Any] = {"perPage": 20, "search": "pasta"}
-    url_search_limited = (
-        URL(MEALIE_URL).joinpath("api/recipes").with_query(params_search_limited)
-    )
-    responses.get(
-        url_search_limited,
-        status=200,
-        body=load_fixture("recipes_searched.json"),
-    )
-    assert await mealie_client.get_recipes(search="pasta", per_page=20) == snapshot
 
 
 async def test_retrieving_recipe(
