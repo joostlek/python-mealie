@@ -248,6 +248,7 @@ async def test_recipes(
         status=200,
         body=load_fixture("recipes.json"),
     )
+    assert await mealie_client.get_recipes() == snapshot
 
     # Scenario 2: Search for 'pasta', default per_page
     params_search: dict[str, Any] = {"perPage": 50, "search": "pasta"}
