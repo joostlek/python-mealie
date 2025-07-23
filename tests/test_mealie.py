@@ -237,41 +237,35 @@ async def test_theme(
 
 
 async def test_recipes(
-    responses: aioresponses,
-    mealie_client: MealieClient,
-    snapshot: SnapshotAssertion
+    responses: aioresponses, mealie_client: MealieClient, snapshot: SnapshotAssertion
 ) -> None:
     """Test retrieving recipes."""
 
-    params: dict[str, Any] = {
-        "perPage": 50,
-    }
-    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
+    params_default: dict[str, Any] = {"perPage": 50}
+    url_default = URL(MEALIE_URL).joinpath("api/recipes").with_query(params_default)
     responses.get(
-        url,
+        url_default,
         status=200,
         body=load_fixture("recipes.json"),
     )
 
-    params: dict[str, Any] = {
-        "perPage": 50,
-        "search": "pasta"
-    }
-    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
+    # Scenario 2: Search for 'pasta', default per_page
+    params_search: dict[str, Any] = {"perPage": 50, "search": "pasta"}
+    url_search = URL(MEALIE_URL).joinpath("api/recipes").with_query(params_search)
     responses.get(
-        url,
+        url_search,
         status=200,
         body=load_fixture("recipes_searched.json"),
     )
     assert await mealie_client.get_recipes(search="pasta") == snapshot
 
-    params: dict[str, Any] = {
-        "perPage": 20,
-        "search": "pasta"
-    }
-    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
+    # Scenario 3: Search for 'pasta', limited per_page
+    params_search_limited: dict[str, Any] = {"perPage": 20, "search": "pasta"}
+    url_search_limited = (
+        URL(MEALIE_URL).joinpath("api/recipes").with_query(params_search_limited)
+    )
     responses.get(
-        url,
+        url_search_limited,
         status=200,
         body=load_fixture("recipes_searched.json"),
     )
