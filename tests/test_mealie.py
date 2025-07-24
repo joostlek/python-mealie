@@ -236,18 +236,36 @@ async def test_theme(
     assert await mealie_client.get_theme() == snapshot
 
 
+@pytest.mark.parametrize(
+    ("kwargs", "params"),
+    [
+        ({}, {"perPage": 50}),
+        ({"search": "pasta"}, {"perPage": 50, "search": "pasta"}),
+        ({"search": "pasta", "per_page": 20}, {"perPage": 20, "search": "pasta"}),
+    ],
+)
 async def test_recipes(
     responses: aioresponses,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
+    kwargs: dict[str, Any],
+    params: dict[str, Any],
 ) -> None:
-    """Test retrieving recipes."""
+    """Test retrieving recipes with various parameters."""
+    url = URL(MEALIE_URL).joinpath("api/recipes").with_query(params)
     responses.get(
-        f"{MEALIE_URL}/api/recipes",
+        url,
         status=200,
         body=load_fixture("recipes.json"),
     )
-    assert await mealie_client.get_recipes() == snapshot
+    assert await mealie_client.get_recipes(**kwargs) == snapshot
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/recipes",
+        METH_GET,
+        headers=HEADERS,
+        params=params,
+        json=None,
+    )
 
 
 async def test_retrieving_recipe(
