@@ -109,8 +109,8 @@ class Ingredient(DataClassORJSONMixin):
     quantity: float | None
     note: str
     unit: str | None
-    is_food: bool = field(metadata=field_options(alias="isFood"))
     reference_id: str = field(metadata=field_options(alias="referenceId"))
+    is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
 
 
 @dataclass
@@ -246,12 +246,14 @@ class ShoppingItem(DataClassORJSONMixin):
     display: str
     checked: bool
     position: int
-    is_food: bool = field(metadata=field_options(alias="isFood"))
-    disable_amount: bool = field(metadata=field_options(alias="disableAmount"))
     quantity: float
     label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
     food_id: str | None = field(default=None, metadata=field_options(alias="foodId"))
     unit_id: str | None = field(default=None, metadata=field_options(alias="unitId"))
+    is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
+    disable_amount: bool | None = field(
+        default=None, metadata=field_options(alias="disableAmount")
+    )
 
 
 @dataclass
