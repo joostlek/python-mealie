@@ -95,11 +95,9 @@ class MealieClient:
             raise MealieConnectionError(msg) from exception
 
         if response.status == 400:
-            text = await response.text()
             msg = "Bad request to Mealie"
             raise MealieBadRequestError(
                 msg,
-                {"response": text},
             )
 
         if response.status == 401:
@@ -107,29 +105,24 @@ class MealieClient:
             raise MealieAuthenticationError(msg)
 
         if response.status == 422:
-            text = await response.text()
             msg = "Mealie validation error"
             raise MealieValidationError(
                 msg,
-                {"response": text},
             )
 
         if response.status == 404:
-            text = await response.text()
             msg = "Object not found in Mealie"
             raise MealieNotFoundError(
                 msg,
-                {"response": text},
             )
 
         content_type = response.headers.get("Content-Type", "")
 
         if "application/json" not in content_type:
-            text = await response.text()
             msg = "Unexpected response from Mealie"
             raise MealieError(
                 msg,
-                {"Content-Type": content_type, "response": text},
+                {"Content-Type": content_type},
             )
 
         return await response.text()
