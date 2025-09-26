@@ -138,6 +138,9 @@ class BaseRecipe(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     name: str
     slug: str
+    totalTime: str
+    prepTime: str
+    performTime: str
     description: str
     image: str | None = None
     recipe_yield: str | None = field(
