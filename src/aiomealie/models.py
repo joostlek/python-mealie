@@ -138,9 +138,9 @@ class BaseRecipe(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     name: str
     slug: str
-    totalTime: str
-    prepTime: str
-    performTime: str
+    totalTime: str = field(metadata=field_options(alias="totalTime"))
+    prepTime: str = field(metadata=field_options(alias="prepTime"))
+    performTime: str = field(metadata=field_options(alias="performTime"))
     description: str
     image: str | None = None
     recipe_yield: str | None = field(
