@@ -138,9 +138,6 @@ class BaseRecipe(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     name: str
     slug: str
-    totalTime: str = field(metadata=field_options(alias="totalTime"))
-    prepTime: str = field(metadata=field_options(alias="prepTime"))
-    performTime: str = field(metadata=field_options(alias="performTime"))
     description: str
     image: str | None = None
     recipe_yield: str | None = field(
@@ -164,6 +161,27 @@ class Recipe(BaseRecipe):
 
     tags: list[Tag]
     date_added: date = field(metadata=field_options(alias="dateAdded"))
+    totalTime: str = field(
+        default=None,
+        metadata=field_options(
+            alias="totalTime",
+            serialization_strategy=OptionalStringSerializationStrategy(),
+        ),
+    )
+    prepTime: str = field(
+        default=None,
+        metadata=field_options(
+            alias="prepTime",
+            serialization_strategy=OptionalStringSerializationStrategy(),
+        ),
+    )
+    performTime: str = field(
+        default=None,
+        metadata=field_options(
+            alias="performTime",
+            serialization_strategy=OptionalStringSerializationStrategy(),
+        ),
+    )
     ingredients: list[Ingredient] = field(
         metadata=field_options(alias="recipeIngredient")
     )
