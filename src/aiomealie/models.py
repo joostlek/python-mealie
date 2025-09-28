@@ -144,8 +144,8 @@ class BaseRecipe(DataClassORJSONMixin):
         metadata=field_options(
             alias="totalTime",
             serialization_strategy=OptionalStringSerializationStrategy(),
-            ),
-        )
+        ),
+    )
     prep_time: str | None = field(
         default=None,
         metadata=field_options(
