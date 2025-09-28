@@ -138,13 +138,14 @@ class BaseRecipe(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     name: str
     slug: str
+    description: str
     total_time: str | None = field(
-    default=None,
-    metadata=field_options(
-        alias="totalTime",
-        serialization_strategy=OptionalStringSerializationStrategy(),
-        ),
-    )
+        default=None,
+        metadata=field_options(
+            alias="totalTime",
+            serialization_strategy=OptionalStringSerializationStrategy(),
+            ),
+        )
     prep_time: str | None = field(
         default=None,
         metadata=field_options(
@@ -159,7 +160,6 @@ class BaseRecipe(DataClassORJSONMixin):
             serialization_strategy=OptionalStringSerializationStrategy(),
         ),
     )
-    description: str
     image: str | None = None
     recipe_yield: str | None = field(
         default=None, metadata=field_options(alias="recipeYield")
