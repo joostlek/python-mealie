@@ -138,21 +138,21 @@ class BaseRecipe(DataClassORJSONMixin):
     group_id: str = field(metadata=field_options(alias="groupId"))
     name: str
     slug: str
-    total_time: str = field(
+    total_time: str | None = field(
     default=None,
     metadata=field_options(
         alias="totalTime",
         serialization_strategy=OptionalStringSerializationStrategy(),
         ),
     )
-    prep_time: str = field(
+    prep_time: str | None = field(
         default=None,
         metadata=field_options(
             alias="prepTime",
             serialization_strategy=OptionalStringSerializationStrategy(),
         ),
     )
-    perform_time: str = field(
+    perform_time: str | None = field(
         default=None,
         metadata=field_options(
             alias="performTime",
