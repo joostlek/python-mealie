@@ -16,6 +16,8 @@ Asynchronous Python client for Mealie.
 
 This package allows you to fetch data from your Mealie instance.
 
+Mealie instances of version 2 and above are supported.
+
 ## Installation
 
 ```bash
