@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import asyncio
 import json
-from awesomeversion import AwesomeVersion
 from dataclasses import dataclass
 from importlib import metadata
 from typing import TYPE_CHECKING, Any, Self
@@ -57,7 +56,6 @@ class MealieClient:
     session: ClientSession | None = None
     request_timeout: int = 10
     _close_session: bool = False
-    household_support: bool | None = None
     _version: str | None = None
 
     async def _request(
@@ -158,16 +156,6 @@ class MealieClient:
         """Handle a DELETE request to Mealie."""
         return await self._request(METH_DELETE, uri, data=data, params=params)
 
-    async def define_household_support(self) -> bool:
-        """Check whether households are supported."""
-        try:
-            await self._get("api/households/mealplans/today")
-        except MealieError:
-            self.household_support = False
-        else:
-            self.household_support = True
-        return self.household_support
-
     @property
     async def version(self) -> str:
         """Return the version, retrieve from get_about if not stored."""
@@ -175,12 +163,6 @@ class MealieClient:
             about = await self.get_about()
             self._version = about.version
         return self._version
-
-    def _versioned_path(self, path_end: str) -> str:
-        """Return the path with a prefix based on household support detected."""
-        if self.household_support:
-            return "api/households/" + path_end
-        return "api/groups/" + path_end
 
     async def get_startup_info(self) -> StartupInfo:
         """Get startup info."""
@@ -226,17 +208,12 @@ class MealieClient:
     async def import_recipe(self, url: str, include_tags: bool = False) -> Recipe:
         """Import a recipe."""
         data = {"url": url, "include_tags": include_tags}
-        version = AwesomeVersion(self._version)
-        if version.valid and version < AwesomeVersion("2.0.0"):
-            mealie_uri = "api/recipes/create-url"
-        else:
-            mealie_uri = "api/recipes/create/url"
-        response = await self._post(mealie_uri, data)
+        response = await self._post("api/recipes/create/url", data)
         return await self.get_recipe(json.loads(response))
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""
-        response = await self._get(self._versioned_path("mealplans/today"))
+        response = await self._get("api/households/mealplans/today")
         return ORJSONDecoder(list[Mealplan]).decode(response)
 
     async def get_mealplans(
@@ -251,14 +228,14 @@ class MealieClient:
         if end_date:
             params["end_date"] = end_date.isoformat()
         params["perPage"] = -1
-        response = await self._get(self._versioned_path("mealplans"), params)
+        response = await self._get("api/households/mealplans", params)
         return MealplanResponse.from_json(response)
 
     async def get_shopping_lists(self) -> ShoppingListsResponse:
         """Get shopping lists."""
         params: dict[str, Any] = {}
         params["perPage"] = -1
-        response = await self._get(self._versioned_path("shopping/lists"), params)
+        response = await self._get("api/households/shopping/lists", params)
         return ShoppingListsResponse.from_json(response)
 
     async def get_shopping_items(
@@ -271,7 +248,7 @@ class MealieClient:
         params["orderBy"] = ShoppingItemsOrderBy.POSITION
         params["orderDirection"] = OrderDirection.ASCENDING
         params["perPage"] = -1
-        response = await self._get(self._versioned_path("shopping/items"), params)
+        response = await self._get("api/households/shopping/items", params)
         return ShoppingItemsResponse.from_json(response)
 
     async def add_shopping_item(
@@ -281,7 +258,7 @@ class MealieClient:
         """Add a shopping item."""
 
         await self._post(
-            self._versioned_path("shopping/items"), data=item.to_dict(omit_none=True)
+            "api/households/shopping/items", data=item.to_dict(omit_none=True)
         )
 
     async def update_shopping_item(
@@ -290,7 +267,7 @@ class MealieClient:
         """Update a shopping item."""
 
         await self._put(
-            f"{self._versioned_path('shopping/items')}/{item_id}",
+            f"api/households/shopping/items/{item_id}",
             data=item.to_dict(omit_none=True),
         )
 
@@ -298,13 +275,13 @@ class MealieClient:
         """Delete shopping item."""
 
         await self._delete(
-            f"{self._versioned_path('shopping/items')}/{item_id}",
+            f"api/households/shopping/items/{item_id}",
         )
 
     async def get_statistics(self) -> Statistics:
         """Get statistics."""
 
-        response = await self._get(self._versioned_path("statistics"))
+        response = await self._get("api/households/statistics")
         return Statistics.from_json(response)
 
     async def random_mealplan(
@@ -312,7 +289,7 @@ class MealieClient:
     ) -> Mealplan:
         """Set a random mealplan for a specific date."""
         response = await self._post(
-            self._versioned_path("mealplans/random"),
+            "api/households/mealplans/random",
             {
                 "date": at.isoformat(),
                 "entryType": entry_type.value,
@@ -340,7 +317,7 @@ class MealieClient:
             data["title"] = note_title
             if note_text:
                 data["text"] = note_text
-        response = await self._post(self._versioned_path("mealplans"), data)
+        response = await self._post("api/households/mealplans", data)
         return Mealplan.from_json(response)
 
     async def close(self) -> None:

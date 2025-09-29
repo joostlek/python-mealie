@@ -628,29 +628,3 @@ async def test_set_mealplan(
         }
         | data,
     )
-
-
-async def test_household_support(
-    responses: aioresponses,
-    mealie_client: MealieClient,
-) -> None:
-    """Test household support."""
-    responses.get(f"{MEALIE_URL}/api/households/mealplans/today", status=404, body="")
-    assert await mealie_client.define_household_support() is False
-    assert mealie_client.household_support is False
-
-
-async def test_no_household_support(
-    responses: aioresponses,
-    mealie_client: MealieClient,
-) -> None:
-    """Test no household support."""
-    mealie_client.household_support = None
-
-    responses.get(
-        f"{MEALIE_URL}/api/households/mealplans/today",
-        status=200,
-        body=load_fixture("mealplan_today.json"),
-    )
-    assert await mealie_client.define_household_support() is True
-    assert mealie_client.household_support is True

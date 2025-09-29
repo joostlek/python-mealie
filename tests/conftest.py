@@ -28,7 +28,6 @@ async def client() -> AsyncGenerator[MealieClient, None]:
             session=session,
         ) as mealie_client,
     ):
-        mealie_client.household_support = True
         yield mealie_client
 
 
