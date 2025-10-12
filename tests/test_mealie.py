@@ -65,6 +65,13 @@ async def test_creating_own_session(
     assert mealie_client.session.closed
 
 
+async def test_invalid_url_error() -> None:
+    """Test invalid URL error."""
+    mealie_client = MealieClient(api_host="abc", token="XXX")
+    with pytest.raises(MealieConnectionError):
+        await mealie_client.get_startup_info()
+
+
 async def test_unexpected_server_response(
     responses: aioresponses,
     mealie_client: MealieClient,
