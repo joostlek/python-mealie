@@ -205,6 +205,9 @@ class MealplanEntryType(StrEnum):
     LUNCH = "lunch"
     BREAKFAST = "breakfast"
     SIDE = "side"
+    SNACK = "snack"
+    DRINK = "drink"
+    DESSERT = "dessert"
 
 
 @dataclass
