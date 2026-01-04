@@ -108,8 +108,17 @@ class Ingredient(DataClassORJSONMixin):
 
     quantity: float | None
     note: str
+    title: str | None
+    display: str | None
     unit: str | None
+    food: dict[str, str] | None
     reference_id: str = field(metadata=field_options(alias="referenceId"))
+    original_text: str | None = field(
+        default=None, metadata=field_options(alias="originalText")
+    )
+    referenced_recipe: str | None = field(
+        default=None, metadata=field_options(alias="referencedRecipe")
+    )
     is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
 
 
