@@ -292,7 +292,9 @@ async def test_retrieving_recipe(
     # Load a nested referenced recipe
     recipe_v3 = load_fixture("recipe-v3.json")
     recipe_json = json.loads(recipe_v3)
-    recipe_json['recipeIngredient'][1]['referencedRecipe'] = json.loads(load_fixture("recipe.json"))
+    recipe_json["recipeIngredient"][1]["referencedRecipe"] = json.loads(
+        load_fixture("recipe.json")
+    )
 
     responses.get(
         f"{MEALIE_URL}/api/recipes/maple-bars",
