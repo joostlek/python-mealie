@@ -116,7 +116,7 @@ class Ingredient(DataClassORJSONMixin):
     original_text: str | None = field(
         default=None, metadata=field_options(alias="originalText")
     )
-    referenced_recipe: str | None = field(
+    referenced_recipe: Recipe | None = field(
         default=None, metadata=field_options(alias="referencedRecipe")
     )
     is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))

@@ -1,0 +1,110 @@
+{
+    "id": "45f8ae68-5c92-4d3c-8279-331d99645333",
+    "userId": "4d60fe4c-a0af-4d01-933e-346e4bf10da8",
+    "householdId": "67e0fe68-e80c-4a84-b15b-008bd6d6fc84",
+    "groupId": "48054d7f-1f2b-484c-9f2c-c8a645771ed4",
+    "name": "Crunchy Maple Bars",
+    "slug": "maple-bars",
+    "image": "22",
+    "recipeServings": 0.0,
+    "recipeYieldQuantity": 0.0,
+    "recipeYield": "",
+    "totalTime": null,
+    "prepTime": null,
+    "cookTime": null,
+    "performTime": null,
+    "description": "Testing how to make Maple Bars",
+    "recipeCategory": [],
+    "tags": [],
+    "tools": [],
+    "rating": null,
+    "orgURL": "",
+    "dateAdded": "2025-01-01",
+    "dateUpdated": "2025-01-01T12:12:18.680338Z",
+    "createdAt": "2025-01-01T12:12:18.680338Z",
+    "updatedAt": "2025-01-01T12:12:18.680338Z",
+    "lastMade": "2025-01-01T12:12:18.680338Z",
+    "recipeIngredient": [
+        {
+            "quantity": 10.0,
+            "unit": {
+                "id": "4ac4b077-fb68-4e28-af89-2eb33b0364c8",
+                "name": "ml",
+                "pluralName": null,
+                "description": "",
+                "extras": {},
+                "fraction": true,
+                "abbreviation": "",
+                "pluralAbbreviation": "",
+                "useAbbreviation": false,
+                "aliases": [],
+                "createdAt": "2025-01-01T12:12:18.680338Z",
+                "updatedAt": "2025-01-01T12:12:18.680338Z"
+            },
+            "food": {
+                "id": "54e74a38-6963-45ef-a1b4-0587a6b766da",
+                "name": "milk",
+                "pluralName": null,
+                "description": "",
+                "extras": {},
+                "labelId": null,
+                "aliases": [],
+                "householdsWithIngredientFood": [],
+                "label": null,
+                "createdAt": "2025-01-01T12:12:18.680338Z",
+                "updatedAt": "2025-01-01T12:12:18.680338Z"
+            },
+            "referencedRecipe": null,
+            "note": "",
+            "display": "10 ml milk",
+            "title": "",
+            "originalText": null,
+            "referenceId": "caf8dae5-b41a-4680-8410-00b16f432b16"
+        },
+        {
+            "quantity": 10.0,
+            "unit": null,
+            "food": null,
+            "referencedRecipe": null,
+            "note": "",
+            "display": "1",
+            "title": "",
+            "originalText": null,
+            "referenceId": "caf8dae5-b41a-4680-8410-00b16f432b16"
+        }
+    ],
+    "recipeInstructions": [
+        {
+            "id": "34a7ca4c-df0b-42dc-a463-4d912eab5009",
+            "title": "",
+            "summary": "",
+            "text": "Just make it today",
+            "ingredientReferences": []
+        }
+    ],
+    "nutrition": {
+        "calories": null,
+        "carbohydrateContent": null,
+        "cholesterolContent": null,
+        "fatContent": null,
+        "fiberContent": null,
+        "proteinContent": null,
+        "saturatedFatContent": null,
+        "sodiumContent": null,
+        "sugarContent": null,
+        "transFatContent": null,
+        "unsaturatedFatContent": null
+    },
+    "settings": {
+        "public": false,
+        "showNutrition": false,
+        "showAssets": false,
+        "landscapeView": false,
+        "disableComments": false,
+        "locked": false
+    },
+    "assets": [],
+    "notes": [],
+    "extras": {},
+    "comments": []
+}
