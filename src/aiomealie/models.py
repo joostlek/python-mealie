@@ -131,9 +131,11 @@ class Food(DataClassORJSONMixin):
     plural_name: str = field(metadata=field_options(alias="pluralName"))
     description: str
     extras: dict[str, str]
-    labelId: str
+    label_id: str = field(metadata=field_options(alias="labelId"))
     aliases: list[str]
-    householdsWithIngredientFood: list[str]
+    households_with_ingredient_food: list[str] = field(
+        metadata=field_options(alias="householdsWithIngredientFood")
+    )
     created_at: datetime = field(metadata=field_options(alias="createdAt"))
     updated_at: datetime = field(metadata=field_options(alias="updatedAt"))
 

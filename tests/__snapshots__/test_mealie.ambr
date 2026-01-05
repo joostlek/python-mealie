@@ -3595,9 +3595,9 @@
           'extras': dict({
           }),
           'food_id': '54e74a38-6963-45ef-a1b4-0587a6b766da',
-          'householdsWithIngredientFood': list([
+          'households_with_ingredient_food': list([
           ]),
-          'labelId': 'None',
+          'label_id': 'None',
           'name': 'milk',
           'plural_name': 'None',
           'updated_at': datetime.datetime(2025, 1, 1, 12, 12, 18, 680338, tzinfo=datetime.timezone.utc),
