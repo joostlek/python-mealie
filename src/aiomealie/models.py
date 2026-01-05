@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, datetime
 from enum import StrEnum
 
 from mashumaro import DataClassDictMixin, field_options
@@ -111,7 +111,7 @@ class Ingredient(DataClassORJSONMixin):
     title: str | None
     display: str | None
     unit: str | None
-    food: dict[str, str] | None
+    food: Food | None
     reference_id: str = field(metadata=field_options(alias="referenceId"))
     original_text: str | None = field(
         default=None, metadata=field_options(alias="originalText")
@@ -120,6 +120,22 @@ class Ingredient(DataClassORJSONMixin):
         default=None, metadata=field_options(alias="referencedRecipe")
     )
     is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
+
+
+@dataclass
+class Food(DataClassORJSONMixin):
+    """Food model."""
+
+    food_id: str = field(metadata=field_options(alias="id"))
+    name: str
+    plural_name: str = field(metadata=field_options(alias="pluralName"))
+    description: str
+    extras: dict[str, str]
+    labelId: str
+    aliases: list[str]
+    householdsWithIngredientFood: list[str]
+    created_at: datetime = field(metadata=field_options(alias="createdAt"))
+    updated_at: datetime = field(metadata=field_options(alias="updatedAt"))
 
 
 @dataclass
