@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 from datetime import date
 from typing import TYPE_CHECKING, Any
 
@@ -287,6 +288,20 @@ async def test_retrieving_recipe(
         body=load_fixture("recipe.json"),
     )
     assert await mealie_client.get_recipe("original-sacher-torte-2") == snapshot
+
+    # Load a nested referenced recipe
+    recipe_v3 = load_fixture("recipe-v3.json")
+    recipe_json = json.loads(recipe_v3)
+    recipe_json["recipeIngredient"][1]["referencedRecipe"] = json.loads(
+        load_fixture("recipe.json")
+    )
+
+    responses.get(
+        f"{MEALIE_URL}/api/recipes/maple-bars",
+        status=200,
+        body=json.dumps(recipe_json),
+    )
+    assert await mealie_client.get_recipe("maple-bars") == snapshot
 
 
 async def test_importing_recipe(
