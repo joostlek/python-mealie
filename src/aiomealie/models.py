@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import date, datetime
 from enum import StrEnum
+from typing import Any
 
 from mashumaro import DataClassDictMixin, field_options
 from mashumaro.mixins.orjson import DataClassORJSONMixin
@@ -128,16 +129,27 @@ class Food(DataClassORJSONMixin):
 
     food_id: str = field(metadata=field_options(alias="id"))
     name: str
-    plural_name: str = field(metadata=field_options(alias="pluralName"))
     description: str
-    extras: dict[str, str]
-    label_id: str = field(metadata=field_options(alias="labelId"))
     aliases: list[str]
-    households_with_ingredient_food: list[str] = field(
-        metadata=field_options(alias="householdsWithIngredientFood")
-    )
     created_at: datetime = field(metadata=field_options(alias="createdAt"))
     updated_at: datetime = field(metadata=field_options(alias="updatedAt"))
+    plural_name: str | None = field(
+        default=None, metadata=field_options(alias="pluralName")
+    )
+    label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
+    label: Label | None = None
+    households_with_ingredient_food: list[str] | None = field(
+        default=None, metadata=field_options(alias="householdsWithIngredientFood")
+    )
+    extras: dict[str, str] | None = None
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
+        """Normalize field names before deserialization to handle API inconsistencies."""
+        # Handle both 'updateAt' and 'updatedAt', v3 uses 'updatedAt' while earlier use 'updateAt'
+        if "updateAt" in d and "updatedAt" not in d:
+            d["updatedAt"] = d.pop("updateAt")
+        return d
 
 
 @dataclass
@@ -154,6 +166,46 @@ class Instruction(DataClassORJSONMixin):
     ingredient_references: list[str] = field(
         metadata=field_options(alias="ingredientReferences")
     )
+
+
+@dataclass
+class Label(DataClassORJSONMixin):
+    """Label model."""
+
+    label_id: str = field(metadata=field_options(alias="id"))
+    name: str
+
+
+@dataclass
+class Unit(DataClassORJSONMixin):
+    """Unit model."""
+
+    unit_id: str = field(metadata=field_options(alias="id"))
+    name: str
+    description: str
+    aliases: list[str]
+    created_at: datetime = field(metadata=field_options(alias="createdAt"))
+    updated_at: datetime = field(metadata=field_options(alias="updatedAt"))
+    fraction: bool = False
+    plural_name: str | None = field(
+        default=None, metadata=field_options(alias="pluralName")
+    )
+    abbreviation: str | None = None
+    plural_abbreviation: str | None = field(
+        default=None, metadata=field_options(alias="pluralAbbreviation")
+    )
+    use_abbreviation: bool = field(
+        default=False, metadata=field_options(alias="useAbbreviation")
+    )
+    extras: dict[str, str] | None = None
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
+        """Normalize field names before deserialization to handle API inconsistencies."""
+        # Handle both 'updateAt' and 'updatedAt', v3 uses 'updatedAt' while earlier use 'updateAt'
+        if "updateAt" in d and "updatedAt" not in d:
+            d["updatedAt"] = d.pop("updateAt")
+        return d
 
 
 @dataclass
@@ -300,8 +352,11 @@ class ShoppingItem(DataClassORJSONMixin):
     position: int
     quantity: float
     label_id: str | None = field(default=None, metadata=field_options(alias="labelId"))
+    label: Label | None = None
     food_id: str | None = field(default=None, metadata=field_options(alias="foodId"))
+    food: Food | None = None
     unit_id: str | None = field(default=None, metadata=field_options(alias="unitId"))
+    unit: Unit | None = None
     is_food: bool | None = field(default=None, metadata=field_options(alias="isFood"))
     disable_amount: bool | None = field(
         default=None, metadata=field_options(alias="disableAmount")
