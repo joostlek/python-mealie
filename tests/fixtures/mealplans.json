@@ -645,6 +645,58 @@
             "householdId": "cd2bb87f-5e4c-4dc6-8477-af9537200014",
             "userId": "6caa6e4d-521f-4ef4-9ed7-388bdd63f47d",
             "recipe": null
+        },
+        {
+            "date": "2026-03-16",
+            "entryType": "dinner",
+            "title": "",
+            "text": "",
+            "recipeId": "10f66ba9-bd51-4556-b10e-05ad0fa686b5",
+            "id": 1585,
+            "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+            "userId": "90b03954-00e1-46de-9520-f0305022b84f",
+            "householdId": "bdcd07f6-de8d-4ae1-a703-84df24b8072c",
+            "recipe": {
+                "id": "10f66ba9-bd51-4556-b10e-05ad0fa686b5",
+                "userId": "90b03954-00e1-46de-9520-f0305022b84f",
+                "householdId": "bdcd07f6-de8d-4ae1-a703-84df24b8072c",
+                "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+                "name": "Spicy Sichuan (dan dan) noodles",
+                "slug": "spicy-sichuan-dan-dan-noodles",
+                "image": "SRyq",
+                "recipeServings": 2.0,
+                "recipeYieldQuantity": 0.0,
+                "recipeYield": "",
+                "totalTime": null,
+                "prepTime": "30 minutes",
+                "cookTime": null,
+                "performTime": "30 minutes",
+                "description": "A traditional Chinese noodle favourite that combines sweet, salty and spicy flavours for a power-house of a meal.",
+                "recipeCategory": [
+                    {
+                        "id": "1fb3a4df-28c3-4040-b6bd-06cc53b497e3",
+                        "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+                        "name": "Dinner",
+                        "slug": "dinner"
+                    }
+                ],
+                "tags": [
+                    {
+                        "id": "ea3805f5-f26a-4192-a39e-1611d026aeff",
+                        "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+                        "name": "Chinese",
+                        "slug": "chinese"
+                    }
+                ],
+                "tools": [],
+                "rating": 5.0,
+                "orgURL": "https://www.example.co.uk/food/recipes/spicy_sichuan_noodles_79051",
+                "dateAdded": "2025-01-29",
+                "dateUpdated": "2026-01-21T23:45:02.574847Z",
+                "createdAt": "2025-01-29T11:52:25.866874Z",
+                "updatedAt": "2026-01-21T23:45:02.587314Z",
+                "lastMade": "2026-01-21T23:45:01.803446Z"
+            }
         }
     ],
     "next": null,
