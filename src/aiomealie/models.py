@@ -102,6 +102,7 @@ class Tag(DataClassORJSONMixin):
     name: str
     slug: str
 
+
 @dataclass
 class Category(DataClassORJSONMixin):
     """Category model."""
@@ -109,6 +110,7 @@ class Category(DataClassORJSONMixin):
     category_id: str = field(metadata=field_options(alias="id"))
     name: str
     slug: str
+
 
 @dataclass
 class Ingredient(DataClassORJSONMixin):
