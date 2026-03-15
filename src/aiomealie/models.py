@@ -102,6 +102,13 @@ class Tag(DataClassORJSONMixin):
     name: str
     slug: str
 
+@dataclass
+class Category(DataClassORJSONMixin):
+    """Category model."""
+
+    category_id: str = field(metadata=field_options(alias="id"))
+    name: str
+    slug: str
 
 @dataclass
 class Ingredient(DataClassORJSONMixin):
@@ -218,6 +225,12 @@ class BaseRecipe(DataClassORJSONMixin):
     name: str
     slug: str
     description: str
+    categories: list[Category] = field(metadata=field_options(alias="recipeCategory"))
+    tags: list[Tag]
+    date_added: date = field(metadata=field_options(alias="dateAdded"))
+    last_made: datetime | None = field(
+        default=None, metadata=field_options(alias="lastMade")
+    )
     total_time: str | None = field(
         default=None,
         metadata=field_options(
@@ -260,8 +273,6 @@ class BaseRecipe(DataClassORJSONMixin):
 class Recipe(BaseRecipe):
     """Recipe model."""
 
-    tags: list[Tag]
-    date_added: date = field(metadata=field_options(alias="dateAdded"))
     ingredients: list[Ingredient] = field(
         metadata=field_options(alias="recipeIngredient")
     )
