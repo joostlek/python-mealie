@@ -10,7 +10,7 @@ from importlib import metadata
 from typing import TYPE_CHECKING, Any, Self
 
 from aiohttp import ClientSession, ClientConnectionError, InvalidUrlClientError
-from aiohttp.hdrs import METH_GET, METH_POST, METH_PUT, METH_DELETE
+from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from mashumaro.codecs.orjson import ORJSONDecoder
 from yarl import URL
 
@@ -192,6 +192,13 @@ class MealieClient:
         response = await self._get("api/app/about/theme")
         return Theme.from_json(response)
 
+    def _recipe_image_url(self, recipe_id_or_slug: str) -> str:
+        return str(
+            URL(self.api_host).joinpath(
+                f"api/media/recipes/{recipe_id_or_slug}/images/original.webp"
+            )
+        )
+
     async def get_recipes(
         self, search: str | None = None, per_page: int = 50
     ) -> RecipesResponse:
@@ -201,12 +208,19 @@ class MealieClient:
         if search:
             params["search"] = search
         response = await self._get("api/recipes", params=params)
-        return RecipesResponse.from_json(response)
+        result = RecipesResponse.from_json(response)
+        for item in result.items:
+            if item.image is not None:
+                item.image = self._recipe_image_url(item.recipe_id)
+        return result
 
     async def get_recipe(self, recipe_id_or_slug: str) -> Recipe:
         """Get recipe."""
         response = await self._get(f"api/recipes/{recipe_id_or_slug}")
-        return Recipe.from_json(response)
+        recipe = Recipe.from_json(response)
+        if recipe.image is not None:
+            recipe.image = self._recipe_image_url(recipe.recipe_id)
+        return recipe
 
     async def import_recipe(self, url: str, include_tags: bool = False) -> Recipe:
         """Import a recipe."""
@@ -232,7 +246,11 @@ class MealieClient:
             params["end_date"] = end_date.isoformat()
         params["perPage"] = -1
         response = await self._get("api/households/mealplans", params)
-        return MealplanResponse.from_json(response)
+        result = MealplanResponse.from_json(response)
+        for item in result.items:
+            if item.recipe is not None and item.recipe.image is not None:
+                item.recipe.image = self._recipe_image_url(item.recipe.recipe_id)
+        return result
 
     async def get_shopping_lists(self) -> ShoppingListsResponse:
         """Get shopping lists."""
