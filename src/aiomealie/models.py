@@ -256,6 +256,12 @@ class BaseRecipe(DataClassORJSONMixin):
     )
     image: str | None = None
     rating: float | None = field(default=None)
+    recipe_servings: float | None = field(
+        default=None, metadata=field_options(alias="recipeServings")
+    )
+    recipe_yield_quantity: float | None = field(
+        default=None, metadata=field_options(alias="recipeYieldQuantity")
+    )
     recipe_yield: str | None = field(
         default=None, metadata=field_options(alias="recipeYield")
     )
