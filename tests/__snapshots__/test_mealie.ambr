@@ -497,7 +497,7 @@
       'recipe': dict({
         'categories': list([
         ]),
-        'date_added': datetime.date(2023, 12, 29),
+        'date_added': None,
         'description': 'Jazz up chicken breasts in this fruity, sweetly spiced sauce with pomegranate seeds, toasted almonds and tagine paste',
         'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
         'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',

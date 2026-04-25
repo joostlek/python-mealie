@@ -229,7 +229,9 @@ class BaseRecipe(DataClassORJSONMixin):
     description: str
     categories: list[Category] = field(metadata=field_options(alias="recipeCategory"))
     tags: list[Tag]
-    date_added: date = field(metadata=field_options(alias="dateAdded"))
+    date_added: date | None = field(
+        default=None, metadata=field_options(alias="dateAdded")
+    )
     last_made: datetime | None = field(
         default=None, metadata=field_options(alias="lastMade")
     )
