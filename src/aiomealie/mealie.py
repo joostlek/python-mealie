@@ -24,9 +24,11 @@ from aiomealie.exceptions import (
 )
 from aiomealie.models import (
     About,
+    CategoriesResponse,
     GroupSummary,
     Mealplan,
     MealplanResponse,
+    MealplanEntryType,
     OrderDirection,
     RecipesResponse,
     ShoppingListsResponse,
@@ -34,11 +36,12 @@ from aiomealie.models import (
     ShoppingItemsOrderBy,
     ShoppingItemsResponse,
     StartupInfo,
+    TagsResponse,
     Theme,
+    ToolsResponse,
     UserInfo,
     Recipe,
     Statistics,
-    MealplanEntryType,
 )
 
 if TYPE_CHECKING:
@@ -213,6 +216,25 @@ class MealieClient:
         data = {"url": url, "include_tags": include_tags}
         response = await self._post("api/recipes/create/url", data)
         return await self.get_recipe(json.loads(response))
+
+    async def get_categories(self, per_page: int = -1) -> CategoriesResponse:
+        """Get all recipe categories."""
+        response = await self._get(
+            "api/organizers/categories", params={"perPage": per_page}
+        )
+        return CategoriesResponse.from_json(response)
+
+    async def get_tags(self, per_page: int = -1) -> TagsResponse:
+        """Get all recipe tags."""
+        response = await self._get("api/organizers/tags", params={"perPage": per_page})
+        return TagsResponse.from_json(response)
+
+    async def get_tools(self, per_page: int = -1) -> ToolsResponse:
+        """Get all recipe tools."""
+        response = await self._get(
+            "api/organizers/tools", params={"perPage": per_page}
+        )
+        return ToolsResponse.from_json(response)
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""

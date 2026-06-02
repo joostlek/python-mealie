@@ -4,6 +4,54 @@
     'version': 'v2.4.1',
   })
 # ---
+# name: test_get_categories
+  dict({
+    'items': list([
+      dict({
+        'category_id': 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+        'name': 'Dessert',
+        'slug': 'dessert',
+      }),
+      dict({
+        'category_id': 'b2c3d4e5-f6a7-8901-bcde-f12345678901',
+        'name': 'Soup',
+        'slug': 'soup',
+      }),
+    ]),
+  })
+# ---
+# name: test_get_tags
+  dict({
+    'items': list([
+      dict({
+        'name': 'Quick',
+        'slug': 'quick',
+        'tag_id': 'c3d4e5f6-a7b8-9012-cdef-012345678901',
+      }),
+      dict({
+        'name': 'Vegetarian',
+        'slug': 'vegetarian',
+        'tag_id': 'd4e5f6a7-b8c9-0123-def0-123456789012',
+      }),
+    ]),
+  })
+# ---
+# name: test_get_tools
+  dict({
+    'items': list([
+      dict({
+        'name': 'Stove',
+        'slug': 'stove',
+        'tool_id': '6e199f62-8356-46cf-8f6f-ea923780a1e3',
+      }),
+      dict({
+        'name': 'Oven',
+        'slug': 'oven',
+        'tool_id': '7f2a0b73-9467-57d0-9a7b-fb034891b2f4',
+      }),
+    ]),
+  })
+# ---
 # name: test_groups_self
   dict({
     'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',

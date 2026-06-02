@@ -113,6 +113,15 @@ class Category(DataClassORJSONMixin):
 
 
 @dataclass
+class Tool(DataClassORJSONMixin):
+    """Tool model."""
+
+    tool_id: str = field(metadata=field_options(alias="id"))
+    name: str
+    slug: str
+
+
+@dataclass
 class Ingredient(DataClassORJSONMixin):
     """Ingredient model."""
 
@@ -296,6 +305,27 @@ class RecipesResponse(DataClassORJSONMixin):
     """RecipesResponse model."""
 
     items: list[BaseRecipe]
+
+
+@dataclass
+class CategoriesResponse(DataClassORJSONMixin):
+    """CategoriesResponse model."""
+
+    items: list[Category]
+
+
+@dataclass
+class TagsResponse(DataClassORJSONMixin):
+    """TagsResponse model."""
+
+    items: list[Tag]
+
+
+@dataclass
+class ToolsResponse(DataClassORJSONMixin):
+    """ToolsResponse model."""
+
+    items: list[Tool]
 
 
 class MealplanEntryType(StrEnum):

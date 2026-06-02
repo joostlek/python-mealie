@@ -11,11 +11,15 @@ from aiomealie.exceptions import (
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
     About,
+    CategoriesResponse,
     StartupInfo,
     GroupSummary,
     Theme,
     BaseRecipe,
     RecipesResponse,
+    TagsResponse,
+    Tool,
+    ToolsResponse,
     Mealplan,
     MealplanResponse,
     MealplanEntryType,
@@ -34,6 +38,7 @@ from aiomealie.models import (
 
 __all__ = [
     "About",
+    "CategoriesResponse",
     "MealieConnectionError",
     "MealieError",
     "MealieAuthenticationError",
@@ -49,6 +54,9 @@ __all__ = [
     "Instruction",
     "Ingredient",
     "Tag",
+    "TagsResponse",
+    "Tool",
+    "ToolsResponse",
     "RecipesResponse",
     "Mealplan",
     "MealplanResponse",
