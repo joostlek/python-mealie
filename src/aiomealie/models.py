@@ -528,8 +528,8 @@ class RecipeRating(DataClassORJSONMixin):
     """RecipeRating model."""
 
     recipe_id: str = field(metadata=field_options(alias="recipeId"))
-    recipe_slug: str = field(metadata=field_options(alias="recipeSlug"))
     is_favorite: bool = field(metadata=field_options(alias="isFavorite"))
+    recipe_slug: str | None = field(default=None, metadata=field_options(alias="recipeSlug"))
     rating: float | None = None
 
 
