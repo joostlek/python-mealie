@@ -175,14 +175,15 @@ class Instruction(DataClassORJSONMixin):
     """Instruction model."""
 
     instruction_id: str = field(metadata=field_options(alias="id"))
-    title: str | None = field(
-        metadata=field_options(
-            serialization_strategy=OptionalStringSerializationStrategy()
-        )
-    )
     text: str
     ingredient_references: list[str] = field(
         metadata=field_options(alias="ingredientReferences")
+    )
+    title: str | None = field(
+        default=None,
+        metadata=field_options(
+            serialization_strategy=OptionalStringSerializationStrategy()
+        ),
     )
 
 
@@ -382,6 +383,7 @@ class ShoppingList(DataClassORJSONMixin):
 
     list_id: str = field(metadata=field_options(alias="id"))
     name: str
+    group_id: str | None = field(default=None, metadata=field_options(alias="groupId"))
 
 
 @dataclass
@@ -443,6 +445,53 @@ class MutateShoppingItem(DataClassDictMixin):
 
 
 @dataclass
+class MutateRecipe(DataClassDictMixin):
+    """MutateRecipe model."""
+
+    name: str | None = None
+    description: str | None = None
+    recipe_category: list[Category] | None = field(
+        default=None, metadata=field_options(alias="recipeCategory")
+    )
+    tags: list[Tag] | None = None
+    total_time: str | None = field(
+        default=None, metadata=field_options(alias="totalTime")
+    )
+    prep_time: str | None = field(
+        default=None, metadata=field_options(alias="prepTime")
+    )
+    perform_time: str | None = field(
+        default=None, metadata=field_options(alias="performTime")
+    )
+    image: str | None = None
+    rating: float | None = None
+    recipe_servings: float | None = field(
+        default=None, metadata=field_options(alias="recipeServings")
+    )
+    recipe_yield_quantity: float | None = field(
+        default=None, metadata=field_options(alias="recipeYieldQuantity")
+    )
+    recipe_yield: str | None = field(
+        default=None, metadata=field_options(alias="recipeYield")
+    )
+    original_url: str | None = field(
+        default=None, metadata=field_options(alias="orgURL")
+    )
+    ingredients: list[Ingredient] | None = field(
+        default=None, metadata=field_options(alias="recipeIngredient")
+    )
+    instructions: list[Instruction] | None = field(
+        default=None, metadata=field_options(alias="recipeInstructions")
+    )
+
+    class Config(BaseConfig):  # pylint: disable=too-few-public-methods
+        """Mashumaro Config."""
+
+        serialize_by_alias = True
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
+
+
+@dataclass
 class ShoppingItemsResponse(DataClassORJSONMixin):
     """ShoppingItemsResponse model."""
 
@@ -458,3 +507,24 @@ class Statistics(DataClassORJSONMixin):
     total_categories: int = field(metadata=field_options(alias="totalCategories"))
     total_tags: int = field(metadata=field_options(alias="totalTags"))
     total_tools: int = field(metadata=field_options(alias="totalTools"))
+
+
+@dataclass
+class FoodsResponse(DataClassORJSONMixin):
+    """FoodsResponse model."""
+
+    items: list[Food]
+
+
+@dataclass
+class UnitsResponse(DataClassORJSONMixin):
+    """UnitsResponse model."""
+
+    items: list[Unit]
+
+
+@dataclass
+class RecipeFavoritesResponse(DataClassORJSONMixin):
+    """RecipeFavoritesResponse model."""
+
+    items: list[BaseRecipe]

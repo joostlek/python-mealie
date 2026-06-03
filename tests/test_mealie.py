@@ -22,7 +22,7 @@ from aiomealie.exceptions import (
     MealieBadRequestError,
 )
 from aiomealie.mealie import MealieClient
-from aiomealie.models import MutateShoppingItem, MealplanEntryType
+from aiomealie.models import MutateRecipe, MutateShoppingItem, MealplanEntryType
 from tests import load_fixture
 
 from .const import HEADERS, MEALIE_URL
@@ -342,6 +342,30 @@ async def test_importing_recipe(
         headers=HEADERS,
         params=None,
         json=None,
+    )
+
+
+async def test_update_recipe(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test updating a recipe."""
+    slug = "original-sacher-torte-2"
+    recipe_data = MutateRecipe(name="Updated Sacher Torte", rating=4.5)
+
+    responses.put(
+        f"{MEALIE_URL}/api/recipes/{slug}",
+        status=200,
+        body=load_fixture("recipe.json"),
+    )
+    assert await mealie_client.update_recipe(slug, recipe_data) == snapshot
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/recipes/{slug}",
+        METH_PUT,
+        headers=HEADERS,
+        params=None,
+        json={"name": "Updated Sacher Torte", "rating": 4.5},
     )
 
 
