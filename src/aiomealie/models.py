@@ -524,7 +524,17 @@ class UnitsResponse(DataClassORJSONMixin):
 
 
 @dataclass
+class RecipeRating(DataClassORJSONMixin):
+    """RecipeRating model."""
+
+    recipe_id: str = field(metadata=field_options(alias="recipeId"))
+    recipe_slug: str = field(metadata=field_options(alias="recipeSlug"))
+    is_favorite: bool = field(metadata=field_options(alias="isFavorite"))
+    rating: float | None = None
+
+
+@dataclass
 class RecipeFavoritesResponse(DataClassORJSONMixin):
     """RecipeFavoritesResponse model."""
 
-    items: list[BaseRecipe]
+    ratings: list[RecipeRating]
