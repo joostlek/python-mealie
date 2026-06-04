@@ -413,6 +413,53 @@ class MutateShoppingItem(DataClassDictMixin):
 
 
 @dataclass
+class MutateRecipe(DataClassDictMixin):
+    """MutateRecipe model."""
+
+    name: str | None = None
+    description: str | None = None
+    recipe_category: list[Category] | None = field(
+        default=None, metadata=field_options(alias="recipeCategory")
+    )
+    tags: list[Tag] | None = None
+    total_time: str | None = field(
+        default=None, metadata=field_options(alias="totalTime")
+    )
+    prep_time: str | None = field(
+        default=None, metadata=field_options(alias="prepTime")
+    )
+    perform_time: str | None = field(
+        default=None, metadata=field_options(alias="performTime")
+    )
+    image: str | None = None
+    rating: float | None = None
+    recipe_servings: float | None = field(
+        default=None, metadata=field_options(alias="recipeServings")
+    )
+    recipe_yield_quantity: float | None = field(
+        default=None, metadata=field_options(alias="recipeYieldQuantity")
+    )
+    recipe_yield: str | None = field(
+        default=None, metadata=field_options(alias="recipeYield")
+    )
+    original_url: str | None = field(
+        default=None, metadata=field_options(alias="orgURL")
+    )
+    ingredients: list[Ingredient] | None = field(
+        default=None, metadata=field_options(alias="recipeIngredient")
+    )
+    instructions: list[Instruction] | None = field(
+        default=None, metadata=field_options(alias="recipeInstructions")
+    )
+
+    class Config(BaseConfig):  # pylint: disable=too-few-public-methods
+        """Mashumaro Config."""
+
+        serialize_by_alias = True
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
+
+
+@dataclass
 class ShoppingItemsResponse(DataClassORJSONMixin):
     """ShoppingItemsResponse model."""
 

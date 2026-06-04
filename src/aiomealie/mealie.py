@@ -1,4 +1,4 @@
-"""Homeassistant Client."""
+"""Mealie Client."""
 
 from __future__ import annotations
 
@@ -26,7 +26,9 @@ from aiomealie.models import (
     About,
     GroupSummary,
     Mealplan,
+    MealplanEntryType,
     MealplanResponse,
+    MutateRecipe,
     OrderDirection,
     RecipesResponse,
     ShoppingListsResponse,
@@ -38,7 +40,6 @@ from aiomealie.models import (
     UserInfo,
     Recipe,
     Statistics,
-    MealplanEntryType,
 )
 
 if TYPE_CHECKING:
@@ -213,6 +214,22 @@ class MealieClient:
         data = {"url": url, "include_tags": include_tags}
         response = await self._post("api/recipes/create/url", data)
         return await self.get_recipe(json.loads(response))
+
+    async def create_recipe(self, name: str) -> Recipe:
+        """Create a new recipe with the given name."""
+        response = await self._post("api/recipes", data={"name": name})
+        return await self.get_recipe(json.loads(response))
+
+    async def update_recipe(self, slug: str, recipe_data: MutateRecipe) -> Recipe:
+        """Update a recipe by slug."""
+        response = await self._put(
+            f"api/recipes/{slug}", data=recipe_data.to_dict(omit_none=True)
+        )
+        return Recipe.from_json(response)
+
+    async def delete_recipe(self, slug: str) -> None:
+        """Delete a recipe by slug."""
+        await self._delete(f"api/recipes/{slug}")
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""
