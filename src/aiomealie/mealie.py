@@ -56,6 +56,7 @@ class MealieClient:
     token: str | None = None
     session: ClientSession | None = None
     request_timeout: int = 10
+    _user_id: str | None = None
     _close_session: bool = False
     _version: str | None = None
 
@@ -250,6 +251,51 @@ class MealieClient:
         params["perPage"] = -1
         response = await self._get("api/households/mealplans", params)
         return MealplanResponse.from_json(response)
+
+    async def _get_user_id(self) -> str:
+        """Return cached user id, fetching from API if needed."""
+        if not self._user_id:
+            user_info = await self.get_user_info()
+            self._user_id = user_info.user_id
+        return self._user_id
+
+    async def get_mealplan(self, mealplan_id: int) -> Mealplan:
+        """Get a single mealplan entry."""
+        response = await self._get(f"api/households/mealplans/{mealplan_id}")
+        return Mealplan.from_json(response)
+
+    async def update_mealplan(
+        self,
+        mealplan_id: int,
+        at: date,
+        entry_type: MealplanEntryType,
+        *,
+        recipe_id: str | None = None,
+        note_title: str | None = None,
+        note_text: str | None = None,
+    ) -> Mealplan:
+        """Update a mealplan entry."""
+        user_id = await self._get_user_id()
+        existing = await self.get_mealplan(mealplan_id)
+        data: dict[str, Any] = {
+            "id": mealplan_id,
+            "date": at.isoformat(),
+            "entryType": entry_type.value,
+            "groupId": existing.group_id,
+            "userId": user_id,
+        }
+        if recipe_id:
+            data["recipeId"] = recipe_id
+        if note_title:
+            data["title"] = note_title
+            if note_text:
+                data["text"] = note_text
+        response = await self._put(f"api/households/mealplans/{mealplan_id}", data=data)
+        return Mealplan.from_json(response)
+
+    async def delete_mealplan(self, mealplan_id: int) -> None:
+        """Delete a mealplan entry."""
+        await self._delete(f"api/households/mealplans/{mealplan_id}")
 
     async def get_shopping_lists(self) -> ShoppingListsResponse:
         """Get shopping lists."""
