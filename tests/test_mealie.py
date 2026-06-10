@@ -722,3 +722,62 @@ async def test_set_mealplan(
         }
         | data,
     )
+
+
+async def test_get_categories(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving categories."""
+    url = (
+        URL(MEALIE_URL)
+        .joinpath("api/organizers/categories")
+        .with_query({"perPage": -1})
+    )
+    responses.get(url, status=200, body=load_fixture("categories.json"))
+    assert await mealie_client.get_categories() == snapshot
+
+
+async def test_get_tags(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving tags."""
+    url = URL(MEALIE_URL).joinpath("api/organizers/tags").with_query({"perPage": -1})
+    responses.get(url, status=200, body=load_fixture("tags.json"))
+    assert await mealie_client.get_tags() == snapshot
+
+
+async def test_get_tools(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving tools."""
+    url = URL(MEALIE_URL).joinpath("api/organizers/tools").with_query({"perPage": -1})
+    responses.get(url, status=200, body=load_fixture("tools.json"))
+    assert await mealie_client.get_tools() == snapshot
+
+
+async def test_get_foods(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving foods."""
+    url = URL(MEALIE_URL).joinpath("api/foods").with_query({"perPage": -1})
+    responses.get(url, status=200, body=load_fixture("foods.json"))
+    assert await mealie_client.get_foods() == snapshot
+
+
+async def test_get_units(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving units."""
+    url = URL(MEALIE_URL).joinpath("api/units").with_query({"perPage": -1})
+    responses.get(url, status=200, body=load_fixture("units.json"))
+    assert await mealie_client.get_units() == snapshot
