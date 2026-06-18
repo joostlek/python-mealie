@@ -172,6 +172,11 @@ class MealieClient:
             self._version = about.version
         return self._version
 
+    @property
+    async def version(self) -> str:
+        """Backward-compatible alias for get_version()."""
+        return await self.get_version()
+
     async def get_startup_info(self) -> StartupInfo:
         """Get startup info."""
         response = await self._get("api/app/about/startup-info")
