@@ -1,0 +1,16 @@
+{
+    "ratings": [
+        {
+            "recipeId": "40393996-417e-4487-a081-28608a668826",
+            "recipeSlug": "cauliflower-salad",
+            "rating": 4.5,
+            "isFavorite": true
+        },
+        {
+            "recipeId": "e1f2a3b4-c5d6-7890-abcd-ef1234567890",
+            "recipeSlug": "original-sacher-torte-2",
+            "rating": null,
+            "isFavorite": true
+        }
+    ]
+}
