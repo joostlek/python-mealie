@@ -4,6 +4,13 @@
     'version': 'v2.4.1',
   })
 # ---
+# name: test_add_recipe_to_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
+  })
+# ---
 # name: test_create_recipe
   dict({
     'categories': list([
@@ -269,6 +276,13 @@
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
   })
 # ---
+# name: test_create_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
+  })
+# ---
 # name: test_get_recipe_favorites
   dict({
     'ratings': list([
@@ -285,6 +299,13 @@
         'recipe_slug': 'original-sacher-torte-2',
       }),
     ]),
+  })
+# ---
+# name: test_get_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
   })
 # ---
 # name: test_groups_self
@@ -7359,14 +7380,17 @@
   dict({
     'items': list([
       dict({
+        'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
         'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
         'name': 'Supermarket',
       }),
       dict({
+        'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
         'list_id': 'f8438635-8211-4be8-80d0-0aa42e37a5f2',
         'name': 'Special groceries',
       }),
       dict({
+        'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
         'list_id': 'e9d78ff2-4b23-4b77-a3a8-464827100b46',
         'name': 'Freezer',
       }),
@@ -7668,6 +7692,13 @@
     ]),
     'total_time': '2 hours 30 minutes',
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
+  })
+# ---
+# name: test_update_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
   })
 # ---
 # name: test_user_info

@@ -352,6 +352,7 @@ class ShoppingList(DataClassORJSONMixin):
 
     list_id: str = field(metadata=field_options(alias="id"))
     name: str
+    group_id: str | None = field(default=None, metadata=field_options(alias="groupId"))
 
 
 @dataclass

@@ -724,7 +724,135 @@ async def test_set_mealplan(
     )
 
 
+LIST_ID = "27edbaab-2ec6-441f-8490-0283ea77585f"
+GROUP_ID = "9ed7c880-3e85-4955-9318-1443d6e080fe"
 USER_ID = "bf1c62fe-4941-4332-9886-e54e88dbdba0"
+
+
+async def test_get_shopping_list(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving a single shopping list."""
+    responses.get(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}",
+        status=200,
+        body=load_fixture("shopping_list.json"),
+    )
+    assert await mealie_client.get_shopping_list(LIST_ID) == snapshot
+
+
+async def test_create_shopping_list(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test creating a shopping list."""
+    responses.post(
+        f"{MEALIE_URL}/api/households/shopping/lists",
+        status=201,
+        body=load_fixture("shopping_list.json"),
+    )
+    assert await mealie_client.create_shopping_list("Supermarket") == snapshot
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/households/shopping/lists",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={"name": "Supermarket"},
+    )
+
+
+async def test_update_shopping_list(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test updating a shopping list."""
+    responses.get(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}",
+        status=200,
+        body=load_fixture("shopping_list.json"),
+    )
+    responses.put(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}",
+        status=200,
+        body=load_fixture("shopping_list.json"),
+    )
+    assert await mealie_client.update_shopping_list(LIST_ID, "Supermarket") == snapshot
+    responses.assert_called_with(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}",
+        METH_PUT,
+        headers=HEADERS,
+        params=None,
+        json={"id": LIST_ID, "name": "Supermarket", "groupId": GROUP_ID},
+    )
+
+
+async def test_delete_shopping_list(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test deleting a shopping list."""
+    responses.delete(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}",
+        status=200,
+        body=load_fixture("shopping_list.json"),
+    )
+    await mealie_client.delete_shopping_list(LIST_ID)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}",
+        METH_DELETE,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
+async def test_add_recipe_to_shopping_list(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test adding a recipe to a shopping list."""
+    recipe_id = "40393996-417e-4487-a081-28608a668826"
+    responses.post(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}/recipe/{recipe_id}",
+        status=200,
+        body=load_fixture("shopping_list.json"),
+    )
+    assert (
+        await mealie_client.add_recipe_to_shopping_list(LIST_ID, recipe_id)
+    ) == snapshot
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}/recipe/{recipe_id}",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={"recipeIncrementQuantity": 1.0},
+    )
+
+
+async def test_remove_recipe_from_shopping_list(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test removing a recipe from a shopping list."""
+    recipe_id = "40393996-417e-4487-a081-28608a668826"
+    responses.post(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}/recipe/{recipe_id}/delete",
+        status=200,
+        body=load_fixture("shopping_list.json"),
+    )
+    await mealie_client.remove_recipe_from_shopping_list(LIST_ID, recipe_id)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/households/shopping/lists/{LIST_ID}/recipe/{recipe_id}/delete",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={"recipeDecrementQuantity": 1.0},
+    )
 
 
 async def test_get_recipe_favorites(
