@@ -32,6 +32,7 @@ from aiomealie.models import (
     OrderDirection,
     RecipeFavoritesResponse,
     RecipesResponse,
+    ShoppingList,
     ShoppingListsResponse,
     MutateShoppingItem,
     ShoppingItemsOrderBy,
@@ -297,6 +298,60 @@ class MealieClient:
         params["perPage"] = -1
         response = await self._get("api/households/shopping/lists", params)
         return ShoppingListsResponse.from_json(response)
+
+    async def get_shopping_list(self, list_id: str) -> ShoppingList:
+        """Get a single shopping list by ID."""
+        response = await self._get(f"api/households/shopping/lists/{list_id}")
+        return ShoppingList.from_json(response)
+
+    async def create_shopping_list(self, name: str) -> ShoppingList:
+        """Create a new shopping list."""
+        response = await self._post(
+            "api/households/shopping/lists", data={"name": name}
+        )
+        return ShoppingList.from_json(response)
+
+    async def update_shopping_list(self, list_id: str, name: str) -> ShoppingList:
+        """Update a shopping list's name."""
+        existing = await self.get_shopping_list(list_id)
+        data: dict[str, Any] = {"id": list_id, "name": name}
+        if existing.group_id:
+            data["groupId"] = existing.group_id
+        response = await self._put(
+            f"api/households/shopping/lists/{list_id}", data=data
+        )
+        return ShoppingList.from_json(response)
+
+    async def delete_shopping_list(self, list_id: str) -> None:
+        """Delete a shopping list."""
+        await self._delete(f"api/households/shopping/lists/{list_id}")
+
+    async def add_recipe_to_shopping_list(
+        self,
+        list_id: str,
+        recipe_id: str,
+        *,
+        scale: float = 1.0,
+    ) -> ShoppingList:
+        """Add a recipe's ingredients to a shopping list."""
+        response = await self._post(
+            f"api/households/shopping/lists/{list_id}/recipe/{recipe_id}",
+            data={"recipeIncrementQuantity": scale},
+        )
+        return ShoppingList.from_json(response)
+
+    async def remove_recipe_from_shopping_list(
+        self,
+        list_id: str,
+        recipe_id: str,
+        *,
+        scale: float = 1.0,
+    ) -> None:
+        """Remove a recipe's ingredients from a shopping list."""
+        await self._post(
+            f"api/households/shopping/lists/{list_id}/recipe/{recipe_id}/delete",
+            data={"recipeDecrementQuantity": scale},
+        )
 
     async def get_shopping_items(
         self,
