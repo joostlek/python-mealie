@@ -168,17 +168,13 @@ class MealieClient:
         """Handle a DELETE request to Mealie."""
         return await self._request(METH_DELETE, uri, data=data, params=params)
 
-    async def get_version(self) -> str:
+    @property
+    async def version(self) -> str:
         """Return the version, retrieve from get_about if not stored."""
         if not self._version:
             about = await self.get_about()
             self._version = about.version
         return self._version
-
-    @property
-    async def version(self) -> str:
-        """Backward-compatible alias for get_version()."""
-        return await self.get_version()
 
     async def get_startup_info(self) -> StartupInfo:
         """Get startup info."""
