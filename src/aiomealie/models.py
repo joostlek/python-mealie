@@ -476,3 +476,22 @@ class Statistics(DataClassORJSONMixin):
     total_categories: int = field(metadata=field_options(alias="totalCategories"))
     total_tags: int = field(metadata=field_options(alias="totalTags"))
     total_tools: int = field(metadata=field_options(alias="totalTools"))
+
+
+@dataclass
+class RecipeRating(DataClassORJSONMixin):
+    """RecipeRating model."""
+
+    recipe_id: str = field(metadata=field_options(alias="recipeId"))
+    is_favorite: bool = field(metadata=field_options(alias="isFavorite"))
+    recipe_slug: str | None = field(
+        default=None, metadata=field_options(alias="recipeSlug")
+    )
+    rating: float | None = None
+
+
+@dataclass
+class RecipeFavoritesResponse(DataClassORJSONMixin):
+    """RecipeFavoritesResponse model."""
+
+    ratings: list[RecipeRating]
