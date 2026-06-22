@@ -724,6 +724,9 @@ async def test_set_mealplan(
     )
 
 
+USER_ID = "bf1c62fe-4941-4332-9886-e54e88dbdba0"
+
+
 async def test_get_mealplan(
     responses: aioresponses,
     mealie_client: MealieClient,
@@ -807,4 +810,96 @@ async def test_delete_mealplan(
         headers=HEADERS,
         params=None,
         json=None,
+    )
+
+
+async def test_get_recipe_favorites(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving recipe favorites."""
+    responses.get(
+        f"{MEALIE_URL}/api/users/self/favorites",
+        status=200,
+        body=load_fixture("recipe_favorites.json"),
+    )
+    assert await mealie_client.get_recipe_favorites() == snapshot
+
+
+async def test_add_recipe_favorite(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test adding a recipe to favorites."""
+    slug = "cauliflower-salad"
+    responses.get(
+        f"{MEALIE_URL}/api/users/self",
+        status=200,
+        body=load_fixture("users_self.json"),
+    )
+    responses.post(
+        f"{MEALIE_URL}/api/users/{USER_ID}/favorites/{slug}",
+        status=200,
+        body="{}",
+    )
+    await mealie_client.add_recipe_favorite(slug)
+    responses.assert_called_with(
+        f"{MEALIE_URL}/api/users/{USER_ID}/favorites/{slug}",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
+async def test_remove_recipe_favorite(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test removing a recipe from favorites."""
+    slug = "cauliflower-salad"
+    responses.get(
+        f"{MEALIE_URL}/api/users/self",
+        status=200,
+        body=load_fixture("users_self.json"),
+    )
+    responses.delete(
+        f"{MEALIE_URL}/api/users/{USER_ID}/favorites/{slug}",
+        status=200,
+        body="{}",
+    )
+    await mealie_client.remove_recipe_favorite(slug)
+    responses.assert_called_with(
+        f"{MEALIE_URL}/api/users/{USER_ID}/favorites/{slug}",
+        METH_DELETE,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
+async def test_rate_recipe(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test rating a recipe."""
+    slug = "cauliflower-salad"
+    responses.get(
+        f"{MEALIE_URL}/api/users/self",
+        status=200,
+        body=load_fixture("users_self.json"),
+    )
+    responses.post(
+        f"{MEALIE_URL}/api/users/{USER_ID}/ratings/{slug}",
+        status=200,
+        body="{}",
+    )
+    await mealie_client.rate_recipe(slug, rating=4.5, is_favorite=True)
+    responses.assert_called_with(
+        f"{MEALIE_URL}/api/users/{USER_ID}/ratings/{slug}",
+        METH_POST,
+        headers=HEADERS,
+        params=None,
+        json={"rating": 4.5, "isFavorite": True},
     )

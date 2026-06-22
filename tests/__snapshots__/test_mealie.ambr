@@ -305,6 +305,24 @@
     'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
   })
 # ---
+# name: test_get_recipe_favorites
+  dict({
+    'ratings': list([
+      dict({
+        'is_favorite': True,
+        'rating': 4.5,
+        'recipe_id': '40393996-417e-4487-a081-28608a668826',
+        'recipe_slug': 'cauliflower-salad',
+      }),
+      dict({
+        'is_favorite': True,
+        'rating': None,
+        'recipe_id': 'e1f2a3b4-c5d6-7890-abcd-ef1234567890',
+        'recipe_slug': 'original-sacher-torte-2',
+      }),
+    ]),
+  })
+# ---
 # name: test_groups_self
   dict({
     'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
