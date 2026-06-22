@@ -729,6 +729,92 @@ GROUP_ID = "9ed7c880-3e85-4955-9318-1443d6e080fe"
 USER_ID = "bf1c62fe-4941-4332-9886-e54e88dbdba0"
 
 
+async def test_get_mealplan(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving a single mealplan entry."""
+    mealplan_id = 192
+    responses.get(
+        f"{MEALIE_URL}/api/households/mealplans/{mealplan_id}",
+        status=200,
+        body=load_fixture("mealplan.json"),
+    )
+    assert await mealie_client.get_mealplan(mealplan_id) == snapshot
+
+
+async def test_update_mealplan(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test updating a mealplan entry."""
+    mealplan_id = 192
+    group_id = "0bf60b2e-ca89-42a9-94d4-8f67ca72b157"
+    user_id = "bf1c62fe-4941-4332-9886-e54e88dbdba0"
+
+    responses.get(
+        f"{MEALIE_URL}/api/users/self",
+        status=200,
+        body=load_fixture("users_self.json"),
+    )
+    responses.get(
+        f"{MEALIE_URL}/api/households/mealplans/{mealplan_id}",
+        status=200,
+        body=load_fixture("mealplan.json"),
+    )
+    responses.put(
+        f"{MEALIE_URL}/api/households/mealplans/{mealplan_id}",
+        status=200,
+        body=load_fixture("mealplan.json"),
+    )
+    assert (
+        await mealie_client.update_mealplan(
+            mealplan_id,
+            at=date(2024, 1, 21),
+            entry_type=MealplanEntryType.DINNER,
+            recipe_id="40393996-417e-4487-a081-28608a668826",
+        )
+        == snapshot
+    )
+    responses.assert_called_with(
+        f"{MEALIE_URL}/api/households/mealplans/{mealplan_id}",
+        METH_PUT,
+        headers=HEADERS,
+        params=None,
+        json={
+            "id": mealplan_id,
+            "date": "2024-01-21",
+            "entryType": "dinner",
+            "groupId": group_id,
+            "userId": user_id,
+            "recipeId": "40393996-417e-4487-a081-28608a668826",
+        },
+    )
+
+
+async def test_delete_mealplan(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+) -> None:
+    """Test deleting a mealplan entry."""
+    mealplan_id = 192
+    responses.delete(
+        f"{MEALIE_URL}/api/households/mealplans/{mealplan_id}",
+        status=200,
+        body=load_fixture("mealplan.json"),
+    )
+    await mealie_client.delete_mealplan(mealplan_id)
+    responses.assert_called_once_with(
+        f"{MEALIE_URL}/api/households/mealplans/{mealplan_id}",
+        METH_DELETE,
+        headers=HEADERS,
+        params=None,
+        json=None,
+    )
+
+
 async def test_get_shopping_list(
     responses: aioresponses,
     mealie_client: MealieClient,
