@@ -1,0 +1,20 @@
+{
+    "page": 1,
+    "per_page": 50,
+    "total": 2,
+    "total_pages": 1,
+    "items": [
+        {
+            "id": "6e199f62-8356-46cf-8f6f-ea923780a1e3",
+            "name": "Stove",
+            "slug": "stove"
+        },
+        {
+            "id": "7f2a0b73-9467-57d0-9a7b-fb034891b2f4",
+            "name": "Oven",
+            "slug": "oven"
+        }
+    ],
+    "next": null,
+    "previous": null
+}

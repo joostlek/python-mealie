@@ -283,6 +283,56 @@
     'name': 'Supermarket',
   })
 # ---
+# name: test_get_categories
+  dict({
+    'items': list([
+      dict({
+        'category_id': 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+        'name': 'Dessert',
+        'slug': 'dessert',
+      }),
+      dict({
+        'category_id': 'b2c3d4e5-f6a7-8901-bcde-f12345678901',
+        'name': 'Soup',
+        'slug': 'soup',
+      }),
+    ]),
+  })
+# ---
+# name: test_get_foods
+  dict({
+    'items': list([
+      dict({
+        'aliases': list([
+        ]),
+        'created_at': datetime.datetime(2024, 1, 1, 0, 0),
+        'description': 'All-purpose flour',
+        'extras': None,
+        'food_id': 'e5f6a7b8-c9d0-1234-ef01-234567890123',
+        'households_with_ingredient_food': None,
+        'label': None,
+        'label_id': None,
+        'name': 'Flour',
+        'plural_name': None,
+        'updated_at': datetime.datetime(2024, 1, 1, 0, 0),
+      }),
+      dict({
+        'aliases': list([
+        ]),
+        'created_at': datetime.datetime(2024, 1, 1, 0, 0),
+        'description': 'White granulated sugar',
+        'extras': None,
+        'food_id': 'f6a7b8c9-d0e1-2345-f012-345678901234',
+        'households_with_ingredient_food': None,
+        'label': None,
+        'label_id': None,
+        'name': 'Sugar',
+        'plural_name': None,
+        'updated_at': datetime.datetime(2024, 1, 1, 0, 0),
+      }),
+    ]),
+  })
+# ---
 # name: test_get_mealplan
   dict({
     'description': None,
@@ -342,6 +392,74 @@
     'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
     'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
     'name': 'Supermarket',
+  })
+# ---
+# name: test_get_tags
+  dict({
+    'items': list([
+      dict({
+        'name': 'Quick',
+        'slug': 'quick',
+        'tag_id': 'c3d4e5f6-a7b8-9012-cdef-012345678901',
+      }),
+      dict({
+        'name': 'Vegetarian',
+        'slug': 'vegetarian',
+        'tag_id': 'd4e5f6a7-b8c9-0123-def0-123456789012',
+      }),
+    ]),
+  })
+# ---
+# name: test_get_tools
+  dict({
+    'items': list([
+      dict({
+        'name': 'Stove',
+        'slug': 'stove',
+        'tool_id': '6e199f62-8356-46cf-8f6f-ea923780a1e3',
+      }),
+      dict({
+        'name': 'Oven',
+        'slug': 'oven',
+        'tool_id': '7f2a0b73-9467-57d0-9a7b-fb034891b2f4',
+      }),
+    ]),
+  })
+# ---
+# name: test_get_units
+  dict({
+    'items': list([
+      dict({
+        'abbreviation': None,
+        'aliases': list([
+        ]),
+        'created_at': datetime.datetime(2024, 1, 1, 0, 0),
+        'description': 'US cup',
+        'extras': None,
+        'fraction': False,
+        'name': 'Cup',
+        'plural_abbreviation': None,
+        'plural_name': None,
+        'unit_id': 'a7b8c9d0-e1f2-3456-0123-456789012345',
+        'updated_at': datetime.datetime(2024, 1, 1, 0, 0),
+        'use_abbreviation': False,
+      }),
+      dict({
+        'abbreviation': 'tbsp',
+        'aliases': list([
+        ]),
+        'created_at': datetime.datetime(2024, 1, 1, 0, 0),
+        'description': 'US tablespoon',
+        'extras': None,
+        'fraction': False,
+        'name': 'Tablespoon',
+        'plural_abbreviation': None,
+        'plural_name': None,
+        'unit_id': 'b8c9d0e1-f2a3-4567-1234-567890123456',
+        'updated_at': datetime.datetime(2024, 1, 1, 0, 0),
+        'use_abbreviation': True,
+      }),
+    ]),
   })
 # ---
 # name: test_groups_self
