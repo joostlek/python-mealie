@@ -4,6 +4,13 @@
     'version': 'v2.4.1',
   })
 # ---
+# name: test_add_recipe_to_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
+  })
+# ---
 # name: test_create_recipe
   dict({
     'categories': list([
@@ -270,6 +277,74 @@
     ]),
     'total_time': '2 hours 30 minutes',
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
+  })
+# ---
+# name: test_create_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
+  })
+# ---
+# name: test_get_mealplan
+  dict({
+    'description': None,
+    'entry_type': <MealplanEntryType.DINNER: 'dinner'>,
+    'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
+    'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
+    'mealplan_date': datetime.date(2024, 1, 21),
+    'mealplan_id': 192,
+    'recipe': dict({
+      'categories': list([
+      ]),
+      'date_added': datetime.date(2023, 12, 29),
+      'description': 'This is a wonderful option for picnics and grill outs when you are looking for a new take on potato salad. This simple side salad made with cauliflower, peas, and hard boiled eggs can be made the day ahead and chilled until party time!',
+      'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
+      'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
+      'image': 'qLdv',
+      'last_made': datetime.datetime(2024, 1, 6, 22, 59, 59),
+      'name': 'Cauliflower Salad',
+      'original_url': 'https://www.allrecipes.com/recipe/142152/cauliflower-salad/',
+      'perform_time': '10 Minutes',
+      'prep_time': '25 Minutes',
+      'rating': None,
+      'recipe_id': '40393996-417e-4487-a081-28608a668826',
+      'recipe_servings': None,
+      'recipe_yield': '6 servings',
+      'recipe_yield_quantity': None,
+      'slug': 'cauliflower-salad',
+      'tags': list([
+      ]),
+      'total_time': '2 Hours 35 Minutes',
+      'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
+    }),
+    'title': None,
+    'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
+  })
+# ---
+# name: test_get_recipe_favorites
+  dict({
+    'ratings': list([
+      dict({
+        'is_favorite': True,
+        'rating': 4.5,
+        'recipe_id': '40393996-417e-4487-a081-28608a668826',
+        'recipe_slug': 'cauliflower-salad',
+      }),
+      dict({
+        'is_favorite': True,
+        'rating': None,
+        'recipe_id': 'e1f2a3b4-c5d6-7890-abcd-ef1234567890',
+        'recipe_slug': 'original-sacher-torte-2',
+      }),
+    ]),
+  })
+# ---
+# name: test_get_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
   })
 # ---
 # name: test_groups_self
@@ -7355,14 +7430,17 @@
   dict({
     'items': list([
       dict({
+        'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
         'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
         'name': 'Supermarket',
       }),
       dict({
+        'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
         'list_id': 'f8438635-8211-4be8-80d0-0aa42e37a5f2',
         'name': 'Special groceries',
       }),
       dict({
+        'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
         'list_id': 'e9d78ff2-4b23-4b77-a3a8-464827100b46',
         'name': 'Freezer',
       }),
@@ -7399,6 +7477,42 @@
     'light_secondary': '#973542',
     'light_success': '#43A047',
     'light_warning': '#FF6D00',
+  })
+# ---
+# name: test_update_mealplan
+  dict({
+    'description': None,
+    'entry_type': <MealplanEntryType.DINNER: 'dinner'>,
+    'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
+    'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
+    'mealplan_date': datetime.date(2024, 1, 21),
+    'mealplan_id': 192,
+    'recipe': dict({
+      'categories': list([
+      ]),
+      'date_added': datetime.date(2023, 12, 29),
+      'description': 'This is a wonderful option for picnics and grill outs when you are looking for a new take on potato salad. This simple side salad made with cauliflower, peas, and hard boiled eggs can be made the day ahead and chilled until party time!',
+      'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
+      'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
+      'image': 'qLdv',
+      'last_made': datetime.datetime(2024, 1, 6, 22, 59, 59),
+      'name': 'Cauliflower Salad',
+      'original_url': 'https://www.allrecipes.com/recipe/142152/cauliflower-salad/',
+      'perform_time': '10 Minutes',
+      'prep_time': '25 Minutes',
+      'rating': None,
+      'recipe_id': '40393996-417e-4487-a081-28608a668826',
+      'recipe_servings': None,
+      'recipe_yield': '6 servings',
+      'recipe_yield_quantity': None,
+      'slug': 'cauliflower-salad',
+      'tags': list([
+      ]),
+      'total_time': '2 Hours 35 Minutes',
+      'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
+    }),
+    'title': None,
+    'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
   })
 # ---
 # name: test_update_recipe
@@ -7667,6 +7781,13 @@
     ]),
     'total_time': '2 hours 30 minutes',
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
+  })
+# ---
+# name: test_update_shopping_list
+  dict({
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'list_id': '27edbaab-2ec6-441f-8490-0283ea77585f',
+    'name': 'Supermarket',
   })
 # ---
 # name: test_user_info
