@@ -289,7 +289,7 @@ class Recipe(BaseRecipe):
     instructions: list[Instruction] = field(
         metadata=field_options(alias="recipeInstructions")
     )
-    extras: dict[str, Any] = field(default_factory=dict)
+    extras: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
