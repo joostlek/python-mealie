@@ -272,6 +272,13 @@
         'tag_id': 'd530b8e4-275a-4093-804b-6d0de154c206',
       }),
     ]),
+    'tools': list([
+      dict({
+        'name': 'Springform tin',
+        'slug': 'springform-tin',
+        'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
+      }),
+    ]),
     'total_time': '2 hours 30 minutes',
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
   })
@@ -311,6 +318,13 @@
       'recipe_yield_quantity': None,
       'slug': 'cauliflower-salad',
       'tags': list([
+      ]),
+      'tools': list([
+        dict({
+          'name': 'Stove',
+          'slug': 'stove',
+          'tool_id': '6e199f62-8356-46cf-8f6f-ea923780a1e3',
+        }),
       ]),
       'total_time': '2 Hours 35 Minutes',
       'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -612,6 +626,13 @@
         'tag_id': 'd530b8e4-275a-4093-804b-6d0de154c206',
       }),
     ]),
+    'tools': list([
+      dict({
+        'name': 'Springform tin',
+        'slug': 'springform-tin',
+        'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
+      }),
+    ]),
     'total_time': '2 hours 30 minutes',
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
   })
@@ -645,6 +666,13 @@
         'recipe_yield_quantity': None,
         'slug': 'cauliflower-salad',
         'tags': list([
+        ]),
+        'tools': list([
+          dict({
+            'name': 'Stove',
+            'slug': 'stove',
+            'tool_id': '6e199f62-8356-46cf-8f6f-ea923780a1e3',
+          }),
         ]),
         'total_time': '2 Hours 35 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -680,6 +708,8 @@
         'slug': '15-minute-cheesy-sausage-veg-pasta',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -713,6 +743,8 @@
         'recipe_yield_quantity': None,
         'slug': 'cake',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -748,6 +780,8 @@
         'slug': 'pomegranate-chicken-with-almond-couscous',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '20 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -781,6 +815,8 @@
         'recipe_yield_quantity': None,
         'slug': 'csirkes-es-tofus-empanadas',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '95',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -821,6 +857,8 @@
             'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '3 Hours 15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -855,6 +893,8 @@
         'slug': 'pomegranate-chicken-with-almond-couscous',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '20 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -866,6 +906,17 @@
 # name: test_mealplans
   dict({
     'items': list([
+      dict({
+        'description': None,
+        'entry_type': <MealplanEntryType.LUNCH: 'lunch'>,
+        'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+        'household_id': 'bdcd07f6-de8d-4ae1-a703-84df24b8072c',
+        'mealplan_date': datetime.date(2026, 7, 24),
+        'mealplan_id': 1908,
+        'recipe': None,
+        'title': 'Cheese & Biscuits',
+        'user_id': '90b03954-00e1-46de-9520-f0305022b84f',
+      }),
       dict({
         'description': None,
         'entry_type': <MealplanEntryType.DINNER: 'dinner'>,
@@ -893,6 +944,8 @@
           'recipe_yield_quantity': None,
           'slug': 'zoete-aardappel-curry-traybake',
           'tags': list([
+          ]),
+          'tools': list([
           ]),
           'total_time': '40 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -928,6 +981,8 @@
           'slug': 'roast-chicken',
           'tags': list([
           ]),
+          'tools': list([
+          ]),
           'total_time': '1 Hour 35 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -961,6 +1016,23 @@
           'recipe_yield_quantity': None,
           'slug': 'receta-de-pollo-al-curry-en-10-minutos-con-video-incluido',
           'tags': list([
+          ]),
+          'tools': list([
+            dict({
+              'name': 'Backofen',
+              'slug': 'backofen',
+              'tool_id': '1170e609-20d3-45b8-b0c7-3a4cfa614e88',
+            }),
+            dict({
+              'name': 'Magimix blender',
+              'slug': 'magimix-blender',
+              'tool_id': '9ab522ad-c3be-4dad-8b4f-d9d53817f4d0',
+            }),
+            dict({
+              'name': 'Alluminio',
+              'slug': 'alluminio',
+              'tool_id': 'b4ca27dc-9bf6-48be-ad10-3e7056cb24bc',
+            }),
           ]),
           'total_time': '10 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1056,6 +1128,8 @@
               'tag_id': '7f99b04f-914a-408b-a057-511ca1125734',
             }),
           ]),
+          'tools': list([
+          ]),
           'total_time': '5 Hours',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -1090,6 +1164,8 @@
           'slug': 'eukole-makaronada-me-kephtedakia-ston-phourno-1',
           'tags': list([
           ]),
+          'tools': list([
+          ]),
           'total_time': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -1123,6 +1199,8 @@
           'recipe_yield_quantity': None,
           'slug': 'greek-turkey-meatballs-with-lemon-orzo-creamy-feta-yogurt-sauce',
           'tags': list([
+          ]),
+          'tools': list([
           ]),
           'total_time': '1 Hour',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1162,6 +1240,8 @@
               'slug': '4-hours',
               'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
             }),
+          ]),
+          'tools': list([
           ]),
           'total_time': '35 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1207,6 +1287,8 @@
               'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
             }),
           ]),
+          'tools': list([
+          ]),
           'total_time': '1 Hour 15 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -1251,6 +1333,8 @@
               'tag_id': '941558d2-50d5-4c9d-8890-a0258f18d493',
             }),
           ]),
+          'tools': list([
+          ]),
           'total_time': '30 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -1289,6 +1373,8 @@
               'slug': '4-hours',
               'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
             }),
+          ]),
+          'tools': list([
           ]),
           'total_time': '3 Hours 15 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1329,6 +1415,8 @@
               'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
             }),
           ]),
+          'tools': list([
+          ]),
           'total_time': '3 Hours 15 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -1368,6 +1456,8 @@
               'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
             }),
           ]),
+          'tools': list([
+          ]),
           'total_time': '35 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -1402,6 +1492,8 @@
           'slug': 'miso-udon-noodles-with-spinach-and-tofu',
           'tags': list([
           ]),
+          'tools': list([
+          ]),
           'total_time': '25 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
@@ -1435,6 +1527,8 @@
           'recipe_yield_quantity': None,
           'slug': 'mousse-de-saumon',
           'tags': list([
+          ]),
+          'tools': list([
           ]),
           'total_time': '17 Minutes',
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1491,6 +1585,13 @@
               'tag_id': 'ea3805f5-f26a-4192-a39e-1611d026aeff',
             }),
           ]),
+          'tools': list([
+            dict({
+              'name': 'Stove',
+              'slug': 'stove',
+              'tool_id': '6e199f62-8356-46cf-8f6f-ea923780a1e3',
+            }),
+          ]),
           'total_time': None,
           'user_id': '90b03954-00e1-46de-9520-f0305022b84f',
         }),
@@ -1529,6 +1630,13 @@
       'slug': 'cauliflower-salad',
       'tags': list([
       ]),
+      'tools': list([
+        dict({
+          'name': 'Stove',
+          'slug': 'stove',
+          'tool_id': '6e199f62-8356-46cf-8f6f-ea923780a1e3',
+        }),
+      ]),
       'total_time': '2 Hours 35 Minutes',
       'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
     }),
@@ -1560,6 +1668,13 @@
         'slug': 'tu6y',
         'tags': list([
         ]),
+        'tools': list([
+          dict({
+            'name': 'Springform tin',
+            'slug': 'springform-tin',
+            'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
+          }),
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1583,6 +1698,8 @@
         'recipe_yield_quantity': None,
         'slug': 'eukole-makaronada-me-kephtedakia-ston-phourno-1',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1608,6 +1725,8 @@
         'slug': 'patates-douces-au-four-1',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1632,6 +1751,8 @@
         'slug': 'sweet-potatoes',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1655,6 +1776,8 @@
         'recipe_yield_quantity': None,
         'slug': 'eukole-makaronada-me-kephtedakia-ston-phourno',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1740,6 +1863,8 @@
             'tag_id': '7f99b04f-914a-408b-a057-511ca1125734',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '5 Hours',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1824,6 +1949,8 @@
             'tag_id': '7f99b04f-914a-408b-a057-511ca1125734',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '5 Hours',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1847,6 +1974,8 @@
         'recipe_yield_quantity': None,
         'slug': 'veganes-marmor-bananenbrot-mit-erdnussbutter',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1872,6 +2001,8 @@
         'slug': 'pasta-mit-tomaten-knoblauch-und-basilikum-einfach-und-genial-kuechenchaotin',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1895,6 +2026,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test123',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -1920,6 +2053,8 @@
         'slug': 'bureeto',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1944,6 +2079,8 @@
         'slug': 'subway-double-cookies',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -1967,6 +2104,8 @@
         'recipe_yield_quantity': None,
         'slug': 'qwerty12345',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2002,6 +2141,8 @@
             'tag_id': '941558d2-50d5-4c9d-8890-a0258f18d493',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2026,6 +2167,8 @@
         'slug': 'meatloaf',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2049,6 +2192,8 @@
         'recipe_yield_quantity': None,
         'slug': 'richtig-rheinischer-sauerbraten',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '3 Hours 20 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2114,6 +2259,8 @@
             'tag_id': 'ec303c13-a4f7-4de3-8a4f-d13b72ddd500',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '35 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2137,6 +2284,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test-20240121',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2162,6 +2311,8 @@
         'slug': 'loempia-bowl',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2185,6 +2336,8 @@
         'recipe_yield_quantity': None,
         'slug': '5-ingredient-chocolate-mousse',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2240,6 +2393,8 @@
             'tag_id': 'fee5e626-792c-479d-a265-81a0029047f2',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2274,6 +2429,13 @@
             'tag_id': '0f80c5d5-d1ee-41ac-a949-54a76b446459',
           }),
         ]),
+        'tools': list([
+          dict({
+            'name': 'Backofen',
+            'slug': 'backofen',
+            'tool_id': '1170e609-20d3-45b8-b0c7-3a4cfa614e88',
+          }),
+        ]),
         'total_time': '24h',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2298,6 +2460,8 @@
         'slug': 'test-234234',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2321,6 +2485,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test-243',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2350,6 +2516,8 @@
             'slug': '4-hours',
             'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '35 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2386,6 +2554,8 @@
         'slug': 'tarta-cytrynowa-z-beza',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '1 Hour',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2409,6 +2579,8 @@
         'recipe_yield_quantity': None,
         'slug': 'martins-test-recipe',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2454,6 +2626,8 @@
             'tag_id': 'c78edd8c-c96b-43fb-86c0-917ea5a08ac7',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2477,6 +2651,8 @@
         'recipe_yield_quantity': None,
         'slug': 'my-test-recipe',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2502,6 +2678,8 @@
         'slug': 'my-test-receipe',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2526,6 +2704,8 @@
         'slug': 'patates-douces-au-four',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2549,6 +2729,8 @@
         'recipe_yield_quantity': None,
         'slug': 'easy-homemade-pizza-dough',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '2 Hours 30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2578,6 +2760,8 @@
             'slug': '4-hours',
             'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '3 Hours 15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2648,6 +2832,8 @@
             'tag_id': 'd77a2071-43ae-40b1-854d-ae995a766fba',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '2 Hours 15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2671,6 +2857,8 @@
         'recipe_yield_quantity': None,
         'slug': 'schnelle-kasespatzle',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '40 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2696,6 +2884,8 @@
         'slug': 'taco',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2719,6 +2909,8 @@
         'recipe_yield_quantity': None,
         'slug': 'vodkapasta',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2744,6 +2936,8 @@
         'slug': 'vodkapasta2',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2767,6 +2961,8 @@
         'recipe_yield_quantity': None,
         'slug': 'rub',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2827,6 +3023,8 @@
             'tag_id': '2a7c5386-5d26-44fa-8a08-81747ee7f132',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2850,6 +3048,8 @@
         'recipe_yield_quantity': None,
         'slug': 'cauliflower-bisque-recipe-with-cheddar-cheese',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2875,6 +3075,8 @@
         'slug': 'prova',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2898,6 +3100,8 @@
         'recipe_yield_quantity': None,
         'slug': 'pate-au-beurre-1',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -2923,6 +3127,8 @@
         'slug': 'pate-au-beurre',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2947,6 +3153,8 @@
         'slug': 'sous-vide-cheesecake-recipe',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '2 Hours 10 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -2970,6 +3178,8 @@
         'recipe_yield_quantity': None,
         'slug': 'the-bomb-mini-cheesecakes',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '1 Hour 30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3050,6 +3260,8 @@
             'tag_id': '024b30ca-53cb-4243-ba6b-d830610f2f48',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '25 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3073,6 +3285,8 @@
         'recipe_yield_quantity': None,
         'slug': 'death-by-chocolate',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3118,6 +3332,8 @@
             'tag_id': '2b6283e2-b8e0-4b3d-90d9-66f322ca77aa',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3156,6 +3372,8 @@
             'slug': 'nudeln',
             'tag_id': '04d2aea8-fc9a-4f9b-9a87-8f15189ab6f9',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3187,6 +3405,13 @@
         'slug': 'tu6y',
         'tags': list([
         ]),
+        'tools': list([
+          dict({
+            'name': 'Springform tin',
+            'slug': 'springform-tin',
+            'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
+          }),
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3210,6 +3435,8 @@
         'recipe_yield_quantity': None,
         'slug': 'eukole-makaronada-me-kephtedakia-ston-phourno-1',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3235,6 +3462,8 @@
         'slug': 'patates-douces-au-four-1',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3259,6 +3488,8 @@
         'slug': 'sweet-potatoes',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3282,6 +3513,8 @@
         'recipe_yield_quantity': None,
         'slug': 'eukole-makaronada-me-kephtedakia-ston-phourno',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3367,6 +3600,8 @@
             'tag_id': '7f99b04f-914a-408b-a057-511ca1125734',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '5 Hours',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3451,6 +3686,8 @@
             'tag_id': '7f99b04f-914a-408b-a057-511ca1125734',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '5 Hours',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3474,6 +3711,8 @@
         'recipe_yield_quantity': None,
         'slug': 'veganes-marmor-bananenbrot-mit-erdnussbutter',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3499,6 +3738,8 @@
         'slug': 'pasta-mit-tomaten-knoblauch-und-basilikum-einfach-und-genial-kuechenchaotin',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3522,6 +3763,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test123',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3547,6 +3790,8 @@
         'slug': 'bureeto',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3571,6 +3816,8 @@
         'slug': 'subway-double-cookies',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3594,6 +3841,8 @@
         'recipe_yield_quantity': None,
         'slug': 'qwerty12345',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3629,6 +3878,8 @@
             'tag_id': '941558d2-50d5-4c9d-8890-a0258f18d493',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3653,6 +3904,8 @@
         'slug': 'meatloaf',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3676,6 +3929,8 @@
         'recipe_yield_quantity': None,
         'slug': 'richtig-rheinischer-sauerbraten',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '3 Hours 20 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3741,6 +3996,8 @@
             'tag_id': 'ec303c13-a4f7-4de3-8a4f-d13b72ddd500',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '35 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3764,6 +4021,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test-20240121',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3789,6 +4048,8 @@
         'slug': 'loempia-bowl',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3812,6 +4073,8 @@
         'recipe_yield_quantity': None,
         'slug': '5-ingredient-chocolate-mousse',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3867,6 +4130,8 @@
             'tag_id': 'fee5e626-792c-479d-a265-81a0029047f2',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3901,6 +4166,13 @@
             'tag_id': '0f80c5d5-d1ee-41ac-a949-54a76b446459',
           }),
         ]),
+        'tools': list([
+          dict({
+            'name': 'Backofen',
+            'slug': 'backofen',
+            'tool_id': '1170e609-20d3-45b8-b0c7-3a4cfa614e88',
+          }),
+        ]),
         'total_time': '24h',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3925,6 +4197,8 @@
         'slug': 'test-234234',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -3948,6 +4222,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test-243',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -3977,6 +4253,8 @@
             'slug': '4-hours',
             'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '35 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4013,6 +4291,8 @@
         'slug': 'tarta-cytrynowa-z-beza',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '1 Hour',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4036,6 +4316,8 @@
         'recipe_yield_quantity': None,
         'slug': 'martins-test-recipe',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4081,6 +4363,8 @@
             'tag_id': 'c78edd8c-c96b-43fb-86c0-917ea5a08ac7',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4104,6 +4388,8 @@
         'recipe_yield_quantity': None,
         'slug': 'my-test-recipe',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4129,6 +4415,8 @@
         'slug': 'my-test-receipe',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4153,6 +4441,8 @@
         'slug': 'patates-douces-au-four',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4176,6 +4466,8 @@
         'recipe_yield_quantity': None,
         'slug': 'easy-homemade-pizza-dough',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '2 Hours 30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4205,6 +4497,8 @@
             'slug': '4-hours',
             'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '3 Hours 15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4275,6 +4569,8 @@
             'tag_id': 'd77a2071-43ae-40b1-854d-ae995a766fba',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '2 Hours 15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4298,6 +4594,8 @@
         'recipe_yield_quantity': None,
         'slug': 'schnelle-kasespatzle',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '40 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4323,6 +4621,8 @@
         'slug': 'taco',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4346,6 +4646,8 @@
         'recipe_yield_quantity': None,
         'slug': 'vodkapasta',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4371,6 +4673,8 @@
         'slug': 'vodkapasta2',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4394,6 +4698,8 @@
         'recipe_yield_quantity': None,
         'slug': 'rub',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4454,6 +4760,8 @@
             'tag_id': '2a7c5386-5d26-44fa-8a08-81747ee7f132',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4477,6 +4785,8 @@
         'recipe_yield_quantity': None,
         'slug': 'cauliflower-bisque-recipe-with-cheddar-cheese',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4502,6 +4812,8 @@
         'slug': 'prova',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4525,6 +4837,8 @@
         'recipe_yield_quantity': None,
         'slug': 'pate-au-beurre-1',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4550,6 +4864,8 @@
         'slug': 'pate-au-beurre',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4574,6 +4890,8 @@
         'slug': 'sous-vide-cheesecake-recipe',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '2 Hours 10 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4597,6 +4915,8 @@
         'recipe_yield_quantity': None,
         'slug': 'the-bomb-mini-cheesecakes',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '1 Hour 30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4677,6 +4997,8 @@
             'tag_id': '024b30ca-53cb-4243-ba6b-d830610f2f48',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '25 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4700,6 +5022,8 @@
         'recipe_yield_quantity': None,
         'slug': 'death-by-chocolate',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4745,6 +5069,8 @@
             'tag_id': '2b6283e2-b8e0-4b3d-90d9-66f322ca77aa',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4783,6 +5109,8 @@
             'slug': 'nudeln',
             'tag_id': '04d2aea8-fc9a-4f9b-9a87-8f15189ab6f9',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4814,6 +5142,13 @@
         'slug': 'tu6y',
         'tags': list([
         ]),
+        'tools': list([
+          dict({
+            'name': 'Springform tin',
+            'slug': 'springform-tin',
+            'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
+          }),
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4837,6 +5172,8 @@
         'recipe_yield_quantity': None,
         'slug': 'eukole-makaronada-me-kephtedakia-ston-phourno-1',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4862,6 +5199,8 @@
         'slug': 'patates-douces-au-four-1',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4886,6 +5225,8 @@
         'slug': 'sweet-potatoes',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -4909,6 +5250,8 @@
         'recipe_yield_quantity': None,
         'slug': 'eukole-makaronada-me-kephtedakia-ston-phourno',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -4994,6 +5337,8 @@
             'tag_id': '7f99b04f-914a-408b-a057-511ca1125734',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '5 Hours',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5078,6 +5423,8 @@
             'tag_id': '7f99b04f-914a-408b-a057-511ca1125734',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '5 Hours',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5101,6 +5448,8 @@
         'recipe_yield_quantity': None,
         'slug': 'veganes-marmor-bananenbrot-mit-erdnussbutter',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5126,6 +5475,8 @@
         'slug': 'pasta-mit-tomaten-knoblauch-und-basilikum-einfach-und-genial-kuechenchaotin',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5149,6 +5500,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test123',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5174,6 +5527,8 @@
         'slug': 'bureeto',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5198,6 +5553,8 @@
         'slug': 'subway-double-cookies',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5221,6 +5578,8 @@
         'recipe_yield_quantity': None,
         'slug': 'qwerty12345',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5256,6 +5615,8 @@
             'tag_id': '941558d2-50d5-4c9d-8890-a0258f18d493',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5280,6 +5641,8 @@
         'slug': 'meatloaf',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5303,6 +5666,8 @@
         'recipe_yield_quantity': None,
         'slug': 'richtig-rheinischer-sauerbraten',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '3 Hours 20 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5368,6 +5733,8 @@
             'tag_id': 'ec303c13-a4f7-4de3-8a4f-d13b72ddd500',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '35 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5391,6 +5758,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test-20240121',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5416,6 +5785,8 @@
         'slug': 'loempia-bowl',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5439,6 +5810,8 @@
         'recipe_yield_quantity': None,
         'slug': '5-ingredient-chocolate-mousse',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5494,6 +5867,8 @@
             'tag_id': 'fee5e626-792c-479d-a265-81a0029047f2',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5528,6 +5903,13 @@
             'tag_id': '0f80c5d5-d1ee-41ac-a949-54a76b446459',
           }),
         ]),
+        'tools': list([
+          dict({
+            'name': 'Backofen',
+            'slug': 'backofen',
+            'tool_id': '1170e609-20d3-45b8-b0c7-3a4cfa614e88',
+          }),
+        ]),
         'total_time': '24h',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5552,6 +5934,8 @@
         'slug': 'test-234234',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5575,6 +5959,8 @@
         'recipe_yield_quantity': None,
         'slug': 'test-243',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5604,6 +5990,8 @@
             'slug': '4-hours',
             'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '35 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5640,6 +6028,8 @@
         'slug': 'tarta-cytrynowa-z-beza',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '1 Hour',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5663,6 +6053,8 @@
         'recipe_yield_quantity': None,
         'slug': 'martins-test-recipe',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5708,6 +6100,8 @@
             'tag_id': 'c78edd8c-c96b-43fb-86c0-917ea5a08ac7',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5731,6 +6125,8 @@
         'recipe_yield_quantity': None,
         'slug': 'my-test-recipe',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5756,6 +6152,8 @@
         'slug': 'my-test-receipe',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5780,6 +6178,8 @@
         'slug': 'patates-douces-au-four',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5803,6 +6203,8 @@
         'recipe_yield_quantity': None,
         'slug': 'easy-homemade-pizza-dough',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '2 Hours 30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5832,6 +6234,8 @@
             'slug': '4-hours',
             'tag_id': '78318c97-75c7-4d06-95b6-51ef8f4a0257',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '3 Hours 15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5902,6 +6306,8 @@
             'tag_id': 'd77a2071-43ae-40b1-854d-ae995a766fba',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '2 Hours 15 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5925,6 +6331,8 @@
         'recipe_yield_quantity': None,
         'slug': 'schnelle-kasespatzle',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '40 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5950,6 +6358,8 @@
         'slug': 'taco',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -5973,6 +6383,8 @@
         'recipe_yield_quantity': None,
         'slug': 'vodkapasta',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -5998,6 +6410,8 @@
         'slug': 'vodkapasta2',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -6021,6 +6435,8 @@
         'recipe_yield_quantity': None,
         'slug': 'rub',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -6081,6 +6497,8 @@
             'tag_id': '2a7c5386-5d26-44fa-8a08-81747ee7f132',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -6104,6 +6522,8 @@
         'recipe_yield_quantity': None,
         'slug': 'cauliflower-bisque-recipe-with-cheddar-cheese',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -6129,6 +6549,8 @@
         'slug': 'prova',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -6152,6 +6574,8 @@
         'recipe_yield_quantity': None,
         'slug': 'pate-au-beurre-1',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -6177,6 +6601,8 @@
         'slug': 'pate-au-beurre',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -6201,6 +6627,8 @@
         'slug': 'sous-vide-cheesecake-recipe',
         'tags': list([
         ]),
+        'tools': list([
+        ]),
         'total_time': '2 Hours 10 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -6224,6 +6652,8 @@
         'recipe_yield_quantity': None,
         'slug': 'the-bomb-mini-cheesecakes',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': '1 Hour 30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -6304,6 +6734,8 @@
             'tag_id': '024b30ca-53cb-4243-ba6b-d830610f2f48',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '25 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -6327,6 +6759,8 @@
         'recipe_yield_quantity': None,
         'slug': 'death-by-chocolate',
         'tags': list([
+        ]),
+        'tools': list([
         ]),
         'total_time': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -6372,6 +6806,8 @@
             'tag_id': '2b6283e2-b8e0-4b3d-90d9-66f322ca77aa',
           }),
         ]),
+        'tools': list([
+        ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
@@ -6410,6 +6846,8 @@
             'slug': 'nudeln',
             'tag_id': '04d2aea8-fc9a-4f9b-9a87-8f15189ab6f9',
           }),
+        ]),
+        'tools': list([
         ]),
         'total_time': '30 Minutes',
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
@@ -6676,6 +7114,13 @@
         'name': 'Original Sachertorte',
         'slug': 'original-sachertorte',
         'tag_id': 'd530b8e4-275a-4093-804b-6d0de154c206',
+      }),
+    ]),
+    'tools': list([
+      dict({
+        'name': 'Springform tin',
+        'slug': 'springform-tin',
+        'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
       }),
     ]),
     'total_time': '2 hours 30 minutes',
@@ -6987,6 +7432,13 @@
               'tag_id': 'd530b8e4-275a-4093-804b-6d0de154c206',
             }),
           ]),
+          'tools': list([
+            dict({
+              'name': 'Springform tin',
+              'slug': 'springform-tin',
+              'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
+            }),
+          ]),
           'total_time': '2 hours 30 minutes',
           'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
         }),
@@ -7015,6 +7467,8 @@
     'recipe_yield_quantity': 0.0,
     'slug': 'maple-bars',
     'tags': list([
+    ]),
+    'tools': list([
     ]),
     'total_time': None,
     'user_id': '4d60fe4c-a0af-4d01-933e-346e4bf10da8',
@@ -7494,6 +7948,13 @@
       'slug': 'cauliflower-salad',
       'tags': list([
       ]),
+      'tools': list([
+        dict({
+          'name': 'Stove',
+          'slug': 'stove',
+          'tool_id': '6e199f62-8356-46cf-8f6f-ea923780a1e3',
+        }),
+      ]),
       'total_time': '2 Hours 35 Minutes',
       'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
     }),
@@ -7760,6 +8221,13 @@
         'name': 'Original Sachertorte',
         'slug': 'original-sachertorte',
         'tag_id': 'd530b8e4-275a-4093-804b-6d0de154c206',
+      }),
+    ]),
+    'tools': list([
+      dict({
+        'name': 'Springform tin',
+        'slug': 'springform-tin',
+        'tool_id': '5d2bb27a-2911-4206-a362-7ea704799d2f',
       }),
     ]),
     'total_time': '2 hours 30 minutes',

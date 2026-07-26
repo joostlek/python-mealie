@@ -5,6 +5,18 @@
     "total_pages": 1,
     "items": [
         {
+            "date": "2026-07-24",
+            "entryType": "lunch",
+            "title": "Cheese & Biscuits",
+            "text": "",
+            "recipeId": null,
+            "id": 1908,
+            "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+            "userId": "90b03954-00e1-46de-9520-f0305022b84f",
+            "householdId": "bdcd07f6-de8d-4ae1-a703-84df24b8072c",
+            "recipe": null
+        },        
+        {
             "date": "2024-01-22",
             "entryType": "dinner",
             "title": "",
@@ -688,7 +700,14 @@
                         "slug": "chinese"
                     }
                 ],
-                "tools": [],
+                "tools": [
+                    {
+                        "id": "6e199f62-8356-46cf-8f6f-ea923780a1e3",
+                        "name": "Stove",
+                        "slug": "stove",
+                        "onHand": false
+                    }
+                ],
                 "rating": 5.0,
                 "orgURL": "https://www.example.co.uk/food/recipes/spicy_sichuan_noodles_79051",
                 "dateAdded": "2025-01-29",

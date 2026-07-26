@@ -113,6 +113,15 @@ class Category(DataClassORJSONMixin):
 
 
 @dataclass
+class Tool(DataClassORJSONMixin):
+    """Tool model."""
+
+    tool_id: str = field(metadata=field_options(alias="id"))
+    name: str
+    slug: str
+
+
+@dataclass
 class Ingredient(DataClassORJSONMixin):
     """Ingredient model."""
 
@@ -229,6 +238,7 @@ class BaseRecipe(DataClassORJSONMixin):
     description: str
     categories: list[Category] = field(metadata=field_options(alias="recipeCategory"))
     tags: list[Tag]
+    tools: list[Tool]
     date_added: date | None = field(
         default=None, metadata=field_options(alias="dateAdded")
     )
