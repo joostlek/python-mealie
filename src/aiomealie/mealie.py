@@ -24,6 +24,8 @@ from aiomealie.exceptions import (
 )
 from aiomealie.models import (
     About,
+    CategoriesResponse,
+    FoodsResponse,
     GroupSummary,
     Mealplan,
     MealplanEntryType,
@@ -38,7 +40,10 @@ from aiomealie.models import (
     ShoppingItemsOrderBy,
     ShoppingItemsResponse,
     StartupInfo,
+    TagsResponse,
     Theme,
+    ToolsResponse,
+    UnitsResponse,
     UserInfo,
     Recipe,
     Statistics,
@@ -233,6 +238,33 @@ class MealieClient:
     async def delete_recipe(self, slug: str) -> None:
         """Delete a recipe by slug."""
         await self._delete(f"api/recipes/{slug}")
+
+    async def get_categories(self, per_page: int = -1) -> CategoriesResponse:
+        """Get all recipe categories. Pass per_page=-1 to retrieve all pages."""
+        response = await self._get(
+            "api/organizers/categories", params={"perPage": per_page}
+        )
+        return CategoriesResponse.from_json(response)
+
+    async def get_tags(self, per_page: int = -1) -> TagsResponse:
+        """Get all recipe tags. Pass per_page=-1 to retrieve all pages."""
+        response = await self._get("api/organizers/tags", params={"perPage": per_page})
+        return TagsResponse.from_json(response)
+
+    async def get_tools(self, per_page: int = -1) -> ToolsResponse:
+        """Get all recipe tools. Pass per_page=-1 to retrieve all pages."""
+        response = await self._get("api/organizers/tools", params={"perPage": per_page})
+        return ToolsResponse.from_json(response)
+
+    async def get_foods(self, per_page: int = -1) -> FoodsResponse:
+        """Get all foods. Pass per_page=-1 to retrieve all pages."""
+        response = await self._get("api/foods", params={"perPage": per_page})
+        return FoodsResponse.from_json(response)
+
+    async def get_units(self, per_page: int = -1) -> UnitsResponse:
+        """Get all units. Pass per_page=-1 to retrieve all pages."""
+        response = await self._get("api/units", params={"perPage": per_page})
+        return UnitsResponse.from_json(response)
 
     async def get_mealplan_today(self) -> list[Mealplan]:
         """Get mealplan."""
