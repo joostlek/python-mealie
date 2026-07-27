@@ -274,6 +274,8 @@
     },
     "assets": [],
     "notes": [],
-    "extras": {},
+    "extras": {
+        "Energy Consumption": "5"
+    },
     "comments": []
 }

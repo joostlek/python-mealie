@@ -17,6 +17,9 @@
     ]),
     'date_added': datetime.date(2024, 6, 29),
     'description': 'The world’s most famous cake, the Original Sacher-Torte, is the consequence of several lucky twists of fate. The first was in 1832, when the Austrian State Chancellor, Prince Klemens Wenzel von Metternich, tasked his kitchen staff with concocting an extraordinary dessert to impress his special guests. As fortune had it, the chef had fallen ill that evening, leaving the apprentice chef, the then-16-year-old Franz Sacher, to perform this culinary magic trick. Metternich’s parting words to the talented teenager: “I hope you won’t disgrace me tonight.”',
+    'extras': dict({
+      'Energy Consumption': '5',
+    }),
     'group_id': '24477569-f6af-4b53-9e3f-6d04b0ca6916',
     'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
     'image': 'SuPW',
@@ -475,6 +478,9 @@
     ]),
     'date_added': datetime.date(2024, 6, 29),
     'description': 'The world’s most famous cake, the Original Sacher-Torte, is the consequence of several lucky twists of fate. The first was in 1832, when the Austrian State Chancellor, Prince Klemens Wenzel von Metternich, tasked his kitchen staff with concocting an extraordinary dessert to impress his special guests. As fortune had it, the chef had fallen ill that evening, leaving the apprentice chef, the then-16-year-old Franz Sacher, to perform this culinary magic trick. Metternich’s parting words to the talented teenager: “I hope you won’t disgrace me tonight.”',
+    'extras': dict({
+      'Energy Consumption': '5',
+    }),
     'group_id': '24477569-f6af-4b53-9e3f-6d04b0ca6916',
     'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
     'image': 'SuPW',
@@ -6541,6 +6547,9 @@
     ]),
     'date_added': datetime.date(2024, 6, 29),
     'description': 'The world’s most famous cake, the Original Sacher-Torte, is the consequence of several lucky twists of fate. The first was in 1832, when the Austrian State Chancellor, Prince Klemens Wenzel von Metternich, tasked his kitchen staff with concocting an extraordinary dessert to impress his special guests. As fortune had it, the chef had fallen ill that evening, leaving the apprentice chef, the then-16-year-old Franz Sacher, to perform this culinary magic trick. Metternich’s parting words to the talented teenager: “I hope you won’t disgrace me tonight.”',
+    'extras': dict({
+      'Energy Consumption': '5',
+    }),
     'group_id': '24477569-f6af-4b53-9e3f-6d04b0ca6916',
     'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
     'image': 'SuPW',
@@ -6806,6 +6815,8 @@
     ]),
     'date_added': datetime.date(2025, 1, 1),
     'description': 'Testing how to make Maple Bars',
+    'extras': dict({
+    }),
     'group_id': '48054d7f-1f2b-484c-9f2c-c8a645771ed4',
     'household_id': '67e0fe68-e80c-4a84-b15b-008bd6d6fc84',
     'image': '22',
@@ -6850,6 +6861,9 @@
           ]),
           'date_added': datetime.date(2024, 6, 29),
           'description': 'The world’s most famous cake, the Original Sacher-Torte, is the consequence of several lucky twists of fate. The first was in 1832, when the Austrian State Chancellor, Prince Klemens Wenzel von Metternich, tasked his kitchen staff with concocting an extraordinary dessert to impress his special guests. As fortune had it, the chef had fallen ill that evening, leaving the apprentice chef, the then-16-year-old Franz Sacher, to perform this culinary magic trick. Metternich’s parting words to the talented teenager: “I hope you won’t disgrace me tonight.”',
+          'extras': dict({
+            'Energy Consumption': '5',
+          }),
           'group_id': '24477569-f6af-4b53-9e3f-6d04b0ca6916',
           'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
           'image': 'SuPW',
@@ -7625,6 +7639,9 @@
     ]),
     'date_added': datetime.date(2024, 6, 29),
     'description': 'The world’s most famous cake, the Original Sacher-Torte, is the consequence of several lucky twists of fate. The first was in 1832, when the Austrian State Chancellor, Prince Klemens Wenzel von Metternich, tasked his kitchen staff with concocting an extraordinary dessert to impress his special guests. As fortune had it, the chef had fallen ill that evening, leaving the apprentice chef, the then-16-year-old Franz Sacher, to perform this culinary magic trick. Metternich’s parting words to the talented teenager: “I hope you won’t disgrace me tonight.”',
+    'extras': dict({
+      'Energy Consumption': '5',
+    }),
     'group_id': '24477569-f6af-4b53-9e3f-6d04b0ca6916',
     'household_id': 'cd2bb87f-5e4c-4dc6-8477-af9537200014',
     'image': 'SuPW',
