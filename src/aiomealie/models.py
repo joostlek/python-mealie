@@ -175,14 +175,15 @@ class Instruction(DataClassORJSONMixin):
     """Instruction model."""
 
     instruction_id: str = field(metadata=field_options(alias="id"))
-    title: str | None = field(
-        metadata=field_options(
-            serialization_strategy=OptionalStringSerializationStrategy()
-        )
-    )
     text: str
     ingredient_references: list[str] = field(
         metadata=field_options(alias="ingredientReferences")
+    )
+    title: str | None = field(
+        default=None,
+        metadata=field_options(
+            serialization_strategy=OptionalStringSerializationStrategy()
+        ),
     )
 
 
@@ -299,6 +300,7 @@ class Recipe(BaseRecipe):
     instructions: list[Instruction] = field(
         metadata=field_options(alias="recipeInstructions")
     )
+    extras: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
@@ -306,6 +308,27 @@ class RecipesResponse(DataClassORJSONMixin):
     """RecipesResponse model."""
 
     items: list[BaseRecipe]
+
+
+@dataclass
+class CategoriesResponse(DataClassORJSONMixin):
+    """CategoriesResponse model."""
+
+    items: list[Category]
+
+
+@dataclass
+class TagsResponse(DataClassORJSONMixin):
+    """TagsResponse model."""
+
+    items: list[Tag]
+
+
+@dataclass
+class ToolsResponse(DataClassORJSONMixin):
+    """ToolsResponse model."""
+
+    items: list[Tool]
 
 
 class MealplanEntryType(StrEnum):
@@ -486,6 +509,20 @@ class Statistics(DataClassORJSONMixin):
     total_categories: int = field(metadata=field_options(alias="totalCategories"))
     total_tags: int = field(metadata=field_options(alias="totalTags"))
     total_tools: int = field(metadata=field_options(alias="totalTools"))
+
+
+@dataclass
+class FoodsResponse(DataClassORJSONMixin):
+    """FoodsResponse model."""
+
+    items: list[Food]
+
+
+@dataclass
+class UnitsResponse(DataClassORJSONMixin):
+    """UnitsResponse model."""
+
+    items: list[Unit]
 
 
 @dataclass

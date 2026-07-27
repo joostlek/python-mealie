@@ -1,0 +1,26 @@
+{
+    "page": 1,
+    "per_page": 50,
+    "total": 2,
+    "total_pages": 1,
+    "items": [
+        {
+            "id": "e5f6a7b8-c9d0-1234-ef01-234567890123",
+            "name": "Flour",
+            "description": "All-purpose flour",
+            "aliases": [],
+            "createdAt": "2024-01-01T00:00:00.000000",
+            "updatedAt": "2024-01-01T00:00:00.000000"
+        },
+        {
+            "id": "f6a7b8c9-d0e1-2345-f012-345678901234",
+            "name": "Sugar",
+            "description": "White granulated sugar",
+            "aliases": [],
+            "createdAt": "2024-01-01T00:00:00.000000",
+            "updatedAt": "2024-01-01T00:00:00.000000"
+        }
+    ],
+    "next": null,
+    "previous": null
+}
