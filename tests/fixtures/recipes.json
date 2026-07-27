@@ -20,7 +20,15 @@
             "description": "",
             "recipeCategory": [],
             "tags": [],
-            "tools": [],
+            "tools": [
+                {
+                    "id": "5d2bb27a-2911-4206-a362-7ea704799d2f",
+                    "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+                    "name": "Springform tin",
+                    "slug": "springform-tin",
+                    "householdsWithTool": []
+                }
+            ],
             "rating": null,
             "orgURL": null,
             "dateAdded": "2024-01-21",

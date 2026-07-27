@@ -239,6 +239,7 @@ class BaseRecipe(DataClassORJSONMixin):
     description: str
     categories: list[Category] = field(metadata=field_options(alias="recipeCategory"))
     tags: list[Tag]
+    tools: list[Tool]
     date_added: date | None = field(
         default=None, metadata=field_options(alias="dateAdded")
     )
