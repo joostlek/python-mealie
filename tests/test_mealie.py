@@ -1090,3 +1090,17 @@ async def test_rate_recipe(
         params=None,
         json={"rating": 4.5, "isFavorite": True},
     )
+
+
+async def test_parse_ingredient(
+    responses: aioresponses,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test parsing an ingredient with default NLP parser."""
+    responses.post(
+        f"{MEALIE_URL}/api/parser/ingredient",
+        status=200,
+        body=load_fixture("parsed_ingredient.json"),
+    )
+    assert await mealie_client.parse_ingredient("sugar") == snapshot

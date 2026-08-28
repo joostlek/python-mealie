@@ -41,6 +41,14 @@ class ShoppingItemsOrderBy(StrEnum):
     POSITION = "position"
 
 
+class RegisteredParser(StrEnum):
+    """RegisteredParser type."""
+
+    NLP = "nlp"
+    BRUTE = "brute"
+    OPENAI = "openai"
+
+
 @dataclass
 class About(DataClassORJSONMixin):
     """About model."""
@@ -539,3 +547,24 @@ class RecipeFavoritesResponse(DataClassORJSONMixin):
     """RecipeFavoritesResponse model."""
 
     ratings: list[RecipeRating]
+
+
+@dataclass
+class IngredientConfidence(DataClassORJSONMixin):
+    """IngredientConfidence model."""
+
+    average: float | None = None
+    comment: float | None = None
+    name: float | None = None
+    unit: float | None = None
+    quantity: float | None = None
+    food: float | None = None
+
+
+@dataclass
+class ParsedIngredient(DataClassORJSONMixin):
+    """ParsedIngredient model."""
+
+    ingredient: Ingredient
+    input: str | None = None
+    confidence: IngredientConfidence = field(default_factory=IngredientConfidence)

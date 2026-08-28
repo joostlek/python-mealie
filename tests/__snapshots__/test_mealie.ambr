@@ -1723,6 +1723,51 @@
     ]),
   })
 # ---
+# name: test_parse_ingredient
+  dict({
+    'confidence': dict({
+      'average': 0.988771,
+      'comment': 0.0,
+      'food': 0.988771,
+      'name': None,
+      'quantity': 0.0,
+      'unit': 0.0,
+    }),
+    'ingredient': dict({
+      'display': 'sugar',
+      'food': dict({
+        'aliases': list([
+          "{'name': 'caster sugar'}",
+        ]),
+        'created_at': datetime.datetime(2025, 8, 20, 7, 48, 51, 847310, tzinfo=datetime.timezone.utc),
+        'description': '',
+        'extras': dict({
+        }),
+        'food_id': '1f8cdc22-0eff-4602-a247-dd8d17dd5c0c',
+        'households_with_ingredient_food': list([
+          'family',
+        ]),
+        'label': dict({
+          'label_id': 'bf0cccc3-6e99-4ae2-bd58-d63bf39aee7c',
+          'name': 'Pantry',
+        }),
+        'label_id': 'bf0cccc3-6e99-4ae2-bd58-d63bf39aee7c',
+        'name': 'Sugar',
+        'plural_name': None,
+        'updated_at': datetime.datetime(2025, 8, 20, 11, 32, 25, 414644, tzinfo=datetime.timezone.utc),
+      }),
+      'is_food': None,
+      'note': '',
+      'original_text': None,
+      'quantity': 0.0,
+      'reference_id': '9cb7e324-c975-4203-a096-e11187f3f72f',
+      'referenced_recipe': None,
+      'title': None,
+      'unit': None,
+    }),
+    'input': 'sugar',
+  })
+# ---
 # name: test_random_mealplan
   dict({
     'description': None,
