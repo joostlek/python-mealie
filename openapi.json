@@ -3,7 +3,7 @@
     "info": {
         "title": "Mealie",
         "description": "\nMealie is a web application for managing your recipes, meal plans, and shopping lists. This is the Restful\nAPI interactive documentation that can be used to explore the API. If you're justing getting started with\nthe API and want to get started quickly, you can use the\n[API Usage | Mealie Docs](https://docs.mealie.io/documentation/getting-started/api-usage/)\nas a reference for how to get started.\n\n\nIf you have any questions or comments about mealie, please use the discord server to talk to the developers or other\ncommunity members. If you'd like to file an issue, please use the\n[GitHub Issue Tracker | Mealie](https://github.com/mealie-recipes/mealie/issues/new/choose)\n\n\n## Helpful Links\n- [Home Page](https://mealie.io)\n- [Documentation](https://docs.mealie.io)\n- [Discord](https://discord.gg/QuStdQGSGK)\n- [Demo](https://demo.mealie.io)\n",
-        "version": "v3.24.0"
+        "version": "v3.26.0"
     },
     "paths": {
         "/api/app/about": {
@@ -211,13 +211,13 @@
             }
         },
         "/api/auth/refresh": {
-            "get": {
+            "post": {
                 "tags": [
                     "Users: Authentication"
                 ],
                 "summary": "Refresh Token",
-                "description": "Use a valid token to get another token",
-                "operationId": "refresh_token_api_auth_refresh_get",
+                "description": "Exchange a valid session token for a fresh one.\n\nThe new token carries over the remember-me choice recorded on the old one, so refreshing doesn't\ndowngrade a remembered session to one that dies with the browser.",
+                "operationId": "refresh_token_api_auth_refresh_post",
                 "responses": {
                     "200": {
                         "description": "Successful Response",
@@ -9789,6 +9789,16 @@
                         }
                     },
                     {
+                        "name": "includeSubstitutions",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean",
+                            "default": true,
+                            "title": "Includesubstitutions"
+                        }
+                    },
+                    {
                         "name": "accept-language",
                         "in": "header",
                         "required": false,
@@ -11922,6 +11932,72 @@
                 }
             }
         },
+        "/api/organizers/categories/merge": {
+            "post": {
+                "tags": [
+                    "Organizer: Categories",
+                    "Organizer: Categories"
+                ],
+                "summary": "Merge Categories",
+                "description": "Merges the from_id category into the to_id category, then deletes from_id.",
+                "operationId": "merge_categories_api_organizers_categories_merge_post",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Accept-Language"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CategoryMerge"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CategoryOut"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/api/organizers/categories/{item_id}": {
             "get": {
                 "tags": [
@@ -12452,6 +12528,72 @@
                         "content": {
                             "application/json": {
                                 "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/organizers/tags/merge": {
+            "post": {
+                "tags": [
+                    "Organizer: Tags",
+                    "Organizer: Tags"
+                ],
+                "summary": "Merge Tags",
+                "description": "Merges the from_id tag into the to_id tag, then deletes from_id.",
+                "operationId": "merge_tags_api_organizers_tags_merge_post",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Accept-Language"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TagMerge"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TagOut"
+                                }
                             }
                         }
                     },
@@ -19601,6 +19743,16 @@
                         }
                     },
                     {
+                        "name": "includeSubstitutions",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean",
+                            "default": true,
+                            "title": "Includesubstitutions"
+                        }
+                    },
+                    {
                         "name": "accept-language",
                         "in": "header",
                         "required": false,
@@ -21094,6 +21246,26 @@
                 ],
                 "title": "CategoryIn"
             },
+            "CategoryMerge": {
+                "properties": {
+                    "fromId": {
+                        "type": "string",
+                        "format": "uuid4",
+                        "title": "Fromid"
+                    },
+                    "toId": {
+                        "type": "string",
+                        "format": "uuid4",
+                        "title": "Toid"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "fromId",
+                    "toId"
+                ],
+                "title": "CategoryMerge"
+            },
             "CategoryOut": {
                 "properties": {
                     "name": {
@@ -21113,6 +21285,11 @@
                     "slug": {
                         "type": "string",
                         "title": "Slug"
+                    },
+                    "recipeCount": {
+                        "type": "integer",
+                        "title": "Recipecount",
+                        "default": 0
                     }
                 },
                 "type": "object",
@@ -21420,6 +21597,14 @@
                         "title": "Aliases",
                         "default": []
                     },
+                    "substitutions": {
+                        "items": {
+                            "$ref": "#/components/schemas/CreateIngredientFoodSubstitution"
+                        },
+                        "type": "array",
+                        "title": "Substitutions",
+                        "default": []
+                    },
                     "householdsWithIngredientFood": {
                         "items": {
                             "type": "string"
@@ -21447,6 +21632,35 @@
                     "name"
                 ],
                 "title": "CreateIngredientFoodAlias"
+            },
+            "CreateIngredientFoodSubstitution": {
+                "properties": {
+                    "substituteFoodId": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uuid4"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Substitutefoodid"
+                    },
+                    "note": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Note"
+                    }
+                },
+                "type": "object",
+                "title": "CreateIngredientFoodSubstitution"
             },
             "CreateIngredientUnit": {
                 "properties": {
@@ -23444,6 +23658,14 @@
                         "title": "Aliases",
                         "default": []
                     },
+                    "substitutions": {
+                        "items": {
+                            "$ref": "#/components/schemas/IngredientFoodSubstitution"
+                        },
+                        "type": "array",
+                        "title": "Substitutions",
+                        "default": []
+                    },
                     "householdsWithIngredientFood": {
                         "items": {
                             "type": "string"
@@ -23552,6 +23774,14 @@
                         },
                         "type": "array",
                         "title": "Aliases",
+                        "default": []
+                    },
+                    "substitutions": {
+                        "items": {
+                            "$ref": "#/components/schemas/IngredientFoodSubstitution"
+                        },
+                        "type": "array",
+                        "title": "Substitutions",
                         "default": []
                     },
                     "householdsWithIngredientFood": {
@@ -23674,6 +23904,76 @@
                     "items"
                 ],
                 "title": "IngredientFoodPagination"
+            },
+            "IngredientFoodSubstitution": {
+                "properties": {
+                    "substituteFoodId": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uuid4"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Substitutefoodid"
+                    },
+                    "note": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Note"
+                    },
+                    "substituteFood": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/components/schemas/IngredientFoodSummary"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
+                    }
+                },
+                "type": "object",
+                "title": "IngredientFoodSubstitution"
+            },
+            "IngredientFoodSummary": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid4",
+                        "title": "Id"
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "pluralName": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Pluralname"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id",
+                    "name"
+                ],
+                "title": "IngredientFoodSummary",
+                "description": "A trimmed projection of a food, with nothing on it that can recurse.\n\nSubstitutions reference this rather than the full IngredientFood, which would make\nPydantic walk food -> substitutions -> food forever and generate an equally circular\nTypeScript type."
             },
             "IngredientReferences": {
                 "properties": {
@@ -24448,6 +24748,24 @@
                 ],
                 "title": "NativeOIDCTokenRequest",
                 "description": "An authorization code captured by a native client, for server-side exchange."
+            },
+            "NoteReference": {
+                "properties": {
+                    "referenceId": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uuid4"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Referenceid"
+                    }
+                },
+                "type": "object",
+                "title": "NoteReference"
             },
             "Nutrition": {
                 "properties": {
@@ -26582,6 +26900,11 @@
                     "slug": {
                         "type": "string",
                         "title": "Slug"
+                    },
+                    "recipeCount": {
+                        "type": "integer",
+                        "title": "Recipecount",
+                        "default": 0
                     }
                 },
                 "type": "object",
@@ -26947,6 +27270,14 @@
                         ],
                         "title": "Originaltext"
                     },
+                    "substitutions": {
+                        "items": {
+                            "$ref": "#/components/schemas/RecipeIngredientSubstitution"
+                        },
+                        "type": "array",
+                        "title": "Substitutions",
+                        "default": []
+                    },
                     "referenceId": {
                         "type": "string",
                         "format": "uuid",
@@ -27047,6 +27378,14 @@
                         ],
                         "title": "Originaltext"
                     },
+                    "substitutions": {
+                        "items": {
+                            "$ref": "#/components/schemas/RecipeIngredientSubstitution"
+                        },
+                        "type": "array",
+                        "title": "Substitutions",
+                        "default": []
+                    },
                     "referenceId": {
                         "type": "string",
                         "format": "uuid",
@@ -27055,6 +27394,45 @@
                 },
                 "type": "object",
                 "title": "RecipeIngredient"
+            },
+            "RecipeIngredientSubstitution": {
+                "properties": {
+                    "substituteFoodId": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uuid4"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Substitutefoodid"
+                    },
+                    "note": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Note"
+                    },
+                    "substituteFood": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/components/schemas/IngredientFoodSummary"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
+                    }
+                },
+                "type": "object",
+                "title": "RecipeIngredientSubstitution"
             },
             "RecipeLastMade": {
                 "properties": {
@@ -27079,6 +27457,11 @@
                     "text": {
                         "type": "string",
                         "title": "Text"
+                    },
+                    "referenceId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "title": "Referenceid"
                     }
                 },
                 "type": "object",
@@ -27270,6 +27653,14 @@
                         "type": "array",
                         "title": "Ingredientreferences",
                         "default": []
+                    },
+                    "noteReferences": {
+                        "items": {
+                            "$ref": "#/components/schemas/NoteReference"
+                        },
+                        "type": "array",
+                        "title": "Notereferences",
+                        "default": []
                     }
                 },
                 "type": "object",
@@ -27306,6 +27697,13 @@
                         "type": "array",
                         "title": "Missingfoods"
                     },
+                    "substitutedFoods": {
+                        "items": {
+                            "$ref": "#/components/schemas/RecipeSuggestionSubstitutedFood"
+                        },
+                        "type": "array",
+                        "title": "Substitutedfoods"
+                    },
                     "missingTools": {
                         "items": {
                             "$ref": "#/components/schemas/RecipeTool"
@@ -27318,9 +27716,27 @@
                 "required": [
                     "recipe",
                     "missingFoods",
+                    "substitutedFoods",
                     "missingTools"
                 ],
                 "title": "RecipeSuggestionResponseItem"
+            },
+            "RecipeSuggestionSubstitutedFood": {
+                "properties": {
+                    "food": {
+                        "$ref": "#/components/schemas/IngredientFood-Output"
+                    },
+                    "substituteFood": {
+                        "$ref": "#/components/schemas/IngredientFoodSummary"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "food",
+                    "substituteFood"
+                ],
+                "title": "RecipeSuggestionSubstitutedFood",
+                "description": "A food the recipe calls for that the user doesn't have, and the one covering it."
             },
             "RecipeSummary": {
                 "properties": {
@@ -27610,6 +28026,11 @@
                     "slug": {
                         "type": "string",
                         "title": "Slug"
+                    },
+                    "recipeCount": {
+                        "type": "integer",
+                        "title": "Recipecount",
+                        "default": 0
                     }
                 },
                 "type": "object",
@@ -27772,8 +28193,7 @@
                     "timestamp": {
                         "type": "string",
                         "format": "date-time",
-                        "title": "Timestamp",
-                        "default": "2026-08-25T13:47:13.861139Z"
+                        "title": "Timestamp"
                     }
                 },
                 "type": "object",
@@ -27828,8 +28248,7 @@
                     "timestamp": {
                         "type": "string",
                         "format": "date-time",
-                        "title": "Timestamp",
-                        "default": "2026-08-25T13:47:13.861139Z"
+                        "title": "Timestamp"
                     },
                     "id": {
                         "type": "string",
@@ -27989,6 +28408,11 @@
                     "slug": {
                         "type": "string",
                         "title": "Slug"
+                    },
+                    "recipeCount": {
+                        "type": "integer",
+                        "title": "Recipecount",
+                        "default": 0
                     },
                     "householdsWithTool": {
                         "items": {
@@ -30249,6 +30673,26 @@
                 ],
                 "title": "TagIn"
             },
+            "TagMerge": {
+                "properties": {
+                    "fromId": {
+                        "type": "string",
+                        "format": "uuid4",
+                        "title": "Fromid"
+                    },
+                    "toId": {
+                        "type": "string",
+                        "format": "uuid4",
+                        "title": "Toid"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "fromId",
+                    "toId"
+                ],
+                "title": "TagMerge"
+            },
             "TagOut": {
                 "properties": {
                     "name": {
@@ -30268,6 +30712,11 @@
                     "slug": {
                         "type": "string",
                         "title": "Slug"
+                    },
+                    "recipeCount": {
+                        "type": "integer",
+                        "title": "Recipecount",
+                        "default": 0
                     }
                 },
                 "type": "object",
