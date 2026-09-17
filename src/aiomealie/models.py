@@ -228,6 +228,49 @@ class Unit(DataClassORJSONMixin):
 
 
 @dataclass
+class Nutrition(DataClassORJSONMixin):
+    """Recipe nutrition information."""
+
+    calories: str | None = None
+    carbohydrate_content: str | None = field(
+        default=None, metadata=field_options(alias="carbohydrateContent")
+    )
+    cholesterol_content: str | None = field(
+        default=None, metadata=field_options(alias="cholesterolContent")
+    )
+    fat_content: str | None = field(
+        default=None, metadata=field_options(alias="fatContent")
+    )
+    fiber_content: str | None = field(
+        default=None, metadata=field_options(alias="fiberContent")
+    )
+    protein_content: str | None = field(
+        default=None, metadata=field_options(alias="proteinContent")
+    )
+    saturated_fat_content: str | None = field(
+        default=None, metadata=field_options(alias="saturatedFatContent")
+    )
+    sodium_content: str | None = field(
+        default=None, metadata=field_options(alias="sodiumContent")
+    )
+    sugar_content: str | None = field(
+        default=None, metadata=field_options(alias="sugarContent")
+    )
+    trans_fat_content: str | None = field(
+        default=None, metadata=field_options(alias="transFatContent")
+    )
+    unsaturated_fat_content: str | None = field(
+        default=None, metadata=field_options(alias="unsaturatedFatContent")
+    )
+
+    class Config(BaseConfig):  # pylint: disable=too-few-public-methods
+        """Mashumaro Config."""
+
+        serialize_by_alias = True
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
+
+
+@dataclass
 class BaseRecipe(DataClassORJSONMixin):
     """Recipe model."""
 
@@ -300,6 +343,7 @@ class Recipe(BaseRecipe):
     instructions: list[Instruction] = field(
         metadata=field_options(alias="recipeInstructions")
     )
+    nutrition: Nutrition | None = None
     extras: dict[str, str] = field(default_factory=dict)
 
 
@@ -485,6 +529,7 @@ class MutateRecipe(DataClassDictMixin):
     instructions: list[Instruction] | None = field(
         default=None, metadata=field_options(alias="recipeInstructions")
     )
+    nutrition: Nutrition | None = None
 
     class Config(BaseConfig):  # pylint: disable=too-few-public-methods
         """Mashumaro Config."""

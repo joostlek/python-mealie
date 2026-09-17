@@ -22,7 +22,12 @@ from aiomealie.exceptions import (
     MealieBadRequestError,
 )
 from aiomealie.mealie import MealieClient
-from aiomealie.models import MutateRecipe, MutateShoppingItem, MealplanEntryType
+from aiomealie.models import (
+    MealplanEntryType,
+    MutateRecipe,
+    MutateShoppingItem,
+    Nutrition,
+)
 from tests import load_fixture
 
 from .const import HEADERS, MEALIE_URL
@@ -378,7 +383,11 @@ async def test_update_recipe(
 ) -> None:
     """Test updating a recipe."""
     slug = "original-sacher-torte-2"
-    recipe_data = MutateRecipe(name="Updated Sacher Torte", rating=4.5)
+    recipe_data = MutateRecipe(
+        name="Updated Sacher Torte",
+        rating=4.5,
+        nutrition=Nutrition(calories="420", protein_content="8"),
+    )
 
     responses.put(
         f"{MEALIE_URL}/api/recipes/{slug}",
@@ -391,7 +400,11 @@ async def test_update_recipe(
         METH_PUT,
         headers=HEADERS,
         params=None,
-        json={"name": "Updated Sacher Torte", "rating": 4.5},
+        json={
+            "name": "Updated Sacher Torte",
+            "rating": 4.5,
+            "nutrition": {"calories": "420", "proteinContent": "8"},
+        },
     )
 
 
