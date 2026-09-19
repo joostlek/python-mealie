@@ -8,9 +8,9 @@ from enum import StrEnum
 from typing import Any
 
 from mashumaro import DataClassDictMixin, field_options
+from mashumaro.config import BaseConfig
 from mashumaro.mixins.orjson import DataClassORJSONMixin
 from mashumaro.types import SerializationStrategy
-from mashumaro.config import BaseConfig
 
 
 class OptionalStringSerializationStrategy(SerializationStrategy):
@@ -129,7 +129,7 @@ class Ingredient(DataClassORJSONMixin):
     note: str
     title: str | None
     display: str | None
-    unit: str | None
+    unit: Unit | None
     food: Food | None
     reference_id: str = field(metadata=field_options(alias="referenceId"))
     original_text: str | None = field(
@@ -199,12 +199,16 @@ class Label(DataClassORJSONMixin):
 class Unit(DataClassORJSONMixin):
     """Unit model."""
 
-    unit_id: str = field(metadata=field_options(alias="id"))
     name: str
-    description: str
-    aliases: list[str]
-    created_at: datetime = field(metadata=field_options(alias="createdAt"))
-    updated_at: datetime = field(metadata=field_options(alias="updatedAt"))
+    unit_id: str | None = field(default=None, metadata=field_options(alias="id"))
+    description: str = ""
+    aliases: list[str] = field(default_factory=list)
+    created_at: datetime | None = field(
+        default=None, metadata=field_options(alias="createdAt")
+    )
+    updated_at: datetime | None = field(
+        default=None, metadata=field_options(alias="updatedAt")
+    )
     fraction: bool = False
     plural_name: str | None = field(
         default=None, metadata=field_options(alias="pluralName")
@@ -217,6 +221,12 @@ class Unit(DataClassORJSONMixin):
         default=False, metadata=field_options(alias="useAbbreviation")
     )
     extras: dict[str, str] | None = None
+    standard_quantity: float | None = field(
+        default=None, metadata=field_options(alias="standardQuantity")
+    )
+    standard_unit: str | None = field(
+        default=None, metadata=field_options(alias="standardUnit")
+    )
 
     @classmethod
     def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
@@ -487,7 +497,9 @@ class MutateShoppingItem(DataClassDictMixin):
         """Mashumaro Config."""
 
         serialize_by_alias = True
-        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
+        # RUF012: mashumaro's BaseConfig declares this as an instance variable,
+        # so a ClassVar annotation would break mypy; the list is a constant here.
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]  # noqa: RUF012
 
 
 @dataclass
@@ -535,7 +547,9 @@ class MutateRecipe(DataClassDictMixin):
         """Mashumaro Config."""
 
         serialize_by_alias = True
-        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
+        # RUF012: mashumaro's BaseConfig declares this as an instance variable,
+        # so a ClassVar annotation would break mypy; the list is a constant here.
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]  # noqa: RUF012
 
 
 @dataclass

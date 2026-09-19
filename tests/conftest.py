@@ -1,9 +1,9 @@
 """Asynchronous Python client for Mealie."""
 
-from typing import AsyncGenerator, Generator
+from collections.abc import AsyncGenerator
 
 import aiohttp
-from aioresponses import aioresponses
+from aiointercept import aiointercept
 import pytest
 
 from aiomealie import MealieClient
@@ -19,7 +19,7 @@ def snapshot_assertion(snapshot: SnapshotAssertion) -> SnapshotAssertion:
 
 
 @pytest.fixture(name="mealie_client")
-async def client() -> AsyncGenerator[MealieClient, None]:
+async def client() -> AsyncGenerator[MealieClient]:
     """Return a Mealie client."""
     async with (
         aiohttp.ClientSession() as session,
@@ -32,7 +32,7 @@ async def client() -> AsyncGenerator[MealieClient, None]:
 
 
 @pytest.fixture(name="responses")
-def aioresponses_fixture() -> Generator[aioresponses, None, None]:
-    """Return aioresponses fixture."""
-    with aioresponses() as mocked_responses:
+async def aiointercept_fixture() -> AsyncGenerator[aiointercept]:
+    """Return aiointercept fixture."""
+    async with aiointercept(mock_external_urls=True) as mocked_responses:
         yield mocked_responses

@@ -40,22 +40,22 @@ Changelog = "https://github.com/joostlek/python-mealie/releases"
 
 [dependency-groups]
 dev = [
-    "aiohttp<3.14",
+    "aiohttp<3.15",
     "codespell==2.4.3",
     "covdefaults==2.3.0",
     "coverage[toml]==7.16.1",
     "mypy==2.3.1",
-    "prek==0.5.2",
+    "prek==0.5.3",
     "pre-commit-hooks==6.0.0",
     "pylint==4.0.8",
     "pytest==9.1.1",
     "pytest-asyncio==1.4.0",
     "pytest-cov==7.1.0",
-    "ruff==0.15.22",
+    "ruff==0.16.8",
     "safety==3.8.1",
     "yamllint==1.38.0",
-    "syrupy==5.5.3",
-    "aioresponses==0.7.9",
+    "syrupy==6.1.1",
+    "aiointercept==0.1.10",
 ]
 
 [tool.uv]
