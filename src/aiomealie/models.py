@@ -202,8 +202,8 @@ class Instruction(DataClassORJSONMixin):
             serialization_strategy=OptionalStringSerializationStrategy()
         ),
     )
-    recipe_note: RecipeNote | None = field(
-        default=None, metadata=field_options(alias="recipeNote")
+    recipe_notes: list[RecipeNote] = field(
+        default_factory=list, metadata=field_options(alias="recipeNotes")
     )
 
 
@@ -392,8 +392,9 @@ class Recipe(BaseRecipe):
             note.get("referenceId"): note for note in notes if note.get("referenceId")
         }
         for instruction in d.get("recipeInstructions") or []:
-            if instruction.get("recipeNote") is not None:
+            if instruction.get("recipeNotes") is not None:
                 continue
+            instruction_notes = []
             for reference in instruction.get("noteReferences") or []:
                 reference_id = (
                     reference
@@ -401,8 +402,8 @@ class Recipe(BaseRecipe):
                     else reference.get("referenceId")
                 )
                 if reference_id in notes_by_reference:
-                    instruction["recipeNote"] = notes_by_reference[reference_id]
-                    break
+                    instruction_notes.append(notes_by_reference[reference_id])
+            instruction["recipeNotes"] = instruction_notes
         return d
 
     ingredients: list[Ingredient] = field(
