@@ -32,9 +32,11 @@ from aiomealie.models import (
     MutateRecipe,
     MutateShoppingItem,
     OrderDirection,
+    ParsedIngredient,
     Recipe,
     RecipeFavoritesResponse,
     RecipesResponse,
+    RegisteredParser,
     ShoppingItemsOrderBy,
     ShoppingItemsResponse,
     ShoppingList,
@@ -467,6 +469,14 @@ class MealieClient:
 
         response = await self._get("api/households/statistics")
         return Statistics.from_json(response)
+
+    async def parse_ingredient(
+        self, ingredient: str, parser: RegisteredParser = RegisteredParser.NLP
+    ) -> ParsedIngredient:
+        """Parse an ingredient string using the specified parser."""
+        data = {"ingredient": ingredient, "parser": parser.value}
+        response = await self._post("api/parser/ingredient", data)
+        return ParsedIngredient.from_json(response)
 
     async def random_mealplan(
         self, at: date, entry_type: MealplanEntryType
