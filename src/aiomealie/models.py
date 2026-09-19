@@ -186,9 +186,7 @@ class Instruction(DataClassORJSONMixin):
     def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
         """Normalize reference objects returned by Mealie."""
         d["ingredientReferences"] = [
-            reference
-            if isinstance(reference, str)
-            else reference.get("referenceId")
+            reference if isinstance(reference, str) else reference.get("referenceId")
             for reference in d.get("ingredientReferences") or []
         ]
         return d
