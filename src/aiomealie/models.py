@@ -193,6 +193,9 @@ class Instruction(DataClassORJSONMixin):
             serialization_strategy=OptionalStringSerializationStrategy()
         ),
     )
+    recipe_note: RecipeNote | None = field(
+        default=None, metadata=field_options(alias="recipeNote")
+    )
 
 
 @dataclass
@@ -351,6 +354,23 @@ class BaseRecipe(DataClassORJSONMixin):
     )
 
 
+@dataclass
+class RecipeNote(DataClassORJSONMixin):
+    """Recipe note model."""
+
+    title: str
+    text: str
+    reference_id: str | None = field(
+        default=None, metadata=field_options(alias="referenceId")
+    )
+
+    class Config(BaseConfig):  # pylint: disable=too-few-public-methods
+        """Mashumaro Config."""
+
+        serialize_by_alias = True
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]  # noqa: RUF012
+
+
 @dataclass(kw_only=True)
 class Recipe(BaseRecipe):
     """Recipe model."""
@@ -362,6 +382,7 @@ class Recipe(BaseRecipe):
         metadata=field_options(alias="recipeInstructions")
     )
     nutrition: Nutrition | None = None
+    notes: list[RecipeNote] | None = None
     extras: dict[str, str] = field(default_factory=dict)
 
 
@@ -550,6 +571,7 @@ class MutateRecipe(DataClassDictMixin):
         default=None, metadata=field_options(alias="recipeInstructions")
     )
     nutrition: Nutrition | None = None
+    notes: list[RecipeNote] | None = None
 
     class Config(BaseConfig):  # pylint: disable=too-few-public-methods
         """Mashumaro Config."""
