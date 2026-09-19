@@ -1,0 +1,45 @@
+{
+  "input": "sugar",
+  "confidence": {
+    "average": 0.988771,
+    "comment": 0,
+    "name": null,
+    "unit": 0,
+    "quantity": 0,
+    "food": 0.988771
+  },
+  "ingredient": {
+    "quantity": 0,
+    "unit": null,
+    "food": {
+      "id": "1f8cdc22-0eff-4602-a247-dd8d17dd5c0c",
+      "name": "Sugar",
+      "pluralName": null,
+      "description": "",
+      "extras": {},
+      "labelId": "bf0cccc3-6e99-4ae2-bd58-d63bf39aee7c",
+      "aliases": [
+        {
+          "name": "caster sugar"
+        }
+      ],
+      "householdsWithIngredientFood": [
+        "family"
+      ],
+      "label": {
+        "name": "Pantry",
+        "color": "#E0E0E0",
+        "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+        "id": "bf0cccc3-6e99-4ae2-bd58-d63bf39aee7c"
+      },
+      "createdAt": "2025-08-20T07:48:51.847310Z",
+      "updatedAt": "2025-08-20T11:32:25.414644Z"
+    },
+    "referencedRecipe": null,
+    "note": "",
+    "display": "sugar",
+    "title": null,
+    "originalText": null,
+    "referenceId": "9cb7e324-c975-4203-a096-e11187f3f72f"
+  }
+}
