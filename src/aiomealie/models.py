@@ -375,6 +375,27 @@ class RecipeNote(DataClassORJSONMixin):
 class Recipe(BaseRecipe):
     """Recipe model."""
 
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
+        """Resolve instruction note references returned by Mealie."""
+        notes = d.get("notes") or []
+        notes_by_reference = {
+            note.get("referenceId"): note for note in notes if note.get("referenceId")
+        }
+        for instruction in d.get("recipeInstructions") or []:
+            if instruction.get("recipeNote") is not None:
+                continue
+            for reference in instruction.get("noteReferences") or []:
+                reference_id = (
+                    reference
+                    if isinstance(reference, str)
+                    else reference.get("referenceId")
+                )
+                if reference_id in notes_by_reference:
+                    instruction["recipeNote"] = notes_by_reference[reference_id]
+                    break
+        return d
+
     ingredients: list[Ingredient] = field(
         metadata=field_options(alias="recipeIngredient")
     )

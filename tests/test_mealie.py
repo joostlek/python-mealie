@@ -27,6 +27,7 @@ from aiomealie.models import (
     MutateRecipe,
     MutateShoppingItem,
     Nutrition,
+    Recipe,
 )
 from tests import load_fixture
 
@@ -292,7 +293,20 @@ async def test_retrieving_recipe(
         status=200,
         body=load_fixture("recipe.json"),
     )
-    assert await mealie_client.get_recipe("original-sacher-torte-2") == snapshot
+    recipe = await mealie_client.get_recipe("original-sacher-torte-2")
+    assert recipe.instructions[0].recipe_note is not None
+    assert recipe.instructions[0].recipe_note.reference_id == (
+        "d2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032"
+    )
+    assert recipe.instructions[0].recipe_note.title == "Baking tip"
+    assert recipe == snapshot
+
+    recipe_json = json.loads(load_fixture("recipe.json"))
+    recipe_json["recipeInstructions"][0]["noteReferences"] = [
+        "d2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032"
+    ]
+    string_reference_recipe = Recipe.from_dict(recipe_json)
+    assert string_reference_recipe.instructions[0].recipe_note is not None
 
     # Load a nested referenced recipe
     recipe_v3 = load_fixture("recipe-v3.json")
