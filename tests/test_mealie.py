@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING, Any
 
 import aiohttp
 from aiohttp.hdrs import METH_GET, METH_POST, METH_PUT, METH_DELETE
-from aioresponses import CallbackResult, aioresponses
+from aiointercept import CallbackResult, aiointercept
 import pytest
 from yarl import URL
 
@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 
 
 async def test_putting_in_own_session(
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test putting in own session."""
     responses.get(
@@ -50,7 +50,7 @@ async def test_putting_in_own_session(
 
 
 async def test_creating_own_session(
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test creating own session."""
     responses.get(
@@ -74,7 +74,7 @@ async def test_invalid_url_error() -> None:
 
 
 async def test_unexpected_server_response(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test handling unexpected response."""
@@ -89,7 +89,7 @@ async def test_unexpected_server_response(
 
 
 async def test_authentication_error(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test authentication error from mealie."""
@@ -105,7 +105,7 @@ async def test_authentication_error(
 
 
 async def test_validation_error(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test validation error from mealie."""
@@ -127,7 +127,7 @@ async def test_validation_error(
 
 
 async def test_not_found_error(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test not found error from mealie."""
@@ -142,7 +142,7 @@ async def test_not_found_error(
 
 
 async def test_bad_request_error(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test not found error from mealie."""
@@ -159,7 +159,7 @@ async def test_bad_request_error(
 
 
 async def test_timeout(
-    responses: aioresponses,
+    responses: aiointercept,
 ) -> None:
     """Test request timeout."""
 
@@ -189,7 +189,7 @@ async def test_client_connection_error() -> None:
 
 
 async def test_about(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -203,7 +203,7 @@ async def test_about(
 
 
 async def test_startup_info(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -217,7 +217,7 @@ async def test_startup_info(
 
 
 async def test_groups_self(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -231,7 +231,7 @@ async def test_groups_self(
 
 
 async def test_theme(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -253,7 +253,7 @@ async def test_theme(
     ],
 )
 async def test_recipes(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
     kwargs: dict[str, Any],
@@ -277,7 +277,7 @@ async def test_recipes(
 
 
 async def test_retrieving_recipe(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -305,7 +305,7 @@ async def test_retrieving_recipe(
 
 
 async def test_importing_recipe(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -346,7 +346,7 @@ async def test_importing_recipe(
 
 
 async def test_create_recipe(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -372,7 +372,7 @@ async def test_create_recipe(
 
 
 async def test_update_recipe(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -396,7 +396,7 @@ async def test_update_recipe(
 
 
 async def test_delete_recipe(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test deleting a recipe."""
@@ -418,7 +418,7 @@ async def test_delete_recipe(
 
 
 async def test_mealplan_today(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -432,7 +432,7 @@ async def test_mealplan_today(
 
 
 async def test_mealplans(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -452,7 +452,7 @@ async def test_mealplans(
 
 
 async def test_user_info(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -484,7 +484,7 @@ async def test_user_info(
     ],
 )
 async def test_mealplans_parameters(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     kwargs: dict[str, Any],
     params: dict[str, Any],
@@ -508,7 +508,7 @@ async def test_mealplans_parameters(
 
 
 async def test_shopping_lists(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -528,7 +528,7 @@ async def test_shopping_lists(
 
 
 async def test_shopping_items(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -563,7 +563,7 @@ async def test_shopping_items(
 
 
 async def test_add_shopping_item(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test adding shopping item."""
@@ -591,7 +591,7 @@ async def test_add_shopping_item(
 
 
 async def test_update_shopping_item(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test updating shopping item."""
@@ -621,7 +621,7 @@ async def test_update_shopping_item(
 
 
 async def test_delete_shopping_item(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test deleting shopping item."""
@@ -643,7 +643,7 @@ async def test_delete_shopping_item(
 
 
 async def test_statistics(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -657,7 +657,7 @@ async def test_statistics(
 
 
 async def test_random_mealplan(
-    responses: aioresponses, mealie_client: MealieClient, snapshot: SnapshotAssertion
+    responses: aiointercept, mealie_client: MealieClient, snapshot: SnapshotAssertion
 ) -> None:
     """Test setting random mealplan."""
 
@@ -695,7 +695,7 @@ async def test_random_mealplan(
     ],
 )
 async def test_set_mealplan(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     kwargs: dict[str, Any],
     data: dict[str, Any],
@@ -730,7 +730,7 @@ USER_ID = "bf1c62fe-4941-4332-9886-e54e88dbdba0"
 
 
 async def test_get_categories(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -745,7 +745,7 @@ async def test_get_categories(
 
 
 async def test_get_tags(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -756,7 +756,7 @@ async def test_get_tags(
 
 
 async def test_get_tools(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -767,7 +767,7 @@ async def test_get_tools(
 
 
 async def test_get_foods(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -778,7 +778,7 @@ async def test_get_foods(
 
 
 async def test_get_units(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -789,7 +789,7 @@ async def test_get_units(
 
 
 async def test_get_mealplan(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -804,7 +804,7 @@ async def test_get_mealplan(
 
 
 async def test_update_mealplan(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -854,7 +854,7 @@ async def test_update_mealplan(
 
 
 async def test_delete_mealplan(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test deleting a mealplan entry."""
@@ -875,7 +875,7 @@ async def test_delete_mealplan(
 
 
 async def test_get_shopping_list(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -889,7 +889,7 @@ async def test_get_shopping_list(
 
 
 async def test_create_shopping_list(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -910,7 +910,7 @@ async def test_create_shopping_list(
 
 
 async def test_update_shopping_list(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -936,7 +936,7 @@ async def test_update_shopping_list(
 
 
 async def test_delete_shopping_list(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test deleting a shopping list."""
@@ -956,7 +956,7 @@ async def test_delete_shopping_list(
 
 
 async def test_add_recipe_to_shopping_list(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -980,7 +980,7 @@ async def test_add_recipe_to_shopping_list(
 
 
 async def test_remove_recipe_from_shopping_list(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test removing a recipe from a shopping list."""
@@ -1001,7 +1001,7 @@ async def test_remove_recipe_from_shopping_list(
 
 
 async def test_get_recipe_favorites(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
     snapshot: SnapshotAssertion,
 ) -> None:
@@ -1015,7 +1015,7 @@ async def test_get_recipe_favorites(
 
 
 async def test_add_recipe_favorite(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test adding a recipe to favorites."""
@@ -1041,7 +1041,7 @@ async def test_add_recipe_favorite(
 
 
 async def test_remove_recipe_favorite(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test removing a recipe from favorites."""
@@ -1067,7 +1067,7 @@ async def test_remove_recipe_favorite(
 
 
 async def test_rate_recipe(
-    responses: aioresponses,
+    responses: aiointercept,
     mealie_client: MealieClient,
 ) -> None:
     """Test rating a recipe."""
