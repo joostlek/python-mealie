@@ -277,7 +277,7 @@ class Nutrition(DataClassORJSONMixin):
         """Mashumaro Config."""
 
         serialize_by_alias = True
-        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]  # noqa: RUF012
 
 
 @dataclass
