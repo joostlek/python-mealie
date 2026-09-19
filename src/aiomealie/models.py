@@ -182,6 +182,17 @@ class Food(DataClassORJSONMixin):
 class Instruction(DataClassORJSONMixin):
     """Instruction model."""
 
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
+        """Normalize reference objects returned by Mealie."""
+        d["ingredientReferences"] = [
+            reference
+            if isinstance(reference, str)
+            else reference.get("referenceId")
+            for reference in d.get("ingredientReferences") or []
+        ]
+        return d
+
     instruction_id: str = field(metadata=field_options(alias="id"))
     text: str
     ingredient_references: list[str] = field(

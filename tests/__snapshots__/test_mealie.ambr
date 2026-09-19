@@ -172,6 +172,7 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
         'recipe_note': dict({
@@ -691,6 +692,7 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
         'recipe_note': dict({
@@ -7271,6 +7273,7 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
         'recipe_note': dict({
@@ -7651,6 +7654,7 @@
           'instructions': list([
             dict({
               'ingredient_references': list([
+                'a3adfe78-d157-44d8-98be-9c133e45bb4e',
               ]),
               'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
               'recipe_note': dict({
@@ -8509,6 +8513,7 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
         'recipe_note': dict({
