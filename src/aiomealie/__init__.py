@@ -1,19 +1,19 @@
 """Asynchronous Python client for Mealie."""
 
 from aiomealie.exceptions import (
+    MealieAuthenticationError,
+    MealieBadRequestError,
     MealieConnectionError,
     MealieError,
-    MealieAuthenticationError,
-    MealieValidationError,
-    MealieBadRequestError,
     MealieNotFoundError,
+    MealieValidationError,
 )
 from aiomealie.mealie import MealieClient
 from aiomealie.models import (
     About,
     BaseRecipe,
-    Category,
     CategoriesResponse,
+    Category,
     Food,
     FoodsResponse,
     GroupSummary,
@@ -47,20 +47,20 @@ from aiomealie.models import (
 __all__ = [
     "About",
     "BaseRecipe",
-    "Category",
     "CategoriesResponse",
+    "Category",
     "Food",
     "FoodsResponse",
     "GroupSummary",
     "Ingredient",
     "Instruction",
-    "MealieConnectionError",
-    "MealieError",
     "MealieAuthenticationError",
     "MealieBadRequestError",
+    "MealieClient",
+    "MealieConnectionError",
+    "MealieError",
     "MealieNotFoundError",
     "MealieValidationError",
-    "MealieClient",
     "Mealplan",
     "MealplanEntryType",
     "MealplanResponse",

@@ -2,25 +2,24 @@
 
 from __future__ import annotations
 
-
 import asyncio
-import json
 from dataclasses import dataclass
 from importlib import metadata
+import json
 from typing import TYPE_CHECKING, Any, Self
 
-from aiohttp import ClientSession, ClientConnectionError, InvalidUrlClientError
-from aiohttp.hdrs import METH_GET, METH_POST, METH_PUT, METH_DELETE
+from aiohttp import ClientConnectionError, ClientSession, InvalidUrlClientError
+from aiohttp.hdrs import METH_DELETE, METH_GET, METH_POST, METH_PUT
 from mashumaro.codecs.orjson import ORJSONDecoder
 from yarl import URL
 
 from aiomealie.exceptions import (
+    MealieAuthenticationError,
+    MealieBadRequestError,
     MealieConnectionError,
     MealieError,
-    MealieAuthenticationError,
-    MealieValidationError,
     MealieNotFoundError,
-    MealieBadRequestError,
+    MealieValidationError,
 )
 from aiomealie.models import (
     About,
@@ -31,22 +30,22 @@ from aiomealie.models import (
     MealplanEntryType,
     MealplanResponse,
     MutateRecipe,
+    MutateShoppingItem,
     OrderDirection,
+    Recipe,
     RecipeFavoritesResponse,
     RecipesResponse,
-    ShoppingList,
-    ShoppingListsResponse,
-    MutateShoppingItem,
     ShoppingItemsOrderBy,
     ShoppingItemsResponse,
+    ShoppingList,
+    ShoppingListsResponse,
     StartupInfo,
+    Statistics,
     TagsResponse,
     Theme,
     ToolsResponse,
     UnitsResponse,
     UserInfo,
-    Recipe,
-    Statistics,
 )
 
 if TYPE_CHECKING:
@@ -94,7 +93,7 @@ class MealieClient:
                 response = await self.session.request(
                     method, url, headers=headers, params=params, json=data
                 )
-        except asyncio.TimeoutError as exception:
+        except TimeoutError as exception:
             msg = "Timeout occurred while connecting to Mealie"
             raise MealieConnectionError(msg) from exception
         except ClientConnectionError as exception:
