@@ -172,9 +172,14 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
-        'recipe_note': None,
+        'recipe_note': dict({
+          'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+          'text': 'Use room-temperature ingredients for a smoother batter.',
+          'title': 'Baking tip',
+        }),
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
@@ -687,9 +692,14 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
-        'recipe_note': None,
+        'recipe_note': dict({
+          'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+          'text': 'Use room-temperature ingredients for a smoother batter.',
+          'title': 'Baking tip',
+        }),
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
@@ -7263,9 +7273,14 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
-        'recipe_note': None,
+        'recipe_note': dict({
+          'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+          'text': 'Use room-temperature ingredients for a smoother batter.',
+          'title': 'Baking tip',
+        }),
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
@@ -7639,9 +7654,14 @@
           'instructions': list([
             dict({
               'ingredient_references': list([
+                'a3adfe78-d157-44d8-98be-9c133e45bb4e',
               ]),
               'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
-              'recipe_note': None,
+              'recipe_note': dict({
+                'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+                'text': 'Use room-temperature ingredients for a smoother batter.',
+                'title': 'Baking tip',
+              }),
               'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
               'title': None,
             }),
@@ -8493,9 +8513,14 @@
     'instructions': list([
       dict({
         'ingredient_references': list([
+          'a3adfe78-d157-44d8-98be-9c133e45bb4e',
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
-        'recipe_note': None,
+        'recipe_note': dict({
+          'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+          'text': 'Use room-temperature ingredients for a smoother batter.',
+          'title': 'Baking tip',
+        }),
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
