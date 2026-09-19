@@ -364,6 +364,12 @@ class RecipeNote(DataClassORJSONMixin):
         default=None, metadata=field_options(alias="referenceId")
     )
 
+    class Config(BaseConfig):  # pylint: disable=too-few-public-methods
+        """Mashumaro Config."""
+
+        serialize_by_alias = True
+        code_generation_options = ["TO_DICT_ADD_OMIT_NONE_FLAG"]  # noqa: RUF012
+
 
 @dataclass(kw_only=True)
 class Recipe(BaseRecipe):
@@ -565,6 +571,7 @@ class MutateRecipe(DataClassDictMixin):
         default=None, metadata=field_options(alias="recipeInstructions")
     )
     nutrition: Nutrition | None = None
+    notes: list[RecipeNote] | None = None
 
     class Config(BaseConfig):  # pylint: disable=too-few-public-methods
         """Mashumaro Config."""
