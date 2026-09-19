@@ -174,6 +174,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
+        'recipe_note': None,
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
@@ -181,6 +182,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
+        'recipe_note': None,
         'text': 'Slit vanilla pod lengthwise and scrape out seeds. Using a hand mixer with whisks, beat the softened butter with the icing sugar and vanilla seeds until bubbles appear.',
         'title': None,
       }),
@@ -188,6 +190,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
+        'recipe_note': None,
         'text': 'Separate the eggs. Whisk the egg yolks into the butter mixture one by one. Now gradually add melted couverture chocolate. Beat the egg whites with the castor sugar until stiff, then place on top of the butter and chocolate mixture. Sift the flour over the mixture, then fold in the flour and beaten egg whites.',
         'title': None,
       }),
@@ -195,6 +198,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
+        'recipe_note': None,
         'text': "Transfer the mixture to the springform, smooth the top, and bake in the oven (middle rack) for 10–15 minutes, leaving the oven door a finger's width ajar. Then close the oven and bake for approximately 50 minutes. (The cake is done when it yields slightly to the touch.)",
         'title': None,
       }),
@@ -202,6 +206,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
+        'recipe_note': None,
         'text': 'Remove the cake from the oven and loosen the sides of the springform. Carefully tip the cake onto a cake rack lined with baking paper and let cool for approximately 20 minutes. Then pull off the baking paper, turn the cake over, and leave on rack to cool completely.',
         'title': None,
       }),
@@ -209,6 +214,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
+        'recipe_note': None,
         'text': 'Cut the cake in half horizontally. Warm the jam and stir until smooth. Brush the top of both cake halves with the jam and place one on top of the other. Brush the sides with the jam as well.',
         'title': None,
       }),
@@ -216,6 +222,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
+        'recipe_note': None,
         'text': 'To make the glaze, put the castor sugar into a saucepan with 125 ml water and boil over high heat for approximately 5 minutes. Take the sugar syrup off the stove and leave to cool a little. Coarsely chop the couverture, gradually adding it to the syrup, and stir until it forms a thick liquid (see tip below).',
         'title': None,
       }),
@@ -223,12 +230,30 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
+        'recipe_note': None,
         'text': 'Pour all the lukewarm glaze liquid at once over the top of the cake and quickly spread using a palette knife. Leave the glaze to set for a few hours. Serve garnished with whipped cream.',
         'title': None,
       }),
     ]),
     'last_made': None,
     'name': 'Original Sacher-Torte (2)',
+    'notes': list([
+      dict({
+        'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+        'text': 'Use room-temperature ingredients for a smoother batter.',
+        'title': 'Baking tip',
+      }),
+      dict({
+        'reference_id': 'f6a1c9e4-7b32-4d85-a018-2e9c5b7d6143',
+        'text': 'Let the cake cool completely before adding the glaze.',
+        'title': 'Cooling',
+      }),
+      dict({
+        'reference_id': '9c4e2a71-6d38-4f05-b927-1a8e3c6d5024',
+        'text': 'Serve with unsweetened whipped cream.',
+        'title': 'Serving',
+      }),
+    ]),
     'nutrition': dict({
       'calories': '400',
       'carbohydrate_content': None,
@@ -664,6 +689,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
+        'recipe_note': None,
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
@@ -671,6 +697,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
+        'recipe_note': None,
         'text': 'Slit vanilla pod lengthwise and scrape out seeds. Using a hand mixer with whisks, beat the softened butter with the icing sugar and vanilla seeds until bubbles appear.',
         'title': None,
       }),
@@ -678,6 +705,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
+        'recipe_note': None,
         'text': 'Separate the eggs. Whisk the egg yolks into the butter mixture one by one. Now gradually add melted couverture chocolate. Beat the egg whites with the castor sugar until stiff, then place on top of the butter and chocolate mixture. Sift the flour over the mixture, then fold in the flour and beaten egg whites.',
         'title': None,
       }),
@@ -685,6 +713,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
+        'recipe_note': None,
         'text': "Transfer the mixture to the springform, smooth the top, and bake in the oven (middle rack) for 10–15 minutes, leaving the oven door a finger's width ajar. Then close the oven and bake for approximately 50 minutes. (The cake is done when it yields slightly to the touch.)",
         'title': None,
       }),
@@ -692,6 +721,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
+        'recipe_note': None,
         'text': 'Remove the cake from the oven and loosen the sides of the springform. Carefully tip the cake onto a cake rack lined with baking paper and let cool for approximately 20 minutes. Then pull off the baking paper, turn the cake over, and leave on rack to cool completely.',
         'title': None,
       }),
@@ -699,6 +729,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
+        'recipe_note': None,
         'text': 'Cut the cake in half horizontally. Warm the jam and stir until smooth. Brush the top of both cake halves with the jam and place one on top of the other. Brush the sides with the jam as well.',
         'title': None,
       }),
@@ -706,6 +737,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
+        'recipe_note': None,
         'text': 'To make the glaze, put the castor sugar into a saucepan with 125 ml water and boil over high heat for approximately 5 minutes. Take the sugar syrup off the stove and leave to cool a little. Coarsely chop the couverture, gradually adding it to the syrup, and stir until it forms a thick liquid (see tip below).',
         'title': None,
       }),
@@ -713,12 +745,30 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
+        'recipe_note': None,
         'text': 'Pour all the lukewarm glaze liquid at once over the top of the cake and quickly spread using a palette knife. Leave the glaze to set for a few hours. Serve garnished with whipped cream.',
         'title': None,
       }),
     ]),
     'last_made': None,
     'name': 'Original Sacher-Torte (2)',
+    'notes': list([
+      dict({
+        'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+        'text': 'Use room-temperature ingredients for a smoother batter.',
+        'title': 'Baking tip',
+      }),
+      dict({
+        'reference_id': 'f6a1c9e4-7b32-4d85-a018-2e9c5b7d6143',
+        'text': 'Let the cake cool completely before adding the glaze.',
+        'title': 'Cooling',
+      }),
+      dict({
+        'reference_id': '9c4e2a71-6d38-4f05-b927-1a8e3c6d5024',
+        'text': 'Serve with unsweetened whipped cream.',
+        'title': 'Serving',
+      }),
+    ]),
     'nutrition': dict({
       'calories': '400',
       'carbohydrate_content': None,
@@ -7215,6 +7265,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
+        'recipe_note': None,
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
@@ -7222,6 +7273,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
+        'recipe_note': None,
         'text': 'Slit vanilla pod lengthwise and scrape out seeds. Using a hand mixer with whisks, beat the softened butter with the icing sugar and vanilla seeds until bubbles appear.',
         'title': None,
       }),
@@ -7229,6 +7281,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
+        'recipe_note': None,
         'text': 'Separate the eggs. Whisk the egg yolks into the butter mixture one by one. Now gradually add melted couverture chocolate. Beat the egg whites with the castor sugar until stiff, then place on top of the butter and chocolate mixture. Sift the flour over the mixture, then fold in the flour and beaten egg whites.',
         'title': None,
       }),
@@ -7236,6 +7289,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
+        'recipe_note': None,
         'text': "Transfer the mixture to the springform, smooth the top, and bake in the oven (middle rack) for 10–15 minutes, leaving the oven door a finger's width ajar. Then close the oven and bake for approximately 50 minutes. (The cake is done when it yields slightly to the touch.)",
         'title': None,
       }),
@@ -7243,6 +7297,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
+        'recipe_note': None,
         'text': 'Remove the cake from the oven and loosen the sides of the springform. Carefully tip the cake onto a cake rack lined with baking paper and let cool for approximately 20 minutes. Then pull off the baking paper, turn the cake over, and leave on rack to cool completely.',
         'title': None,
       }),
@@ -7250,6 +7305,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
+        'recipe_note': None,
         'text': 'Cut the cake in half horizontally. Warm the jam and stir until smooth. Brush the top of both cake halves with the jam and place one on top of the other. Brush the sides with the jam as well.',
         'title': None,
       }),
@@ -7257,6 +7313,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
+        'recipe_note': None,
         'text': 'To make the glaze, put the castor sugar into a saucepan with 125 ml water and boil over high heat for approximately 5 minutes. Take the sugar syrup off the stove and leave to cool a little. Coarsely chop the couverture, gradually adding it to the syrup, and stir until it forms a thick liquid (see tip below).',
         'title': None,
       }),
@@ -7264,12 +7321,30 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
+        'recipe_note': None,
         'text': 'Pour all the lukewarm glaze liquid at once over the top of the cake and quickly spread using a palette knife. Leave the glaze to set for a few hours. Serve garnished with whipped cream.',
         'title': None,
       }),
     ]),
     'last_made': None,
     'name': 'Original Sacher-Torte (2)',
+    'notes': list([
+      dict({
+        'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+        'text': 'Use room-temperature ingredients for a smoother batter.',
+        'title': 'Baking tip',
+      }),
+      dict({
+        'reference_id': 'f6a1c9e4-7b32-4d85-a018-2e9c5b7d6143',
+        'text': 'Let the cake cool completely before adding the glaze.',
+        'title': 'Cooling',
+      }),
+      dict({
+        'reference_id': '9c4e2a71-6d38-4f05-b927-1a8e3c6d5024',
+        'text': 'Serve with unsweetened whipped cream.',
+        'title': 'Serving',
+      }),
+    ]),
     'nutrition': dict({
       'calories': '400',
       'carbohydrate_content': None,
@@ -7566,6 +7641,7 @@
               'ingredient_references': list([
               ]),
               'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
+              'recipe_note': None,
               'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
               'title': None,
             }),
@@ -7573,6 +7649,7 @@
               'ingredient_references': list([
               ]),
               'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
+              'recipe_note': None,
               'text': 'Slit vanilla pod lengthwise and scrape out seeds. Using a hand mixer with whisks, beat the softened butter with the icing sugar and vanilla seeds until bubbles appear.',
               'title': None,
             }),
@@ -7580,6 +7657,7 @@
               'ingredient_references': list([
               ]),
               'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
+              'recipe_note': None,
               'text': 'Separate the eggs. Whisk the egg yolks into the butter mixture one by one. Now gradually add melted couverture chocolate. Beat the egg whites with the castor sugar until stiff, then place on top of the butter and chocolate mixture. Sift the flour over the mixture, then fold in the flour and beaten egg whites.',
               'title': None,
             }),
@@ -7587,6 +7665,7 @@
               'ingredient_references': list([
               ]),
               'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
+              'recipe_note': None,
               'text': "Transfer the mixture to the springform, smooth the top, and bake in the oven (middle rack) for 10–15 minutes, leaving the oven door a finger's width ajar. Then close the oven and bake for approximately 50 minutes. (The cake is done when it yields slightly to the touch.)",
               'title': None,
             }),
@@ -7594,6 +7673,7 @@
               'ingredient_references': list([
               ]),
               'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
+              'recipe_note': None,
               'text': 'Remove the cake from the oven and loosen the sides of the springform. Carefully tip the cake onto a cake rack lined with baking paper and let cool for approximately 20 minutes. Then pull off the baking paper, turn the cake over, and leave on rack to cool completely.',
               'title': None,
             }),
@@ -7601,6 +7681,7 @@
               'ingredient_references': list([
               ]),
               'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
+              'recipe_note': None,
               'text': 'Cut the cake in half horizontally. Warm the jam and stir until smooth. Brush the top of both cake halves with the jam and place one on top of the other. Brush the sides with the jam as well.',
               'title': None,
             }),
@@ -7608,6 +7689,7 @@
               'ingredient_references': list([
               ]),
               'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
+              'recipe_note': None,
               'text': 'To make the glaze, put the castor sugar into a saucepan with 125 ml water and boil over high heat for approximately 5 minutes. Take the sugar syrup off the stove and leave to cool a little. Coarsely chop the couverture, gradually adding it to the syrup, and stir until it forms a thick liquid (see tip below).',
               'title': None,
             }),
@@ -7615,12 +7697,30 @@
               'ingredient_references': list([
               ]),
               'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
+              'recipe_note': None,
               'text': 'Pour all the lukewarm glaze liquid at once over the top of the cake and quickly spread using a palette knife. Leave the glaze to set for a few hours. Serve garnished with whipped cream.',
               'title': None,
             }),
           ]),
           'last_made': None,
           'name': 'Original Sacher-Torte (2)',
+          'notes': list([
+            dict({
+              'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+              'text': 'Use room-temperature ingredients for a smoother batter.',
+              'title': 'Baking tip',
+            }),
+            dict({
+              'reference_id': 'f6a1c9e4-7b32-4d85-a018-2e9c5b7d6143',
+              'text': 'Let the cake cool completely before adding the glaze.',
+              'title': 'Cooling',
+            }),
+            dict({
+              'reference_id': '9c4e2a71-6d38-4f05-b927-1a8e3c6d5024',
+              'text': 'Serve with unsweetened whipped cream.',
+              'title': 'Serving',
+            }),
+          ]),
           'nutrition': dict({
             'calories': '400',
             'carbohydrate_content': None,
@@ -7699,12 +7799,15 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '34a7ca4c-df0b-42dc-a463-4d912eab5009',
+        'recipe_note': None,
         'text': 'Just make it today',
         'title': None,
       }),
     ]),
     'last_made': datetime.datetime(2025, 1, 1, 12, 12, 18, 680338, tzinfo=datetime.timezone.utc),
     'name': 'Crunchy Maple Bars',
+    'notes': list([
+    ]),
     'nutrition': dict({
       'calories': None,
       'carbohydrate_content': None,
@@ -8392,6 +8495,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2d558dbf-5361-4ef2-9d86-4161f5eb6146',
+        'recipe_note': None,
         'text': 'Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.',
         'title': None,
       }),
@@ -8399,6 +8503,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
+        'recipe_note': None,
         'text': 'Slit vanilla pod lengthwise and scrape out seeds. Using a hand mixer with whisks, beat the softened butter with the icing sugar and vanilla seeds until bubbles appear.',
         'title': None,
       }),
@@ -8406,6 +8511,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
+        'recipe_note': None,
         'text': 'Separate the eggs. Whisk the egg yolks into the butter mixture one by one. Now gradually add melted couverture chocolate. Beat the egg whites with the castor sugar until stiff, then place on top of the butter and chocolate mixture. Sift the flour over the mixture, then fold in the flour and beaten egg whites.',
         'title': None,
       }),
@@ -8413,6 +8519,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
+        'recipe_note': None,
         'text': "Transfer the mixture to the springform, smooth the top, and bake in the oven (middle rack) for 10–15 minutes, leaving the oven door a finger's width ajar. Then close the oven and bake for approximately 50 minutes. (The cake is done when it yields slightly to the touch.)",
         'title': None,
       }),
@@ -8420,6 +8527,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
+        'recipe_note': None,
         'text': 'Remove the cake from the oven and loosen the sides of the springform. Carefully tip the cake onto a cake rack lined with baking paper and let cool for approximately 20 minutes. Then pull off the baking paper, turn the cake over, and leave on rack to cool completely.',
         'title': None,
       }),
@@ -8427,6 +8535,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
+        'recipe_note': None,
         'text': 'Cut the cake in half horizontally. Warm the jam and stir until smooth. Brush the top of both cake halves with the jam and place one on top of the other. Brush the sides with the jam as well.',
         'title': None,
       }),
@@ -8434,6 +8543,7 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
+        'recipe_note': None,
         'text': 'To make the glaze, put the castor sugar into a saucepan with 125 ml water and boil over high heat for approximately 5 minutes. Take the sugar syrup off the stove and leave to cool a little. Coarsely chop the couverture, gradually adding it to the syrup, and stir until it forms a thick liquid (see tip below).',
         'title': None,
       }),
@@ -8441,12 +8551,30 @@
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
+        'recipe_note': None,
         'text': 'Pour all the lukewarm glaze liquid at once over the top of the cake and quickly spread using a palette knife. Leave the glaze to set for a few hours. Serve garnished with whipped cream.',
         'title': None,
       }),
     ]),
     'last_made': None,
     'name': 'Original Sacher-Torte (2)',
+    'notes': list([
+      dict({
+        'reference_id': 'd2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032',
+        'text': 'Use room-temperature ingredients for a smoother batter.',
+        'title': 'Baking tip',
+      }),
+      dict({
+        'reference_id': 'f6a1c9e4-7b32-4d85-a018-2e9c5b7d6143',
+        'text': 'Let the cake cool completely before adding the glaze.',
+        'title': 'Cooling',
+      }),
+      dict({
+        'reference_id': '9c4e2a71-6d38-4f05-b927-1a8e3c6d5024',
+        'text': 'Serve with unsweetened whipped cream.',
+        'title': 'Serving',
+      }),
+    ]),
     'nutrition': dict({
       'calories': '400',
       'carbohydrate_content': None,

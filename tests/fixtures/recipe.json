@@ -217,7 +217,12 @@
             "id": "2d558dbf-5361-4ef2-9d86-4161f5eb6146",
             "title": "",
             "text": "Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.",
-            "ingredientReferences": []
+            "ingredientReferences": [],
+            "noteReferences": [
+                {
+                    "referenceId": "d2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032"
+                }
+            ]
         },
         {
             "id": "dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a",
@@ -281,7 +286,23 @@
         "locked": false
     },
     "assets": [],
-    "notes": [],
+    "notes": [
+        {
+            "title": "Baking tip",
+            "text": "Use room-temperature ingredients for a smoother batter.",
+            "referenceId": "d2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032"
+        },
+        {
+            "title": "Cooling",
+            "text": "Let the cake cool completely before adding the glaze.",
+            "referenceId": "f6a1c9e4-7b32-4d85-a018-2e9c5b7d6143"
+        },
+        {
+            "title": "Serving",
+            "text": "Serve with unsweetened whipped cream.",
+            "referenceId": "9c4e2a71-6d38-4f05-b927-1a8e3c6d5024"
+        }
+    ],
     "extras": {
         "Energy Consumption": "5"
     },
