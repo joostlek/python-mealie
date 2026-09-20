@@ -153,12 +153,16 @@ class Ingredient(DataClassORJSONMixin):
 class Food(DataClassORJSONMixin):
     """Food model."""
 
-    food_id: str = field(metadata=field_options(alias="id"))
+    food_id: str | None = field(metadata=field_options(alias="id"))
     name: str
     description: str
     aliases: list[str]
-    created_at: datetime = field(metadata=field_options(alias="createdAt"))
-    updated_at: datetime = field(metadata=field_options(alias="updatedAt"))
+    created_at: datetime | None = field(
+        default=None, metadata=field_options(alias="createdAt")
+    )
+    updated_at: datetime | None = field(
+        default=None, metadata=field_options(alias="updatedAt")
+    )
     plural_name: str | None = field(
         default=None, metadata=field_options(alias="pluralName")
     )
