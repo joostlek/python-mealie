@@ -1888,6 +1888,46 @@
     'input': 'sugar',
   })
 # ---
+# name: test_parse_non_food_ingredient
+  dict({
+    'confidence': dict({
+      'average': None,
+      'comment': None,
+      'food': None,
+      'name': None,
+      'quantity': None,
+      'unit': None,
+    }),
+    'ingredient': dict({
+      'display': 'shower gel',
+      'food': dict({
+        'aliases': list([
+        ]),
+        'created_at': None,
+        'description': '',
+        'extras': dict({
+        }),
+        'food_id': None,
+        'households_with_ingredient_food': list([
+        ]),
+        'label': None,
+        'label_id': None,
+        'name': 'shower gel',
+        'plural_name': None,
+        'updated_at': None,
+      }),
+      'is_food': None,
+      'note': '',
+      'original_text': None,
+      'quantity': 0.0,
+      'reference_id': 'e00b5f87-a034-4e75-b7ed-e36bc5127ea1',
+      'referenced_recipe': None,
+      'title': None,
+      'unit': None,
+    }),
+    'input': None,
+  })
+# ---
 # name: test_random_mealplan
   dict({
     'description': None,

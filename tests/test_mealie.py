@@ -1131,6 +1131,7 @@ async def test_parse_ingredient(
 async def test_parse_non_food_ingredient(
     responses: aiointercept,
     mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
 ) -> None:
     """Test parsing text that does not match a known food."""
     responses.post(
@@ -1139,8 +1140,4 @@ async def test_parse_non_food_ingredient(
         body=load_fixture("parsed_ingredient_non_food.json"),
     )
 
-    parsed_ingredient = await mealie_client.parse_ingredient("shower gel")
-
-    assert parsed_ingredient.ingredient.food is not None
-    assert parsed_ingredient.ingredient.food.food_id is None
-    assert parsed_ingredient.ingredient.food.name == "shower gel"
+    assert await mealie_client.parse_ingredient("shower gel") == snapshot
