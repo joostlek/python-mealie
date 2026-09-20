@@ -217,10 +217,20 @@
             "id": "2d558dbf-5361-4ef2-9d86-4161f5eb6146",
             "title": "",
             "text": "Preheat oven to 170°C. Line the base of a springform with baking paper, grease the sides, and dust with a little flour. Melt couverture over boiling water. Let cool slightly.",
-            "ingredientReferences": [],
+            "ingredientReferences": [
+                {
+                    "referenceId": "a3adfe78-d157-44d8-98be-9c133e45bb4e"
+                },
+                {
+                    "referenceId": "41d234d7-c040-48f9-91e6-f4636aebb77b"
+                }
+            ],
             "noteReferences": [
                 {
                     "referenceId": "d2b7f3c8-4a6e-4f91-9b25-8c1d7e6a5032"
+                },
+                {
+                    "referenceId": "f6a1c9e4-7b32-4d85-a018-2e9c5b7d6143"
                 }
             ]
         },

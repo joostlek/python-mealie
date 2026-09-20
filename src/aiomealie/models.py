@@ -182,6 +182,15 @@ class Food(DataClassORJSONMixin):
 class Instruction(DataClassORJSONMixin):
     """Instruction model."""
 
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
+        """Normalize reference objects returned by Mealie."""
+        d["ingredientReferences"] = [
+            reference if isinstance(reference, str) else reference.get("referenceId")
+            for reference in d.get("ingredientReferences") or []
+        ]
+        return d
+
     instruction_id: str = field(metadata=field_options(alias="id"))
     text: str
     ingredient_references: list[str] = field(
@@ -193,8 +202,8 @@ class Instruction(DataClassORJSONMixin):
             serialization_strategy=OptionalStringSerializationStrategy()
         ),
     )
-    recipe_note: RecipeNote | None = field(
-        default=None, metadata=field_options(alias="recipeNote")
+    recipe_notes: list[RecipeNote] = field(
+        default_factory=list, metadata=field_options(alias="recipeNotes")
     )
 
 
@@ -374,6 +383,28 @@ class RecipeNote(DataClassORJSONMixin):
 @dataclass(kw_only=True)
 class Recipe(BaseRecipe):
     """Recipe model."""
+
+    @classmethod
+    def __pre_deserialize__(cls, d: dict[Any, Any]) -> dict[Any, Any]:
+        """Resolve instruction note references returned by Mealie."""
+        notes = d.get("notes") or []
+        notes_by_reference = {
+            note.get("referenceId"): note for note in notes if note.get("referenceId")
+        }
+        for instruction in d.get("recipeInstructions") or []:
+            if instruction.get("recipeNotes") is not None:
+                continue
+            instruction_notes = []
+            for reference in instruction.get("noteReferences") or []:
+                reference_id = (
+                    reference
+                    if isinstance(reference, str)
+                    else reference.get("referenceId")
+                )
+                if reference_id in notes_by_reference:
+                    instruction_notes.append(notes_by_reference[reference_id])
+            instruction["recipeNotes"] = instruction_notes
+        return d
 
     ingredients: list[Ingredient] = field(
         metadata=field_options(alias="recipeIngredient")
