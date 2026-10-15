@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import date, datetime
+from datetime import date, datetime, time
 from enum import StrEnum
 from typing import Any
 
@@ -49,6 +49,12 @@ class RegisteredParser(StrEnum):
     OPENAI = "openai"
 
 
+class WebhookType(StrEnum):
+    """WebhookType type."""
+
+    MEALPLAN = "mealplan"
+
+
 @dataclass
 class About(DataClassORJSONMixin):
     """About model."""
@@ -64,12 +70,133 @@ class StartupInfo(DataClassORJSONMixin):
 
 
 @dataclass
+class GroupPreferences(DataClassORJSONMixin):
+    """GroupPreferences model."""
+
+    group_id: str = field(metadata=field_options(alias="groupId"))
+    preferences_id: str = field(metadata=field_options(alias="id"))
+    private_group: bool = field(
+        default=True, metadata=field_options(alias="privateGroup")
+    )
+    show_announcements: bool = field(
+        default=True, metadata=field_options(alias="showAnnouncements")
+    )
+
+
+@dataclass
+class AIProviderSummary(DataClassORJSONMixin):
+    """AIProviderSummary model."""
+
+    provider_id: str = field(metadata=field_options(alias="id"))
+    name: str
+
+
+@dataclass
+class AIProviderSettings(DataClassORJSONMixin):
+    """AIProviderSettings model."""
+
+    default_provider_id: str | None = field(
+        metadata=field_options(alias="defaultProviderId")
+    )
+    audio_provider_id: str | None = field(
+        metadata=field_options(alias="audioProviderId")
+    )
+    image_provider_id: str | None = field(
+        metadata=field_options(alias="imageProviderId")
+    )
+    providers: list[AIProviderSummary]
+    ai_enabled: bool = field(metadata=field_options(alias="aiEnabled"))
+    audio_provider_enabled: bool = field(
+        metadata=field_options(alias="audioProviderEnabled")
+    )
+    image_provider_enabled: bool = field(
+        metadata=field_options(alias="imageProviderEnabled")
+    )
+
+
+@dataclass
 class GroupSummary(DataClassORJSONMixin):
     """GroupSummary model."""
 
     name: str
     group_id: str = field(metadata=field_options(alias="id"))
     slug: str
+    preferences: GroupPreferences | None = None
+    ai_provider_settings: AIProviderSettings | None = field(
+        default=None, metadata=field_options(alias="aiProviderSettings")
+    )
+
+
+@dataclass
+class HouseholdPreferences(DataClassORJSONMixin):
+    """HouseholdPreferences model."""
+
+    preferences_id: str = field(metadata=field_options(alias="id"))
+    private_household: bool = field(
+        default=True, metadata=field_options(alias="privateHousehold")
+    )
+    show_announcements: bool = field(
+        default=True, metadata=field_options(alias="showAnnouncements")
+    )
+    lock_recipe_edits_from_other_households: bool = field(
+        default=True, metadata=field_options(alias="lockRecipeEditsFromOtherHouseholds")
+    )
+    first_day_of_week: int = field(
+        default=0, metadata=field_options(alias="firstDayOfWeek")
+    )
+    recipe_public: bool = field(
+        default=True, metadata=field_options(alias="recipePublic")
+    )
+    recipe_show_nutrition: bool = field(
+        default=False, metadata=field_options(alias="recipeShowNutrition")
+    )
+    recipe_show_assets: bool = field(
+        default=False, metadata=field_options(alias="recipeShowAssets")
+    )
+    recipe_landscape_view: bool = field(
+        default=False, metadata=field_options(alias="recipeLandscapeView")
+    )
+    recipe_disable_comments: bool = field(
+        default=False, metadata=field_options(alias="recipeDisableComments")
+    )
+
+
+@dataclass
+class HouseholdUserSummary(DataClassORJSONMixin):
+    """HouseholdUserSummary model."""
+
+    user_id: str = field(metadata=field_options(alias="id"))
+    full_name: str = field(metadata=field_options(alias="fullName"))
+
+
+@dataclass
+class Webhook(DataClassORJSONMixin):
+    """Webhook model."""
+
+    scheduled_time: time = field(metadata=field_options(alias="scheduledTime"))
+    group_id: str = field(metadata=field_options(alias="groupId"))
+    household_id: str = field(metadata=field_options(alias="householdId"))
+    webhook_id: str = field(metadata=field_options(alias="id"))
+    enabled: bool = True
+    name: str = ""
+    url: str = ""
+    webhook_type: WebhookType = field(
+        default=WebhookType.MEALPLAN, metadata=field_options(alias="webhookType")
+    )
+
+
+@dataclass
+class HouseholdSummary(DataClassORJSONMixin):
+    """HouseholdSummary model."""
+
+    group_id: str = field(metadata=field_options(alias="groupId"))
+    name: str
+    household_id: str = field(metadata=field_options(alias="id"))
+    slug: str
+    group: str
+    preferences: HouseholdPreferences | None = None
+    users: list[HouseholdUserSummary] | None = None
+    webhooks: list[Webhook] = field(default_factory=list)
 
 
 @dataclass

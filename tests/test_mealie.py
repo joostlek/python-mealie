@@ -235,6 +235,20 @@ async def test_groups_self(
     assert await mealie_client.get_groups_self() == snapshot
 
 
+async def test_households_self(
+    responses: aiointercept,
+    mealie_client: MealieClient,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test retrieving households self."""
+    responses.get(
+        f"{MEALIE_URL}/api/households/self",
+        status=200,
+        body=load_fixture("households_self.json"),
+    )
+    assert await mealie_client.get_households_self() == snapshot
+
+
 async def test_theme(
     responses: aiointercept,
     mealie_client: MealieClient,
