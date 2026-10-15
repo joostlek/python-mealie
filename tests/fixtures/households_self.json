@@ -1,0 +1,30 @@
+{
+    "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+    "name": "Family",
+    "id": "bdcd07f6-de8d-4ae1-a703-84df24b8072c",
+    "slug": "family",
+    "preferences": {
+        "privateHousehold": true,
+        "showAnnouncements": true,
+        "lockRecipeEditsFromOtherHouseholds": true,
+        "firstDayOfWeek": 1,
+        "recipePublic": false,
+        "recipeShowNutrition": false,
+        "recipeShowAssets": false,
+        "recipeLandscapeView": false,
+        "recipeDisableComments": false,
+        "id": "2dd119d3-8933-4a91-b250-57d933758529"
+    },
+    "group": "Home",
+    "users": [
+        {
+            "id": "90b03954-00e1-46de-9520-f0305022b84f",
+            "fullName": "Andrew"
+        },
+        {
+            "id": "d8e23b09-569d-45d0-b5dd-21a6deb807bf",
+            "fullName": "Luke"
+        }
+    ],
+    "webhooks": []
+}

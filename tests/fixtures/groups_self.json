@@ -1,17 +1,29 @@
 {
-    "name": "home",
-    "id": "0bf60b2e-ca89-42a9-94d4-8f67ca72b157",
+    "name": "Home",
+    "id": "9ed7c880-3e85-4955-9318-1443d6e080fe",
     "slug": "home",
     "preferences": {
         "privateGroup": true,
-        "firstDayOfWeek": 1,
-        "recipePublic": true,
-        "recipeShowNutrition": true,
-        "recipeShowAssets": true,
-        "recipeLandscapeView": false,
-        "recipeDisableComments": false,
-        "recipeDisableAmount": false,
-        "groupId": "0bf60b2e-ca89-42a9-94d4-8f67ca72b157",
-        "id": "1994bf96-92c8-4697-bee6-3ad714571102"
+        "showAnnouncements": true,
+        "groupId": "9ed7c880-3e85-4955-9318-1443d6e080fe",
+        "id": "15ba882b-37f5-4ef9-9b17-6166d26c08e7"
+    },
+    "aiProviderSettings": {
+        "defaultProviderId": "6ed80909-9c6e-43da-9b4b-f2381cc0964b",
+        "audioProviderId": "73fbb1b2-091f-4d1b-b63a-5949ec2c42d1",
+        "imageProviderId": "6ed80909-9c6e-43da-9b4b-f2381cc0964b",
+        "providers": [
+            {
+                "id": "73fbb1b2-091f-4d1b-b63a-5949ec2c42d1",
+                "name": "whisper-1"
+            },
+            {
+                "id": "6ed80909-9c6e-43da-9b4b-f2381cc0964b",
+                "name": "luna"
+            }
+        ],
+        "aiEnabled": true,
+        "audioProviderEnabled": true,
+        "imageProviderEnabled": true
     }
 }
