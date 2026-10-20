@@ -541,9 +541,66 @@
 # ---
 # name: test_groups_self
   dict({
-    'group_id': '0bf60b2e-ca89-42a9-94d4-8f67ca72b157',
-    'name': 'home',
+    'ai_provider_settings': dict({
+      'ai_enabled': True,
+      'audio_provider_enabled': True,
+      'audio_provider_id': '73fbb1b2-091f-4d1b-b63a-5949ec2c42d1',
+      'default_provider_id': '6ed80909-9c6e-43da-9b4b-f2381cc0964b',
+      'image_provider_enabled': True,
+      'image_provider_id': '6ed80909-9c6e-43da-9b4b-f2381cc0964b',
+      'providers': list([
+        dict({
+          'name': 'whisper-1',
+          'provider_id': '73fbb1b2-091f-4d1b-b63a-5949ec2c42d1',
+        }),
+        dict({
+          'name': 'luna',
+          'provider_id': '6ed80909-9c6e-43da-9b4b-f2381cc0964b',
+        }),
+      ]),
+    }),
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'name': 'Home',
+    'preferences': dict({
+      'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+      'preferences_id': '15ba882b-37f5-4ef9-9b17-6166d26c08e7',
+      'private_group': True,
+      'show_announcements': True,
+    }),
     'slug': 'home',
+  })
+# ---
+# name: test_households_self
+  dict({
+    'group': 'Home',
+    'group_id': '9ed7c880-3e85-4955-9318-1443d6e080fe',
+    'household_id': 'bdcd07f6-de8d-4ae1-a703-84df24b8072c',
+    'name': 'Family',
+    'preferences': dict({
+      'first_day_of_week': 1,
+      'lock_recipe_edits_from_other_households': True,
+      'preferences_id': '2dd119d3-8933-4a91-b250-57d933758529',
+      'private_household': True,
+      'recipe_disable_comments': False,
+      'recipe_landscape_view': False,
+      'recipe_public': False,
+      'recipe_show_assets': False,
+      'recipe_show_nutrition': False,
+      'show_announcements': True,
+    }),
+    'slug': 'family',
+    'users': list([
+      dict({
+        'full_name': 'Andrew',
+        'user_id': '90b03954-00e1-46de-9520-f0305022b84f',
+      }),
+      dict({
+        'full_name': 'Luke',
+        'user_id': 'd8e23b09-569d-45d0-b5dd-21a6deb807bf',
+      }),
+    ]),
+    'webhooks': list([
+    ]),
   })
 # ---
 # name: test_importing_recipe

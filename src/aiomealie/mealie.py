@@ -26,6 +26,7 @@ from aiomealie.models import (
     CategoriesResponse,
     FoodsResponse,
     GroupSummary,
+    HouseholdSummary,
     Mealplan,
     MealplanEntryType,
     MealplanResponse,
@@ -196,6 +197,11 @@ class MealieClient:
         """Get groups self."""
         response = await self._get("api/groups/self")
         return GroupSummary.from_json(response)
+
+    async def get_households_self(self) -> HouseholdSummary:
+        """Get households self."""
+        response = await self._get("api/households/self")
+        return HouseholdSummary.from_json(response)
 
     async def get_theme(self) -> Theme:
         """Get theme."""
