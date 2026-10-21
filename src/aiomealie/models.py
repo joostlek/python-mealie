@@ -471,6 +471,15 @@ class BaseRecipe(DataClassORJSONMixin):
             serialization_strategy=OptionalStringSerializationStrategy(),
         ),
     )
+    total_time_seconds: int | None = field(
+        default=None, metadata=field_options(alias="totalTimeSeconds")
+    )
+    prep_time_seconds: int | None = field(
+        default=None, metadata=field_options(alias="prepTimeSeconds")
+    )
+    perform_time_seconds: int | None = field(
+        default=None, metadata=field_options(alias="performTimeSeconds")
+    )
     image: str | None = None
     rating: float | None = field(default=None)
     recipe_servings: float | None = field(

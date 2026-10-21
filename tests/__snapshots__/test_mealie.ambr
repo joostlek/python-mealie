@@ -289,7 +289,9 @@
     }),
     'original_url': 'https://www.sacher.com/en/original-sacher-torte/recipe/',
     'perform_time': '1 hour',
+    'perform_time_seconds': 3600,
     'prep_time': '1 hour 30 minutes',
+    'prep_time_seconds': 5400,
     'rating': None,
     'recipe_id': 'fada9582-709b-46aa-b384-d5952123ad93',
     'recipe_servings': None,
@@ -341,6 +343,7 @@
       }),
     ]),
     'total_time': '2 hours 30 minutes',
+    'total_time_seconds': 9000,
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
   })
 # ---
@@ -421,7 +424,9 @@
       'name': 'Cauliflower Salad',
       'original_url': 'https://www.allrecipes.com/recipe/142152/cauliflower-salad/',
       'perform_time': '10 Minutes',
+      'perform_time_seconds': None,
       'prep_time': '25 Minutes',
+      'prep_time_seconds': None,
       'rating': None,
       'recipe_id': '40393996-417e-4487-a081-28608a668826',
       'recipe_servings': None,
@@ -438,6 +443,7 @@
         }),
       ]),
       'total_time': '2 Hours 35 Minutes',
+      'total_time_seconds': None,
       'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
     }),
     'title': None,
@@ -881,7 +887,9 @@
     }),
     'original_url': 'https://www.sacher.com/en/original-sacher-torte/recipe/',
     'perform_time': '1 hour',
+    'perform_time_seconds': 3600,
     'prep_time': '1 hour 30 minutes',
+    'prep_time_seconds': 5400,
     'rating': None,
     'recipe_id': 'fada9582-709b-46aa-b384-d5952123ad93',
     'recipe_servings': None,
@@ -933,6 +941,7 @@
       }),
     ]),
     'total_time': '2 hours 30 minutes',
+    'total_time_seconds': 9000,
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
   })
 # ---
@@ -957,7 +966,9 @@
         'name': 'Cauliflower Salad',
         'original_url': 'https://www.allrecipes.com/recipe/142152/cauliflower-salad/',
         'perform_time': '10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '25 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '40393996-417e-4487-a081-28608a668826',
         'recipe_servings': None,
@@ -974,6 +985,7 @@
           }),
         ]),
         'total_time': '2 Hours 35 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       'title': None,
@@ -998,7 +1010,9 @@
         'name': '15 Minute Cheesy Sausage & Veg Pasta',
         'original_url': 'https://www.annabelkarmel.com/recipes/15-minute-cheesy-sausage-veg-pasta/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '872bb477-8d90-4025-98b0-07a9d0d9ce3a',
         'recipe_servings': None,
@@ -1010,6 +1024,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       'title': None,
@@ -1034,7 +1049,9 @@
         'name': 'cake',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '744a9831-fa56-4f61-9e12-fc5ebce58ed9',
         'recipe_servings': None,
@@ -1046,6 +1063,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       'title': None,
@@ -1070,7 +1088,9 @@
         'name': 'Pomegranate chicken with almond couscous',
         'original_url': 'https://www.bbcgoodfood.com/recipes/pomegranate-chicken-almond-couscous',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '27455eb2-31d3-4682-84ff-02a114bf293a',
         'recipe_servings': None,
@@ -1082,6 +1102,7 @@
         'tools': list([
         ]),
         'total_time': '20 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       'title': None,
@@ -1106,7 +1127,9 @@
         'name': 'Csirkés és tofus empanadas',
         'original_url': 'https://streetkitchen.hu/street-kitchen/csirkes-es-tofus-empanadas/',
         'perform_time': '15',
+        'perform_time_seconds': None,
         'prep_time': '40',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '4233330e-6947-4042-90b7-44c405b70714',
         'recipe_servings': None,
@@ -1118,6 +1141,7 @@
         'tools': list([
         ]),
         'total_time': '95',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       'title': None,
@@ -1142,7 +1166,9 @@
         'name': 'All-American Beef Stew Recipe',
         'original_url': 'https://www.seriouseats.com/all-american-beef-stew-recipe',
         'perform_time': '3 Hours 10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '48f39d27-4b8e-4c14-bf36-4e1e6497e75e',
         'recipe_servings': None,
@@ -1159,6 +1185,7 @@
         'tools': list([
         ]),
         'total_time': '3 Hours 15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       'title': None,
@@ -1183,7 +1210,9 @@
         'name': 'Pomegranate chicken with almond couscous',
         'original_url': 'https://www.bbcgoodfood.com/recipes/pomegranate-chicken-almond-couscous',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '27455eb2-31d3-4682-84ff-02a114bf293a',
         'recipe_servings': None,
@@ -1195,6 +1224,7 @@
         'tools': list([
         ]),
         'total_time': '20 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       'title': None,
@@ -1235,7 +1265,9 @@
           'name': 'Zoete aardappel curry traybake',
           'original_url': 'https://chickslovefood.com/recept/zoete-aardappel-curry-traybake/',
           'perform_time': None,
+          'perform_time_seconds': None,
           'prep_time': None,
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': 'c5f00a93-71a2-4e48-900f-d9ad0bb9de93',
           'recipe_servings': None,
@@ -1247,6 +1279,7 @@
           'tools': list([
           ]),
           'total_time': '40 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1271,7 +1304,9 @@
           'name': 'Roast Chicken',
           'original_url': 'https://tastesbetterfromscratch.com/roast-chicken/',
           'perform_time': '1 Hour 20 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '15 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '5b055066-d57d-4fd0-8dfd-a2c2f07b36f1',
           'recipe_servings': None,
@@ -1283,6 +1318,7 @@
           'tools': list([
           ]),
           'total_time': '1 Hour 35 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1307,7 +1343,9 @@
           'name': 'Receta de pollo al curry en 10 minutos (con vídeo incluido)',
           'original_url': 'https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-de-pollo-al-curry-en-10-minutos',
           'perform_time': '7 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '3 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': 'e360a0cc-18b0-4a84-a91b-8aa59e2451c9',
           'recipe_servings': None,
@@ -1334,6 +1372,7 @@
             }),
           ]),
           'total_time': '10 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1358,7 +1397,9 @@
           'name': 'Boeuf bourguignon : la vraie recette (2)',
           'original_url': 'https://www.marmiton.org/recettes/recette_boeuf-bourguignon_18889.aspx',
           'perform_time': '4 Hours',
+          'perform_time_seconds': None,
           'prep_time': '1 Hour',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '9c7b8aee-c93c-4b1b-ab48-2625d444743a',
           'recipe_servings': None,
@@ -1430,6 +1471,7 @@
           'tools': list([
           ]),
           'total_time': '5 Hours',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1454,7 +1496,9 @@
           'name': 'Εύκολη μακαρονάδα με κεφτεδάκια στον φούρνο (1)',
           'original_url': 'https://akispetretzikis.com/recipe/7959/efkolh-makaronada-me-keftedakia-ston-fourno',
           'perform_time': '50 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '15 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': 'f79f7e9d-4b58-4930-a586-2b127f16ee34',
           'recipe_servings': None,
@@ -1466,6 +1510,7 @@
           'tools': list([
           ]),
           'total_time': None,
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1490,7 +1535,9 @@
           'name': 'Greek Turkey Meatballs with Lemon Orzo & Creamy Feta Yogurt Sauce',
           'original_url': 'https://www.ambitiouskitchen.com/greek-turkey-meatballs/',
           'perform_time': '20 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '40 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '47595e4c-52bc-441d-b273-3edf4258806d',
           'recipe_servings': None,
@@ -1502,6 +1549,7 @@
           'tools': list([
           ]),
           'total_time': '1 Hour',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1526,7 +1574,9 @@
           'name': 'Einfacher Nudelauflauf mit Brokkoli',
           'original_url': 'https://kochkarussell.com/einfacher-nudelauflauf-brokkoli/',
           'perform_time': '20 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '15 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '9d553779-607e-471b-acf3-84e6be27b159',
           'recipe_servings': None,
@@ -1543,6 +1593,7 @@
           'tools': list([
           ]),
           'total_time': '35 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1567,7 +1618,9 @@
           'name': 'Pampered Chef Double Chocolate Mocha Trifle',
           'original_url': 'https://www.food.com/recipe/pampered-chef-double-chocolate-mocha-trifle-74963',
           'perform_time': '1 Hour',
+          'perform_time_seconds': None,
           'prep_time': '15 Minutes',
+          'prep_time_seconds': None,
           'rating': 3.0,
           'recipe_id': '92635fd0-f2dc-4e78-a6e4-ecd556ad361f',
           'recipe_servings': None,
@@ -1589,6 +1642,7 @@
           'tools': list([
           ]),
           'total_time': '1 Hour 15 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1613,7 +1667,9 @@
           'name': 'Cheeseburger Sliders (Easy, 30-min Recipe)',
           'original_url': 'https://natashaskitchen.com/cheeseburger-sliders/',
           'perform_time': '22 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '8 Minutes',
+          'prep_time_seconds': None,
           'rating': 5.0,
           'recipe_id': '8bdd3656-5e7e-45d3-a3c4-557390846a22',
           'recipe_servings': None,
@@ -1635,6 +1691,7 @@
           'tools': list([
           ]),
           'total_time': '30 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1659,7 +1716,9 @@
           'name': 'All-American Beef Stew Recipe',
           'original_url': 'https://www.seriouseats.com/all-american-beef-stew-recipe',
           'perform_time': '3 Hours 10 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '5 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '48f39d27-4b8e-4c14-bf36-4e1e6497e75e',
           'recipe_servings': None,
@@ -1676,6 +1735,7 @@
           'tools': list([
           ]),
           'total_time': '3 Hours 15 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1700,7 +1760,9 @@
           'name': 'All-American Beef Stew Recipe',
           'original_url': 'https://www.seriouseats.com/all-american-beef-stew-recipe',
           'perform_time': '3 Hours 10 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '5 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '48f39d27-4b8e-4c14-bf36-4e1e6497e75e',
           'recipe_servings': None,
@@ -1717,6 +1779,7 @@
           'tools': list([
           ]),
           'total_time': '3 Hours 15 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1741,7 +1804,9 @@
           'name': 'Einfacher Nudelauflauf mit Brokkoli',
           'original_url': 'https://kochkarussell.com/einfacher-nudelauflauf-brokkoli/',
           'perform_time': '20 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '15 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '9d553779-607e-471b-acf3-84e6be27b159',
           'recipe_servings': None,
@@ -1758,6 +1823,7 @@
           'tools': list([
           ]),
           'total_time': '35 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1782,7 +1848,9 @@
           'name': 'Miso Udon Noodles with Spinach and Tofu',
           'original_url': 'https://www.allrecipes.com/recipe/284039/miso-udon-noodles-with-spinach-and-tofu/',
           'perform_time': '15 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '10 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '25b814f2-d9bf-4df0-b40d-d2f2457b4317',
           'recipe_servings': None,
@@ -1794,6 +1862,7 @@
           'tools': list([
           ]),
           'total_time': '25 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1818,7 +1887,9 @@
           'name': 'Mousse de saumon',
           'original_url': 'https://www.ricardocuisine.com/recettes/8919-mousse-de-saumon',
           'perform_time': '2 Minutes',
+          'perform_time_seconds': None,
           'prep_time': '15 Minutes',
+          'prep_time_seconds': None,
           'rating': None,
           'recipe_id': '55c88810-4cf1-4d86-ae50-63b15fd173fb',
           'recipe_servings': None,
@@ -1830,6 +1901,7 @@
           'tools': list([
           ]),
           'total_time': '17 Minutes',
+          'total_time_seconds': None,
           'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
         }),
         'title': None,
@@ -1870,7 +1942,9 @@
           'name': 'Spicy Sichuan (dan dan) noodles',
           'original_url': 'https://www.example.co.uk/food/recipes/spicy_sichuan_noodles_79051',
           'perform_time': '30 minutes',
+          'perform_time_seconds': None,
           'prep_time': '30 minutes',
+          'prep_time_seconds': None,
           'rating': 5.0,
           'recipe_id': '10f66ba9-bd51-4556-b10e-05ad0fa686b5',
           'recipe_servings': 2.0,
@@ -1892,6 +1966,7 @@
             }),
           ]),
           'total_time': None,
+          'total_time_seconds': None,
           'user_id': '90b03954-00e1-46de-9520-f0305022b84f',
         }),
         'title': None,
@@ -2005,7 +2080,9 @@
       'name': 'Cauliflower Salad',
       'original_url': 'https://www.allrecipes.com/recipe/142152/cauliflower-salad/',
       'perform_time': '10 Minutes',
+      'perform_time_seconds': None,
       'prep_time': '25 Minutes',
+      'prep_time_seconds': None,
       'rating': None,
       'recipe_id': '40393996-417e-4487-a081-28608a668826',
       'recipe_servings': None,
@@ -2022,6 +2099,7 @@
         }),
       ]),
       'total_time': '2 Hours 35 Minutes',
+      'total_time_seconds': None,
       'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
     }),
     'title': None,
@@ -2043,7 +2121,9 @@
         'name': 'tu6y',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'e82f5449-c33b-437c-b712-337587199264',
         'recipe_servings': None,
@@ -2060,6 +2140,7 @@
           }),
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2074,7 +2155,9 @@
         'name': 'Εύκολη μακαρονάδα με κεφτεδάκια στον φούρνο (1)',
         'original_url': 'https://akispetretzikis.com/recipe/7959/efkolh-makaronada-me-keftedakia-ston-fourno',
         'perform_time': '50 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f79f7e9d-4b58-4930-a586-2b127f16ee34',
         'recipe_servings': None,
@@ -2086,6 +2169,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2100,7 +2184,9 @@
         'name': 'Patates douces au four (1)',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '90097c8b-9d80-468a-b497-73957ac0cd8b',
         'recipe_servings': None,
@@ -2112,6 +2198,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2126,7 +2213,9 @@
         'name': 'Sweet potatoes',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '98845807-9365-41fd-acd1-35630b468c27',
         'recipe_servings': None,
@@ -2138,6 +2227,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2152,7 +2242,9 @@
         'name': 'Εύκολη μακαρονάδα με κεφτεδάκια στον φούρνο',
         'original_url': 'https://akispetretzikis.com/recipe/7959/efkolh-makaronada-me-keftedakia-ston-fourno',
         'perform_time': '50 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '40c227e0-3c7e-41f7-866d-5de04eaecdd7',
         'recipe_servings': None,
@@ -2164,6 +2256,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2178,7 +2271,9 @@
         'name': 'Boeuf bourguignon : la vraie recette (2)',
         'original_url': 'https://www.marmiton.org/recettes/recette_boeuf-bourguignon_18889.aspx',
         'perform_time': '4 Hours',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9c7b8aee-c93c-4b1b-ab48-2625d444743a',
         'recipe_servings': None,
@@ -2250,6 +2345,7 @@
         'tools': list([
         ]),
         'total_time': '5 Hours',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2264,7 +2360,9 @@
         'name': 'Boeuf bourguignon : la vraie recette (1)',
         'original_url': 'https://www.marmiton.org/recettes/recette_boeuf-bourguignon_18889.aspx',
         'perform_time': '4 Hours',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': 'fc42c7d1-7b0f-4e04-b88a-dbd80b81540b',
         'recipe_servings': None,
@@ -2336,6 +2434,7 @@
         'tools': list([
         ]),
         'total_time': '5 Hours',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2350,7 +2449,9 @@
         'name': 'Veganes Marmor-Bananenbrot mit Erdnussbutter',
         'original_url': 'https://biancazapatka.com/de/erdnussbutter-schoko-bananenbrot/',
         'perform_time': '55 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '89e63d72-7a51-4cef-b162-2e45035d0a91',
         'recipe_servings': None,
@@ -2362,6 +2463,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2376,7 +2478,9 @@
         'name': 'Pasta mit Tomaten, Knoblauch und Basilikum - einfach (und) genial! - Kuechenchaotin',
         'original_url': 'https://kuechenchaotin.de/pasta-mit-tomaten-knoblauch-basilikum/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': 3.5,
         'recipe_id': 'eab64457-97ba-4d6c-871c-cb1c724ccb51',
         'recipe_servings': None,
@@ -2388,6 +2492,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2402,7 +2507,9 @@
         'name': 'test123',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '12439e3d-3c1c-4dcc-9c6e-4afcea2a0542',
         'recipe_servings': None,
@@ -2414,6 +2521,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2428,7 +2536,9 @@
         'name': 'Bureeto',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '6567f6ec-e410-49cb-a1a5-d08517184e78',
         'recipe_servings': None,
@@ -2440,6 +2550,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2454,7 +2565,9 @@
         'name': 'Subway Double Cookies',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f7737d17-161c-4008-88d4-dd2616778cd0',
         'recipe_servings': None,
@@ -2466,6 +2579,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2480,7 +2594,9 @@
         'name': 'qwerty12345',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1904b717-4a8b-4de9-8909-56958875b5f4',
         'recipe_servings': None,
@@ -2492,6 +2608,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2506,7 +2623,9 @@
         'name': 'Cheeseburger Sliders (Easy, 30-min Recipe)',
         'original_url': 'https://natashaskitchen.com/cheeseburger-sliders/',
         'perform_time': '22 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '8 Minutes',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': '8bdd3656-5e7e-45d3-a3c4-557390846a22',
         'recipe_servings': None,
@@ -2528,6 +2647,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2542,7 +2662,9 @@
         'name': 'meatloaf',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '8a30d31d-aa14-411e-af0c-6b61a94f5291',
         'recipe_servings': None,
@@ -2554,6 +2676,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2568,7 +2691,9 @@
         'name': 'Richtig rheinischer Sauerbraten',
         'original_url': 'https://www.chefkoch.de/rezepte/937641199437984/Richtig-rheinischer-Sauerbraten.html',
         'perform_time': '2 Hours 20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': 3.0,
         'recipe_id': 'f2f7880b-1136-436f-91b7-129788d8c117',
         'recipe_servings': None,
@@ -2580,6 +2705,7 @@
         'tools': list([
         ]),
         'total_time': '3 Hours 20 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2594,7 +2720,9 @@
         'name': 'Orientalischer Gemüse-Hähnchen Eintopf',
         'original_url': 'https://www.chefkoch.de/rezepte/2307761368177614/Orientalischer-Gemuese-Haehnchen-Eintopf.html',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'cf634591-0f82-4254-8e00-2f7e8b0c9022',
         'recipe_servings': None,
@@ -2646,6 +2774,7 @@
         'tools': list([
         ]),
         'total_time': '35 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2660,7 +2789,9 @@
         'name': 'test 20240121',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '05208856-d273-4cc9-bcfa-e0215d57108d',
         'recipe_servings': None,
@@ -2672,6 +2803,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2686,7 +2818,9 @@
         'name': 'Loempia bowl',
         'original_url': 'https://www.lekkerensimpel.com/loempia-bowl/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '145eeb05-781a-4eb0-a656-afa8bc8c0164',
         'recipe_servings': None,
@@ -2698,6 +2832,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2712,7 +2847,9 @@
         'name': '5 Ingredient Chocolate Mousse',
         'original_url': 'https://thehappypear.ie/aquafaba-chocolate-mousse/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '5c6532aa-ad84-424c-bc05-c32d50430fe4',
         'recipe_servings': None,
@@ -2724,6 +2861,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2738,7 +2876,9 @@
         'name': 'Der perfekte Pfannkuchen - gelingt einfach immer',
         'original_url': 'https://www.chefkoch.de/rezepte/1208161226570428/Der-perfekte-Pfannkuchen-gelingt-einfach-immer.html',
         'perform_time': '10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f2e684f2-49e0-45ee-90de-951344472f1c',
         'recipe_servings': None,
@@ -2780,6 +2920,7 @@
         'tools': list([
         ]),
         'total_time': '15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2799,7 +2940,9 @@
         'name': 'Dinkel-Sauerteigbrot',
         'original_url': 'https://www.besondersgut.ch/dinkel-sauerteigbrot/',
         'perform_time': '35min',
+        'perform_time_seconds': None,
         'prep_time': '1h',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'cf239441-b75d-4dea-a48e-9d99b7cb5842',
         'recipe_servings': None,
@@ -2821,6 +2964,7 @@
           }),
         ]),
         'total_time': '24h',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2835,7 +2979,9 @@
         'name': 'test 234234',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2673eb90-6d78-4b95-af36-5db8c8a6da37',
         'recipe_servings': None,
@@ -2847,6 +2993,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2861,7 +3008,9 @@
         'name': 'test 243',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '0a723c54-af53-40e9-a15f-c87aae5ac688',
         'recipe_servings': None,
@@ -2873,6 +3022,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2887,7 +3037,9 @@
         'name': 'Einfacher Nudelauflauf mit Brokkoli',
         'original_url': 'https://kochkarussell.com/einfacher-nudelauflauf-brokkoli/',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9d553779-607e-471b-acf3-84e6be27b159',
         'recipe_servings': None,
@@ -2904,6 +3056,7 @@
         'tools': list([
         ]),
         'total_time': '35 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2929,7 +3082,9 @@
         'name': 'Tarta cytrynowa z bezą',
         'original_url': 'https://www.przepisy.pl/przepis/tarta-cytrynowa-z-beza',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9d3cb303-a996-4144-948a-36afaeeef554',
         'recipe_servings': None,
@@ -2941,6 +3096,7 @@
         'tools': list([
         ]),
         'total_time': '1 Hour',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2955,7 +3111,9 @@
         'name': 'Martins test Recipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '77f05a49-e869-4048-aa62-0d8a1f5a8f1c',
         'recipe_servings': None,
@@ -2967,6 +3125,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -2981,7 +3140,9 @@
         'name': 'Muffinki czekoladowe',
         'original_url': 'https://aniagotuje.pl/przepis/muffinki-czekoladowe',
         'perform_time': '30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '25 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '75a90207-9c10-4390-a265-c47a4b67fd69',
         'recipe_servings': None,
@@ -3013,6 +3174,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3027,7 +3189,9 @@
         'name': 'My Test Recipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '4320ba72-377b-4657-8297-dce198f24cdf',
         'recipe_servings': None,
@@ -3039,6 +3203,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3053,7 +3218,9 @@
         'name': 'My Test Receipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '98dac844-31ee-426a-b16c-fb62a5dd2816',
         'recipe_servings': None,
@@ -3065,6 +3232,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3079,7 +3247,9 @@
         'name': 'Patates douces au four',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c3c8f207-c704-415d-81b1-da9f032cf52f',
         'recipe_servings': None,
@@ -3091,6 +3261,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3105,7 +3276,9 @@
         'name': 'Easy Homemade Pizza Dough',
         'original_url': 'https://sallysbakingaddiction.com/homemade-pizza-crust-recipe/',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '2 Hours 15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1edb2f6e-133c-4be0-b516-3c23625a97ec',
         'recipe_servings': None,
@@ -3117,6 +3290,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3131,7 +3305,9 @@
         'name': 'All-American Beef Stew Recipe',
         'original_url': 'https://www.seriouseats.com/all-american-beef-stew-recipe',
         'perform_time': '3 Hours 10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '48f39d27-4b8e-4c14-bf36-4e1e6497e75e',
         'recipe_servings': None,
@@ -3148,6 +3324,7 @@
         'tools': list([
         ]),
         'total_time': '3 Hours 15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3162,7 +3339,9 @@
         'name': "Serious Eats' Halal Cart-Style Chicken and Rice With White Sauce",
         'original_url': 'https://www.seriouseats.com/serious-eats-halal-cart-style-chicken-and-rice-white-sauce-recipe',
         'perform_time': '55 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '20 Minutes',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': '6530ea6e-401e-4304-8a7a-12162ddf5b9c',
         'recipe_servings': None,
@@ -3219,6 +3398,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3233,7 +3413,9 @@
         'name': 'Schnelle Käsespätzle',
         'original_url': 'https://www.chefkoch.de/rezepte/1062121211526182/Schnelle-Kaesespaetzle.html',
         'perform_time': '30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c496cf9c-1ece-448a-9d3f-ef772f078a4e',
         'recipe_servings': None,
@@ -3245,6 +3427,7 @@
         'tools': list([
         ]),
         'total_time': '40 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3259,7 +3442,9 @@
         'name': 'taco',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '49aa6f42-6760-4adf-b6cd-59592da485c3',
         'recipe_servings': None,
@@ -3271,6 +3456,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3285,7 +3471,9 @@
         'name': 'Vodkapasta',
         'original_url': 'https://www.ica.se/recept/vodkapasta-729011/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '6402a253-2baa-460d-bf4f-b759bb655588',
         'recipe_servings': None,
@@ -3297,6 +3485,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3311,7 +3500,9 @@
         'name': 'Vodkapasta2',
         'original_url': 'https://www.ica.se/recept/vodkapasta-729011/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '4f54e9e1-f21d-40ec-a135-91e633dfb733',
         'recipe_servings': None,
@@ -3323,6 +3514,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3337,7 +3529,9 @@
         'name': 'Rub',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'e1a3edb0-49a0-49a3-83e3-95554e932670',
         'recipe_servings': None,
@@ -3349,6 +3543,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3363,7 +3558,9 @@
         'name': 'Banana Bread Chocolate Chip Cookies',
         'original_url': 'https://www.justapinch.com/recipes/dessert/cookies/banana-bread-chocolate-chip-cookies.html',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1a0f4e54-db5b-40f1-ab7e-166dab5f6523',
         'recipe_servings': None,
@@ -3410,6 +3607,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3424,7 +3622,9 @@
         'name': 'Cauliflower Bisque Recipe with Cheddar Cheese',
         'original_url': 'https://chefjeanpierre.com/recipes/soups/creamy-cauliflower-bisque/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '447acae6-3424-4c16-8c26-c09040ad8041',
         'recipe_servings': None,
@@ -3436,6 +3636,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3450,7 +3651,9 @@
         'name': 'Prova ',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '864136a3-27b0-4f3b-a90f-486f42d6df7a',
         'recipe_servings': None,
@@ -3462,6 +3665,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3476,7 +3680,9 @@
         'name': 'pate au beurre (1)',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c7ccf4c7-c5f4-4191-a79b-1a49d068f6a4',
         'recipe_servings': None,
@@ -3488,6 +3694,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3502,7 +3709,9 @@
         'name': 'pate au beurre',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'd01865c3-0f18-4e8d-84c0-c14c345fdf9c',
         'recipe_servings': None,
@@ -3514,6 +3723,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3528,7 +3738,9 @@
         'name': 'Sous Vide Cheesecake Recipe',
         'original_url': 'https://saltpepperskillet.com/recipes/sous-vide-cheesecake/',
         'perform_time': '1 Hour 30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2cec2bb2-19b6-40b8-a36c-1a76ea29c517',
         'recipe_servings': None,
@@ -3540,6 +3752,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 10 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3554,7 +3767,9 @@
         'name': 'The Bomb Mini Cheesecakes',
         'original_url': 'https://recipes.anovaculinary.com/recipe/the-bomb-cheesecakes',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '30 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '8e0e4566-9caf-4c2e-a01c-dcead23db86b',
         'recipe_servings': None,
@@ -3566,6 +3781,7 @@
         'tools': list([
         ]),
         'total_time': '1 Hour 30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3580,7 +3796,9 @@
         'name': 'Tagliatelle al Salmone',
         'original_url': 'https://www.chefkoch.de/rezepte/2109501340136606/Tagliatelle-al-Salmone.html',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'a051eafd-9712-4aee-a8e5-0cd10a6772ee',
         'recipe_servings': None,
@@ -3647,6 +3865,7 @@
         'tools': list([
         ]),
         'total_time': '25 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3661,7 +3880,9 @@
         'name': 'Death by Chocolate',
         'original_url': 'https://www.backenmachtgluecklich.de/rezepte/death-by-chocolate-kuchen.html',
         'perform_time': '25 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '25 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '093d51e9-0823-40ad-8e0e-a1d5790dd627',
         'recipe_servings': None,
@@ -3673,6 +3894,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3687,7 +3909,9 @@
         'name': 'Palak Dal Rezept aus Indien',
         'original_url': 'https://www.fernweh-koch.de/palak-dal-indischer-spinat-linsen-rezept/',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2d1f62ec-4200-4cfd-987e-c75755d7607c',
         'recipe_servings': None,
@@ -3719,6 +3943,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3733,7 +3958,9 @@
         'name': 'Tortelline - á la Romana',
         'original_url': 'https://www.chefkoch.de/rezepte/74441028021809/Tortelline-a-la-Romana.html',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '30 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '973dc36d-1661-49b4-ad2d-0b7191034fb3',
         'recipe_servings': None,
@@ -3760,6 +3987,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
     ]),
@@ -3780,7 +4008,9 @@
         'name': 'tu6y',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'e82f5449-c33b-437c-b712-337587199264',
         'recipe_servings': None,
@@ -3797,6 +4027,7 @@
           }),
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3811,7 +4042,9 @@
         'name': 'Εύκολη μακαρονάδα με κεφτεδάκια στον φούρνο (1)',
         'original_url': 'https://akispetretzikis.com/recipe/7959/efkolh-makaronada-me-keftedakia-ston-fourno',
         'perform_time': '50 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f79f7e9d-4b58-4930-a586-2b127f16ee34',
         'recipe_servings': None,
@@ -3823,6 +4056,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3837,7 +4071,9 @@
         'name': 'Patates douces au four (1)',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '90097c8b-9d80-468a-b497-73957ac0cd8b',
         'recipe_servings': None,
@@ -3849,6 +4085,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3863,7 +4100,9 @@
         'name': 'Sweet potatoes',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '98845807-9365-41fd-acd1-35630b468c27',
         'recipe_servings': None,
@@ -3875,6 +4114,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3889,7 +4129,9 @@
         'name': 'Εύκολη μακαρονάδα με κεφτεδάκια στον φούρνο',
         'original_url': 'https://akispetretzikis.com/recipe/7959/efkolh-makaronada-me-keftedakia-ston-fourno',
         'perform_time': '50 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '40c227e0-3c7e-41f7-866d-5de04eaecdd7',
         'recipe_servings': None,
@@ -3901,6 +4143,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -3915,7 +4158,9 @@
         'name': 'Boeuf bourguignon : la vraie recette (2)',
         'original_url': 'https://www.marmiton.org/recettes/recette_boeuf-bourguignon_18889.aspx',
         'perform_time': '4 Hours',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9c7b8aee-c93c-4b1b-ab48-2625d444743a',
         'recipe_servings': None,
@@ -3987,6 +4232,7 @@
         'tools': list([
         ]),
         'total_time': '5 Hours',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4001,7 +4247,9 @@
         'name': 'Boeuf bourguignon : la vraie recette (1)',
         'original_url': 'https://www.marmiton.org/recettes/recette_boeuf-bourguignon_18889.aspx',
         'perform_time': '4 Hours',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': 'fc42c7d1-7b0f-4e04-b88a-dbd80b81540b',
         'recipe_servings': None,
@@ -4073,6 +4321,7 @@
         'tools': list([
         ]),
         'total_time': '5 Hours',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4087,7 +4336,9 @@
         'name': 'Veganes Marmor-Bananenbrot mit Erdnussbutter',
         'original_url': 'https://biancazapatka.com/de/erdnussbutter-schoko-bananenbrot/',
         'perform_time': '55 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '89e63d72-7a51-4cef-b162-2e45035d0a91',
         'recipe_servings': None,
@@ -4099,6 +4350,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4113,7 +4365,9 @@
         'name': 'Pasta mit Tomaten, Knoblauch und Basilikum - einfach (und) genial! - Kuechenchaotin',
         'original_url': 'https://kuechenchaotin.de/pasta-mit-tomaten-knoblauch-basilikum/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': 3.5,
         'recipe_id': 'eab64457-97ba-4d6c-871c-cb1c724ccb51',
         'recipe_servings': None,
@@ -4125,6 +4379,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4139,7 +4394,9 @@
         'name': 'test123',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '12439e3d-3c1c-4dcc-9c6e-4afcea2a0542',
         'recipe_servings': None,
@@ -4151,6 +4408,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4165,7 +4423,9 @@
         'name': 'Bureeto',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '6567f6ec-e410-49cb-a1a5-d08517184e78',
         'recipe_servings': None,
@@ -4177,6 +4437,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4191,7 +4452,9 @@
         'name': 'Subway Double Cookies',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f7737d17-161c-4008-88d4-dd2616778cd0',
         'recipe_servings': None,
@@ -4203,6 +4466,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4217,7 +4481,9 @@
         'name': 'qwerty12345',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1904b717-4a8b-4de9-8909-56958875b5f4',
         'recipe_servings': None,
@@ -4229,6 +4495,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4243,7 +4510,9 @@
         'name': 'Cheeseburger Sliders (Easy, 30-min Recipe)',
         'original_url': 'https://natashaskitchen.com/cheeseburger-sliders/',
         'perform_time': '22 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '8 Minutes',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': '8bdd3656-5e7e-45d3-a3c4-557390846a22',
         'recipe_servings': None,
@@ -4265,6 +4534,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4279,7 +4549,9 @@
         'name': 'meatloaf',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '8a30d31d-aa14-411e-af0c-6b61a94f5291',
         'recipe_servings': None,
@@ -4291,6 +4563,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4305,7 +4578,9 @@
         'name': 'Richtig rheinischer Sauerbraten',
         'original_url': 'https://www.chefkoch.de/rezepte/937641199437984/Richtig-rheinischer-Sauerbraten.html',
         'perform_time': '2 Hours 20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': 3.0,
         'recipe_id': 'f2f7880b-1136-436f-91b7-129788d8c117',
         'recipe_servings': None,
@@ -4317,6 +4592,7 @@
         'tools': list([
         ]),
         'total_time': '3 Hours 20 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4331,7 +4607,9 @@
         'name': 'Orientalischer Gemüse-Hähnchen Eintopf',
         'original_url': 'https://www.chefkoch.de/rezepte/2307761368177614/Orientalischer-Gemuese-Haehnchen-Eintopf.html',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'cf634591-0f82-4254-8e00-2f7e8b0c9022',
         'recipe_servings': None,
@@ -4383,6 +4661,7 @@
         'tools': list([
         ]),
         'total_time': '35 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4397,7 +4676,9 @@
         'name': 'test 20240121',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '05208856-d273-4cc9-bcfa-e0215d57108d',
         'recipe_servings': None,
@@ -4409,6 +4690,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4423,7 +4705,9 @@
         'name': 'Loempia bowl',
         'original_url': 'https://www.lekkerensimpel.com/loempia-bowl/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '145eeb05-781a-4eb0-a656-afa8bc8c0164',
         'recipe_servings': None,
@@ -4435,6 +4719,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4449,7 +4734,9 @@
         'name': '5 Ingredient Chocolate Mousse',
         'original_url': 'https://thehappypear.ie/aquafaba-chocolate-mousse/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '5c6532aa-ad84-424c-bc05-c32d50430fe4',
         'recipe_servings': None,
@@ -4461,6 +4748,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4475,7 +4763,9 @@
         'name': 'Der perfekte Pfannkuchen - gelingt einfach immer',
         'original_url': 'https://www.chefkoch.de/rezepte/1208161226570428/Der-perfekte-Pfannkuchen-gelingt-einfach-immer.html',
         'perform_time': '10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f2e684f2-49e0-45ee-90de-951344472f1c',
         'recipe_servings': None,
@@ -4517,6 +4807,7 @@
         'tools': list([
         ]),
         'total_time': '15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4536,7 +4827,9 @@
         'name': 'Dinkel-Sauerteigbrot',
         'original_url': 'https://www.besondersgut.ch/dinkel-sauerteigbrot/',
         'perform_time': '35min',
+        'perform_time_seconds': None,
         'prep_time': '1h',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'cf239441-b75d-4dea-a48e-9d99b7cb5842',
         'recipe_servings': None,
@@ -4558,6 +4851,7 @@
           }),
         ]),
         'total_time': '24h',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4572,7 +4866,9 @@
         'name': 'test 234234',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2673eb90-6d78-4b95-af36-5db8c8a6da37',
         'recipe_servings': None,
@@ -4584,6 +4880,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4598,7 +4895,9 @@
         'name': 'test 243',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '0a723c54-af53-40e9-a15f-c87aae5ac688',
         'recipe_servings': None,
@@ -4610,6 +4909,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4624,7 +4924,9 @@
         'name': 'Einfacher Nudelauflauf mit Brokkoli',
         'original_url': 'https://kochkarussell.com/einfacher-nudelauflauf-brokkoli/',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9d553779-607e-471b-acf3-84e6be27b159',
         'recipe_servings': None,
@@ -4641,6 +4943,7 @@
         'tools': list([
         ]),
         'total_time': '35 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4666,7 +4969,9 @@
         'name': 'Tarta cytrynowa z bezą',
         'original_url': 'https://www.przepisy.pl/przepis/tarta-cytrynowa-z-beza',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9d3cb303-a996-4144-948a-36afaeeef554',
         'recipe_servings': None,
@@ -4678,6 +4983,7 @@
         'tools': list([
         ]),
         'total_time': '1 Hour',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4692,7 +4998,9 @@
         'name': 'Martins test Recipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '77f05a49-e869-4048-aa62-0d8a1f5a8f1c',
         'recipe_servings': None,
@@ -4704,6 +5012,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4718,7 +5027,9 @@
         'name': 'Muffinki czekoladowe',
         'original_url': 'https://aniagotuje.pl/przepis/muffinki-czekoladowe',
         'perform_time': '30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '25 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '75a90207-9c10-4390-a265-c47a4b67fd69',
         'recipe_servings': None,
@@ -4750,6 +5061,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4764,7 +5076,9 @@
         'name': 'My Test Recipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '4320ba72-377b-4657-8297-dce198f24cdf',
         'recipe_servings': None,
@@ -4776,6 +5090,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4790,7 +5105,9 @@
         'name': 'My Test Receipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '98dac844-31ee-426a-b16c-fb62a5dd2816',
         'recipe_servings': None,
@@ -4802,6 +5119,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4816,7 +5134,9 @@
         'name': 'Patates douces au four',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c3c8f207-c704-415d-81b1-da9f032cf52f',
         'recipe_servings': None,
@@ -4828,6 +5148,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4842,7 +5163,9 @@
         'name': 'Easy Homemade Pizza Dough',
         'original_url': 'https://sallysbakingaddiction.com/homemade-pizza-crust-recipe/',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '2 Hours 15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1edb2f6e-133c-4be0-b516-3c23625a97ec',
         'recipe_servings': None,
@@ -4854,6 +5177,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4868,7 +5192,9 @@
         'name': 'All-American Beef Stew Recipe',
         'original_url': 'https://www.seriouseats.com/all-american-beef-stew-recipe',
         'perform_time': '3 Hours 10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '48f39d27-4b8e-4c14-bf36-4e1e6497e75e',
         'recipe_servings': None,
@@ -4885,6 +5211,7 @@
         'tools': list([
         ]),
         'total_time': '3 Hours 15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4899,7 +5226,9 @@
         'name': "Serious Eats' Halal Cart-Style Chicken and Rice With White Sauce",
         'original_url': 'https://www.seriouseats.com/serious-eats-halal-cart-style-chicken-and-rice-white-sauce-recipe',
         'perform_time': '55 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '20 Minutes',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': '6530ea6e-401e-4304-8a7a-12162ddf5b9c',
         'recipe_servings': None,
@@ -4956,6 +5285,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4970,7 +5300,9 @@
         'name': 'Schnelle Käsespätzle',
         'original_url': 'https://www.chefkoch.de/rezepte/1062121211526182/Schnelle-Kaesespaetzle.html',
         'perform_time': '30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c496cf9c-1ece-448a-9d3f-ef772f078a4e',
         'recipe_servings': None,
@@ -4982,6 +5314,7 @@
         'tools': list([
         ]),
         'total_time': '40 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -4996,7 +5329,9 @@
         'name': 'taco',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '49aa6f42-6760-4adf-b6cd-59592da485c3',
         'recipe_servings': None,
@@ -5008,6 +5343,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5022,7 +5358,9 @@
         'name': 'Vodkapasta',
         'original_url': 'https://www.ica.se/recept/vodkapasta-729011/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '6402a253-2baa-460d-bf4f-b759bb655588',
         'recipe_servings': None,
@@ -5034,6 +5372,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5048,7 +5387,9 @@
         'name': 'Vodkapasta2',
         'original_url': 'https://www.ica.se/recept/vodkapasta-729011/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '4f54e9e1-f21d-40ec-a135-91e633dfb733',
         'recipe_servings': None,
@@ -5060,6 +5401,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5074,7 +5416,9 @@
         'name': 'Rub',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'e1a3edb0-49a0-49a3-83e3-95554e932670',
         'recipe_servings': None,
@@ -5086,6 +5430,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5100,7 +5445,9 @@
         'name': 'Banana Bread Chocolate Chip Cookies',
         'original_url': 'https://www.justapinch.com/recipes/dessert/cookies/banana-bread-chocolate-chip-cookies.html',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1a0f4e54-db5b-40f1-ab7e-166dab5f6523',
         'recipe_servings': None,
@@ -5147,6 +5494,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5161,7 +5509,9 @@
         'name': 'Cauliflower Bisque Recipe with Cheddar Cheese',
         'original_url': 'https://chefjeanpierre.com/recipes/soups/creamy-cauliflower-bisque/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '447acae6-3424-4c16-8c26-c09040ad8041',
         'recipe_servings': None,
@@ -5173,6 +5523,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5187,7 +5538,9 @@
         'name': 'Prova ',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '864136a3-27b0-4f3b-a90f-486f42d6df7a',
         'recipe_servings': None,
@@ -5199,6 +5552,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5213,7 +5567,9 @@
         'name': 'pate au beurre (1)',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c7ccf4c7-c5f4-4191-a79b-1a49d068f6a4',
         'recipe_servings': None,
@@ -5225,6 +5581,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5239,7 +5596,9 @@
         'name': 'pate au beurre',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'd01865c3-0f18-4e8d-84c0-c14c345fdf9c',
         'recipe_servings': None,
@@ -5251,6 +5610,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5265,7 +5625,9 @@
         'name': 'Sous Vide Cheesecake Recipe',
         'original_url': 'https://saltpepperskillet.com/recipes/sous-vide-cheesecake/',
         'perform_time': '1 Hour 30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2cec2bb2-19b6-40b8-a36c-1a76ea29c517',
         'recipe_servings': None,
@@ -5277,6 +5639,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 10 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5291,7 +5654,9 @@
         'name': 'The Bomb Mini Cheesecakes',
         'original_url': 'https://recipes.anovaculinary.com/recipe/the-bomb-cheesecakes',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '30 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '8e0e4566-9caf-4c2e-a01c-dcead23db86b',
         'recipe_servings': None,
@@ -5303,6 +5668,7 @@
         'tools': list([
         ]),
         'total_time': '1 Hour 30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5317,7 +5683,9 @@
         'name': 'Tagliatelle al Salmone',
         'original_url': 'https://www.chefkoch.de/rezepte/2109501340136606/Tagliatelle-al-Salmone.html',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'a051eafd-9712-4aee-a8e5-0cd10a6772ee',
         'recipe_servings': None,
@@ -5384,6 +5752,7 @@
         'tools': list([
         ]),
         'total_time': '25 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5398,7 +5767,9 @@
         'name': 'Death by Chocolate',
         'original_url': 'https://www.backenmachtgluecklich.de/rezepte/death-by-chocolate-kuchen.html',
         'perform_time': '25 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '25 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '093d51e9-0823-40ad-8e0e-a1d5790dd627',
         'recipe_servings': None,
@@ -5410,6 +5781,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5424,7 +5796,9 @@
         'name': 'Palak Dal Rezept aus Indien',
         'original_url': 'https://www.fernweh-koch.de/palak-dal-indischer-spinat-linsen-rezept/',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2d1f62ec-4200-4cfd-987e-c75755d7607c',
         'recipe_servings': None,
@@ -5456,6 +5830,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5470,7 +5845,9 @@
         'name': 'Tortelline - á la Romana',
         'original_url': 'https://www.chefkoch.de/rezepte/74441028021809/Tortelline-a-la-Romana.html',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '30 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '973dc36d-1661-49b4-ad2d-0b7191034fb3',
         'recipe_servings': None,
@@ -5497,6 +5874,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
     ]),
@@ -5517,7 +5895,9 @@
         'name': 'tu6y',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'e82f5449-c33b-437c-b712-337587199264',
         'recipe_servings': None,
@@ -5534,6 +5914,7 @@
           }),
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5548,7 +5929,9 @@
         'name': 'Εύκολη μακαρονάδα με κεφτεδάκια στον φούρνο (1)',
         'original_url': 'https://akispetretzikis.com/recipe/7959/efkolh-makaronada-me-keftedakia-ston-fourno',
         'perform_time': '50 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f79f7e9d-4b58-4930-a586-2b127f16ee34',
         'recipe_servings': None,
@@ -5560,6 +5943,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5574,7 +5958,9 @@
         'name': 'Patates douces au four (1)',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '90097c8b-9d80-468a-b497-73957ac0cd8b',
         'recipe_servings': None,
@@ -5586,6 +5972,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5600,7 +5987,9 @@
         'name': 'Sweet potatoes',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '98845807-9365-41fd-acd1-35630b468c27',
         'recipe_servings': None,
@@ -5612,6 +6001,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5626,7 +6016,9 @@
         'name': 'Εύκολη μακαρονάδα με κεφτεδάκια στον φούρνο',
         'original_url': 'https://akispetretzikis.com/recipe/7959/efkolh-makaronada-me-keftedakia-ston-fourno',
         'perform_time': '50 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '40c227e0-3c7e-41f7-866d-5de04eaecdd7',
         'recipe_servings': None,
@@ -5638,6 +6030,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5652,7 +6045,9 @@
         'name': 'Boeuf bourguignon : la vraie recette (2)',
         'original_url': 'https://www.marmiton.org/recettes/recette_boeuf-bourguignon_18889.aspx',
         'perform_time': '4 Hours',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9c7b8aee-c93c-4b1b-ab48-2625d444743a',
         'recipe_servings': None,
@@ -5724,6 +6119,7 @@
         'tools': list([
         ]),
         'total_time': '5 Hours',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5738,7 +6134,9 @@
         'name': 'Boeuf bourguignon : la vraie recette (1)',
         'original_url': 'https://www.marmiton.org/recettes/recette_boeuf-bourguignon_18889.aspx',
         'perform_time': '4 Hours',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': 'fc42c7d1-7b0f-4e04-b88a-dbd80b81540b',
         'recipe_servings': None,
@@ -5810,6 +6208,7 @@
         'tools': list([
         ]),
         'total_time': '5 Hours',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5824,7 +6223,9 @@
         'name': 'Veganes Marmor-Bananenbrot mit Erdnussbutter',
         'original_url': 'https://biancazapatka.com/de/erdnussbutter-schoko-bananenbrot/',
         'perform_time': '55 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '89e63d72-7a51-4cef-b162-2e45035d0a91',
         'recipe_servings': None,
@@ -5836,6 +6237,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5850,7 +6252,9 @@
         'name': 'Pasta mit Tomaten, Knoblauch und Basilikum - einfach (und) genial! - Kuechenchaotin',
         'original_url': 'https://kuechenchaotin.de/pasta-mit-tomaten-knoblauch-basilikum/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': 3.5,
         'recipe_id': 'eab64457-97ba-4d6c-871c-cb1c724ccb51',
         'recipe_servings': None,
@@ -5862,6 +6266,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5876,7 +6281,9 @@
         'name': 'test123',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '12439e3d-3c1c-4dcc-9c6e-4afcea2a0542',
         'recipe_servings': None,
@@ -5888,6 +6295,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5902,7 +6310,9 @@
         'name': 'Bureeto',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '6567f6ec-e410-49cb-a1a5-d08517184e78',
         'recipe_servings': None,
@@ -5914,6 +6324,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5928,7 +6339,9 @@
         'name': 'Subway Double Cookies',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f7737d17-161c-4008-88d4-dd2616778cd0',
         'recipe_servings': None,
@@ -5940,6 +6353,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5954,7 +6368,9 @@
         'name': 'qwerty12345',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1904b717-4a8b-4de9-8909-56958875b5f4',
         'recipe_servings': None,
@@ -5966,6 +6382,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -5980,7 +6397,9 @@
         'name': 'Cheeseburger Sliders (Easy, 30-min Recipe)',
         'original_url': 'https://natashaskitchen.com/cheeseburger-sliders/',
         'perform_time': '22 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '8 Minutes',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': '8bdd3656-5e7e-45d3-a3c4-557390846a22',
         'recipe_servings': None,
@@ -6002,6 +6421,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6016,7 +6436,9 @@
         'name': 'meatloaf',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '8a30d31d-aa14-411e-af0c-6b61a94f5291',
         'recipe_servings': None,
@@ -6028,6 +6450,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6042,7 +6465,9 @@
         'name': 'Richtig rheinischer Sauerbraten',
         'original_url': 'https://www.chefkoch.de/rezepte/937641199437984/Richtig-rheinischer-Sauerbraten.html',
         'perform_time': '2 Hours 20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': 3.0,
         'recipe_id': 'f2f7880b-1136-436f-91b7-129788d8c117',
         'recipe_servings': None,
@@ -6054,6 +6479,7 @@
         'tools': list([
         ]),
         'total_time': '3 Hours 20 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6068,7 +6494,9 @@
         'name': 'Orientalischer Gemüse-Hähnchen Eintopf',
         'original_url': 'https://www.chefkoch.de/rezepte/2307761368177614/Orientalischer-Gemuese-Haehnchen-Eintopf.html',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'cf634591-0f82-4254-8e00-2f7e8b0c9022',
         'recipe_servings': None,
@@ -6120,6 +6548,7 @@
         'tools': list([
         ]),
         'total_time': '35 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6134,7 +6563,9 @@
         'name': 'test 20240121',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '05208856-d273-4cc9-bcfa-e0215d57108d',
         'recipe_servings': None,
@@ -6146,6 +6577,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6160,7 +6592,9 @@
         'name': 'Loempia bowl',
         'original_url': 'https://www.lekkerensimpel.com/loempia-bowl/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '145eeb05-781a-4eb0-a656-afa8bc8c0164',
         'recipe_servings': None,
@@ -6172,6 +6606,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6186,7 +6621,9 @@
         'name': '5 Ingredient Chocolate Mousse',
         'original_url': 'https://thehappypear.ie/aquafaba-chocolate-mousse/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '5c6532aa-ad84-424c-bc05-c32d50430fe4',
         'recipe_servings': None,
@@ -6198,6 +6635,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6212,7 +6650,9 @@
         'name': 'Der perfekte Pfannkuchen - gelingt einfach immer',
         'original_url': 'https://www.chefkoch.de/rezepte/1208161226570428/Der-perfekte-Pfannkuchen-gelingt-einfach-immer.html',
         'perform_time': '10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'f2e684f2-49e0-45ee-90de-951344472f1c',
         'recipe_servings': None,
@@ -6254,6 +6694,7 @@
         'tools': list([
         ]),
         'total_time': '15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6273,7 +6714,9 @@
         'name': 'Dinkel-Sauerteigbrot',
         'original_url': 'https://www.besondersgut.ch/dinkel-sauerteigbrot/',
         'perform_time': '35min',
+        'perform_time_seconds': None,
         'prep_time': '1h',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'cf239441-b75d-4dea-a48e-9d99b7cb5842',
         'recipe_servings': None,
@@ -6295,6 +6738,7 @@
           }),
         ]),
         'total_time': '24h',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6309,7 +6753,9 @@
         'name': 'test 234234',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2673eb90-6d78-4b95-af36-5db8c8a6da37',
         'recipe_servings': None,
@@ -6321,6 +6767,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6335,7 +6782,9 @@
         'name': 'test 243',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '0a723c54-af53-40e9-a15f-c87aae5ac688',
         'recipe_servings': None,
@@ -6347,6 +6796,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6361,7 +6811,9 @@
         'name': 'Einfacher Nudelauflauf mit Brokkoli',
         'original_url': 'https://kochkarussell.com/einfacher-nudelauflauf-brokkoli/',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9d553779-607e-471b-acf3-84e6be27b159',
         'recipe_servings': None,
@@ -6378,6 +6830,7 @@
         'tools': list([
         ]),
         'total_time': '35 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6403,7 +6856,9 @@
         'name': 'Tarta cytrynowa z bezą',
         'original_url': 'https://www.przepisy.pl/przepis/tarta-cytrynowa-z-beza',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '1 Hour',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '9d3cb303-a996-4144-948a-36afaeeef554',
         'recipe_servings': None,
@@ -6415,6 +6870,7 @@
         'tools': list([
         ]),
         'total_time': '1 Hour',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6429,7 +6885,9 @@
         'name': 'Martins test Recipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '77f05a49-e869-4048-aa62-0d8a1f5a8f1c',
         'recipe_servings': None,
@@ -6441,6 +6899,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6455,7 +6914,9 @@
         'name': 'Muffinki czekoladowe',
         'original_url': 'https://aniagotuje.pl/przepis/muffinki-czekoladowe',
         'perform_time': '30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '25 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '75a90207-9c10-4390-a265-c47a4b67fd69',
         'recipe_servings': None,
@@ -6487,6 +6948,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6501,7 +6963,9 @@
         'name': 'My Test Recipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '4320ba72-377b-4657-8297-dce198f24cdf',
         'recipe_servings': None,
@@ -6513,6 +6977,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6527,7 +6992,9 @@
         'name': 'My Test Receipe',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '98dac844-31ee-426a-b16c-fb62a5dd2816',
         'recipe_servings': None,
@@ -6539,6 +7006,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6553,7 +7021,9 @@
         'name': 'Patates douces au four',
         'original_url': 'https://www.papillesetpupilles.fr/2018/10/patates-douces-au-four.html/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c3c8f207-c704-415d-81b1-da9f032cf52f',
         'recipe_servings': None,
@@ -6565,6 +7035,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6579,7 +7050,9 @@
         'name': 'Easy Homemade Pizza Dough',
         'original_url': 'https://sallysbakingaddiction.com/homemade-pizza-crust-recipe/',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '2 Hours 15 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1edb2f6e-133c-4be0-b516-3c23625a97ec',
         'recipe_servings': None,
@@ -6591,6 +7064,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6605,7 +7079,9 @@
         'name': 'All-American Beef Stew Recipe',
         'original_url': 'https://www.seriouseats.com/all-american-beef-stew-recipe',
         'perform_time': '3 Hours 10 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '5 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '48f39d27-4b8e-4c14-bf36-4e1e6497e75e',
         'recipe_servings': None,
@@ -6622,6 +7098,7 @@
         'tools': list([
         ]),
         'total_time': '3 Hours 15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6636,7 +7113,9 @@
         'name': "Serious Eats' Halal Cart-Style Chicken and Rice With White Sauce",
         'original_url': 'https://www.seriouseats.com/serious-eats-halal-cart-style-chicken-and-rice-white-sauce-recipe',
         'perform_time': '55 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '20 Minutes',
+        'prep_time_seconds': None,
         'rating': 5.0,
         'recipe_id': '6530ea6e-401e-4304-8a7a-12162ddf5b9c',
         'recipe_servings': None,
@@ -6693,6 +7172,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 15 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6707,7 +7187,9 @@
         'name': 'Schnelle Käsespätzle',
         'original_url': 'https://www.chefkoch.de/rezepte/1062121211526182/Schnelle-Kaesespaetzle.html',
         'perform_time': '30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c496cf9c-1ece-448a-9d3f-ef772f078a4e',
         'recipe_servings': None,
@@ -6719,6 +7201,7 @@
         'tools': list([
         ]),
         'total_time': '40 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6733,7 +7216,9 @@
         'name': 'taco',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '49aa6f42-6760-4adf-b6cd-59592da485c3',
         'recipe_servings': None,
@@ -6745,6 +7230,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6759,7 +7245,9 @@
         'name': 'Vodkapasta',
         'original_url': 'https://www.ica.se/recept/vodkapasta-729011/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '6402a253-2baa-460d-bf4f-b759bb655588',
         'recipe_servings': None,
@@ -6771,6 +7259,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6785,7 +7274,9 @@
         'name': 'Vodkapasta2',
         'original_url': 'https://www.ica.se/recept/vodkapasta-729011/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '4f54e9e1-f21d-40ec-a135-91e633dfb733',
         'recipe_servings': None,
@@ -6797,6 +7288,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6811,7 +7303,9 @@
         'name': 'Rub',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'e1a3edb0-49a0-49a3-83e3-95554e932670',
         'recipe_servings': None,
@@ -6823,6 +7317,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6837,7 +7332,9 @@
         'name': 'Banana Bread Chocolate Chip Cookies',
         'original_url': 'https://www.justapinch.com/recipes/dessert/cookies/banana-bread-chocolate-chip-cookies.html',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '1a0f4e54-db5b-40f1-ab7e-166dab5f6523',
         'recipe_servings': None,
@@ -6884,6 +7381,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6898,7 +7396,9 @@
         'name': 'Cauliflower Bisque Recipe with Cheddar Cheese',
         'original_url': 'https://chefjeanpierre.com/recipes/soups/creamy-cauliflower-bisque/',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '447acae6-3424-4c16-8c26-c09040ad8041',
         'recipe_servings': None,
@@ -6910,6 +7410,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6924,7 +7425,9 @@
         'name': 'Prova ',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '864136a3-27b0-4f3b-a90f-486f42d6df7a',
         'recipe_servings': None,
@@ -6936,6 +7439,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6950,7 +7454,9 @@
         'name': 'pate au beurre (1)',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'c7ccf4c7-c5f4-4191-a79b-1a49d068f6a4',
         'recipe_servings': None,
@@ -6962,6 +7468,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -6976,7 +7483,9 @@
         'name': 'pate au beurre',
         'original_url': None,
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': None,
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'd01865c3-0f18-4e8d-84c0-c14c345fdf9c',
         'recipe_servings': None,
@@ -6988,6 +7497,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -7002,7 +7512,9 @@
         'name': 'Sous Vide Cheesecake Recipe',
         'original_url': 'https://saltpepperskillet.com/recipes/sous-vide-cheesecake/',
         'perform_time': '1 Hour 30 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2cec2bb2-19b6-40b8-a36c-1a76ea29c517',
         'recipe_servings': None,
@@ -7014,6 +7526,7 @@
         'tools': list([
         ]),
         'total_time': '2 Hours 10 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -7028,7 +7541,9 @@
         'name': 'The Bomb Mini Cheesecakes',
         'original_url': 'https://recipes.anovaculinary.com/recipe/the-bomb-cheesecakes',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '30 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '8e0e4566-9caf-4c2e-a01c-dcead23db86b',
         'recipe_servings': None,
@@ -7040,6 +7555,7 @@
         'tools': list([
         ]),
         'total_time': '1 Hour 30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -7054,7 +7570,9 @@
         'name': 'Tagliatelle al Salmone',
         'original_url': 'https://www.chefkoch.de/rezepte/2109501340136606/Tagliatelle-al-Salmone.html',
         'perform_time': '15 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': 'a051eafd-9712-4aee-a8e5-0cd10a6772ee',
         'recipe_servings': None,
@@ -7121,6 +7639,7 @@
         'tools': list([
         ]),
         'total_time': '25 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -7135,7 +7654,9 @@
         'name': 'Death by Chocolate',
         'original_url': 'https://www.backenmachtgluecklich.de/rezepte/death-by-chocolate-kuchen.html',
         'perform_time': '25 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '25 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '093d51e9-0823-40ad-8e0e-a1d5790dd627',
         'recipe_servings': None,
@@ -7147,6 +7668,7 @@
         'tools': list([
         ]),
         'total_time': None,
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -7161,7 +7683,9 @@
         'name': 'Palak Dal Rezept aus Indien',
         'original_url': 'https://www.fernweh-koch.de/palak-dal-indischer-spinat-linsen-rezept/',
         'perform_time': '20 Minutes',
+        'perform_time_seconds': None,
         'prep_time': '10 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '2d1f62ec-4200-4cfd-987e-c75755d7607c',
         'recipe_servings': None,
@@ -7193,6 +7717,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
       dict({
@@ -7207,7 +7732,9 @@
         'name': 'Tortelline - á la Romana',
         'original_url': 'https://www.chefkoch.de/rezepte/74441028021809/Tortelline-a-la-Romana.html',
         'perform_time': None,
+        'perform_time_seconds': None,
         'prep_time': '30 Minutes',
+        'prep_time_seconds': None,
         'rating': None,
         'recipe_id': '973dc36d-1661-49b4-ad2d-0b7191034fb3',
         'recipe_servings': None,
@@ -7234,6 +7761,7 @@
         'tools': list([
         ]),
         'total_time': '30 Minutes',
+        'total_time_seconds': None,
         'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
       }),
     ]),
@@ -7517,7 +8045,9 @@
     }),
     'original_url': 'https://www.sacher.com/en/original-sacher-torte/recipe/',
     'perform_time': '1 hour',
+    'perform_time_seconds': 3600,
     'prep_time': '1 hour 30 minutes',
+    'prep_time_seconds': 5400,
     'rating': None,
     'recipe_id': 'fada9582-709b-46aa-b384-d5952123ad93',
     'recipe_servings': None,
@@ -7569,6 +8099,7 @@
       }),
     ]),
     'total_time': '2 hours 30 minutes',
+    'total_time_seconds': 9000,
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
   })
 # ---
@@ -7913,7 +8444,9 @@
           }),
           'original_url': 'https://www.sacher.com/en/original-sacher-torte/recipe/',
           'perform_time': '1 hour',
+          'perform_time_seconds': 3600,
           'prep_time': '1 hour 30 minutes',
+          'prep_time_seconds': 5400,
           'rating': None,
           'recipe_id': 'fada9582-709b-46aa-b384-d5952123ad93',
           'recipe_servings': None,
@@ -7965,6 +8498,7 @@
             }),
           ]),
           'total_time': '2 hours 30 minutes',
+          'total_time_seconds': 9000,
           'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
         }),
         'title': '',
@@ -8001,7 +8535,9 @@
     }),
     'original_url': '',
     'perform_time': None,
+    'perform_time_seconds': None,
     'prep_time': None,
+    'prep_time_seconds': None,
     'rating': None,
     'recipe_id': '45f8ae68-5c92-4d3c-8279-331d99645333',
     'recipe_servings': 0.0,
@@ -8013,6 +8549,7 @@
     'tools': list([
     ]),
     'total_time': None,
+    'total_time_seconds': None,
     'user_id': '4d60fe4c-a0af-4d01-933e-346e4bf10da8',
   })
 # ---
@@ -8487,7 +9024,9 @@
       'name': 'Cauliflower Salad',
       'original_url': 'https://www.allrecipes.com/recipe/142152/cauliflower-salad/',
       'perform_time': '10 Minutes',
+      'perform_time_seconds': None,
       'prep_time': '25 Minutes',
+      'prep_time_seconds': None,
       'rating': None,
       'recipe_id': '40393996-417e-4487-a081-28608a668826',
       'recipe_servings': None,
@@ -8504,6 +9043,7 @@
         }),
       ]),
       'total_time': '2 Hours 35 Minutes',
+      'total_time_seconds': None,
       'user_id': '1ce8b5fe-04e8-4b80-aab1-d92c94685c6d',
     }),
     'title': None,
@@ -8788,7 +9328,9 @@
     }),
     'original_url': 'https://www.sacher.com/en/original-sacher-torte/recipe/',
     'perform_time': '1 hour',
+    'perform_time_seconds': 3600,
     'prep_time': '1 hour 30 minutes',
+    'prep_time_seconds': 5400,
     'rating': None,
     'recipe_id': 'fada9582-709b-46aa-b384-d5952123ad93',
     'recipe_servings': None,
@@ -8840,6 +9382,7 @@
       }),
     ]),
     'total_time': '2 hours 30 minutes',
+    'total_time_seconds': 9000,
     'user_id': 'bf1c62fe-4941-4332-9886-e54e88dbdba0',
   })
 # ---
