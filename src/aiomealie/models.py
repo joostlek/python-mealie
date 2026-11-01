@@ -336,6 +336,9 @@ class Instruction(DataClassORJSONMixin):
     recipe_notes: list[RecipeNote] = field(
         default_factory=list, metadata=field_options(alias="recipeNotes")
     )
+    duration_seconds: int | None = field(
+        default=None, metadata=field_options(alias="durationSeconds")
+    )
 
 
 @dataclass
