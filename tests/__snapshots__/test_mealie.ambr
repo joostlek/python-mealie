@@ -171,6 +171,7 @@
     ]),
     'instructions': list([
       dict({
+        'duration_seconds': 120,
         'ingredient_references': list([
           'a3adfe78-d157-44d8-98be-9c133e45bb4e',
           '41d234d7-c040-48f9-91e6-f4636aebb77b',
@@ -192,6 +193,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
@@ -201,6 +203,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
@@ -210,6 +213,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
@@ -219,6 +223,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
@@ -228,6 +233,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
@@ -237,6 +243,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
@@ -246,6 +253,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
@@ -769,6 +777,7 @@
     ]),
     'instructions': list([
       dict({
+        'duration_seconds': 120,
         'ingredient_references': list([
           'a3adfe78-d157-44d8-98be-9c133e45bb4e',
           '41d234d7-c040-48f9-91e6-f4636aebb77b',
@@ -790,6 +799,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
@@ -799,6 +809,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
@@ -808,6 +819,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
@@ -817,6 +829,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
@@ -826,6 +839,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
@@ -835,6 +849,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
@@ -844,6 +859,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
@@ -7927,6 +7943,7 @@
     ]),
     'instructions': list([
       dict({
+        'duration_seconds': 120,
         'ingredient_references': list([
           'a3adfe78-d157-44d8-98be-9c133e45bb4e',
           '41d234d7-c040-48f9-91e6-f4636aebb77b',
@@ -7948,6 +7965,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
@@ -7957,6 +7975,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
@@ -7966,6 +7985,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
@@ -7975,6 +7995,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
@@ -7984,6 +8005,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
@@ -7993,6 +8015,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
@@ -8002,6 +8025,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
@@ -8326,6 +8350,7 @@
           ]),
           'instructions': list([
             dict({
+              'duration_seconds': 120,
               'ingredient_references': list([
                 'a3adfe78-d157-44d8-98be-9c133e45bb4e',
                 '41d234d7-c040-48f9-91e6-f4636aebb77b',
@@ -8347,6 +8372,7 @@
               'title': None,
             }),
             dict({
+              'duration_seconds': None,
               'ingredient_references': list([
               ]),
               'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
@@ -8356,6 +8382,7 @@
               'title': None,
             }),
             dict({
+              'duration_seconds': None,
               'ingredient_references': list([
               ]),
               'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
@@ -8365,6 +8392,7 @@
               'title': None,
             }),
             dict({
+              'duration_seconds': None,
               'ingredient_references': list([
               ]),
               'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
@@ -8374,6 +8402,7 @@
               'title': None,
             }),
             dict({
+              'duration_seconds': None,
               'ingredient_references': list([
               ]),
               'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
@@ -8383,6 +8412,7 @@
               'title': None,
             }),
             dict({
+              'duration_seconds': None,
               'ingredient_references': list([
               ]),
               'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
@@ -8392,6 +8422,7 @@
               'title': None,
             }),
             dict({
+              'duration_seconds': None,
               'ingredient_references': list([
               ]),
               'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
@@ -8401,6 +8432,7 @@
               'title': None,
             }),
             dict({
+              'duration_seconds': None,
               'ingredient_references': list([
               ]),
               'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
@@ -8507,6 +8539,7 @@
     ]),
     'instructions': list([
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '34a7ca4c-df0b-42dc-a463-4d912eab5009',
@@ -9210,6 +9243,7 @@
     ]),
     'instructions': list([
       dict({
+        'duration_seconds': 120,
         'ingredient_references': list([
           'a3adfe78-d157-44d8-98be-9c133e45bb4e',
           '41d234d7-c040-48f9-91e6-f4636aebb77b',
@@ -9231,6 +9265,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': 'dbcc1c37-3cbf-4045-9902-8f7fd1e68f0a',
@@ -9240,6 +9275,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '2265bd14-a691-40b1-9fe6-7b5dfeac8401',
@@ -9249,6 +9285,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '0aade447-dfac-4aae-8e67-ac250ad13ae2',
@@ -9258,6 +9295,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '5fdcb703-7103-468d-a65d-a92460b92eb3',
@@ -9267,6 +9305,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '81474afc-b44e-49b3-bb67-5d7dab8f832a',
@@ -9276,6 +9315,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '8fac8aee-0d3c-4f78-9ff8-56d20472e5f1',
@@ -9285,6 +9325,7 @@
         'title': None,
       }),
       dict({
+        'duration_seconds': None,
         'ingredient_references': list([
         ]),
         'instruction_id': '7162e099-d651-4656-902a-a09a9b40c4e1',
