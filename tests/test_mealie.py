@@ -408,6 +408,9 @@ async def test_update_recipe(
     slug = "original-sacher-torte-2"
     recipe_data = MutateRecipe(
         name="Updated Sacher Torte",
+        total_time_seconds=3600,
+        prep_time_seconds=0,
+        perform_time_seconds=3600,
         rating=4.5,
         nutrition=Nutrition(calories="420", protein_content="8"),
     )
@@ -425,6 +428,9 @@ async def test_update_recipe(
         params=None,
         json={
             "name": "Updated Sacher Torte",
+            "totalTimeSeconds": 3600,
+            "prepTimeSeconds": 0,
+            "performTimeSeconds": 3600,
             "rating": 4.5,
             "nutrition": {"calories": "420", "proteinContent": "8"},
         },
