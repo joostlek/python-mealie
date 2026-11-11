@@ -54,7 +54,7 @@ dev = [
     "ruff==0.17.4",
     "safety==3.8.1",
     "yamllint==1.38.0",
-    "syrupy==6.1.1",
+    "syrupy==7.0.0",
     "aiointercept==1.0.0",
 ]
 
